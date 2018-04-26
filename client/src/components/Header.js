@@ -15,21 +15,8 @@ const HeaderEl = styled.header`
 
 const Title = styled(Link)`
   text-align: center;
-  margin-right: auto;
   color: white;
   text-decoration: none;
-`;
-
-const Button = styled.button`
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
-  border: none;
-  font-size: 18px;
-
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const Header = () => (
@@ -37,10 +24,6 @@ const Header = () => (
     <Title to="/">
       <h1>React Sandbox</h1>
     </Title>
-
-    <Link to="/to-dos">
-      <Button>ToDo App</Button>
-    </Link>
   </HeaderEl>
 );
 

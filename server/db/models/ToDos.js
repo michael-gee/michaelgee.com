@@ -8,6 +8,6 @@ const ToDoSchema = new Schema({
   }
 });
 
-const ToDo = mongoose.model('todo-item', ToDoSchema);
+const ToDos = mongoose.model('todos', ToDoSchema);
 
-module.exports = ToDo;
+module.exports = ToDos;

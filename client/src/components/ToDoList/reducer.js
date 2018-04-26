@@ -1,4 +1,4 @@
-import actions from './types';
+import actions from '../../types';
 
 export default function (state = { message: 'Hello World!' }, action) {
   switch (action.type) {

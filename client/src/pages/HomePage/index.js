@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import InitialState from '../containers/InitialState';
+import { Link } from 'react-router-dom';
+
+import InitialState from '../../components/InitialState';
+
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 750px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -29,12 +31,30 @@ const Button = styled.a`
   }
 `;
 
+const StyledLink = styled(Link)`
+  max-width: 400px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 const Home = () => {
   return (
     <Container>
       <h1>Welcome to React Sandbox</h1>
 
       <InitialState />
+
+      <StyledLink to="/to-dos">ToDo App</StyledLink>
 
       <Button href="/api/mock-data">Get Backend Data from Express/MongoDB</Button>
     </Container>

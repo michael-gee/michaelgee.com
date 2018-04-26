@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import App from '../containers/App';
+import App from '../components/App';
 
 import HomePage from '../pages/HomePage';
 import ToDoPage from '../pages/ToDoPage';

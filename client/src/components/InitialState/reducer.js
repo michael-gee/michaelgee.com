@@ -1,4 +1,4 @@
-import { CHANGE_INITIAL_STATE } from '../types';
+import { CHANGE_INITIAL_STATE } from '../../types';
 
 export default function (state = { currentMessage: 'Hello World!' }, action) {
   switch (action.type) {

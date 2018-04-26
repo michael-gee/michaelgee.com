@@ -1,4 +1,4 @@
-import { CHANGE_INITIAL_STATE } from '../types';
+import { CHANGE_INITIAL_STATE } from '../../types';
 
 const actions = {
   toggleInitialState(currentState) {
