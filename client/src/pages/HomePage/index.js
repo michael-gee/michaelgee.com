@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import InitialState from '../../components/InitialState';
+import InitialState from './components/InitialState';
 
 import styled from 'styled-components';
 

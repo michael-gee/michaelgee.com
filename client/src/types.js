@@ -5,5 +5,4 @@ export const
   // ToDoPage Types
   FETCH_TODOS = 'fetch-todos',
   CREATE_TODO = 'create-todo',
-  UPDATE_TODO = 'edit-todo',
   DELETE_TODO = 'delete-todo';
