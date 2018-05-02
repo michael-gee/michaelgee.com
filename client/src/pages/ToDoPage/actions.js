@@ -49,6 +49,14 @@ const actions = {
           Accept: 'application/json',
         })
       })
+      .then(res => res.json())
+      .catch(err => console.log('Error: ', err))
+      .then(res => {
+        dispatch({
+          type: DELETE_TODO,
+          payload: res
+        });
+      })
     }
   }
 };

@@ -11,6 +11,16 @@ const ToDo = styled.div`
   align-items: center;
 `;
 
+const StyledSpan = styled.span`
+  border-radius: 50%;
+  padding: 5px 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+`;
+
 class ToDoItem extends Component {
   onDelete(e) {
     const currentItem = e.currentTarget.id;
@@ -22,9 +32,9 @@ class ToDoItem extends Component {
     return (
       <ToDo>
         <span>{this.props.value}</span>
-        <span onClick={this.onDelete.bind(this)} id={this.props.id}>
+        <StyledSpan onClick={this.onDelete.bind(this)} id={this.props.id}>
           <Icon icon={DELETE} color="#000" />
-        </span>
+        </StyledSpan>
       </ToDo>
     );
   }

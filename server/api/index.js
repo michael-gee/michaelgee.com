@@ -32,9 +32,10 @@ router.post('/create', (req, res, send) => {
 
 router.route('/delete')
   .delete(function(req, res, next) {
-    //ToDo.findByIdAndRemove({ _id: req.body.todo })
-    console.log(req.body);
-    res.send(req.body);
+    ToDo.findByIdAndRemove({ _id: req.body.todo })
+      .then(response => {
+        res.send(req.body);
+      })
   });
 
 router.get('/mock-data', (req, res, send) => {

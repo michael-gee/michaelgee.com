@@ -18,6 +18,12 @@ export default function (state = { items: [], initialLoad: true }, action) {
         items: [ ...state.items, action.payload],
       };
 
+    case DELETE_TODO:
+      return {
+        ...state,
+        items: state.items.filter(item => item._id != action.payload.todo),
+      };
+
     default: return state;
   }
 }
