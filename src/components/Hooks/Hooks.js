@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import Button from '@material-ui/core/Button'
+
 import { useStyles } from './styles'
 
 const HooksComponent = () => {
@@ -24,20 +26,23 @@ const HooksComponent = () => {
         <div className={classes.hooksCount} data-test="counter-count">
           Current Count: {count}
         </div>
-        <button
+        <Button
           className={classes.hooksCounterBtn}
+          color="primary"
+          variant="contained"
           data-test="counter-incrementBtn"
           onClick={() => setCount(count + 1)}
         >
           Increment
-        </button>
-        <button
+        </Button>
+        <Button
           className={classes.hooksCounterBtn}
+          variant="contained"
           data-test="counter-decrementBtn"
           onClick={() => setCount(count - 1)}
         >
           Decrement
-        </button>
+        </Button>
       </div>
     </div>
   )
