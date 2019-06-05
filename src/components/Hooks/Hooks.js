@@ -4,7 +4,6 @@ import './Hooks.css'
 
 const HooksComponent = () => {
   const [count, setCount] = useState(0)
-  const [isMessageShown, showMessage] = useState(false)
 
   // passed count as the second parameter tells this effect only to run if the count variable has changed
   useEffect(() => {
@@ -21,18 +20,13 @@ const HooksComponent = () => {
     <div id="rs-hooks-container">
       <div id="rs-hooks-counter-example">
         <h1>Simple Counter Example (Hooks):</h1>
-        <div>Current Count: {count}</div>
-        <button className="rs-hooks-counter-btn" onClick={() => setCount(count + 1)}>
+        <div data-test="counter-count">Current Count: {count}</div>
+        <button className="rs-hooks-counter-btn" data-test="counter-incrementBtn" onClick={() => setCount(count + 1)}>
           Increment
         </button>
-        <button className="rs-hooks-counter-btn" onClick={() => setCount(count - 1)}>
+        <button className="rs-hooks-counter-btn" data-test="counter-decrementBtn" onClick={() => setCount(count - 1)}>
           Decrement
         </button>
-      </div>
-
-      <div id="rs-hooks-hiddenMessage-example">
-        {isMessageShown && <div>hello world</div>}
-        {!isMessageShown && <button onClick={() => showMessage(true)}>Show Message</button>}
       </div>
     </div>
   )
