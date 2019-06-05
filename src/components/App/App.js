@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Hooks from '../Hooks'
 
-import './App.css'
+import { useStyles } from './styles'
 
-class App extends Component {
-  render() {
-    return (
-      <div id="rs-app-container">
-        <h1>React Sandbox</h1>
+const App = () => {
+  const classes = useStyles()
 
-        <Hooks />
-      </div>
-    )
-  }
+  return (
+    <div id="rs-app-container" className={classes.appContainer}>
+      <h1>React Sandbox</h1>
+
+      <Hooks />
+    </div>
+  )
 }
 
 export default App

@@ -14,7 +14,7 @@ describe('<Hooks />', () => {
   })
 
   it('should renders without error with its expected props', () => {
-    expect(wrapper.find('#rs-hooks-container').length).toEqual(1)
+    expect(wrapper.find('[data-test="rs-hooks-container"]').length).toEqual(1)
   })
 
   it('should set the initial count state to 0', () => {
