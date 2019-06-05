@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 
 import { useStyles } from './styles'
 
-const HooksComponent = () => {
+const CounterComponent = () => {
   const classes = useStyles()
   const [count, setCount] = useState(0)
 
@@ -20,14 +20,14 @@ const HooksComponent = () => {
   // side note: (memory leaks) memory leaks happen when component state updates happen in a component that is unmounted: for example when this.setState is in a callback or after an async method in mount or update which does not complete execution. this will result in the setState being kept in memory and can cause problems in the application.
 
   return (
-    <div data-test="rs-hooks-container">
+    <div data-test="rs-counter-container">
       <div>
         <h2>Simple Counter Example (Hooks):</h2>
-        <div className={classes.hooksCount} data-test="counter-count">
+        <div className={classes.counterCount} data-test="counter-count">
           Current Count: {count}
         </div>
         <Button
-          className={classes.hooksCounterBtn}
+          className={classes.counterBtn}
           color="primary"
           variant="contained"
           data-test="counter-incrementBtn"
@@ -36,7 +36,7 @@ const HooksComponent = () => {
           Increment
         </Button>
         <Button
-          className={classes.hooksCounterBtn}
+          className={classes.counterBtn}
           variant="contained"
           data-test="counter-decrementBtn"
           onClick={() => setCount(count - 1)}
@@ -48,4 +48,4 @@ const HooksComponent = () => {
   )
 }
 
-export default HooksComponent
+export default CounterComponent

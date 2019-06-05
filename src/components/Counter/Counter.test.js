@@ -2,19 +2,19 @@ import React from 'react'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import Hooks from './Hooks'
+import Counter from './Counter'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('<Hooks />', () => {
+describe('<Counter />', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<Hooks />)
+    wrapper = shallow(<Counter />)
   })
 
   it('should renders without error with its expected props', () => {
-    expect(wrapper.find('[data-test="rs-hooks-container"]').length).toEqual(1)
+    expect(wrapper.find('[data-test="rs-counter-container"]').length).toEqual(1)
   })
 
   it('should set the initial count state to 0', () => {

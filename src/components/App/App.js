@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Hooks from '../Hooks'
+import Counter from '../Counter'
 
 import { useStyles } from './styles'
 
@@ -11,7 +11,7 @@ const App = () => {
     <div id="rs-app-container" className={classes.appContainer}>
       <h1>React Sandbox</h1>
 
-      <Hooks />
+      <Counter />
     </div>
   )
 }
