@@ -1,36 +1,39 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
 
 import Button from '@material-ui/core/Button'
 import HomeIcon from '@material-ui/icons/Home'
 
-import Homepage from './Homepage'
-import Counter from './Counter/'
-
 import constants from '../constants'
 
 import { useStyles } from './styles'
+
+const Homepage = lazy(() => import('./Homepage'))
+const Counter = lazy(() => import('./Counter'))
 
 const RouteViewer = props => {
   const classes = useStyles()
 
   return (
     <div className={classes.routeViewerContainer} data-test="rs-routeViewer">
-      {props.location.pathname !== '/' && (
-        <Button
-          onClick={() => _navigateToHomepage(props.history)}
-          color="primary"
-          variant="contained"
-          data-test="rs-routeViewer-navBtn"
-        >
-          <HomeIcon />
-          <span className={classes.backNavButtonText}>Back to Home</span>
-        </Button>
-      )}
+      {/* REPLACE THIS WITH CUSTOM SPINNER COMPONENT */}
+      <Suspense fallback={<div>Loading...</div>}>
+        {props.location.pathname !== '/' && (
+          <Button
+            onClick={() => _navigateToHomepage(props.history)}
+            color="primary"
+            variant="contained"
+            data-test="rs-routeViewer-navBtn"
+          >
+            <HomeIcon />
+            <span className={classes.backNavButtonText}>Back to Home</span>
+          </Button>
+        )}
 
-      <Route exact path={constants.routePaths.homepage} component={Homepage} />
-      <Route exact path={constants.routePaths.counter} component={Counter} />
+        <Route exact path={constants.routePaths.homepage} component={Homepage} />
+        <Route exact path={constants.routePaths.counter} component={Counter} />
+      </Suspense>
     </div>
   )
 }
