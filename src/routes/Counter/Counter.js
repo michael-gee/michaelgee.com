@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 
 import { useStyles } from './styles'
 
-const CounterComponent = () => {
+const CounterComponent = props => {
   const classes = useStyles()
   const [count, setCount] = useState(0)
 
@@ -22,7 +22,7 @@ const CounterComponent = () => {
   // side note: (memory leaks) memory leaks happen when component state updates happen in a component that is unmounted: for example when this.setState is in a callback or after an async method in mount or update which does not complete execution. this will result in the setState being kept in memory and can cause problems in the application.
 
   return (
-    <div data-test="rs-counter-container">
+    <div className={classes.counterContainer} data-test="rs-counter-container">
       <div>
         <h2>Simple Counter Example (Hooks):</h2>
         <div className={classes.counterCount} data-test="counter-count">
@@ -30,7 +30,7 @@ const CounterComponent = () => {
         </div>
         <Button
           className={classes.counterBtn}
-          color="primary"
+          color="secondary"
           variant="contained"
           data-test="counter-incrementBtn"
           onClick={() => setCount(count + 1)}

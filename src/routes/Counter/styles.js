@@ -1,6 +1,13 @@
 import { makeStyles } from '@material-ui/styles'
 
 export const useStyles = makeStyles({
+  counterContainer: {
+    margin: '24px 0',
+    padding: '12px 0',
+    textAlign: 'center',
+    border: '2px solid #3F51B5'
+  },
+
   counterCount: { fontSize: '1.8em', marginBottom: 12 },
 
   counterBtn: {
