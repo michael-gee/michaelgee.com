@@ -1,6 +1,13 @@
 export default {
-  routePaths: {
-    homepage: '/',
-    counter: '/counter'
+  appContainer: 'reactSandboxAppContainer',
+
+  navigation: {
+    events: {
+      navigateTo: 'navigateTo'
+    },
+    routePaths: {
+      homepage: '/',
+      counter: '/counter'
+    }
   }
 }

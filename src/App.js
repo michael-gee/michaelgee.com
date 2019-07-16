@@ -1,5 +1,5 @@
 import React from 'react'
-import { MemoryRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import RouteViewer from './routes/RouteViewer'
 

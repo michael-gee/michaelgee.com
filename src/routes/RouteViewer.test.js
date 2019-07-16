@@ -13,7 +13,7 @@ describe('<RouteViewer />', () => {
 
   beforeEach(() => {
     mockHistory = { replace: jest.fn() }
-    mockLocation = { pathname: constants.routePaths.homepage }
+    mockLocation = { pathname: constants.navigation.routePaths.homepage }
     mockMatch = {}
 
     wrapper = shallow(<RouteViewer history={mockHistory} location={mockLocation} match={mockMatch} />)
@@ -35,7 +35,7 @@ describe('<RouteViewer />', () => {
     it('should render the "Back to Home" button', () => {
       expect(wrapper.find('[data-test="rs-routeViewer-navBtn"]').length).toEqual(0)
 
-      mockLocation = { pathname: constants.routePaths.counter }
+      mockLocation = { pathname: constants.navigation.routePaths.counter }
       // current location route set to the counter route
       wrapper.setProps({ location: mockLocation })
 
@@ -45,14 +45,14 @@ describe('<RouteViewer />', () => {
     it('should navigate user back to the homepage when the "Back to Home" button is clicked', () => {
       expect(mockHistory.replace).not.toHaveBeenCalled()
 
-      mockLocation = { pathname: constants.routePaths.counter }
+      mockLocation = { pathname: constants.navigation.routePaths.counter }
       // current location route set to the counter route
       wrapper.setProps({ location: mockLocation })
 
       const NavButton = wrapper.find('[data-test="rs-routeViewer-navBtn"]')
       NavButton.props().onClick()
 
-      expect(mockHistory.replace).toHaveBeenCalledWith(constants.routePaths.homepage)
+      expect(mockHistory.replace).toHaveBeenCalledWith(constants.navigation.routePaths.homepage)
     })
   })
 })
