@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import RouteViewer from './routes/RouteViewer'
+import RouteViewer from './navigation/RouteViewer'
 
 import { useStyles } from './appStyles'
 

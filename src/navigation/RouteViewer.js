@@ -10,8 +10,8 @@ import constants from '../constants'
 
 import { useStyles } from './styles'
 
-const Homepage = lazy(() => import('./Homepage'))
-const Counter = lazy(() => import('./Counter'))
+const Homepage = lazy(() => import('../routes/Homepage'))
+const Counter = lazy(() => import('../routes/Counter'))
 
 const RouteViewer = props => {
   const appContainer = useRef(document.getElementById(constants.appContainer))
@@ -50,7 +50,7 @@ const RouteViewer = props => {
         )}
 
         <Route exact path={constants.navigation.routePaths.homepage} component={Homepage} />
-        <Route exact path={constants.navigation.routePaths.counter} component={Counter} />
+        <Route path={constants.navigation.routePaths.counter} component={Counter} />
       </Suspense>
     </div>
   )
