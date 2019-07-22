@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 
 import RouteViewer from './RouteViewer'
 
+import * as navigation from '../utils/navigationUtils'
 import constants from '../constants'
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -12,9 +13,11 @@ describe('<RouteViewer />', () => {
   let wrapper, mockHistory, mockLocation, mockMatch
 
   beforeEach(() => {
-    mockHistory = { replace: jest.fn() }
+    mockHistory = {}
     mockLocation = { pathname: constants.navigation.routePaths.homepage }
     mockMatch = {}
+
+    navigation.triggerNavigationChange = jest.fn()
 
     wrapper = shallow(<RouteViewer history={mockHistory} location={mockLocation} match={mockMatch} />)
   })
@@ -43,7 +46,7 @@ describe('<RouteViewer />', () => {
     })
 
     it('should navigate user back to the homepage when the "Back to Home" button is clicked', () => {
-      expect(mockHistory.replace).not.toHaveBeenCalled()
+      expect(navigation.triggerNavigationChange).not.toHaveBeenCalled()
 
       mockLocation = { pathname: constants.navigation.routePaths.counter }
       // current location route set to the counter route
@@ -52,7 +55,7 @@ describe('<RouteViewer />', () => {
       const NavButton = wrapper.find('[data-test="rs-routeViewer-navBtn"]')
       NavButton.props().onClick()
 
-      expect(mockHistory.replace).toHaveBeenCalledWith(constants.navigation.routePaths.homepage)
+      expect(navigation.triggerNavigationChange).toHaveBeenCalledWith(constants.navigation.routePaths.homepage)
     })
   })
 })

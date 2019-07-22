@@ -5,13 +5,13 @@ import { Route } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import HomeIcon from '@material-ui/icons/Home'
 
-import { triggerNavigationChange } from '../utils/navigationUtils'
+import Loading from '../components/Loading'
+
+import routes from './routes'
 import constants from '../constants'
+import { triggerNavigationChange } from '../utils/navigationUtils'
 
 import { useStyles } from './styles'
-
-const Homepage = lazy(() => import('../routes/Homepage'))
-const Counter = lazy(() => import('../routes/Counter'))
 
 const RouteViewer = props => {
   const appContainer = useRef(document.getElementById(constants.appContainer))
@@ -36,7 +36,7 @@ const RouteViewer = props => {
   return (
     <div className={classes.routeViewerContainer} data-test="rs-routeViewer">
       {/* REPLACE THIS WITH CUSTOM SPINNER COMPONENT */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         {props.location.pathname !== '/' && (
           <Button
             onClick={() => triggerNavigationChange(constants.navigation.routePaths.homepage)}
@@ -49,8 +49,8 @@ const RouteViewer = props => {
           </Button>
         )}
 
-        <Route exact path={constants.navigation.routePaths.homepage} component={Homepage} />
-        <Route path={constants.navigation.routePaths.counter} component={Counter} />
+        <Route exact path={constants.navigation.routePaths.homepage} component={routes.Homepage} />
+        <Route path={constants.navigation.routePaths.counter} component={routes.Counter} />
       </Suspense>
     </div>
   )
