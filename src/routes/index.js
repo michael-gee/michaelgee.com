@@ -7,8 +7,8 @@
 //   Counter: lazy(() => import('../routes/Counter'))
 // }
 
-import Homepage from '../routes/Homepage'
-import Counter from '../routes/Counter'
+import Homepage from './Homepage'
+import Counter from './Counter'
 
 export default {
   Homepage,
