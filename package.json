@@ -5,11 +5,13 @@
   "dependencies": {
     "@material-ui/core": "^4.0.2",
     "@material-ui/icons": "^4.0.1",
+    "namor": "^1.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "react-table": "^7.0.0-alpha.8"
   },
   "scripts": {
     "start": "react-scripts start",

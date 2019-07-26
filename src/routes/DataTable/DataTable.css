@@ -1,0 +1,11 @@
+#rs-dataTable {
+  display: block;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+  overflow: scroll;
+}
+
+#rs-dataTable-header-container {
+  display: flex;
+  padding: 12px 0;
+}
