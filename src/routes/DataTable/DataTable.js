@@ -4,12 +4,10 @@ import { useTable, useSortBy } from 'react-table'
 
 import { Icon } from 'office-ui-fabric-react'
 
-import makeData from './makeData'
-
 import './DataTable.css'
 
 const DataTable = props => {
-  const data = useMemo(() => makeData(100))
+  const { data } = props
   const columns = _generateTableColumns(props.columns)
 
   const instance = useTable(
@@ -29,25 +27,12 @@ const DataTable = props => {
           <thead id="rs-dataTable-header-container" {...headerGroup.getHeaderGroupProps()}>
             <tr>
               {headerGroup.headers.map(column => {
-                console.log(column)
                 return (
                   <th className="rs-dataTable-header" {...column.getHeaderProps(column.getSortByToggleProps())}>
                     <div className="rs-dataTable-header-content">
                       {column.render('Header')}
                       {/* <div>{column.canFilter ? column.render('Filter') : null}</div> */}
-                      <span>
-                        {column.canSortBy ? (
-                          column.sorted ? (
-                            column.sortedDesc ? (
-                              <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
-                            ) : (
-                              <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
-                            )
-                          ) : (
-                            <Icon iconName="Sort" className="rs-dataTable-header-icon" />
-                          )
-                        ) : null}
-                      </span>
+                      <span>{_renderSortIcon(column)}</span>
                     </div>
                   </th>
                 )
@@ -71,6 +56,22 @@ const DataTable = props => {
       </tbody>
     </table>
   )
+}
+
+function _renderSortIcon(column) {
+  if (column.canSortBy) {
+    return column.sorted ? (
+      column.sortedDesc ? (
+        <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
+      ) : (
+        <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
+      )
+    ) : (
+      <Icon iconName="Sort" className="rs-dataTable-header-icon" />
+    )
+  } else {
+    return null
+  }
 }
 
 function _generateTableColumns(columns) {

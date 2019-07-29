@@ -9,6 +9,7 @@ import DataTable from './routes/DataTable'
 import { useStyles } from './appStyles'
 
 import columns from './routes/DataTable/static'
+import makeData from './routes/DataTable/makeData'
 
 initializeIcons()
 
@@ -23,7 +24,7 @@ export const App = () => {
         <Route path="/" component={RouteViewer} />
       </Router> */}
 
-      <DataTable columns={columns} />
+      <DataTable columns={columns} data={makeData(10)} />
     </div>
   )
 }
