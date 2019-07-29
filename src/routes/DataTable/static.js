@@ -3,7 +3,8 @@ import React from 'react'
 export default [
   {
     Header: 'First Name',
-    accessor: 'firstName'
+    accessor: 'firstName',
+    filter: 'text'
     // Filter: header => {
     //   return (
     //     <input
@@ -17,38 +18,23 @@ export default [
   {
     Header: 'Last Name',
     id: 'lastName',
+    filter: 'text',
     accessor: d => d.lastName
   },
   {
     Header: 'Age',
-    accessor: 'age'
+    accessor: 'age',
+    canFilter: false
   },
   {
     Header: 'Visits',
-    accessor: 'visits'
-  },
-  {
-    Header: 'Profile Progress',
-    accessor: 'progress',
-    aggregate: 'average',
-    canSortBy: false,
-    Cell: row => (
-      <div
-        style={{
-          width: `${row.value}%`,
-          minWidth: '5px',
-          height: '20px',
-          backgroundColor: `hsla(${row.value}, 100%, 45%, 1)`,
-          borderRadius: '2px',
-          transition: 'all .4s ease'
-        }}
-      />
-    )
+    accessor: 'visits',
+    canFilter: false
   },
   {
     Header: 'Status',
     accessor: 'status',
-    canSortBy: false,
+    canFilter: false,
     Cell: row => (
       <span>
         <span

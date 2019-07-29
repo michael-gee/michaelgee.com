@@ -1,38 +1,79 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
-import { useTable, useSortBy } from 'react-table'
+import { useTable, useTableState, useSortBy, useFilters, usePagination } from 'react-table'
 
-import { Icon } from 'office-ui-fabric-react'
+import { Icon, SearchBox } from 'office-ui-fabric-react'
 
 import './DataTable.css'
 
 const DataTable = props => {
   const { data } = props
   const columns = _generateTableColumns(props.columns)
+  const initialState = useTableState({ pageSize: 10, pageIndex: 1 })
+
+  const filterTypes = React.useMemo(
+    () => ({
+      text: (rows, id, filterValue) => {
+        return rows.filter(row => {
+          const rowValue = row.values[id]
+          return rowValue !== undefined
+            ? String(rowValue)
+                .toLowerCase()
+                .startsWith(String(filterValue).toLowerCase())
+            : true
+        })
+      }
+    }),
+    []
+  )
+
+  const defaultColumn = React.useMemo(
+    () => ({
+      Filter: DefaultColumnFilter
+    }),
+    []
+  )
 
   const instance = useTable(
     {
       data,
-      columns
+      columns,
+      state: initialState,
+      defaultColumn,
+      filterTypes
     },
-    useSortBy
+    useSortBy,
+    useFilters,
+    usePagination
   )
+
+  console.log(instance)
 
   const { getTableProps, headerGroups, rows, prepareRow } = instance
 
   return (
-    <table id="rs-dataTable" {...getTableProps()}>
+    <table {...getTableProps()} id="rs-dataTable">
       {headerGroups.map(headerGroup => {
         return (
-          <thead id="rs-dataTable-header-container" {...headerGroup.getHeaderGroupProps()}>
+          <thead {...headerGroup.getHeaderGroupProps()} id="rs-dataTable-header-container">
             <tr>
               {headerGroup.headers.map(column => {
                 return (
-                  <th className="rs-dataTable-header" {...column.getHeaderProps(column.getSortByToggleProps())}>
-                    <div className="rs-dataTable-header-content">
+                  <th className="rs-dataTable-header" key={column.id}>
+                    <div
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                      className="rs-dataTable-header-content"
+                    >
                       {column.render('Header')}
-                      {/* <div>{column.canFilter ? column.render('Filter') : null}</div> */}
                       <span>{_renderSortIcon(column)}</span>
+                    </div>
+
+                    <div className="rs-dataTable-filter">
+                      {column.canFilter ? (
+                        column.render('Filter')
+                      ) : (
+                        <SearchBox iconProps={{ iconName: 'Filter' }} disabled={true} />
+                      )}
                     </div>
                   </th>
                 )
@@ -72,6 +113,16 @@ function _renderSortIcon(column) {
   } else {
     return null
   }
+}
+
+// Define a default UI for filtering
+function DefaultColumnFilter({ filterValue, setFilter }) {
+  return (
+    <SearchBox
+      iconProps={{ iconName: 'Filter' }}
+      onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely}
+    />
+  )
 }
 
 function _generateTableColumns(columns) {

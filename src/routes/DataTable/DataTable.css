@@ -20,7 +20,7 @@
   padding: 20px 8px 4px;
 }
 
-#rs-dataTable-header-container th:hover .rs-dataTable-header-icon {
+#rs-dataTable-header-container .rs-dataTable-header-content:hover .rs-dataTable-header-icon {
   color: #000;
 }
 
@@ -41,10 +41,17 @@
   background-color: #F5F5F5;
 }
 
-
 #rs-dataTable-body tr td {
   padding: 8px;
   padding-left: 10px;
   font-size: 13px;
   line-height: 1.42857143;
+}
+
+.rs-dataTable-filter {
+  padding: 8px 0;
+}
+.rs-dataTable-filter input {
+  font-size: 13px;
+  width: 100%;
 }

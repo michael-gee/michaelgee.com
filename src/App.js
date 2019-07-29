@@ -24,7 +24,7 @@ export const App = () => {
         <Route path="/" component={RouteViewer} />
       </Router> */}
 
-      <DataTable columns={columns} data={makeData(10)} />
+      <DataTable columns={columns} data={makeData(100)} />
     </div>
   )
 }
