@@ -6,8 +6,7 @@ export const useStyles = makeStyles({
       padding: '0',
       margin: '0',
       fontSize: '62.5%',
-      fontFamily: 'Roboto, Arial, Helvetica, sans-serif',
-      backgroundColor: '#F5F5F5'
+      fontFamily: 'Roboto, Arial, Helvetica, sans-serif'
     },
 
     h1: { fontSize: '3.2em' },
