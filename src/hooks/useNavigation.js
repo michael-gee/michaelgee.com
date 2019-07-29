@@ -11,7 +11,7 @@ const useNavigation = () => {
     document.getElementById(constants.appContainer).dispatchEvent(event)
   }
 
-  return useMemo(() => ({ navigateTo }))
+  return useMemo(() => ({ navigateTo }), [])
 }
 
 export default useNavigation

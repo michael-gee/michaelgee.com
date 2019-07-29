@@ -26,10 +26,9 @@ const DataTable = props => {
     }),
     []
   )
-
   const defaultColumn = React.useMemo(
     () => ({
-      Filter: DefaultColumnFilter
+      Filter: _renderDefaultFilter
     }),
     []
   )
@@ -49,7 +48,7 @@ const DataTable = props => {
 
   console.log(instance)
 
-  const { getTableProps, headerGroups, rows, prepareRow } = instance
+  const { getTableProps, headerGroups, page, prepareRow } = instance
 
   return (
     <table {...getTableProps()} id="rs-dataTable">
@@ -84,11 +83,11 @@ const DataTable = props => {
       })}
 
       <tbody id="rs-dataTable-body">
-        {rows.map(
-          (row, i) =>
-            prepareRow(row) || (
-              <tr {...row.getRowProps()}>
-                {row.cells.map(cell => {
+        {page.map(
+          (item, i) =>
+            prepareRow(item) || (
+              <tr key={item.original.id}>
+                {item.cells.map(cell => {
                   return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                 })}
               </tr>
@@ -115,8 +114,7 @@ function _renderSortIcon(column) {
   }
 }
 
-// Define a default UI for filtering
-function DefaultColumnFilter({ filterValue, setFilter }) {
+function _renderDefaultFilter({ filterValue, setFilter }) {
   return (
     <SearchBox
       iconProps={{ iconName: 'Filter' }}
@@ -126,7 +124,7 @@ function DefaultColumnFilter({ filterValue, setFilter }) {
 }
 
 function _generateTableColumns(columns) {
-  return useMemo(() => columns)
+  return useMemo(() => columns, [])
 }
 
 DataTable.propTypes = {
