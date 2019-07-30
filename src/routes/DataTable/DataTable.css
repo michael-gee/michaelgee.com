@@ -8,13 +8,12 @@
 }
 
 #rs-dataTable-header-container {
-  font-size: 1.6em;
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
 }
 
 #rs-dataTable-header-container th {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   padding: 20px 8px 4px;
 }
@@ -41,14 +40,14 @@
 }
 
 #rs-dataTable-body tr td {
-  padding: 8px;
-  padding-left: 24px;
-  font-size: 13px;
+  padding: 6px 8px;
+  padding-left: 16px;
+  font-size: 15px;
   line-height: 1.42857143;
 }
 
 .rs-dataTable-filter {
-  padding: 8px 0;
+  padding: 4px 0;
 }
 
 .rs-dataTable-filter .ms-TextField i{
