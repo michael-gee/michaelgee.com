@@ -48,9 +48,21 @@ const DataTable = props => {
     usePagination
   )
 
-  console.log(instance)
-
-  const { getTableProps, headerGroups, rows, page, setPageSize, prepareRow } = instance
+  const {
+    getTableProps,
+    headerGroups,
+    rows,
+    page,
+    setPageSize,
+    canNextPage,
+    canPreviousPage,
+    nextPage,
+    previousPage,
+    pageIndex,
+    pageCount,
+    gotoPage,
+    prepareRow
+  } = instance
 
   return (
     <div>
@@ -99,7 +111,17 @@ const DataTable = props => {
         </tbody>
       </table>
 
-      <Pagination currentItemsCount={rows.length} setPageSize={setPageSize} />
+      <Pagination
+        currentItemsCount={rows.length}
+        setPageSize={setPageSize}
+        canNextPage={canNextPage}
+        canPreviousPage={canPreviousPage}
+        nextPage={nextPage}
+        previousPage={previousPage}
+        pageIndex={pageIndex}
+        pageCount={pageCount}
+        gotoPage={gotoPage}
+      />
     </div>
   )
 }
