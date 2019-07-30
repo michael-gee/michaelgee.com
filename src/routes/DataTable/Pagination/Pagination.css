@@ -1,0 +1,15 @@
+#rs-pagination-container {
+  display: flex;
+  width: 100%;
+  padding: 40px 0 40px 8px;
+  font-size: 13px;
+}
+
+#rs-pagination-container div {
+  min-width: 33%;
+}
+
+#rs-pagination-viewItems, #rs-pagination-viewItems .ms-Pivot {
+  display: flex;
+  justify-content: flex-end;
+}

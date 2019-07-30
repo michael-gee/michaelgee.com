@@ -2,7 +2,9 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { useTable, useTableState, useSortBy, useFilters, usePagination } from 'react-table'
 
-import { Icon, SearchBox } from 'office-ui-fabric-react'
+import { Icon, TextField } from 'office-ui-fabric-react'
+
+import Pagination from './Pagination'
 
 import './DataTable.css'
 
@@ -48,53 +50,57 @@ const DataTable = props => {
 
   console.log(instance)
 
-  const { getTableProps, headerGroups, page, prepareRow } = instance
+  const { getTableProps, headerGroups, rows, page, setPageSize, prepareRow } = instance
 
   return (
-    <table {...getTableProps()} id="rs-dataTable">
-      {headerGroups.map(headerGroup => {
-        return (
-          <thead {...headerGroup.getHeaderGroupProps()} id="rs-dataTable-header-container">
-            <tr>
-              {headerGroup.headers.map(column => {
-                return (
-                  <th className="rs-dataTable-header" key={column.id}>
-                    <div
-                      {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className="rs-dataTable-header-content"
-                    >
-                      {column.render('Header')}
-                      <span>{_renderSortIcon(column)}</span>
-                    </div>
+    <div>
+      <table {...getTableProps()} id="rs-dataTable">
+        {headerGroups.map(headerGroup => {
+          return (
+            <thead {...headerGroup.getHeaderGroupProps()} id="rs-dataTable-header-container">
+              <tr>
+                {headerGroup.headers.map(column => {
+                  return (
+                    <th className="rs-dataTable-header" key={column.id}>
+                      <div
+                        {...column.getHeaderProps(column.getSortByToggleProps())}
+                        className="rs-dataTable-header-content"
+                      >
+                        {column.render('Header')}
+                        <span>{_renderSortIcon(column)}</span>
+                      </div>
 
-                    <div className="rs-dataTable-filter">
-                      {column.canFilter ? (
-                        column.render('Filter')
-                      ) : (
-                        <SearchBox iconProps={{ iconName: 'Filter' }} disabled={true} />
-                      )}
-                    </div>
-                  </th>
-                )
-              })}
-            </tr>
-          </thead>
-        )
-      })}
-
-      <tbody id="rs-dataTable-body">
-        {page.map(
-          (item, i) =>
-            prepareRow(item) || (
-              <tr key={item.original.id}>
-                {item.cells.map(cell => {
-                  return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                      <div className="rs-dataTable-filter">
+                        {column.canFilter ? (
+                          column.render('Filter')
+                        ) : (
+                          <TextField iconProps={{ iconName: 'Filter' }} disabled={true} />
+                        )}
+                      </div>
+                    </th>
+                  )
                 })}
               </tr>
-            )
-        )}
-      </tbody>
-    </table>
+            </thead>
+          )
+        })}
+
+        <tbody id="rs-dataTable-body">
+          {page.map(
+            (item, i) =>
+              prepareRow(item) || (
+                <tr key={item.original.id}>
+                  {item.cells.map(cell => {
+                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  })}
+                </tr>
+              )
+          )}
+        </tbody>
+      </table>
+
+      <Pagination currentItemsCount={rows.length} setPageSize={setPageSize} />
+    </div>
   )
 }
 
@@ -116,7 +122,7 @@ function _renderSortIcon(column) {
 
 function _renderDefaultFilter({ filterValue, setFilter }) {
   return (
-    <SearchBox
+    <TextField
       iconProps={{ iconName: 'Filter' }}
       onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely}
     />
