@@ -23,18 +23,18 @@ export default [
   },
   {
     Header: 'Age',
-    accessor: 'age',
-    canFilter: false
+    accessor: 'age'
+    // canFilter: false
   },
   {
     Header: 'Visits',
-    accessor: 'visits',
-    canFilter: false
+    accessor: 'visits'
+    // canFilter: false
   },
   {
     Header: 'Status',
     accessor: 'status',
-    canFilter: false,
+    // canFilter: false,
     Cell: row => (
       <span>
         <span
