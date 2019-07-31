@@ -10,10 +10,10 @@ import './DataTable.css'
 
 const DataTable = props => {
   const { data } = props
-  const columns = _generateTableColumns(props.columns)
+  const columns = useMemo(() => props.columns, [])
   const initialState = useTableState({ pageSize: 10, pageIndex: 1 })
 
-  const filterTypes = React.useMemo(
+  const filterTypes = useMemo(
     () => ({
       text: (rows, id, filterValue) => {
         return rows.filter(row => {
@@ -28,7 +28,7 @@ const DataTable = props => {
     }),
     []
   )
-  const defaultColumn = React.useMemo(
+  const defaultColumn = useMemo(
     () => ({
       Filter: _renderDefaultFilter
     }),
@@ -149,10 +149,6 @@ function _renderDefaultFilter({ filterValue, setFilter }) {
       onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely}
     />
   )
-}
-
-function _generateTableColumns(columns) {
-  return useMemo(() => columns, [])
 }
 
 DataTable.propTypes = {
