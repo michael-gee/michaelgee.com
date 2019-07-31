@@ -12,7 +12,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
-    "react-table": "^7.0.0-alpha.12",
+    "react-table": "^7.0.0-alpha.16",
     "uuid": "^3.3.2"
   },
   "scripts": {

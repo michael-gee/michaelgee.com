@@ -43,8 +43,8 @@ const DataTable = props => {
       defaultColumn,
       filterTypes
     },
-    useSortBy,
     useFilters,
+    useSortBy,
     usePagination
   )
 
@@ -127,7 +127,7 @@ const DataTable = props => {
 }
 
 function _renderSortIcon(column) {
-  if (column.canSortBy) {
+  if (column.canSort) {
     return column.sorted ? (
       column.sortedDesc ? (
         <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
