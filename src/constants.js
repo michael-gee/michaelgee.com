@@ -7,7 +7,8 @@ export default {
     },
     routePaths: {
       homepage: '/',
-      counter: '/counter'
+      counter: '/counter',
+      dataTable: '/react-table-PoC'
     }
   }
 }

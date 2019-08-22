@@ -4,8 +4,6 @@ import { Route } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import HomeIcon from '@material-ui/icons/Home'
 
-// import Loading from '../components/Loading'
-
 import routes from '../routes'
 import constants from '../constants'
 import useNavigation from '../hooks/useNavigation'
@@ -34,8 +32,6 @@ const RouteViewer = props => {
 
   return (
     <div className={classes.routeViewerContainer} data-test="rs-routeViewer">
-      {/* Implement Suspense/code splitting when react API is more declared and ready */}
-      {/* <Suspense fallback={<Loading />}> */}
       {props.location.pathname !== '/' && (
         <Button
           onClick={() => navigateTo(constants.navigation.routePaths.homepage)}
@@ -48,9 +44,12 @@ const RouteViewer = props => {
         </Button>
       )}
 
-      <Route exact path={constants.navigation.routePaths.homepage} component={routes.Homepage} />
-      <Route path={constants.navigation.routePaths.counter} component={routes.Counter} />
-      {/* </Suspense> */}
+      {routes &&
+        routes.length > 0 &&
+        routes.map(route => {
+          const { exact, path, component } = route
+          return <Route exact={exact || false} path={path} component={component} />
+        })}
     </div>
   )
 }
