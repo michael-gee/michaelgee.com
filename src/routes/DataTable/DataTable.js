@@ -10,7 +10,7 @@ import './DataTable.css'
 
 const DataTable = props => {
   const { data } = props
-  const columns = useMemo(() => props.columns, [])
+  const columns = useMemo(() => props.columns, [props.columns])
   const initialState = useTableState({ pageSize: 10, pageIndex: 1 })
 
   const filterTypes = useMemo(
