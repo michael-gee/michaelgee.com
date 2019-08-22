@@ -15,6 +15,7 @@ const Homepage = props => {
       <Button id="nav-btn" onClick={() => navigateTo(constants.navigation.routePaths.counter)}>
         Navigate to Counter
       </Button>
+      <Button onClick={() => navigateTo(constants.navigation.routePaths.dataTable)}>Navigate to Data Table</Button>
     </div>
   )
 }
