@@ -22,11 +22,13 @@ const RouteViewer = props => {
       props.history.push(path, args.detail)
     }
 
-    appContainer.current.addEventListener(constants.navigation.events.navigateTo, onNavigateTo, false)
+    appContainer.current &&
+      appContainer.current.addEventListener(constants.navigation.events.navigateTo, onNavigateTo, false)
     console.log('onNavigateTo was registered')
 
     return function cleanup() {
-      appContainer.current.removeEventListener(constants.navigation.events.navigateTo, onNavigateTo, false)
+      appContainer.current &&
+        appContainer.current.removeEventListener(constants.navigation.events.navigateTo, onNavigateTo, false)
     }
   }, [])
 

@@ -1,19 +1,9 @@
 import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-
+import { render } from '@testing-library/react'
 import App from './App'
 
-Enzyme.configure({ adapter: new Adapter() })
+it('renders welcome message', () => {
+  const { getByText } = render(<App />)
 
-describe('<App />', () => {
-  let wrapper
-
-  beforeEach(() => {
-    wrapper = shallow(<App />)
-  })
-
-  it('should renders without error with its expected props', () => {
-    expect(wrapper.find('#rs-app-container').length).toEqual(1)
-  })
+  expect(getByText('React Sandbox')).toBeInTheDocument()
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Pivot, PivotItem, PivotLinkFormat } from 'office-ui-fabric-react/lib/Pivot'
+import { Pivot, PivotItem, PivotLinkFormat } from 'office-ui-fabric-react'
 
 import './Pagination.css'
 
