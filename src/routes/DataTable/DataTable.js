@@ -101,7 +101,7 @@ const DataTable = props => {
           {page.map(
             (item, i) =>
               prepareRow(item) || (
-                <tr key={item.original.id}>
+                <tr key={i}>
                   {item.cells.map(cell => {
                     return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                   })}
