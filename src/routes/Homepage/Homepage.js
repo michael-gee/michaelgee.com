@@ -9,7 +9,7 @@ const Homepage = props => {
   const { navigateTo } = useNavigation()
 
   return (
-    <div data-testid="rs-homepage">
+    <div data-testid="rs-homepage-container">
       <h1>Homepage</h1>
 
       <Button

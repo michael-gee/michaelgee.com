@@ -25,7 +25,7 @@ describe('<Homepage />', () => {
   it('should render without error', () => {
     const { getByTestId } = wrapper
 
-    expect(getByTestId('rs-homepage')).toBeTruthy()
+    expect(getByTestId('rs-homepage-container')).toBeTruthy()
   })
 
   it('should trigger a navigation when the "Navigate to Counter" button is clicked', () => {
