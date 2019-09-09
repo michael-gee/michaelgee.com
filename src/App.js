@@ -13,7 +13,7 @@ export const App = () => {
   const classes = useStyles()
 
   return (
-    <div id="rs-app-container" className={classes.appContainer}>
+    <div id="rs-app-container" className={classes.appContainer} data-test="rs-app-container">
       <h1 className={classes.appTitle}>React Sandbox</h1>
 
       <Router>

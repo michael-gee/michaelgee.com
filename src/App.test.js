@@ -2,8 +2,8 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import App from './App'
 
-it('renders welcome message', () => {
-  const { getByText } = render(<App />)
+it('should render without error', () => {
+  const { container } = render(<App />)
 
-  expect(getByText('React Sandbox')).toBeInTheDocument()
+  expect(container.querySelector('#rs-app-container')).toBeTruthy()
 })
