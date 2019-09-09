@@ -9,13 +9,21 @@ const Homepage = props => {
   const { navigateTo } = useNavigation()
 
   return (
-    <div data-test="rs-homepage">
+    <div data-testid="rs-homepage">
       <h1>Homepage</h1>
 
-      <Button id="nav-btn" onClick={() => navigateTo(constants.navigation.routePaths.counter)}>
+      <Button
+        onClick={() => navigateTo(constants.navigation.routePaths.counter)}
+        data-testid="rs-homepage-counter-navBtn"
+      >
         Navigate to Counter
       </Button>
-      <Button onClick={() => navigateTo(constants.navigation.routePaths.dataTable)}>Navigate to Data Table</Button>
+      <Button
+        onClick={() => navigateTo(constants.navigation.routePaths.dataTable)}
+        data-testid="rs-homepage-dataTable-navBtn"
+      >
+        Navigate to Data Table
+      </Button>
     </div>
   )
 }

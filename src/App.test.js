@@ -1,9 +1,18 @@
 import React from 'react'
 import { render } from '@testing-library/react'
+
 import App from './App'
 
-it('should render without error', () => {
-  const { container } = render(<App />)
+describe('<App />', () => {
+  let wrapper
 
-  expect(container.querySelector('#rs-app-container')).toBeTruthy()
+  beforeEach(() => {
+    wrapper = render(<App />)
+  })
+
+  it('should render without error', () => {
+    const { container } = wrapper
+
+    expect(container.querySelector('#rs-app-container')).toBeTruthy()
+  })
 })
