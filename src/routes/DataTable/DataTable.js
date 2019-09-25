@@ -124,32 +124,32 @@ const DataTable = props => {
       />
     </div>
   )
-}
 
-function _renderSortIcon(column) {
-  if (column.canSort) {
-    return column.isSorted ? (
-      column.isSortedDesc ? (
-        <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
+  function _renderSortIcon(column) {
+    if (column.canSort) {
+      return column.isSorted ? (
+        column.isSortedDesc ? (
+          <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
+        ) : (
+          <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
+        )
       ) : (
-        <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
+        <Icon iconName="Sort" className="rs-dataTable-header-icon" />
       )
-    ) : (
-      <Icon iconName="Sort" className="rs-dataTable-header-icon" />
-    )
-  } else {
-    return null
+    } else {
+      return null
+    }
   }
-}
 
-function _renderDefaultFilter({ column: { filterValue, setFilter } }) {
-  return (
-    <TextField
-      value={filterValue || ''}
-      onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely
-      iconProps={{ iconName: 'Filter' }}
-    />
-  )
+  function _renderDefaultFilter({ column: { filterValue, setFilter } }) {
+    return (
+      <TextField
+        value={filterValue || ''}
+        onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely
+        iconProps={{ iconName: 'Filter' }}
+      />
+    )
+  }
 }
 
 DataTable.propTypes = {
