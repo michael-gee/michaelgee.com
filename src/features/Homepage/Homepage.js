@@ -24,6 +24,12 @@ const Homepage = props => {
       >
         Navigate to Data Table
       </Button>
+      <Button
+        onClick={() => navigateTo(constants.navigation.routePaths.treeList)}
+        data-testid="rs-homepage-treeList-navBtn"
+      >
+        Navigate to Tree List
+      </Button>
     </div>
   )
 }

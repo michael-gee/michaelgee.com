@@ -10,6 +10,7 @@ import React from 'react'
 
 import Homepage from './Homepage'
 import Counter from './Counter'
+import TreeList from './TreeList'
 
 import DataTable from './DataTable'
 import columns from './DataTable/static'
@@ -23,5 +24,6 @@ export default [
   {
     path: constants.navigation.routePaths.dataTable,
     component: () => <DataTable columns={columns} data={makeData(100)} />
-  }
+  },
+  { path: constants.navigation.routePaths.treeList, component: TreeList }
 ]

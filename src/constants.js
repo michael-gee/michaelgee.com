@@ -7,8 +7,9 @@ export default {
     },
     routePaths: {
       homepage: '/',
-      counter: '/counter',
-      dataTable: '/react-table'
+      counter: '/hooks-counter',
+      dataTable: '/react-table',
+      treeList: '/tree-list'
     }
   }
 }
