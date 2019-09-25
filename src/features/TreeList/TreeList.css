@@ -1,0 +1,12 @@
+#rs-treeList-container {
+  font-size: 1.8em;
+}
+
+.rs-treeList-list {
+  list-style-type: none;
+}
+
+.rs-treeList-item {
+  display: flex;
+  align-items: center;
+}

@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import HomeIcon from '@material-ui/icons/Home'
 
-import routes from '../routes'
+import routes from '../features'
 import constants from '../constants'
 import useNavigation from '../hooks/useNavigation'
 
