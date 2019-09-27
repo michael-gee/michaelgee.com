@@ -29,7 +29,7 @@ const FeatureItem = props => {
         subheader="September 14, 2016"
       />
 
-      <img src={reactSVG} alt="React JS Logo" />
+      <img src={reactSVG} alt="React JS Logo" className={classes.cardImage} />
 
       <CardActions>
         <IconButton

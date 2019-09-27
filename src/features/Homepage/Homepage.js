@@ -17,6 +17,10 @@ const Homepage = props => {
       <FeatureItem />
       <FeatureItem />
 
+      <FeatureItem />
+      <FeatureItem />
+      <FeatureItem />
+
       {/* <h1>Homepage</h1>
 
       <Button
