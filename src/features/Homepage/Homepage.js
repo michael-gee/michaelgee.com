@@ -1,16 +1,23 @@
 import React from 'react'
 
-import Button from '@material-ui/core/Button'
+import FeatureItem from './FeatureItem'
 
 import useNavigation from '../../hooks/useNavigation'
 import constants from '../../constants'
 
+import { useStyles } from './styles'
+
 const Homepage = props => {
+  const classes = useStyles()
   const { navigateTo } = useNavigation()
 
   return (
-    <div data-testid="rs-homepage-container">
-      <h1>Homepage</h1>
+    <div className={classes.homepageContainer} data-testid="rs-homepage-container">
+      <FeatureItem />
+      <FeatureItem />
+      <FeatureItem />
+
+      {/* <h1>Homepage</h1>
 
       <Button
         onClick={() => navigateTo(constants.navigation.routePaths.counter)}
@@ -23,13 +30,14 @@ const Homepage = props => {
         data-testid="rs-homepage-dataTable-navBtn"
       >
         Navigate to Data Table
-      </Button>
-      <Button
+      </Button> */}
+
+      {/* <Button
         onClick={() => navigateTo(constants.navigation.routePaths.treeList)}
         data-testid="rs-homepage-treeList-navBtn"
       >
         Navigate to Tree List
-      </Button>
+      </Button> */}
     </div>
   )
 }

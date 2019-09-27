@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Icon } from 'office-ui-fabric-react'
+import { IconButton } from 'office-ui-fabric-react'
 
 import staticData from './static'
 
@@ -8,7 +8,7 @@ import './TreeList.css'
 
 const TreeList = props => {
   const { data } = staticData
-  const [treeData, setTreeData] = useState([data[0]])
+  const [treeData, setTreeData] = useState([data[0].organizationalUnits])
 
   return <div id="rs-treeList-container">{_renderTreeList()}</div>
 
@@ -17,15 +17,19 @@ const TreeList = props => {
       return <div>No data was found</div>
     }
 
-    if (treeData.length === 1) {
+    return treeData.map((treeItem, index) => {
       return (
-        <ul className="rs-treeList-list">
-          {treeData[0].organizationalUnits.map(item => {
+        <ul className="rs-treeList-list" key={`treeList-${index}`}>
+          {treeItem.organizationalUnits.map(item => {
+            console.log(item)
+
             return (
-              <li className="rs-treeList-item">
-                <Icon
+              <li className="rs-treeList-item" key={item.id}>
+                <IconButton
                   className="rs-treeList-item-icon"
-                  iconName={item.isOpen ? 'OpenFolderHorizontal' : 'FolderHorizontal'}
+                  iconProps={{ iconName: item.isOpen ? 'OpenFolderHorizontal' : 'FolderHorizontal' }}
+                  disabled={!item.hasChild && !item.userFilterEnabled}
+                  onClick={() => _configureTreeData(index, item)}
                 />
                 <span className="rs-treeList-item-text">{item.name}</span>
               </li>
@@ -33,7 +37,18 @@ const TreeList = props => {
           })}
         </ul>
       )
-    }
+    })
+  }
+
+  function _configureTreeData(currentListIndex, item) {
+    const currentItemIndex = treeData[currentListIndex].organizationalUnits.findIndex(
+      treeDataItem => treeDataItem.uid === item.uid
+    )
+    item.isOpen = !item.isOpen
+
+    treeData[currentListIndex].organizationalUnits[currentItemIndex] = item
+
+    setTreeData(treeData)
   }
 }
 

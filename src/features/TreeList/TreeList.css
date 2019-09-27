@@ -10,3 +10,6 @@
   display: flex;
   align-items: center;
 }
+.rs-treeList-item-text {
+  padding-left: 8px;
+}
