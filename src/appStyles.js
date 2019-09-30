@@ -6,7 +6,8 @@ export const useStyles = makeStyles({
       padding: '0',
       margin: '0',
       fontSize: '62.5%',
-      fontFamily: 'Roboto, Arial, Helvetica, sans-serif'
+      fontFamily: 'Roboto, Arial, Helvetica, sans-serif',
+      backgroundColor: '#EDF1F5'
     },
 
     h1: { fontSize: '3.2em' },
@@ -20,5 +21,13 @@ export const useStyles = makeStyles({
   },
 
   appContainer: { padding: '12px 40px', paddingTop: 40 },
-  appTitle: { textAlign: 'center' }
+  appTitle: {
+    textAlign: 'center',
+    color: '#62DAFB',
+    backgroundColor: '#424242',
+    maxWidth: 1176,
+    margin: '0 auto',
+    padding: '10px 0',
+    borderRadius: '3px'
+  }
 })
