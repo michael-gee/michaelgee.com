@@ -13,13 +13,13 @@ const Homepage = props => {
 
   return (
     <div className={classes.homepageContainer} data-testid="rs-homepage-container">
-      <FeatureItem />
-      <FeatureItem />
-      <FeatureItem />
+      <FeatureItem title="React Feature 1" />
+      <FeatureItem title="React Feature 2" />
+      <FeatureItem title="React Feature 3" />
 
-      <FeatureItem />
-      <FeatureItem />
-      <FeatureItem />
+      <FeatureItem title="React Feature 4" />
+      <FeatureItem title="React Feature 5" />
+      <FeatureItem title="React Feature 6" />
 
       {/* <h1>Homepage</h1>
 
