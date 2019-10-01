@@ -17,7 +17,8 @@ export const useStyles = makeStyles({
   },
 
   cardAvatar: {
-    backgroundColor: '#62DAFB'
+    backgroundColor: '#62DAFB',
+    color: '#424242'
   },
 
   cardImage: {
