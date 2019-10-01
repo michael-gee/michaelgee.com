@@ -4,13 +4,12 @@ import Button from '@material-ui/core/Button'
 
 import { useStyles } from './styles'
 
-const CounterComponent = props => {
-  const classes = useStyles()
+const Counter = () => {
   const [count, setCount] = useState(0)
+  const classes = useStyles()
 
   // passed count as the second parameter tells this effect only to run if the count variable has changed
   useEffect(() => {
-    // console.log('count effect')
     document.title = `You clicked ${count} times`
 
     // RETURNing a method within a useEffect is a way of using an effect which will also need clean up (unsubscribing to something when the component unmounts)
@@ -18,8 +17,6 @@ const CounterComponent = props => {
       document.title = 'React Sandbox'
     }
   }, [count])
-
-  // side note: (memory leaks) memory leaks happen when component state updates happen in a component that is unmounted: for example when this.setState is in a callback or after an async method in mount or update which does not complete execution. this will result in the setState being kept in memory and can cause problems in the application.
 
   return (
     <div className={classes.counterContainer} data-testid="rs-counter-container">
@@ -29,7 +26,8 @@ const CounterComponent = props => {
           Current Count: {count}
         </div>
         <Button
-          className={classes.counterBtn}
+          // 1st listed className has preference for styles
+          className={`${classes.incrementBtn} ${classes.counterBtn}`}
           color="secondary"
           variant="contained"
           data-testid="rs-counter-incrementBtn"
@@ -50,4 +48,6 @@ const CounterComponent = props => {
   )
 }
 
-export default CounterComponent
+export default Counter
+
+// side note: (memory leaks) memory leaks happen when component state updates happen in a component that is unmounted: for example when this.setState is in a callback or after an async method in mount or update which does not complete execution. this will result in the setState being kept in memory and can cause problems in the application.

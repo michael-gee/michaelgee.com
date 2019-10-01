@@ -2,16 +2,12 @@ import React from 'react'
 
 import FeatureItem from './FeatureItem'
 
-import dataArr from './static'
+import data from './static'
 
-import { useStyles } from './styles'
-
-const Homepage = props => {
-  const classes = useStyles()
-
+const Homepage = () => {
   return (
-    <div className={classes.homepageContainer} data-testid="rs-homepage-container">
-      {dataArr.map(item => (
+    <div style={{ display: 'flex', flexWrap: 'wrap' }} data-testid="rs-homepage-container">
+      {data.map(item => (
         <FeatureItem
           title={item.title}
           route={item.route}

@@ -2,10 +2,11 @@ import { makeStyles } from '@material-ui/styles'
 
 export const useStyles = makeStyles({
   counterContainer: {
+    color: 'white',
+    backgroundColor: '#424242',
     margin: '24px 0',
-    padding: '12px 0',
-    textAlign: 'center',
-    border: '2px solid #3F51B5'
+    padding: '40px 0',
+    textAlign: 'center'
   },
 
   counterCount: { fontSize: '1.8em', marginBottom: 12 },
@@ -16,5 +17,16 @@ export const useStyles = makeStyles({
 
     '&:last-child': { marginLeft: '10px' },
     '&:hover': { cursor: 'pointer' }
+  },
+
+  incrementBtn: {
+    backgroundColor: '#62DAFB',
+    color: '#424242',
+    transition: '.5',
+
+    '&:hover': {
+      backgroundColor: 'white',
+      color: '#424242'
+    }
   }
 })
