@@ -1,54 +1,62 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { IconButton } from 'office-ui-fabric-react'
 
-import staticData from './static'
+import data from './static'
 
 import './TreeList.css'
 
 const TreeList = props => {
-  const { data } = staticData
-  const [treeData, setTreeData] = useState([data[0].organizationalUnits])
+  const [treeData, setTreeData] = useState([data[0]])
+  const [renderedTreeData, setRenderedTreeData] = useState([])
 
-  return <div id="rs-treeList-container">{_renderTreeList()}</div>
+  useEffect(() => {
+    const flattenedData = flattenTreeData()
+    setRenderedTreeData(flattenedData)
 
-  function _renderTreeList() {
-    if (treeData.length < 1) {
-      return <div>No data was found</div>
+    function flattenTreeData() {
+      const arr = []
+
+      if (treeData.length > 0) {
+        treeData.forEach(item => {
+          if (item.organizationalUnits.length > 0) {
+            item.organizationalUnits.forEach(unit => {
+              arr.push(unit)
+            })
+          }
+        })
+      }
+
+      return arr
     }
+  }, [treeData])
 
-    return treeData.map((treeItem, index) => {
-      return (
-        <ul className="rs-treeList-list" key={`treeList-${index}`}>
-          {treeItem.organizationalUnits.map(item => {
-            console.log(item)
-
+  return (
+    <div id="rs-treeList-container">
+      {treeData.length < 1 ? (
+        <div>No data was found</div>
+      ) : (
+        <ul className="rs-treeList-list">
+          {renderedTreeData.map(item => {
             return (
-              <li className="rs-treeList-item" key={item.id}>
+              <li className="rs-treeList-item" style={{ paddingLeft: (item.depth - 1) * 40 }} key={item.id}>
                 <IconButton
                   className="rs-treeList-item-icon"
                   iconProps={{ iconName: item.isOpen ? 'OpenFolderHorizontal' : 'FolderHorizontal' }}
                   disabled={!item.hasChild && !item.userFilterEnabled}
-                  onClick={() => _configureTreeData(index, item)}
+                  onClick={() => _configureTreeData(item)}
                 />
                 <span className="rs-treeList-item-text">{item.name}</span>
               </li>
             )
           })}
         </ul>
-      )
-    })
-  }
+      )}
+    </div>
+  )
 
-  function _configureTreeData(currentListIndex, item) {
-    const currentItemIndex = treeData[currentListIndex].organizationalUnits.findIndex(
-      treeDataItem => treeDataItem.uid === item.uid
-    )
-    item.isOpen = !item.isOpen
-
-    treeData[currentListIndex].organizationalUnits[currentItemIndex] = item
-
-    setTreeData(treeData)
+  function _configureTreeData(item) {
+    setTreeData([...treeData, data[treeData.length]])
   }
 }
 

@@ -4,6 +4,7 @@ import constants from '../../constants'
 
 export default [
   {
+    // Note: generates new uids on every refresh
     uid: v4(),
     title: 'Simple Hooks Counter',
     route: constants.navigation.routePaths.counter,
