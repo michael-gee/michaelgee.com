@@ -65,7 +65,7 @@ const DataTable = props => {
   } = instance
 
   return (
-    <div>
+    <div id="rs-dataTable-container">
       <table {...getTableProps()} id="rs-dataTable">
         {headerGroups.map(headerGroup => {
           return (
