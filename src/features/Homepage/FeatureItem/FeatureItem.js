@@ -10,26 +10,28 @@ import Collapse from '@material-ui/core/Collapse'
 import IconButton from '@material-ui/core/IconButton'
 import { ArrowForward, CodeOutlined, ExpandMore, ExpandLess } from '@material-ui/icons'
 
+import useNavigation from '../../../hooks/useNavigation'
+
 import reactSVG from './react.svg'
 
 import { useStyles } from './styles'
 
 const FeatureItem = props => {
-  const { title } = props
+  const { title, route, date, description } = props
   const [isExpanded, setIsExpanded] = useState(false)
-
+  const { navigateTo } = useNavigation()
   const classes = useStyles()
 
   return (
     <Card className={classes.cardContainer} style={!isExpanded ? { maxHeight: 220 } : {}}>
       <CardHeader
         avatar={
-          <Avatar style={{ backgroundColor: '#62DAFB' }} aria-label="feature">
+          <Avatar className={classes.cardAvatar} aria-label="feature">
             <CodeOutlined />
           </Avatar>
         }
         title={title}
-        subheader="September 14, 2016"
+        subheader={date}
       />
 
       <img src={reactSVG} alt="React JS Logo" className={classes.cardImage} />
@@ -51,7 +53,7 @@ const FeatureItem = props => {
 
       <Collapse in={isExpanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <p>hello world</p>
+          <p className={classes.cardDesc}>{description}</p>
         </CardContent>
       </Collapse>
     </Card>
@@ -62,12 +64,15 @@ const FeatureItem = props => {
   }
 
   function _handleItemClick() {
-    console.log('item clicked')
+    navigateTo(route)
   }
 }
 
 FeatureItem.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 }
 
 export default FeatureItem

@@ -7,8 +7,8 @@ import staticData from './static'
 import './TreeList.css'
 
 const TreeList = props => {
-  const { data } = staticData
   const [treeData, setTreeData] = useState([data[0].organizationalUnits])
+  const { data } = staticData
 
   return <div id="rs-treeList-container">{_renderTreeList()}</div>
 
