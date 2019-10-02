@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 
 import { Route } from 'react-router-dom'
 
-import routes from '../../features'
+import routes from '../routes'
 import constants from '../../constants'
 
 const RouteViewer = props => {

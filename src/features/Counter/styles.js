@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     textAlign: 'center'
   },
 
-  counterCount: { fontSize: '1.8em', marginBottom: 12 },
+  counterCount: { fontSize: '2em', marginBottom: 12 },
 
   counterBtn: {
     margin: '10px 0',

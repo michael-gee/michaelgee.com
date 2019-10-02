@@ -8,13 +8,13 @@
 // }
 import React from 'react'
 
-import Homepage from './Homepage'
-import Counter from './Counter'
-import TreeList from './TreeList'
+import Homepage from '../features/Homepage'
+import Counter from '../features/Counter'
+import TreeList from '../features/TreeList'
 
-import DataTable from './DataTable'
-import columns from './DataTable/static'
-import makeData from './DataTable/makeData'
+import DataTable from '../features/DataTable'
+import columns from '../features/DataTable/static'
+import makeData from '../features/DataTable/makeData'
 
 import constants from '../constants'
 

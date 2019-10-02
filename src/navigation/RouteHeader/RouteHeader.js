@@ -29,10 +29,24 @@ const RouteHeader = props => {
       ) : (
         <div className={classes.divHidden} />
       )}
-      <div>React Sandbox</div>
+      <div>{_configureRouteTitle(currentRoute, isHomepage)}</div>
       <div className={classes.divHidden} />
     </div>
   )
+
+  function _configureRouteTitle(routePath, isHomepage) {
+    if (isHomepage) {
+      return 'React Sandbox'
+    } else {
+      routePath = routePath
+        .split('/')[1]
+        .split('-')
+        .map(item => item.charAt(0).toUpperCase() + item.slice(1))
+        .join(' ')
+
+      return routePath
+    }
+  }
 }
 
 RouteHeader.propTypes = {

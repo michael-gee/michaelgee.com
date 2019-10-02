@@ -21,7 +21,6 @@ const Counter = () => {
   return (
     <div className={classes.counterContainer} data-testid="rs-counter-container">
       <div>
-        <h2>Simple Counter Example (Hooks):</h2>
         <div className={classes.counterCount} data-testid="rs-counter-count">
           Current Count: {count}
         </div>
