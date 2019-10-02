@@ -3,8 +3,6 @@ import { render } from '@testing-library/react'
 
 import Homepage from './Homepage'
 
-// import constants from '../../constants'
-
 describe('<Homepage />', () => {
   let wrapper
 
@@ -18,5 +16,11 @@ describe('<Homepage />', () => {
     expect(queryByTestId('rs-homepage-container')).toBeTruthy()
   })
 
-  // @@@@@ need to learn how to mock imported data (Also in RouteViewer)
+  // @@@@@ failing test - cannot use imported module data in test
+  xit('should render a FeatureItem component for each item in the data array', () => {
+    console.log(wrapper)
+    const { queryByTestId } = wrapper
+
+    // expect(queryByTestId('rs-homepage-ftItem')).toBeTruthy()
+  })
 })

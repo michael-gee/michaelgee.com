@@ -32,7 +32,7 @@ describe('<RouteViewer />', () => {
     expect(queryByTestId('rs-routeViewer')).toBeTruthy()
   })
 
-  // @@@@@ doesn't work
+  // @@@@@ doesn't work - cannot use import data in test
   xit('should render a Route component for every object returned from routes.js', () => {
     const { queryByTestId } = wrapper
 

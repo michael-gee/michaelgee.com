@@ -14,6 +14,7 @@ const Homepage = () => {
           date={item.date}
           description={item.description}
           key={item.uid}
+          data-testid="rs-homepage-ftItem"
         />
       ))}
     </div>

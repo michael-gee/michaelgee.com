@@ -61,7 +61,7 @@ const FeatureItem = props => {
         </IconButton>
       </CardActions>
 
-      <Collapse in={isExpanded} timeout="auto" unmountOnExit data-testid="rs-featureItem-collapse">
+      <Collapse in={isExpanded} timeout="auto" unmountOnExit>
         <CardContent>
           <p className={classes.cardDesc}>{description}</p>
         </CardContent>
