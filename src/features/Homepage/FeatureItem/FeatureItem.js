@@ -23,7 +23,11 @@ const FeatureItem = props => {
   const classes = useStyles()
 
   return (
-    <Card className={classes.cardContainer} style={!isExpanded ? { maxHeight: 220 } : {}}>
+    <Card
+      className={classes.cardContainer}
+      data-testid="rs-featureItem-container"
+      style={!isExpanded ? { maxHeight: 220 } : {}}
+    >
       <CardHeader
         avatar={
           <Avatar className={classes.cardAvatar} aria-label="feature">
@@ -42,16 +46,22 @@ const FeatureItem = props => {
           onClick={_handleExpandClick}
           aria-expanded={isExpanded}
           title={`${isExpanded ? 'Close' : 'Open'} item description`}
+          data-testid="rs-featureItem-expandIconBtn"
         >
           {isExpanded ? <ExpandLess /> : <ExpandMore />}
         </IconButton>
 
-        <IconButton color="inherit" onClick={_handleItemClick} title={`Navigate to ${title}`}>
+        <IconButton
+          color="inherit"
+          onClick={_handleItemClick}
+          title={`Navigate to ${title}`}
+          data-testid="rs-featureItem-navIconBtn"
+        >
           <ArrowForward />
         </IconButton>
       </CardActions>
 
-      <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+      <Collapse in={isExpanded} timeout="auto" unmountOnExit data-testid="rs-featureItem-collapse">
         <CardContent>
           <p className={classes.cardDesc}>{description}</p>
         </CardContent>

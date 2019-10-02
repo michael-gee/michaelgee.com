@@ -30,7 +30,15 @@ const RouteViewer = props => {
         routes.length > 0 &&
         routes.map(route => {
           const { exact, path, component } = route
-          return <Route exact={exact || false} path={path} component={component} key={path} />
+          return (
+            <Route
+              exact={exact || false}
+              path={path}
+              component={component}
+              key={path}
+              data-testid="rs-routeViewer-route"
+            />
+          )
         })}
     </div>
   )

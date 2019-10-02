@@ -11,13 +11,12 @@ import { useStyles } from './styles'
 
 const RouteHeader = props => {
   const { currentRoute } = props
-  const isHomepage = currentRoute === '/' ? true : false
   const { navigateTo } = useNavigation()
   const classes = useStyles()
 
   return (
-    <div className={classes.headerContainer}>
-      {!isHomepage ? (
+    <div className={classes.headerContainer} data-testid="rs-header-container">
+      {currentRoute !== constants.navigation.routePaths.homepage ? (
         <IconButton
           onClick={() => navigateTo(constants.navigation.routePaths.homepage)}
           className={classes.headerIcon}
@@ -29,16 +28,16 @@ const RouteHeader = props => {
       ) : (
         <div className={classes.divHidden} />
       )}
-      <div>{_configureRouteTitle(currentRoute, isHomepage)}</div>
+      <div>{_configureRouteTitle()}</div>
       <div className={classes.divHidden} />
     </div>
   )
 
-  function _configureRouteTitle(routePath, isHomepage) {
-    if (isHomepage) {
+  function _configureRouteTitle() {
+    if (currentRoute === constants.navigation.routePaths.homepage) {
       return 'React Sandbox'
     } else {
-      routePath = routePath
+      const routePath = currentRoute
         .split('/')[1]
         .split('-')
         .map(item => item.charAt(0).toUpperCase() + item.slice(1))
