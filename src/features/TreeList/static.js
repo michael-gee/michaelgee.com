@@ -312,5 +312,28 @@ export default [
         hasChild: true
       }
     ]
+  },
+
+  {
+    importing: false,
+    organizationalUnits: [
+      {
+        depth: 4,
+        id: '12b21c16-a778-4458-bbe7-5fb8a09050f6',
+        companyId: '0fc7a174551ba976834c4cd997b49afb',
+        parent: '49439a25-7466-44bc-8ed1-ca7ddd0c1193',
+        name: 'Users',
+        distinguishedName: 'OU=Users,OU=Italia2,DC=coreviewlab,DC=local',
+        identityUrl: 'b0ceb24028f77b0476f82d4cf9cf1d22',
+        ancestors: [
+          'c45d1beb5489a642137323f6ee38bfb8',
+          'd4fbf493d0f9775ea6d775784025f3b3',
+          '49439a25-7466-44bc-8ed1-ca7ddd0c1193'
+        ],
+        deleted: false,
+        userFilterEnabled: true,
+        hasChild: false
+      }
+    ]
   }
 ]
