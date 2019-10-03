@@ -9,8 +9,6 @@ const RouteViewer = props => {
   const { routes } = props
   const appContainer = useRef(document.getElementById(constants.appContainer))
 
-  console.log(props)
-
   // @@@@@ testable?
   useEffect(() => {
     const onNavigateTo = args => {
