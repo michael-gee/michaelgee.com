@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 import { Route } from 'react-router-dom'
 
@@ -8,6 +9,7 @@ import constants from '../../constants'
 const RouteViewer = props => {
   const appContainer = useRef(document.getElementById(constants.appContainer))
 
+  // @@@@@ testable?
   useEffect(() => {
     const onNavigateTo = args => {
       const path = args.detail.path
@@ -31,17 +33,17 @@ const RouteViewer = props => {
         routes.map(route => {
           const { exact, path, component } = route
           return (
-            <Route
-              exact={exact || false}
-              path={path}
-              component={component}
-              key={path}
-              data-testid="rs-routeViewer-route"
-            />
+            <div key={path} data-testid="rs-routeViewer-route">
+              <Route exact={exact || false} path={path} component={component} />
+            </div>
           )
         })}
     </div>
   )
+}
+
+RouteViewer.propTypes = {
+  routes: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default RouteViewer

@@ -3,11 +3,15 @@ import { render } from '@testing-library/react'
 
 import Homepage from './Homepage'
 
+import data from './static'
+
 describe('<Homepage />', () => {
-  let wrapper
+  let wrapper, mockData
 
   beforeEach(() => {
-    wrapper = render(<Homepage />)
+    mockData = data
+
+    wrapper = render(<Homepage data={mockData} />)
   })
 
   it('should render without error', () => {
@@ -16,11 +20,9 @@ describe('<Homepage />', () => {
     expect(queryByTestId('rs-homepage-container')).toBeTruthy()
   })
 
-  // @@@@@ failing test - cannot use imported module data in test
-  xit('should render a FeatureItem component for each item in the data array', () => {
-    console.log(wrapper)
-    const { queryByTestId } = wrapper
+  it('should render a <FeatureItem /> component for each item in the data array', () => {
+    const { queryAllByTestId } = wrapper
 
-    // expect(queryByTestId('rs-homepage-ftItem')).toBeTruthy()
+    expect(queryAllByTestId('rs-homepage-ftItem').length).toEqual(3)
   })
 })

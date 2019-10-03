@@ -4,24 +4,17 @@ import { render } from '@testing-library/react'
 
 import RouteViewer from './RouteViewer'
 
-// @@@@@ doesn't work
-// jest.mock('../routes', () => {
-//   return {
-//     default: [
-//       { path: '/pathname', component: () => {} },
-//       { path: '/pathname1', component: () => {} },
-//       { path: '/pathname2', component: () => {} }
-//     ]
-//   }
-// })
+import routes from '../routes'
 
 describe('<RouteViewer />', () => {
-  let wrapper
+  let wrapper, mockRoutes
 
   beforeEach(() => {
+    mockRoutes = routes
+
     wrapper = render(
       <Router>
-        <Route component={RouteViewer}></Route>
+        <Route component={() => <RouteViewer routes={mockRoutes} />} />
       </Router>
     )
   })
@@ -32,10 +25,9 @@ describe('<RouteViewer />', () => {
     expect(queryByTestId('rs-routeViewer')).toBeTruthy()
   })
 
-  // @@@@@ doesn't work - cannot use import data in test
-  xit('should render a Route component for every object returned from routes.js', () => {
-    const { queryByTestId } = wrapper
+  it('should render a <Route /> component for every routes prop item', () => {
+    const { queryAllByTestId } = wrapper
 
-    expect(queryByTestId('rs-routeViewer-route')).toBeTruthy()
+    expect(queryAllByTestId('rs-routeViewer-route').length).toEqual(4)
   })
 })

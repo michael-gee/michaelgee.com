@@ -1,3 +1,7 @@
+import React from 'react'
+
 import Homepage from './Homepage'
 
-export default Homepage
+import data from './static'
+
+export default () => <Homepage data={data} />

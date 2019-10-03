@@ -1,3 +1,7 @@
+import React from 'react'
+
 import RouteViewer from './RouteViewer'
 
-export default RouteViewer
+import routes from '../routes'
+
+export default () => <RouteViewer routes={routes} />

@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import { initializeIcons } from 'office-ui-fabric-react'
-
 import RouteHeader from './navigation/RouteHeader'
 import RouteViewer from './navigation/RouteViewer'
+
+import { initializeIcons } from 'office-ui-fabric-react'
 
 import { useStyles } from './appStyles'
 
