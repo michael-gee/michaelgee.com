@@ -74,9 +74,6 @@ const FeatureItem = props => {
   }
 
   function _handleItemClick() {
-    console.log(navigateTo)
-    console.log(route)
-
     navigateTo(route)
   }
 }
