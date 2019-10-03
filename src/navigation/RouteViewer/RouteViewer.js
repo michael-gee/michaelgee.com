@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 
 import { Route } from 'react-router-dom'
 
-import routes from '../routes'
 import constants from '../../constants'
 
 const RouteViewer = props => {
+  const { routes } = props
   const appContainer = useRef(document.getElementById(constants.appContainer))
+
+  console.log(props)
 
   // @@@@@ testable?
   useEffect(() => {

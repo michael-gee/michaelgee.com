@@ -4,4 +4,4 @@ import RouteViewer from './RouteViewer'
 
 import routes from '../routes'
 
-export default () => <RouteViewer routes={routes} />
+export default props => <RouteViewer routes={routes} {...props} />

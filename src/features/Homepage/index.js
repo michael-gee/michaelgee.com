@@ -4,4 +4,4 @@ import Homepage from './Homepage'
 
 import data from './static'
 
-export default () => <Homepage data={data} />
+export default props => <Homepage data={data} {...props} />
