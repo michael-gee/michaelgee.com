@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.4.2",
-    "@material-ui/icons": "^4.4.1",
-    "namor": "^1.1.2",
-    "office-ui-fabric-react": "^7.34.0",
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/icons": "^4.4.3",
+    "namor": "^1.1.3",
+    "office-ui-fabric-react": "^7.43.1",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.1.1",
-    "react-table": "^7.0.0-beta.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.2.0",
+    "react-table": "^7.0.0-beta.8",
     "uuid": "^3.3.3"
   },
   "scripts": {
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.1.0",
-    "@testing-library/react": "^9.1.4",
-    "@testing-library/react-hooks": "^2.0.1"
+    "@testing-library/react": "^9.3.0",
+    "@testing-library/react-hooks": "^2.0.3"
   },
   "browserslist": {
     "production": [
