@@ -1,5 +1,7 @@
 #rs-treeList-container {
-  font-size: 1.8em;
+  font-size: 1.6em;
+  background-color: white;
+  padding: 24px;
 }
 
 .rs-treeList-list {
@@ -9,7 +11,8 @@
 .rs-treeList-item {
   display: flex;
   align-items: center;
+  padding-bottom: 2px;
 }
-.rs-treeList-item-text {
-  padding-left: 8px;
+.rs-treeList-item-icon {
+  border-radius: 50%;
 }
