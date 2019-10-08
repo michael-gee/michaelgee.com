@@ -11,8 +11,15 @@
 .rs-treeList-item {
   display: flex;
   align-items: center;
-  padding-bottom: 2px;
 }
-.rs-treeList-item-icon {
+.rs-treeList-caret-icon {
   border-radius: 50%;
+}
+.rs-treeList-caret-icon:hover {
+  background-color: white;
+  color: black;
+}
+
+.rs-treeList-caret-icon {
+  color: black;
 }
