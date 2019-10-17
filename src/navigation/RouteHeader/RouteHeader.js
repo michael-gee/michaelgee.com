@@ -4,21 +4,22 @@ import PropTypes from 'prop-types'
 import IconButton from '@material-ui/core/IconButton'
 import HomeIcon from '@material-ui/icons/Home'
 
-import useNavigation from '../../hooks/useNavigation'
+import useAppCommand from '../../hooks/useAppCommand'
+
 import constants from '../../constants'
 
 import { useStyles } from './styles'
 
 const RouteHeader = props => {
   const { currentRoute } = props
-  const { navigateTo } = useNavigation()
+  const viewHomepageCommand = useAppCommand(constants.commands.viewHomepage)
   const classes = useStyles()
 
   return (
     <div className={classes.headerContainer} data-testid="rs-header-container">
       {currentRoute !== constants.navigation.routePaths.homepage ? (
         <IconButton
-          onClick={() => navigateTo(constants.navigation.routePaths.homepage)}
+          onClick={viewHomepageCommand.execute}
           className={classes.headerIcon}
           title="Navigate to homepage"
           data-testid="rs-header-iconBtn"

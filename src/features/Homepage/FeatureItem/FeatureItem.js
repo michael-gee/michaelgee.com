@@ -10,16 +10,16 @@ import Collapse from '@material-ui/core/Collapse'
 import IconButton from '@material-ui/core/IconButton'
 import { ArrowForward, CodeOutlined, ExpandMore, ExpandLess } from '@material-ui/icons'
 
-import useNavigation from '../../../hooks/useNavigation'
+import useAppCommand from '../../../hooks/useAppCommand'
 
 import reactSVG from './react.svg'
 
 import { useStyles } from './styles'
 
 const FeatureItem = props => {
-  const { title, route, date, description } = props
+  const { title, command, commandOpts, date, description } = props
   const [isExpanded, setIsExpanded] = useState(false)
-  const { navigateTo } = useNavigation()
+  const appCommand = useAppCommand(command)
   const classes = useStyles()
 
   return (
@@ -74,13 +74,14 @@ const FeatureItem = props => {
   }
 
   function _handleItemClick() {
-    navigateTo(route)
+    appCommand.execute({ commandOpts })
   }
 }
 
 FeatureItem.propTypes = {
   title: PropTypes.string.isRequired,
-  route: PropTypes.string.isRequired,
+  command: PropTypes.string.isRequired,
+  commandOpts: PropTypes.object,
   date: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 }
