@@ -3,6 +3,12 @@ import { render } from '@testing-library/react'
 
 import Homepage from './Homepage'
 
+jest.mock('../../hooks/useAppCommand', () => {
+  return jest.fn().mockImplementation(() => {
+    return {}
+  })
+})
+
 import data from './static'
 
 describe('<Homepage />', () => {
