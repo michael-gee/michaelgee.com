@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
-import { useTable, useTableState, useSortBy, useFilters, usePagination } from 'react-table'
+import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 
 import { Icon, TextField } from 'office-ui-fabric-react'
 
@@ -11,7 +11,6 @@ import './DataTable.css'
 const DataTable = props => {
   const { data } = props
   const columns = useMemo(() => props.columns, [props.columns])
-  const initialState = useTableState({ pageSize: 10, pageIndex: 0 })
 
   const filterTypes = useMemo(
     () => ({
@@ -35,19 +34,6 @@ const DataTable = props => {
     []
   )
 
-  const instance = useTable(
-    {
-      data,
-      columns,
-      state: initialState,
-      defaultColumn,
-      filterTypes
-    },
-    useFilters,
-    useSortBy,
-    usePagination
-  )
-
   const {
     getTableProps,
     headerGroups,
@@ -62,7 +48,18 @@ const DataTable = props => {
     pageCount,
     gotoPage,
     prepareRow
-  } = instance
+  } = useTable(
+    {
+      data,
+      columns,
+      defaultColumn,
+      filterTypes,
+      initialState: { pageSize: 10, pageIndex: 0 }
+    },
+    useFilters,
+    useSortBy,
+    usePagination
+  )
 
   return (
     <div id="rs-dataTable-container">
