@@ -20,7 +20,7 @@ export const App = () => {
           path="/"
           render={props => (
             <>
-              <RouteHeader currentRoute={props.location.pathname} />
+              <RouteHeader {...props} />
               <RouteViewer {...props} />
             </>
           )}
