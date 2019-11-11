@@ -16,14 +16,14 @@ import DataTable from '../features/DataTable'
 import columns from '../features/DataTable/static'
 import makeData from '../features/DataTable/makeData'
 
-import constants from '../constants'
+import { RS_ROUTE_PATHS } from '../constants/navigation'
 
 export default [
-  { path: constants.navigation.routePaths.homepage, component: Homepage, exact: true },
-  { path: constants.navigation.routePaths.counter, component: Counter },
+  { path: RS_ROUTE_PATHS.homepage, component: Homepage, exact: true },
+  { path: RS_ROUTE_PATHS.counter, component: Counter },
   {
-    path: constants.navigation.routePaths.dataTable,
+    path: RS_ROUTE_PATHS.dataTable,
     component: () => <DataTable columns={columns} data={makeData(100)} />
   },
-  { path: constants.navigation.routePaths.treeList, component: TreeList }
+  { path: RS_ROUTE_PATHS.treeList, component: TreeList }
 ]

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 import { Route } from 'react-router-dom'
 
-import constants from '../../constants'
+import { RS_APP_CONTAINERS, RS_NAV_EVENTS } from '../../constants/navigation'
 
 const RouteViewer = props => {
   const { routes } = props
-  const appContainer = useRef(document.getElementById(constants.appContainer))
+  const appContainer = useRef(document.getElementById(RS_APP_CONTAINERS.default))
 
   // @@@@@ testable?
   useEffect(() => {
@@ -18,11 +18,11 @@ const RouteViewer = props => {
     }
 
     const current = appContainer.current
-    current && current.addEventListener(constants.navigation.events.navigateTo, onNavigateTo, false)
+    current && current.addEventListener(RS_NAV_EVENTS.navigateTo, onNavigateTo, false)
     console.log('onNavigateTo was registered')
 
     return function cleanup() {
-      current && current.removeEventListener(constants.navigation.events.navigateTo, onNavigateTo, false)
+      current && current.removeEventListener(RS_NAV_EVENTS.navigateTo, onNavigateTo, false)
     }
   }, [props.history])
 

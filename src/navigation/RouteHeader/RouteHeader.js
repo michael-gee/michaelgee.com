@@ -6,18 +6,19 @@ import HomeIcon from '@material-ui/icons/Home'
 
 import useAppCommand from '../../hooks/useAppCommand'
 
-import constants from '../../constants'
+import { RS_APP_COMMANDS } from '../../constants/commands'
+import { RS_ROUTE_PATHS } from '../../constants/navigation'
 
 import { useStyles } from './styles'
 
 const RouteHeader = props => {
   const { currentRoute } = props
-  const viewHomepageCommand = useAppCommand(constants.commands.viewHomepage)
+  const viewHomepageCommand = useAppCommand(RS_APP_COMMANDS.viewHomepage)
   const classes = useStyles()
 
   return (
     <div className={classes.headerContainer} data-testid="rs-header-container">
-      {currentRoute !== constants.navigation.routePaths.homepage ? (
+      {currentRoute !== RS_ROUTE_PATHS.homepage ? (
         <IconButton
           onClick={viewHomepageCommand.execute}
           className={classes.headerIcon}
@@ -35,7 +36,7 @@ const RouteHeader = props => {
   )
 
   function _configureRouteTitle() {
-    if (currentRoute === constants.navigation.routePaths.homepage) {
+    if (currentRoute === RS_ROUTE_PATHS.homepage) {
       return 'React Sandbox'
     } else {
       const routePath = currentRoute

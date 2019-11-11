@@ -1,28 +1,20 @@
-import { useRouteMatch } from 'react-router-dom'
-
 import { dispatchNavigateEvent } from '../navigation/helpers'
 
-import constants from '../constants'
+import { RS_ROUTE_PATHS } from '../constants/navigation'
 
 const useAppCommand = commandName => {
-  const { url } = useRouteMatch()
-
-  const command = new commands[commandName](url)
+  const command = commandName ? new commands[commandName]() : { canExecute: false, execute: () => {} }
   return command
 }
 
 class AppCommandBase {
-  constructor(url) {
-    this.url = url
-  }
-
   execute(args) {}
   canExecute(args) {}
 }
 
 export class ViewHomepageCommand extends AppCommandBase {
   execute() {
-    dispatchNavigateEvent(constants.navigation.routePaths.homepage)
+    dispatchNavigateEvent(RS_ROUTE_PATHS.homepage)
   }
   canExecute() {
     return true
@@ -31,7 +23,7 @@ export class ViewHomepageCommand extends AppCommandBase {
 
 export class ViewCounterCommand extends AppCommandBase {
   execute() {
-    dispatchNavigateEvent(constants.navigation.routePaths.counter)
+    dispatchNavigateEvent(RS_ROUTE_PATHS.counter)
   }
   canExecute() {
     return true
@@ -40,7 +32,7 @@ export class ViewCounterCommand extends AppCommandBase {
 
 export class ViewDataTableCommand extends AppCommandBase {
   execute() {
-    dispatchNavigateEvent(constants.navigation.routePaths.dataTable)
+    dispatchNavigateEvent(RS_ROUTE_PATHS.dataTable)
   }
   canExecute() {
     return true
@@ -49,7 +41,7 @@ export class ViewDataTableCommand extends AppCommandBase {
 
 export class ViewTreeListCommand extends AppCommandBase {
   execute() {
-    dispatchNavigateEvent(constants.navigation.routePaths.treeList)
+    dispatchNavigateEvent(RS_ROUTE_PATHS.treeList)
   }
   canExecute() {
     return true

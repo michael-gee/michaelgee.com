@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 
 import FeatureItem from './FeatureItem'
 
-import constants from '../../../constants'
+import { RS_APP_COMMANDS } from '../../../constants/commands'
 
 jest.mock('../../../hooks/useAppCommand', () => {
   return jest.fn().mockImplementation(() => {
@@ -16,7 +16,7 @@ describe('<FeatureItem />', () => {
 
   beforeEach(() => {
     mockTitle = 'Simple Hooks Counter'
-    mockCommand = constants.commands.viewCounter
+    mockCommand = RS_APP_COMMANDS.viewCounter
     mockDate = 'May 22nd, 2019'
     mockDescription = 'Mock Description'
 
