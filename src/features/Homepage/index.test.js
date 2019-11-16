@@ -1,23 +1,13 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import Homepage from './Homepage'
-
-jest.mock('../../hooks/useAppCommand', () => {
-  return jest.fn().mockImplementation(() => {
-    return {}
-  })
-})
-
-import data from './static'
+import Homepage from './'
 
 describe('<Homepage />', () => {
-  let wrapper, mockData
+  let wrapper
 
   beforeEach(() => {
-    mockData = data
-
-    wrapper = render(<Homepage data={mockData} />)
+    wrapper = render(<Homepage />)
   })
 
   it('should render without error', () => {

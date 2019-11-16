@@ -1,7 +1,19 @@
 import React from 'react'
 
-import Homepage from './Homepage'
+import FeatureItem from './FeatureItem'
 
 import data from './static'
 
-export default props => <Homepage data={data} {...props} />
+const Homepage = () => {
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap' }} data-testid="rs-homepage-container">
+      {data.map(item => (
+        <div key={item.uid} data-testid="rs-homepage-ftItem">
+          <FeatureItem title={item.title} command={item.command} date={item.date} description={item.description} />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+export default Homepage

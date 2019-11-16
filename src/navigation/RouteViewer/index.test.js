@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { render } from '@testing-library/react'
 
-import RouteViewer from './RouteViewer'
+import RouteViewer from './'
 
 import routes from '../routes'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
-import FeatureItem from './FeatureItem'
+import FeatureItem from './'
 
 import { RS_APP_COMMANDS } from '../../../constants/commands'
 
