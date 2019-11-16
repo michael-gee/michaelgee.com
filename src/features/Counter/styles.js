@@ -1,9 +1,11 @@
 import { makeStyles } from '@material-ui/styles'
 
+import { RS_PALETTE } from '../../constants/theme'
+
 export const useStyles = makeStyles({
   counterContainer: {
     color: 'white',
-    backgroundColor: '#424242',
+    backgroundColor: RS_PALETTE.tertiary,
     margin: '24px 0',
     padding: '40px 0',
     textAlign: 'center'
@@ -20,13 +22,13 @@ export const useStyles = makeStyles({
   },
 
   incrementBtn: {
-    backgroundColor: '#62DAFB',
-    color: '#424242',
+    backgroundColor: RS_PALETTE.primary,
+    color: RS_PALETTE.tertiary,
     transition: '.5',
 
     '&:hover': {
       backgroundColor: 'white',
-      color: '#424242'
+      color: RS_PALETTE.primary
     }
   }
 })

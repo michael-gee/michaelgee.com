@@ -20,5 +20,5 @@ export const useStyles = makeStyles({
     p: { fontSize: '1.6em' }
   },
 
-  appContainer: { padding: '12px 40px', paddingTop: 40 }
+  appContainer: { padding: '24px' }
 })
