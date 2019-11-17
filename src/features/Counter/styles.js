@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles'
 
-import { RS_PALETTE } from '../../constants/theme'
+import { RS_PALETTE } from 'constants/theme'
 
 export const useStyles = makeStyles({
   counterContainer: {

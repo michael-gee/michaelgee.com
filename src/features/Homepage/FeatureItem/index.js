@@ -10,7 +10,7 @@ import Collapse from '@material-ui/core/Collapse'
 import IconButton from '@material-ui/core/IconButton'
 import { ArrowForward, CodeOutlined, ExpandMore, ExpandLess } from '@material-ui/icons'
 
-import useAppCommand from '../../../hooks/useAppCommand'
+import useAppCommand from 'hooks/useAppCommand'
 
 import reactSVG from './react.svg'
 

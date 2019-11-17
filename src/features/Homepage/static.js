@@ -1,6 +1,6 @@
 import { v4 } from 'uuid'
 
-import { RS_APP_COMMANDS } from '../../constants/commands'
+import { RS_APP_COMMANDS } from 'constants/commands'
 
 export default [
   {

@@ -8,15 +8,15 @@
 // }
 import React from 'react'
 
-import Homepage from '../features/Homepage'
-import Counter from '../features/Counter'
-import TreeList from '../features/TreeList'
+import Homepage from 'features/Homepage'
+import Counter from 'features/Counter'
+import TreeList from 'features/TreeList'
 
-import DataTable from '../features/DataTable'
-import columns from '../features/DataTable/static'
-import makeData from '../features/DataTable/makeData'
+import DataTable from 'features/DataTable'
+import columns from 'features/DataTable/static'
+import makeData from 'features/DataTable/makeData'
 
-import { RS_ROUTE_PATHS } from '../constants/navigation'
+import { RS_ROUTE_PATHS } from 'constants/navigation'
 
 export default [
   { path: RS_ROUTE_PATHS.homepage, component: Homepage, exact: true },

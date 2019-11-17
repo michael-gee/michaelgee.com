@@ -3,9 +3,9 @@ import { render, fireEvent } from '@testing-library/react'
 
 import FeatureItem from './'
 
-import { RS_APP_COMMANDS } from '../../../constants/commands'
+import { RS_APP_COMMANDS } from 'constants/commands'
 
-jest.mock('../../../hooks/useAppCommand', () => {
+jest.mock('hooks/useAppCommand', () => {
   return jest.fn().mockImplementation(() => {
     return {}
   })

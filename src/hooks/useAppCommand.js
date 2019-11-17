@@ -1,6 +1,6 @@
-import { dispatchNavigateEvent } from '../navigation/helpers'
+import { dispatchNavigateEvent } from 'navigation/helpers'
 
-import { RS_ROUTE_PATHS } from '../constants/navigation'
+import { RS_ROUTE_PATHS } from 'constants/navigation'
 
 const useAppCommand = commandName => {
   const command = commandName ? new commands[commandName]() : { canExecute: false, execute: () => {} }
