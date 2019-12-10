@@ -19,7 +19,7 @@ const Pagination = props => {
           <PivotItem headerText="50" itemKey="50" />
           <PivotItem headerText="100" itemKey="100" />
         </Pivot> */}
-        Pivot
+        Material UI Pivot
       </div>
     </div>
   )
