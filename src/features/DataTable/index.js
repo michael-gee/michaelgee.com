@@ -2,7 +2,10 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 
-import { Icon, TextField } from 'office-ui-fabric-react'
+import TextField from '@material-ui/core/TextField'
+import SortIcon from '@material-ui/icons/SwapVertRounded'
+import SortUpIcon from '@material-ui/icons/VerticalAlignTopRounded'
+import SortDownIcon from '@material-ui/icons/VerticalAlignBottomRounded'
 
 import Pagination from './Pagination'
 
@@ -37,24 +40,25 @@ const DataTable = props => {
   const {
     getTableProps,
     headerGroups,
+    prepareRow,
     rows,
     page,
-    setPageSize,
+
     canNextPage,
     canPreviousPage,
     nextPage,
     previousPage,
-    pageIndex,
     pageCount,
     gotoPage,
-    prepareRow
+    setPageSize,
+    state: { pageIndex }
   } = useTable(
     {
       data,
       columns,
       defaultColumn,
       filterTypes,
-      initialState: { pageSize: 10, pageIndex: 0 }
+      initialState: { pageIndex: 0 }
     },
     useFilters,
     useSortBy,
@@ -80,11 +84,7 @@ const DataTable = props => {
                       </div>
 
                       <div className="rs-dataTable-filter">
-                        {column.canFilter ? (
-                          column.render('Filter')
-                        ) : (
-                          <TextField iconProps={{ iconName: 'Filter' }} disabled={true} />
-                        )}
+                        {column.canFilter ? column.render('Filter') : <TextField disabled={true} />}
                       </div>
                     </th>
                   )
@@ -126,12 +126,12 @@ const DataTable = props => {
     if (column.canSort) {
       return column.isSorted ? (
         column.isSortedDesc ? (
-          <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
+          <SortDownIcon className="rs-dataTable-header-icon" />
         ) : (
-          <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
+          <SortUpIcon className="rs-dataTable-header-icon" />
         )
       ) : (
-        <Icon iconName="Sort" className="rs-dataTable-header-icon" />
+        <SortIcon className="rs-dataTable-header-icon" />
       )
     } else {
       return null
@@ -143,7 +143,7 @@ const DataTable = props => {
       <TextField
         value={filterValue || ''}
         onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely
-        iconProps={{ iconName: 'Filter' }}
+        // iconProps={{ iconName: 'Filter' }}
       />
     )
   }

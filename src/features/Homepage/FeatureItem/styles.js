@@ -1,9 +1,11 @@
 import { makeStyles } from '@material-ui/styles'
 
+import { RS_PALETTE } from 'constants/theme'
+
 export const useStyles = makeStyles({
   cardContainer: {
     color: 'white',
-    backgroundColor: '#424242',
+    backgroundColor: RS_PALETTE.tertiary,
     width: 276,
     margin: '12px',
     userSelect: 'none',
@@ -17,8 +19,8 @@ export const useStyles = makeStyles({
   },
 
   cardAvatar: {
-    backgroundColor: '#62DAFB',
-    color: '#424242'
+    backgroundColor: RS_PALETTE.primary,
+    color: RS_PALETTE.tertiary
   },
 
   cardImage: {

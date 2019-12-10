@@ -5,8 +5,7 @@ export const RS_APP_CONTAINERS = {
 export const RS_ROUTE_PATHS = {
   homepage: '/',
   counter: '/simple-hooks-counter',
-  dataTable: '/react-table-v7',
-  treeList: '/custom-tree-list'
+  dataTable: '/react-table-v7'
 }
 
 export const RS_NAV_EVENTS = {

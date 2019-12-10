@@ -1,26 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Pivot, PivotItem, PivotLinkFormat } from 'office-ui-fabric-react'
-
 import './Pagination.css'
 
 const Pagination = props => {
-  const { setPageSize } = props
+  const { setPageSize, currentItemsCount } = props
 
   return (
     <div id="rs-pagination-container">
-      <div id="rs-pagination-totalItems">{props.currentItemsCount} results</div>
+      <div id="rs-pagination-totalItems">{currentItemsCount} results</div>
 
       {_renderPagination()}
 
       <div id="rs-pagination-viewItems">
-        <Pivot linkFormat={PivotLinkFormat.tabs} onLinkClick={ev => _handleTabChange(ev.props.itemKey)}>
+        {/* <Pivot linkFormat={PivotLinkFormat.tabs} onLinkClick={ev => _handleTabChange(ev.props.itemKey)}>
           <PivotItem headerText="10" itemKey="10" />
           <PivotItem headerText="25" itemKey="25" />
           <PivotItem headerText="50" itemKey="50" />
           <PivotItem headerText="100" itemKey="100" />
-        </Pivot>
+        </Pivot> */}
+        Pivot
       </div>
     </div>
   )

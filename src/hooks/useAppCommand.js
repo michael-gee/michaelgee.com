@@ -1,6 +1,6 @@
-import { dispatchNavigateEvent } from '../navigation/helpers'
+import { dispatchNavigateEvent } from 'navigation/helpers'
 
-import { RS_ROUTE_PATHS } from '../constants/navigation'
+import { RS_ROUTE_PATHS } from 'constants/navigation'
 
 const useAppCommand = commandName => {
   const command = commandName ? new commands[commandName]() : { canExecute: false, execute: () => {} }
@@ -39,20 +39,10 @@ export class ViewDataTableCommand extends AppCommandBase {
   }
 }
 
-export class ViewTreeListCommand extends AppCommandBase {
-  execute() {
-    dispatchNavigateEvent(RS_ROUTE_PATHS.treeList)
-  }
-  canExecute() {
-    return true
-  }
-}
-
 const commands = {
   ViewHomepageCommand,
   ViewCounterCommand,
-  ViewDataTableCommand,
-  ViewTreeListCommand
+  ViewDataTableCommand
 }
 
 export default useAppCommand

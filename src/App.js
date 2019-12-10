@@ -5,11 +5,7 @@ import RouteHeader from './navigation/RouteHeader'
 import RouteViewer from './navigation/RouteViewer'
 import ThemeProvider from './components/ThemeProvider'
 
-import { initializeIcons } from 'office-ui-fabric-react'
-
 import { useStyles } from './appStyles'
-
-initializeIcons()
 
 export const App = () => {
   const classes = useStyles()
