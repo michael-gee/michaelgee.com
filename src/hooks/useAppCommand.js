@@ -39,20 +39,10 @@ export class ViewDataTableCommand extends AppCommandBase {
   }
 }
 
-export class ViewTreeListCommand extends AppCommandBase {
-  execute() {
-    dispatchNavigateEvent(RS_ROUTE_PATHS.treeList)
-  }
-  canExecute() {
-    return true
-  }
-}
-
 const commands = {
   ViewHomepageCommand,
   ViewCounterCommand,
-  ViewDataTableCommand,
-  ViewTreeListCommand
+  ViewDataTableCommand
 }
 
 export default useAppCommand
