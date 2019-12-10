@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import './Pagination.css'
 
 const Pagination = props => {
-  const { setPageSize } = props
+  const { setPageSize, currentItemsCount } = props
 
   return (
     <div id="rs-pagination-container">
-      <div id="rs-pagination-totalItems">{props.currentItemsCount} results</div>
+      <div id="rs-pagination-totalItems">{currentItemsCount} results</div>
 
       {_renderPagination()}
 
