@@ -2,8 +2,6 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 
-import { Icon, TextField } from 'office-ui-fabric-react'
-
 import Pagination from './Pagination'
 
 import './DataTable.css'
@@ -76,14 +74,15 @@ const DataTable = props => {
                         className="rs-dataTable-header-content"
                       >
                         {column.render('Header')}
-                        <span>{_renderSortIcon(column)}</span>
+                        {/* <span>{_renderSortIcon(column)}</span> */}
                       </div>
 
                       <div className="rs-dataTable-filter">
                         {column.canFilter ? (
                           column.render('Filter')
                         ) : (
-                          <TextField iconProps={{ iconName: 'Filter' }} disabled={true} />
+                          // <TextField iconProps={{ iconName: 'Filter' }} disabled={true} />
+                          <input type="text" />
                         )}
                       </div>
                     </th>
@@ -122,29 +121,30 @@ const DataTable = props => {
     </div>
   )
 
-  function _renderSortIcon(column) {
-    if (column.canSort) {
-      return column.isSorted ? (
-        column.isSortedDesc ? (
-          <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
-        ) : (
-          <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
-        )
-      ) : (
-        <Icon iconName="Sort" className="rs-dataTable-header-icon" />
-      )
-    } else {
-      return null
-    }
-  }
+  // function _renderSortIcon(column) {
+  //   if (column.canSort) {
+  //     return column.isSorted ? (
+  //       column.isSortedDesc ? (
+  //         <Icon iconName="SortDown" className="rs-dataTable-header-icon" />
+  //       ) : (
+  //         <Icon iconName="SortUp" className="rs-dataTable-header-icon" />
+  //       )
+  //     ) : (
+  //       <Icon iconName="Sort" className="rs-dataTable-header-icon" />
+  //     )
+  //   } else {
+  //     return null
+  //   }
+  // }
 
   function _renderDefaultFilter({ column: { filterValue, setFilter } }) {
     return (
-      <TextField
-        value={filterValue || ''}
-        onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely
-        iconProps={{ iconName: 'Filter' }}
-      />
+      // <TextField
+      //   value={filterValue || ''}
+      //   onChange={(_, newValue) => setFilter(newValue || undefined)} // Set undefined to remove the filter entirely
+      //   iconProps={{ iconName: 'Filter' }}
+      // />
+      <input type="text" />
     )
   }
 }
