@@ -11,8 +11,7 @@ describe('<App />', () => {
   })
 
   it('should render without error', () => {
-    const { container } = wrapper
-
-    expect(container.querySelector('#rs-app-container')).toBeTruthy()
+    const { queryByTestId } = wrapper
+    expect(queryByTestId('app-container')).toBeTruthy()
   })
 })

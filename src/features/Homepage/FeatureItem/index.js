@@ -25,8 +25,8 @@ const FeatureItem = props => {
   return (
     <Card
       className={classes.cardContainer}
-      data-testid="rs-featureItem-container"
       style={!isExpanded ? { maxHeight: 220 } : {}}
+      data-testid="rs-featureItem-container"
     >
       <CardHeader
         avatar={

@@ -11,7 +11,7 @@ export const App = () => {
   const classes = useStyles()
 
   return (
-    <div id="rs-app-container" className={classes.appContainer}>
+    <div className={classes.appContainer} data-testid="app-container">
       <ThemeProvider>
         <Router>
           <Route

@@ -29,16 +29,16 @@ const Counter = () => {
           className={`${classes.incrementBtn} ${classes.counterBtn}`}
           color="secondary"
           variant="contained"
-          data-testid="rs-counter-incrementBtn"
           onClick={() => setCount(count + 1)}
+          data-testid="rs-counter-incrementBtn"
         >
           Increment
         </Button>
         <Button
           className={classes.counterBtn}
           variant="contained"
-          data-testid="rs-counter-decrementBtn"
           onClick={() => setCount(count - 1)}
+          data-testid="rs-counter-decrementBtn"
         >
           Decrement
         </Button>

@@ -124,15 +124,8 @@ const DataTable = props => {
 
   function _renderSortIcon(column) {
     if (column.canSort) {
-      return column.isSorted ? (
-        column.isSortedDesc ? (
-          <SortDownIcon className="rs-dataTable-header-icon" />
-        ) : (
-          <SortUpIcon className="rs-dataTable-header-icon" />
-        )
-      ) : (
-        <SortIcon className="rs-dataTable-header-icon" />
-      )
+      // @@@@@ style these Icons to appear lightgray (color in coreview poc) and black on hover & click
+      return column.isSorted ? column.isSortedDesc ? <SortDownIcon /> : <SortUpIcon /> : <SortIcon />
     } else {
       return null
     }
