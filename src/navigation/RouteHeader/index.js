@@ -3,21 +3,23 @@ import React from 'react'
 import IconButton from '@material-ui/core/IconButton'
 import HomeIcon from '@material-ui/icons/Home'
 
+import { useHistory, useLocation } from 'react-router-dom'
+
 import { RS_ROUTE_PATHS } from '../../constants/navigation'
 
 import { useStyles } from './styles'
 
-const RouteHeader = props => {
-  const isHomepage = props.location.pathname === RS_ROUTE_PATHS.homepage
+const RouteHeader = () => {
+  const history = useHistory()
+  const location = useLocation()
+  const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
   const classes = useStyles()
 
   return (
     <div className={classes.headerContainer} data-testid="rs-header-container">
       {!isHomepage ? (
         <IconButton
-          onClick={() => {
-            props.history && props.history.goBack()
-          }}
+          onClick={history.goBack}
           className={classes.headerIcon}
           title="Navigate to homepage"
           data-testid="rs-header-iconBtn"
@@ -27,7 +29,7 @@ const RouteHeader = props => {
       ) : (
         <div className={classes.divHidden} />
       )}
-      <div>{_configureRouteTitle(props.location && props.location.pathname)}</div>
+      <div>{_configureRouteTitle(location.pathname)}</div>
       <div className={classes.divHidden} />
     </div>
   )

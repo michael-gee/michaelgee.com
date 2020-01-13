@@ -1,19 +1,25 @@
 import React, { useRef, useEffect } from 'react'
 
-import { Route } from 'react-router-dom'
+import { Route, useHistory } from 'react-router-dom'
 
 import { RS_APP_CONTAINERS, RS_NAV_EVENTS } from '../../constants/navigation'
 import routes from '../routes'
 
-const RouteViewer = props => {
+const RouteViewer = () => {
+  const history = useHistory()
   const appContainer = useRef(document.getElementById(RS_APP_CONTAINERS.default))
 
-  // @@@@@ testable?
+  // @@@@@ add test
   useEffect(() => {
     const onNavigateTo = args => {
       const path = args.detail.path
-      console.log('onNavigateTo: ', path)
-      props.history.push(path, args.detail)
+      console.log('onNavigateTo: ', path, appContainer)
+
+      if (args.detail.options && args.detail.options.replace) {
+        history.replace(path, args.detail)
+      } else {
+        history.push(path, args.detail)
+      }
     }
 
     const current = appContainer.current
@@ -23,7 +29,7 @@ const RouteViewer = props => {
     return function cleanup() {
       current && current.removeEventListener(RS_NAV_EVENTS.navigateTo, onNavigateTo, false)
     }
-  }, [props.history])
+  }, [history])
 
   return (
     <div style={{ maxWidth: 1200, margin: '24px auto' }} data-testid="rs-routeViewer">

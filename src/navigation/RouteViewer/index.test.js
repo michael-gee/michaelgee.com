@@ -28,6 +28,6 @@ describe('<RouteViewer />', () => {
   it('should render a <Route /> component for every routes prop item', () => {
     const { queryAllByTestId } = wrapper
 
-    expect(queryAllByTestId('rs-routeViewer-route').length).toEqual(4)
+    expect(queryAllByTestId('rs-routeViewer-route').length).toEqual(3)
   })
 })

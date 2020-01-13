@@ -16,10 +16,10 @@ export const App = () => {
         <Router>
           <Route
             path="/"
-            render={props => (
+            render={() => (
               <>
-                <RouteHeader {...props} />
-                <RouteViewer {...props} />
+                <RouteHeader />
+                <RouteViewer />
               </>
             )}
           />
