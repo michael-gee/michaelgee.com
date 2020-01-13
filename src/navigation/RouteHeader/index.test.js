@@ -5,8 +5,6 @@ import { render, fireEvent } from '@testing-library/react'
 
 import RouteHeader from './'
 
-import { RS_ROUTE_PATHS } from '../../constants/navigation'
-
 describe('<RouteHeader />', () => {
   let wrapper, history
 
@@ -30,37 +28,41 @@ describe('<RouteHeader />', () => {
   it('should render the home navigation icon button when the current route NOT is the homepage', () => {
     const { queryByTestId } = wrapper
 
-    history.push('/simple-hooks-counter')
+    history.replace('/simple-hooks-counter')
 
     expect(queryByTestId('rs-header-iconBtn')).toBeTruthy()
   })
 
-  // @@@@@ fix test
-  xit('should navigate back to the homepage when the navigation icon button is clicked', () => {
-    const { queryByTestId } = wrapper
+  it('should navigate back to the homepage when the navigation icon button is clicked', () => {
+    const { queryByTestId, rerender } = wrapper
     const NavigationIconButton = queryByTestId('rs-header-iconBtn')
-    history.push('/simple-hooks-counter')
 
-    console.log(history)
+    history.replace('/simple-hooks-counter')
+    history.goBack = jest.fn()
+
+    rerender(
+      <Router history={history}>
+        <RouteHeader />
+      </Router>
+    )
 
     fireEvent.click(NavigationIconButton)
-
-    console.log(history)
 
     expect(history.goBack).toHaveBeenCalled()
   })
 
-  // @@@@@ fix test
-  xit('should render the title dependent on the currentRoute', () => {
-    const { queryByText, rerender } = wrapper
-    expect(queryByText('Simple Hooks Counter')).toBeTruthy()
+  it('should render the title dependent on the currentRoute', () => {
+    const { queryByText } = wrapper
 
-    rerender(<RouteHeader location={{ pathname: RS_ROUTE_PATHS.homepage }} history={{ goBack: mockGoBack }} />)
-    expect(queryByText('Simple Hooks Counter')).toBeNull()
+    history.replace('/')
     expect(queryByText('React Sandbox')).toBeTruthy()
 
-    rerender(<RouteHeader location={{ pathname: RS_ROUTE_PATHS.dataTable }} history={{ goBack: mockGoBack }} />)
-    expect(queryByText('ReactSandbox')).toBeNull()
+    history.push('/simple-hooks-counter')
+    expect(queryByText('Simple Hooks Counter')).toBeTruthy()
+    expect(queryByText('React Sandbox')).toBeNull()
+
+    history.push('/react-table-v7')
     expect(queryByText('React Table V7')).toBeTruthy()
+    expect(queryByText('Simple Hooks Counter')).toBeNull()
   })
 })
