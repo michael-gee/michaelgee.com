@@ -19,30 +19,30 @@ const Counter = () => {
   }, [count])
 
   return (
-    <div className={classes.counterContainer} data-testid="rs-counter-container">
-      <div>
-        <div className={classes.counterCount} data-testid="rs-counter-count">
-          Current Count: {count}
-        </div>
-        <Button
-          // 1st listed className has preference for styles
-          className={`${classes.incrementBtn} ${classes.counterBtn}`}
-          color="secondary"
-          variant="contained"
-          onClick={() => setCount(count + 1)}
-          data-testid="rs-counter-incrementBtn"
-        >
-          Increment
-        </Button>
-        <Button
-          className={classes.counterBtn}
-          variant="contained"
-          onClick={() => setCount(count - 1)}
-          data-testid="rs-counter-decrementBtn"
-        >
-          Decrement
-        </Button>
+    <div className={classes.counterContainer}>
+      <div className={classes.counterCount} data-testid="rs-counter-count">
+        Current Count: {count}
       </div>
+
+      <Button
+        // 1st listed className has preference for styles
+        className={`${classes.incrementBtn} ${classes.counterBtn}`}
+        color="secondary"
+        variant="contained"
+        onClick={() => setCount(count + 1)}
+        data-testid="rs-counter-incrementBtn"
+      >
+        Increment
+      </Button>
+
+      <Button
+        className={classes.counterBtn}
+        variant="contained"
+        onClick={() => setCount(count - 1)}
+        data-testid="rs-counter-decrementBtn"
+      >
+        Decrement
+      </Button>
     </div>
   )
 }

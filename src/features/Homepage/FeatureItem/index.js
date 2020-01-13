@@ -23,11 +23,7 @@ const FeatureItem = props => {
   const classes = useStyles()
 
   return (
-    <Card
-      className={classes.cardContainer}
-      style={!isExpanded ? { maxHeight: 220 } : {}}
-      data-testid="rs-featureItem-container"
-    >
+    <Card className={classes.cardContainer} style={!isExpanded ? { maxHeight: 220 } : {}}>
       <CardHeader
         avatar={
           <Avatar className={classes.cardAvatar} aria-label="feature">

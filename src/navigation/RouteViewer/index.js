@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 
 import { Route, useHistory } from 'react-router-dom'
 
-import { RS_APP_CONTAINERS, RS_NAV_EVENTS } from '../../constants/navigation'
+import { RS_APP_CONTAINERS, RS_NAV_EVENTS } from 'constants/navigation'
 import routes from '../routes'
 
 const RouteViewer = () => {

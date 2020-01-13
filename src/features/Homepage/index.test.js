@@ -10,15 +10,9 @@ describe('<Homepage />', () => {
     wrapper = render(<Homepage />)
   })
 
-  it('should render without error', () => {
-    const { queryByTestId } = wrapper
-
-    expect(queryByTestId('rs-homepage-container')).toBeTruthy()
-  })
-
   it('should render a <FeatureItem /> component for each item in the data array', () => {
     const { queryAllByTestId } = wrapper
 
-    expect(queryAllByTestId('rs-homepage-ftItem').length).toEqual(3)
+    expect(queryAllByTestId('rs-homepage-ftItem').length).toEqual(2)
   })
 })

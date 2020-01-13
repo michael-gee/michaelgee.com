@@ -25,12 +25,6 @@ describe('<FeatureItem />', () => {
     )
   })
 
-  it('should render without error with its expected props', () => {
-    const { queryByTestId } = wrapper
-
-    expect(queryByTestId('rs-featureItem-container')).toBeTruthy()
-  })
-
   it('should render the title and created by date props in the card header', () => {
     const { queryByText } = wrapper
 

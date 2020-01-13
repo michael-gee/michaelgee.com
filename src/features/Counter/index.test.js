@@ -10,11 +10,6 @@ describe('<Counter />', () => {
     wrapper = render(<Counter />)
   })
 
-  it('should render without error', () => {
-    const { queryByTestId } = wrapper
-    expect(queryByTestId('rs-counter-container')).toBeTruthy()
-  })
-
   it('should set and display the initial count state as 0', () => {
     const { queryByTestId } = wrapper
     expect(queryByTestId('rs-counter-count').innerHTML).toContain(0)

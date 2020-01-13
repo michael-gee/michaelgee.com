@@ -5,15 +5,15 @@ import HomeIcon from '@material-ui/icons/Home'
 
 import { useHistory, useLocation } from 'react-router-dom'
 
-import { RS_ROUTE_PATHS } from '../../constants/navigation'
+import { RS_ROUTE_PATHS } from 'constants/navigation'
 
 import { useStyles } from './styles'
 
 const RouteHeader = () => {
   const history = useHistory()
   const location = useLocation()
-  const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
   const classes = useStyles()
+  const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
 
   return (
     <div className={classes.headerContainer} data-testid="rs-header-container">
