@@ -19,16 +19,16 @@ export const useStyles = makeStyles({
 
     '&:last-child': { marginLeft: '10px' },
     '&:hover': { cursor: 'pointer' }
-  },
-
-  incrementBtn: {
-    backgroundColor: RS_PALETTE.primary,
-    color: RS_PALETTE.tertiary,
-    transition: '.5',
-
-    '&:hover': {
-      backgroundColor: 'white',
-      color: RS_PALETTE.primary
-    }
   }
+
+  // incrementBtn: {
+  //   backgroundColor: RS_PALETTE.primary,
+  //   color: RS_PALETTE.tertiary,
+  //   transition: '.5',
+
+  //   '&:hover': {
+  //     backgroundColor: 'white',
+  //     color: RS_PALETTE.primary
+  //   }
+  // }
 })

@@ -27,7 +27,6 @@ const Counter = () => {
       <Button
         // 1st listed className has preference for styles
         className={`${classes.incrementBtn} ${classes.counterBtn}`}
-        color="secondary"
         variant="contained"
         onClick={() => setCount(count + 1)}
         data-testid="rs-counter-incrementBtn"
