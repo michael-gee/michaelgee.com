@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react'
 
 import Button from '@material-ui/core/Button'
 
-const SimpleCounter = ({ classes }) => {
+import { useStyles } from './styles'
+
+const SimpleCounter = () => {
   const [count, setCount] = useState(0)
+  const classes = useStyles()
 
   // passed count as the second parameter tells this effect only to run if the count variable has changed
   useEffect(() => {

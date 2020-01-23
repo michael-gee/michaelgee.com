@@ -11,7 +11,7 @@ const Counter = () => {
   return (
     <div className={classes.container}>
       <div className={classes.countContainer}>
-        <SimpleCounter classes={classes} />
+        <SimpleCounter />
       </div>
 
       <div className={classes.countContainer}>
@@ -21,7 +21,6 @@ const Counter = () => {
             { label: 'Counter 2', value: 10, key: 'count2' },
             { label: 'Counter 3', value: 20, key: 'count3' }
           ]}
-          classes={classes}
         />
       </div>
     </div>
