@@ -3,12 +3,18 @@ import { makeStyles } from '@material-ui/styles'
 import { RS_PALETTE } from 'constants/theme'
 
 export const useStyles = makeStyles({
-  counterContainer: {
+  container: {
+    display: 'flex',
+    width: '100%',
     color: 'white',
     backgroundColor: RS_PALETTE.tertiary,
     margin: '24px 0',
     padding: '40px 0',
     textAlign: 'center'
+  },
+
+  countContainer: {
+    width: '50%'
   },
 
   counterCount: { fontSize: '2em', marginBottom: 12 },

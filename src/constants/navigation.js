@@ -4,7 +4,7 @@ export const RS_APP_CONTAINERS = {
 
 export const RS_ROUTE_PATHS = {
   homepage: '/',
-  counter: '/simple-hooks-counter',
+  counter: '/react-hooks-counters',
   dataTable: '/react-table-v7'
 }
 
