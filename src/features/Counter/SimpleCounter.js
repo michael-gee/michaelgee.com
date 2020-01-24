@@ -28,7 +28,7 @@ const SimpleCounter = () => {
         // 1st listed className has preference for styles
         className={`${classes.incrementBtn} ${classes.counterBtn}`}
         variant="contained"
-        onClick={() => setCount(count + 1)}
+        onClick={() => setCount(prevCount => prevCount + 1)}
         data-testid="rs-counter-incrementBtn"
       >
         Increment
@@ -37,7 +37,10 @@ const SimpleCounter = () => {
       <Button
         className={classes.counterBtn}
         variant="contained"
-        onClick={() => setCount(count - 1)}
+        // // https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous
+        // when updating state that to a value that relies on the value of the previous state, it is best practice to pass a callback function to the setState function which will prevent stale state updates and renders
+        // the link provided is the in depth explanation of this
+        onClick={() => setCount(prevCount => prevCount - 1)}
         data-testid="rs-counter-decrementBtn"
       >
         Decrement
