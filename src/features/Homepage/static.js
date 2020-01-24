@@ -6,9 +6,9 @@ export default [
   {
     // Note: generates new uids on every refresh
     uid: v4(),
-    title: 'Simple Hooks Counter',
+    title: 'Simple Hooks Counters',
     command: RS_APP_COMMANDS.viewCounter,
-    date: 'May 22nd, 2019',
+    date: 'January 24th, 2020',
     description:
       'A very simple counter component which I introduced the useState and useEffect hooks along with testing hooks with react-testing-library'
   },

@@ -8,7 +8,6 @@ const SimpleCounter = () => {
   const [count, setCount] = useState(0)
   const classes = useStyles()
 
-  // passed count as the second parameter tells this effect only to run if the count variable has changed
   useEffect(() => {
     document.title = `You clicked ${count} times`
 
@@ -16,6 +15,7 @@ const SimpleCounter = () => {
     return () => {
       document.title = 'React Sandbox'
     }
+    // passed count as the second parameter tells this effect only to run if the count variable has changed
   }, [count])
 
   return (
