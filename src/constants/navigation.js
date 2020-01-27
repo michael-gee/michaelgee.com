@@ -5,7 +5,8 @@ export const RS_APP_CONTAINERS = {
 export const RS_ROUTE_PATHS = {
   homepage: '/',
   counter: '/react-hooks-counters',
-  dataTable: '/react-table-v7'
+  dataTable: '/react-table-v7',
+  toDoList: '/to-do-list'
 }
 
 export const RS_NAV_EVENTS = {

@@ -10,6 +10,7 @@ import React from 'react'
 
 import Homepage from 'features/Homepage'
 import Counter from 'features/Counter'
+import ToDoList from 'features/ToDoList'
 
 import DataTable from 'features/DataTable'
 import columns from 'features/DataTable/static'
@@ -23,5 +24,6 @@ export default [
   {
     path: RS_ROUTE_PATHS.dataTable,
     component: () => <DataTable columns={columns} data={makeData(100)} />
-  }
+  },
+  { path: RS_ROUTE_PATHS.toDoList, component: ToDoList }
 ]

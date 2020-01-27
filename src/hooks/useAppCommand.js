@@ -39,10 +39,20 @@ export class ViewDataTableCommand extends AppCommandBase {
   }
 }
 
+export class ViewToDoListCommand extends AppCommandBase {
+  execute() {
+    dispatchNavigateEvent(RS_ROUTE_PATHS.toDoList)
+  }
+  canExecute() {
+    return true
+  }
+}
+
 const commands = {
   ViewHomepageCommand,
   ViewCounterCommand,
-  ViewDataTableCommand
+  ViewDataTableCommand,
+  ViewToDoListCommand
 }
 
 export default useAppCommand

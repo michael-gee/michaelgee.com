@@ -1,13 +1,12 @@
 import { makeStyles } from '@material-ui/styles'
 
-import { RS_PALETTE } from 'constants/theme'
+// import { RS_PALETTE } from 'constants/theme'
 
 export const useStyles = makeStyles({
   container: {
     display: 'flex',
     width: '100%',
-    color: 'white',
-    backgroundColor: RS_PALETTE.tertiary,
+    backgroundColor: 'white',
     margin: '24px 0',
     padding: '40px 0',
     textAlign: 'center'
