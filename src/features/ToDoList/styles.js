@@ -6,8 +6,13 @@ export const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     maxWidth: '600px',
-    margin: '32px auto',
+    margin: '40px auto',
     fontSize: '1.6em'
+  },
+
+  toDoInputField: {
+    display: 'flex',
+    marginTop: '40px'
   },
 
   noToDos: {
