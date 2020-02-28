@@ -4,7 +4,7 @@ import IconButton from '@material-ui/core/IconButton'
 import AddIcon from '@material-ui/icons/Add'
 import TextField from '@material-ui/core/TextField'
 
-const ToDoInput = ({ className, onAddToDo }) => {
+const ToDoInput = ({ onAddToDo }) => {
   const [toDoInput, setToDoInput] = useState('')
 
   // use useRef() here for dom access of the input field to enter a new to do item
@@ -12,7 +12,8 @@ const ToDoInput = ({ className, onAddToDo }) => {
   const toDoInputRef = useRef()
 
   return (
-    <div className={className}>
+    // CSS styles from ToDoList.css
+    <div id="rs-todos-input">
       <TextField
         value={toDoInput}
         onChange={e => {

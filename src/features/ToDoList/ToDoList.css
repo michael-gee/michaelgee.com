@@ -1,0 +1,18 @@
+#rs-todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: 40px auto;
+  font-size: 1.6em;  
+}
+
+#rs-todo-noData {
+  text-align: center;
+}
+
+/* ToDoInput CSS */
+#rs-todos-input {
+  display: flex;
+  margin-top: 40px;
+}

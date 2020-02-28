@@ -4,9 +4,11 @@ import FeatureItem from './FeatureItem'
 
 import data from './static'
 
+import './Homepage.css'
+
 const Homepage = () => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }} data-testid="rs-homepage-container">
+    <div id="rs-homepage-container">
       {data.map(item => (
         <div key={item.uid} data-testid="rs-homepage-ftItem">
           <FeatureItem title={item.title} command={item.command} date={item.date} description={item.description} />

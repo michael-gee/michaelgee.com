@@ -1,21 +1,19 @@
 import React from 'react'
 
+import ObjCounters from './ObjCounters'
 import SimpleCounter from './SimpleCounter'
-import ObjCounter from './ObjCounter'
 
-import { useStyles } from './styles'
+import './Counter.css'
 
 const Counter = () => {
-  const classes = useStyles()
-
   return (
-    <div className={classes.container}>
-      <div className={classes.countContainer}>
+    <div id="rs-counter-container">
+      <div className="rs-counter-section">
         <SimpleCounter />
       </div>
 
-      <div className={classes.countContainer}>
-        <ObjCounter
+      <div className="rs-counter-section">
+        <ObjCounters
           counters={[
             { label: 'Counter 1', value: 0, key: 'count1' },
             { label: 'Counter 2', value: 10, key: 'count2' },

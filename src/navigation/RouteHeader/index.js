@@ -7,30 +7,29 @@ import { useHistory, useLocation } from 'react-router-dom'
 
 import { RS_ROUTE_PATHS } from 'constants/navigation'
 
-import { useStyles } from './styles'
+import './RouteHeader.css'
 
 const RouteHeader = () => {
   const history = useHistory()
   const location = useLocation()
-  const classes = useStyles()
   const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
 
   return (
-    <div className={classes.headerContainer} data-testid="rs-header-container">
+    <div id="rs-header-container" data-testid="rs-header-container">
       {!isHomepage ? (
         <IconButton
+          id="rs-header-icon"
           onClick={history.goBack}
-          className={classes.headerIcon}
           title="Navigate to homepage"
           data-testid="rs-header-iconBtn"
         >
           <HomeIcon />
         </IconButton>
       ) : (
-        <div className={classes.divHidden} />
+        <div className="rs-header-hidden" />
       )}
       <div>{_configureRouteTitle(location.pathname)}</div>
-      <div className={classes.divHidden} />
+      <div className="rs-header-hidden" />
     </div>
   )
 

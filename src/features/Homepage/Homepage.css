@@ -1,0 +1,22 @@
+#rs-homepage-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* FeatureItem CSS */
+.rs-featureItem-image {
+  display: flex;
+  max-width: 120px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.rs-featureItem-description { 
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.rs-featureItem-actions {
+  display: flex;
+  justify-content: space-between;
+}

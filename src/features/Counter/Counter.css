@@ -1,0 +1,20 @@
+#rs-counter-container {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  margin: 24px 0;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.rs-counter-section { 
+  width: 50%;
+  font-size: 2em;
+ }
+
+.rs-counter-button {
+  margin: 10px 0;
+  font-size: 1.6em;
+}
+.rs-counter-button:last-child { margin-left: 10px; }
+.rs-counter-button:hover {cursor: pointer;}

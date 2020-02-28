@@ -8,21 +8,18 @@ import useApi from 'hooks/useApi'
 
 import { v4 } from 'uuid'
 
-import { useStyles } from './styles'
+import './ToDoList.css'
 
 const ToDoList = () => {
   const [toDos, setToDos] = useState([])
+
   const { isLoading, data, hasError } = useApi(_fetchMockToDoItems, {
     onMount: true,
     initialData: null
   })
 
-  const classes = useStyles()
-
-  console.log(data)
-
   return (
-    <div className={classes.container}>
+    <div id="rs-todo-list">
       {toDos.length > 0 ? (
         <ul>
           {toDos.map(todo => {
@@ -30,10 +27,10 @@ const ToDoList = () => {
           })}
         </ul>
       ) : (
-        <div className={classes.noToDos}>There are currently no to-dos.</div>
+        <div id="rs-todo-noData">There are currently no to-dos.</div>
       )}
 
-      <ToDoInput classes={classes} onAddToDo={_onAddToDo} />
+      <ToDoInput onAddToDo={_onAddToDo} />
     </div>
   )
 

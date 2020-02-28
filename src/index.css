@@ -1,0 +1,16 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: #EDF1F5;
+}
+
+h1 { font-size: 3.2em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1.2em; }
+
+/* @@@@@ add custom css variables palette to be used throughout the application */

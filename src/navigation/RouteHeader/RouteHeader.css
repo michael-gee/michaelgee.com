@@ -1,0 +1,31 @@
+#rs-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3.2em;
+  max-width: 1154px;
+  color: white;
+  background-color: red;
+  margin: 0 auto;
+  padding: 20px 24px;
+  border-radius: 3px;
+}
+
+#rs-header-icon {
+  background-color: white;
+  color: red;
+  padding: 8px;
+  transition: .5s;
+}
+#rs-header-icon:hover {
+  color: black;
+  background-color: red;
+}
+
+.rs-header-hidden {
+  width: 40px;
+  height: 40px;
+}
+
+
+

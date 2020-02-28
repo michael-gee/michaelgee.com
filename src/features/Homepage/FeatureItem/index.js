@@ -22,6 +22,7 @@ const FeatureItem = props => {
   const appCommand = useAppCommand(command)
   const classes = useStyles()
 
+  // CSS from Homepage.css
   return (
     <Card className={classes.cardContainer} style={!isExpanded ? { maxHeight: 220 } : {}}>
       <CardHeader
@@ -34,9 +35,9 @@ const FeatureItem = props => {
         subheader={date}
       />
 
-      <img src={reactSVG} alt="React JS Logo" className={classes.cardImage} />
+      <img src={reactSVG} alt="React JS Logo" className="rs-featureItem-image" />
 
-      <CardActions className={classes.cardActions}>
+      <CardActions className="rs-featureItem-actions">
         <IconButton
           color="inherit"
           onClick={_handleExpandClick}
@@ -59,7 +60,7 @@ const FeatureItem = props => {
 
       <Collapse in={isExpanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <p className={classes.cardDesc}>{description}</p>
+          <p className="rs-featureItem-description">{description}</p>
         </CardContent>
       </Collapse>
     </Card>

@@ -15,7 +15,7 @@ const ObjCounter = ({ counters }) => {
 
   return Object.keys(objCounters).map(counter => {
     return (
-      <div style={{ fontSize: '2em', marginBottom: 12 }} key={counter}>
+      <div style={{ marginBottom: 12 }} key={counter}>
         <span>
           {objCounters[counter].label}: {objCounters[counter].value}
         </span>

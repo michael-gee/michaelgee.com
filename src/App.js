@@ -5,27 +5,21 @@ import RouteHeader from './navigation/RouteHeader'
 import RouteViewer from './navigation/RouteViewer'
 import ThemeProvider from './components/ThemeProvider'
 
-import { useStyles } from './appStyles'
-
-export const App = () => {
-  const classes = useStyles()
-
+const App = () => {
   return (
-    <div className={classes.appContainer} data-testid="app-container">
-      <ThemeProvider>
-        <Router>
-          <Route
-            path="/"
-            render={() => (
-              <>
-                <RouteHeader />
-                <RouteViewer />
-              </>
-            )}
-          />
-        </Router>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <Route
+          path="/"
+          render={() => (
+            <>
+              <RouteHeader />
+              <RouteViewer />
+            </>
+          )}
+        />
+      </Router>
+    </ThemeProvider>
   )
 }
 
