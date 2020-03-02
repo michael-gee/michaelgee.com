@@ -24,7 +24,7 @@ export default [
     uid: v4(),
     title: 'To Do List',
     command: RS_APP_COMMANDS.viewToDoList,
-    date: 'January 27th, 2019',
+    date: 'February 28th, 2020',
     description: ''
   }
 ]

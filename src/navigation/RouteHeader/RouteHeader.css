@@ -4,22 +4,22 @@
   align-items: center;
   font-size: 3.2em;
   max-width: 1154px;
-  color: white;
-  background-color: red;
+  color: var(--rs-primary-color);
+  background-color: var(--rs-tertiary-color);
   margin: 0 auto;
   padding: 20px 24px;
   border-radius: 3px;
 }
 
 #rs-header-icon {
-  background-color: white;
-  color: red;
+  background-color: var(--rs-primary-color);
+  color: var(--rs-tertiary-color);
   padding: 8px;
   transition: .5s;
 }
 #rs-header-icon:hover {
-  color: black;
-  background-color: red;
+  color: var(--rs-tertiary-color);
+  background-color: white;
 }
 
 .rs-header-hidden {

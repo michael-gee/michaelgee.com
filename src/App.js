@@ -7,19 +7,21 @@ import ThemeProvider from './components/ThemeProvider'
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Router>
-        <Route
-          path="/"
-          render={() => (
-            <>
-              <RouteHeader />
-              <RouteViewer />
-            </>
-          )}
-        />
-      </Router>
-    </ThemeProvider>
+    <div id="rs-app-container">
+      <ThemeProvider>
+        <Router>
+          <Route
+            path="/"
+            render={() => (
+              <>
+                <RouteHeader />
+                <RouteViewer />
+              </>
+            )}
+          />
+        </Router>
+      </ThemeProvider>
+    </div>
   )
 }
 
