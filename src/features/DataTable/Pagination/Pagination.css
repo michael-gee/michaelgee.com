@@ -1,0 +1,39 @@
+#rs-dataTable-pagination-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding: 40px 0 40px 8px;
+}
+
+.rs-dataTable-pagination-section { min-width: 33%; }
+
+#rs-dataTable-pagination-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#rs-dataTable-pagination-content button {
+  display: flex;
+  align-items: center;
+  font-size: .8em;
+  padding: 10px 12px;
+  color: #337ab7;
+  border: none;
+  outline: none;
+}
+#rs-dataTable-pagination-content button:hover { 
+  cursor: pointer;
+  background-color: #f5f5f5;;
+}
+
+.rs-dataTable-pagination-disabled { color: #777 !important; }
+.rs-dataTable-pagination-disabled:hover { 
+  background-color: white !important;
+  cursor: not-allowed !important;
+ }
+
+.rs-dataTable-pagination-pivot {
+  display: flex;
+  justify-content: flex-end;
+}

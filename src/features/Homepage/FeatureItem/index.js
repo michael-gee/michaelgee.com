@@ -22,7 +22,7 @@ const FeatureItem = props => {
   const appCommand = useAppCommand(command)
   const classes = useStyles()
 
-  // CSS from Homepage.css
+  // CSS from Homepage.css & styles.js
   return (
     <Card className={classes.cardContainer} style={!isExpanded ? { maxHeight: 220 } : {}}>
       <CardHeader

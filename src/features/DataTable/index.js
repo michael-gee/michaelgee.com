@@ -11,12 +11,11 @@ import SvgIcon from '@material-ui/core/SvgIcon'
 
 import Pagination from './Pagination'
 
-import { useStyles } from './styles'
+import './DataTable.css'
 
 const DataTable = props => {
   const { data } = props
   const columns = useMemo(() => props.columns, [props.columns])
-  const classes = useStyles()
 
   const filterTypes = useMemo(
     () => ({
@@ -69,21 +68,24 @@ const DataTable = props => {
   )
 
   return (
-    <div className={classes.container}>
-      <table {...getTableProps()} className={classes.dataTable}>
+    <div className="rs-dataTable-container">
+      <table {...getTableProps()} className="rs-dataTable">
         {headerGroups.map(headerGroup => {
           return (
-            <thead {...headerGroup.getHeaderGroupProps()} className={classes.headerContainer}>
+            <thead {...headerGroup.getHeaderGroupProps()} className="rs-dataTable-header">
               <tr>
                 {headerGroup.headers.map(column => {
                   return (
                     <th key={column.id}>
-                      <div {...column.getHeaderProps(column.getSortByToggleProps())} className={classes.headerContent}>
+                      <div
+                        {...column.getHeaderProps(column.getSortByToggleProps())}
+                        className="rs-dataTable-header-content"
+                      >
                         {column.render('Header')}
                         <span>{_renderSortIcon(column)}</span>
                       </div>
 
-                      <div className={classes.rowFilter}>
+                      <div className="rs-dataTable-rowFilter">
                         {column.canFilter ? column.render('Filter') : <TextField disabled={true} />}
                       </div>
                     </th>
@@ -94,7 +96,7 @@ const DataTable = props => {
           )
         })}
 
-        <tbody className={classes.tableBody}>
+        <tbody className="rs-dataTable-body">
           {page.map(
             (item, i) =>
               prepareRow(item) || (

@@ -1,19 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { useStyles } from './styles'
+import './Pagination.css'
 
 const Pagination = props => {
   const { setPageSize, currentItemsCount } = props
-  const classes = useStyles()
 
   return (
-    <div className={classes.container}>
-      <div className={classes.section}>{currentItemsCount} results</div>
+    <div id="rs-dataTable-pagination-container">
+      <div className="rs-dataTable-pagination-section">{currentItemsCount} results</div>
 
       {_renderPagination()}
 
-      <div className={`${classes.section} ${classes.pivot}`}>
+      <div className="rs-dataTable-pagination-section rs-dataTable-pagination-pivot">
         {/* <Pivot linkFormat={PivotLinkFormat.tabs} onLinkClick={ev => _handleTabChange(ev.props.itemKey)}>
           <PivotItem headerText="10" itemKey="10" />
           <PivotItem headerText="25" itemKey="25" />
@@ -29,15 +28,19 @@ const Pagination = props => {
     const { canNextPage, canPreviousPage, nextPage, previousPage, pageIndex, pageCount, gotoPage } = props
 
     return (
-      <div className={`${classes.section} ${classes.pagination}`}>
+      <div id="rs-dataTable-pagination-content" className="rs-dataTable-pagination-section">
         <button
           onClick={() => gotoPage(0)}
-          className={pageIndex === 0 ? classes.disabled : ''}
+          className={pageIndex === 0 ? 'rs-dataTable-pagination-disabled' : ''}
           disabled={pageIndex === 0}
         >
           {'<<'}
         </button>
-        <button onClick={previousPage} className={!canPreviousPage ? classes.disabled : ''} disabled={!canPreviousPage}>
+        <button
+          onClick={previousPage}
+          className={!canPreviousPage ? 'rs-dataTable-pagination-disabled' : ''}
+          disabled={!canPreviousPage}
+        >
           {'<'}
         </button>
 
@@ -45,12 +48,16 @@ const Pagination = props => {
           Page {pageIndex + 1} of {pageCount}
         </div>
 
-        <button onClick={nextPage} className={!canNextPage ? classes.disabled : ''} disabled={!canNextPage}>
+        <button
+          onClick={nextPage}
+          className={!canNextPage ? 'rs-dataTable-pagination-disabled' : ''}
+          disabled={!canNextPage}
+        >
           {'>'}
         </button>
         <button
           onClick={() => gotoPage(pageCount - 1)}
-          className={pageIndex === pageCount - 1 ? classes.disabled : ''}
+          className={pageIndex === pageCount - 1 ? 'rs-dataTable-pagination-disabled' : ''}
           disabled={pageIndex === pageCount - 1}
         >
           {'>>'}
