@@ -1,7 +1,9 @@
 import React from 'react'
 
-import IconButton from '@material-ui/core/IconButton'
-import HomeIcon from '@material-ui/icons/Home'
+// import IconButton from '@material-ui/core/IconButton'
+// import HomeIcon from '@material-ui/icons/Home'
+
+import { Button } from 'semantic-ui-react'
 
 import { useHistory, useLocation } from 'react-router-dom'
 
@@ -17,14 +19,15 @@ const RouteHeader = () => {
   return (
     <div id="rs-header-container" data-testid="rs-header-container">
       {!isHomepage ? (
-        <IconButton
-          id="rs-header-icon"
-          onClick={history.goBack}
-          title="Navigate to homepage"
-          data-testid="rs-header-iconBtn"
-        >
-          <HomeIcon />
-        </IconButton>
+        // <IconButton
+        //   id="rs-header-icon"
+        //   onClick={history.goBack}
+        //   title="Navigate to homepage"
+        //   data-testid="rs-header-iconBtn"
+        // >
+        //   <HomeIcon />
+        // </IconButton>
+        <Button icon="home" content="Home" />
       ) : (
         <div className="rs-header-hidden" />
       )}
