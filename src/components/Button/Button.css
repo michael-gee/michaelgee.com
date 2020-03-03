@@ -1,0 +1,23 @@
+.ui.button.rs-primary-btn {
+  background-color: var(--rs-primary-color);
+  color: var(--rs-tertiary-color);
+}
+
+.ui.button.rs-secondary-btn {
+  background-color: var(--rs-secondary-color);
+  color: white;
+}
+
+.ui.button.rs-tertiary-btn {
+  background-color: var(--rs-tertiary-color);
+  color: white;
+}
+
+.ui.button.rs-custom-btn {
+  transition: .3s;
+}
+
+.ui.button.rs-custom-btn:hover {
+  opacity: .7;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}
