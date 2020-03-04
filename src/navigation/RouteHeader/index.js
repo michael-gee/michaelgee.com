@@ -24,7 +24,15 @@ const RouteHeader = () => {
         // >
         //   <HomeIcon />
         // </IconButton>
-        <Button text="Home" onClick={history.goBack} variant="primary" />
+
+        <Button
+          text="Home"
+          onClick={history.goBack}
+          size="medium"
+          variant="primary"
+          title="Navigate to homepage"
+          disabled
+        />
       ) : (
         <div className="rs-header-hidden" />
       )}
