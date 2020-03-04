@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import IconButton from '@material-ui/core/IconButton'
-import AddIcon from '@material-ui/icons/Add'
-import SubtractIcon from '@material-ui/icons/Remove'
+import IconButton from 'components/Button/IconButton'
+
+import { RS_BUTTON_COLORS, RS_BUTTON_SIZES } from 'components/Button/constants'
 
 const ObjCounter = ({ counters }) => {
   // for related values that you expect to update together at the same time can be stored in an object. If the state is unrelated and updated separately, it is better to use multiple useState() constants
@@ -15,30 +15,30 @@ const ObjCounter = ({ counters }) => {
 
   return Object.keys(objCounters).map(counter => {
     return (
-      <div style={{ marginBottom: 12 }} key={counter}>
+      <div className="rs-objCounter-counter" key={counter}>
         <span>
           {objCounters[counter].label}: {objCounters[counter].value}
         </span>
 
-        <IconButton
-          onClick={() => {
-            _incrementCount(counter)
-          }}
-          size="small"
-          aria-label="add"
-        >
-          <AddIcon />
-        </IconButton>
+        <div>
+          <IconButton
+            iconName="add"
+            color={RS_BUTTON_COLORS.green}
+            size={RS_BUTTON_SIZES.mini}
+            onClick={() => {
+              _incrementCount(counter)
+            }}
+          />
 
-        <IconButton
-          onClick={() => {
-            _decrementCount(counter)
-          }}
-          size="small"
-          aria-label="subtract"
-        >
-          <SubtractIcon />
-        </IconButton>
+          <IconButton
+            iconName="minus"
+            color={RS_BUTTON_COLORS.red}
+            size={RS_BUTTON_SIZES.mini}
+            onClick={() => {
+              _decrementCount(counter)
+            }}
+          />
+        </div>
       </div>
     )
   })

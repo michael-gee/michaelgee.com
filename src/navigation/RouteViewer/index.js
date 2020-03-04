@@ -32,7 +32,7 @@ const RouteViewer = () => {
   }, [history])
 
   return (
-    <div style={{ maxWidth: 1200, margin: '24px auto' }} data-testid="rs-routeViewer">
+    <div style={{ maxWidth: 1154, margin: '24px auto' }} data-testid="rs-routeViewer">
       {routes &&
         routes.length > 0 &&
         routes.map(route => {

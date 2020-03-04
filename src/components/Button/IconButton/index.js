@@ -3,31 +3,32 @@ import PropTypes from 'prop-types'
 
 import { Button as SUIButton } from 'semantic-ui-react'
 
-import { RS_BUTTON_COLOR_TYPES, RS_BUTTON_CUSTOM_COLOR_TYPES, RS_BUTTON_SIZE_TYPES } from './constants'
+import { RS_BUTTON_COLOR_TYPES, RS_BUTTON_CUSTOM_COLOR_TYPES, RS_BUTTON_SIZE_TYPES } from '../constants'
 
-import './Button.css'
+import '../Button.css'
 
-const Button = props => {
-  const { text, onClick, color, customColor, size, iconName, disabled, id, className, style, title } = props
-  const btnClassNames = _configureClassNames()
+const IconButton = props => {
+  const { iconName, onClick, color, customColor, size, disabled, id, className, style, title } = props
+  const iconBtnClassNames = _configureClassNames()
 
   return (
     <SUIButton
       id={id}
-      className={btnClassNames}
+      className={iconBtnClassNames}
       style={style}
       color={customColor ? undefined : color}
-      content={text}
-      onClick={onClick}
-      size={size}
       icon={iconName}
+      onClick={onClick}
+      circular
+      size={size}
       disabled={disabled ? true : undefined}
       title={title}
     />
   )
 
   function _configureClassNames() {
-    if (disabled) return className
+    // styles from Button.css
+    if (disabled) return className // props.className
     let classNames = `rs-custom-btn${className ? ' ' + className : ''}`
     if (color) return classNames
 
@@ -50,18 +51,17 @@ const Button = props => {
   }
 }
 
-Button.propTypes = {
+IconButton.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
-  text: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   color: PropTypes.oneOf(RS_BUTTON_COLOR_TYPES),
   customColor: PropTypes.oneOf(RS_BUTTON_CUSTOM_COLOR_TYPES),
   size: PropTypes.oneOf(RS_BUTTON_SIZE_TYPES),
-  iconName: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string
 }
 
-export default Button
+export default IconButton

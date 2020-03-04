@@ -8,7 +8,7 @@ export default [
     uid: v4(),
     title: 'Simple Hooks Counters',
     command: RS_APP_COMMANDS.viewCounter,
-    date: 'January 24th, 2020',
+    date: 'March 3rd, 2020',
     description:
       'A very simple counter component which I introduced the useState, useEffect, and useRef hooks along with testing hooks with react-testing-library'
   },

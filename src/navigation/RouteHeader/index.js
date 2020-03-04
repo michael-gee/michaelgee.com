@@ -1,10 +1,11 @@
 import React from 'react'
 
-import Button from 'components/Button'
+import IconButton from 'components/Button/IconButton'
 
 import { useHistory, useLocation } from 'react-router-dom'
 
 import { RS_ROUTE_PATHS } from 'constants/navigation'
+import { RS_BUTTON_CUSTOM_COLORS, RS_BUTTON_SIZES } from 'components/Button/constants'
 
 import './RouteHeader.css'
 
@@ -16,22 +17,12 @@ const RouteHeader = () => {
   return (
     <div id="rs-header-container" data-testid="rs-header-container">
       {!isHomepage ? (
-        // <IconButton
-        //   id="rs-header-icon"
-        //   onClick={history.goBack}
-        //   title="Navigate to homepage"
-        //   data-testid="rs-header-iconBtn"
-        // >
-        //   <HomeIcon />
-        // </IconButton>
-
-        <Button
-          text="Home"
+        <IconButton
+          iconName="home"
           onClick={history.goBack}
-          size="medium"
-          variant="primary"
+          customColor={RS_BUTTON_CUSTOM_COLORS.primary}
+          size={RS_BUTTON_SIZES.large}
           title="Navigate to homepage"
-          disabled
         />
       ) : (
         <div className="rs-header-hidden" />

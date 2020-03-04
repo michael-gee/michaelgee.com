@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import Button from '@material-ui/core/Button'
+import Button from 'components/Button'
+
+import { RS_BUTTON_COLORS } from 'components/Button/constants'
 
 const SimpleCounter = () => {
   const [count, setCount] = useState(0)
@@ -21,24 +23,24 @@ const SimpleCounter = () => {
 
   return (
     <>
-      <div style={{ marginTop: 16 }} data-testid="rs-counter-count">
+      <div id="rs-simple-countText" data-testid="rs-counter-count">
         Current Count: {count}
       </div>
 
       <Button
-        variant="contained"
+        text="Increment"
+        color={RS_BUTTON_COLORS.green}
         onClick={() => {
           setCount(prevCount => prevCount + 1)
           clickCount.current++
           return
         }}
         data-testid="rs-counter-incrementBtn"
-      >
-        Increment
-      </Button>
+      />
 
       <Button
-        variant="contained"
+        text="Decrement"
+        color={RS_BUTTON_COLORS.red}
         onClick={() => {
           // // https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous
           // when updating state that to a value that relies on the value of the previous state, it is best practice to pass a callback function to the setState function which will prevent stale state updates and renders
@@ -48,9 +50,7 @@ const SimpleCounter = () => {
           return
         }}
         data-testid="rs-counter-decrementBtn"
-      >
-        Decrement
-      </Button>
+      />
     </>
   )
 }
