@@ -34,7 +34,7 @@ export default [
   {
     Header: 'Status',
     accessor: 'status',
-    // canFilter: false,
+    canFilter: false,
     Cell: row => (
       <span>
         <span

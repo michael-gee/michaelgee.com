@@ -1,5 +1,5 @@
 .rs-dataTable-container {
-  padding: 0 12px;
+  padding: 0 16px;
   background-color: white;
   font-size: 1.6em;
 }
@@ -17,13 +17,14 @@
 }
 .rs-dataTable-header th {
   font-weight: 400;
-  padding: 20px 8px 4px;
+  padding: 8px;
 }
 
 .rs-dataTable-header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 32px;
 }
 
 .rs-dataTable-header-icon {
@@ -33,9 +34,15 @@
 .rs-dataTable-body tr { border-bottom: 1px solid #ddd; }
 .rs-dataTable-body tr:hover { background-color: #f5f5f5; }
 .rs-dataTable-body tr td { 
-  padding: 6px 8px;
-  padding-left: 16px;
+  padding: 6px 16px;
+  padding-left: 24px;
   line-height: 1.43;  
 }
 
 .rs-dataTable-rowFilter { padding: 4px 0; }
+.rs-dataTable-rowFilter .ui.icon.button {
+  display: flex;
+  justify-content: center;
+  padding: 0; 
+  min-width: 32px;
+}
