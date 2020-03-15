@@ -16,7 +16,7 @@ export default [
     uid: v4(),
     title: 'Data Table with react-table',
     command: RS_APP_COMMANDS.viewDataTable,
-    date: 'December 10th, 2019',
+    date: 'March 15th, 2020',
     description:
       'A feature filled data table using the v7 react-table library which introduced a "headless" data table approach to give ONLY the functionality of the table but all the styling and rendering control to the developer'
   },

@@ -8,6 +8,7 @@
 }
 
 #rs-todo-noData {
+  margin-top: 16px;
   text-align: center;
 }
 
@@ -15,4 +16,7 @@
 #rs-todos-input {
   display: flex;
   margin-top: 40px;
+}
+#rs-todos-input .ui.input {
+  width: 100%;
 }
