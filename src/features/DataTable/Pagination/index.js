@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+
+import IconButton from 'components/Button/IconButton'
 
 import './Pagination.css'
 
 const Pagination = props => {
   const { setPageSize, currentItemsCount } = props
+  const [currentTab, setCurrentTab] = useState(10)
+  const tabOptions = [10, 25, 50, 100]
 
   return (
     <div id="rs-dataTable-pagination-container">
@@ -13,13 +17,18 @@ const Pagination = props => {
       {_renderPagination()}
 
       <div className="rs-dataTable-pagination-section rs-dataTable-pagination-pivot">
-        {/* <Pivot linkFormat={PivotLinkFormat.tabs} onLinkClick={ev => _handleTabChange(ev.props.itemKey)}>
-          <PivotItem headerText="10" itemKey="10" />
-          <PivotItem headerText="25" itemKey="25" />
-          <PivotItem headerText="50" itemKey="50" />
-          <PivotItem headerText="100" itemKey="100" />
-        </Pivot> */}
-        Material UI Pivot
+        {tabOptions.map(tab => {
+          return (
+            <IconButton
+              customColor={currentTab === tab ? 'tertiary' : 'primary'}
+              size="mini"
+              onClick={() => _handleTabChange(tab)}
+              key={`key-${tab}`}
+            >
+              {tab}
+            </IconButton>
+          )
+        })}
       </div>
     </div>
   )
@@ -68,6 +77,7 @@ const Pagination = props => {
 
   function _handleTabChange(tab) {
     setPageSize(Number(tab))
+    setCurrentTab(tab)
   }
 }
 

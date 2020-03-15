@@ -23,7 +23,9 @@ const IconButton = props => {
       size={size}
       disabled={disabled ? true : undefined}
       title={title}
-    />
+    >
+      {props.children}
+    </SUIButton>
   )
 
   function _configureClassNames() {
@@ -55,7 +57,7 @@ IconButton.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
-  iconName: PropTypes.string.isRequired,
+  iconName: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   color: PropTypes.oneOf(RS_BUTTON_COLOR_TYPES),
   customColor: PropTypes.oneOf(RS_BUTTON_CUSTOM_COLOR_TYPES),
