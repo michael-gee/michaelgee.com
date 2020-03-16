@@ -4,19 +4,29 @@
 }
 
 /* FeatureItem CSS */
-.rs-featureItem-image {
-  display: flex;
-  max-width: 120px;
-  margin: 0 auto;
-  pointer-events: none;
+.rs-homepage-ftItem .ui.card {
+  color: white;
+  background-color: var(--rs-tertiary-color);
+  font-size: 1.8em;
+  width: 276px;
+  margin: 12px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+/* Card.Header */
+.rs-homepage-ftItem .ui.card .header { 
+  color: white;
+  margin: 0 12px;
+}
+/* Card.Meta */
+.rs-homepage-ftItem .ui.card .meta { 
+  color: rgba(155,155,155,.9);
+  margin: 8px 12px;
 }
 
-.rs-featureItem-description { 
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.rs-featureItem-actions {
+.rs-featureItem-cardIcons {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }

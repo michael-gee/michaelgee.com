@@ -10,7 +10,7 @@ const Homepage = () => {
   return (
     <div id="rs-homepage-container">
       {data.map(item => (
-        <div key={item.uid} data-testid="rs-homepage-ftItem">
+        <div className="rs-homepage-ftItem" key={item.uid}>
           <FeatureItem title={item.title} command={item.command} date={item.date} description={item.description} />
         </div>
       ))}

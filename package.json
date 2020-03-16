@@ -20,8 +20,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@material-ui/core": "^4.9.5",
-    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/react-hooks": "^2.0.3"

@@ -10,7 +10,7 @@ export default [
     command: RS_APP_COMMANDS.viewCounter,
     date: 'March 3rd, 2020',
     description:
-      'A very simple counter component which I introduced the useState, useEffect, and useRef hooks along with testing hooks with react-testing-library'
+      'A very simple counter component which I introduced the useState, useEffect, and useRef hooks along with testing hooks with react-testing-library.'
   },
   {
     uid: v4(),
@@ -18,13 +18,13 @@ export default [
     command: RS_APP_COMMANDS.viewDataTable,
     date: 'March 15th, 2020',
     description:
-      'A feature filled data table using the v7 react-table library which introduced a "headless" data table approach to give ONLY the functionality of the table but all the styling and rendering control to the developer'
+      'A feature filled data table using the v7 react-table library which introduced a "headless" data table approach to give ONLY the functionality of the table but all the styling and rendering control to the developer.'
   },
   {
     uid: v4(),
     title: 'To Do List',
     command: RS_APP_COMMANDS.viewToDoList,
-    date: 'February 28th, 2020',
+    date: 'March 15th, 2020',
     description: ''
   }
 ]
