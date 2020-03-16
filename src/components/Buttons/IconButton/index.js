@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Button as SUIButton } from 'semantic-ui-react'
 
-import { RS_BUTTON_COLOR_TYPES, RS_BUTTON_CUSTOM_COLOR_TYPES, RS_BUTTON_SIZE_TYPES } from '../constants'
+import { RS_BUTTON_COLOR_TYPES, RS_BUTTON_CUSTOM_COLOR_TYPES, RS_BUTTON_SIZE_TYPES } from 'constants/button'
 
 import '../Button.css'
 

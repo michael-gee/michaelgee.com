@@ -1,11 +1,11 @@
 import React from 'react'
 
-import IconButton from 'components/Button/IconButton'
+import IconButton from 'components/Buttons/IconButton'
 
 import { useHistory, useLocation } from 'react-router-dom'
 
 import { RS_ROUTE_PATHS } from 'constants/navigation'
-import { RS_BUTTON_CUSTOM_COLORS, RS_BUTTON_SIZES } from 'components/Button/constants'
+import { RS_BUTTON_CUSTOM_COLORS, RS_BUTTON_SIZES } from 'constants/button'
 
 import './RouteHeader.css'
 
@@ -13,6 +13,8 @@ const RouteHeader = () => {
   const history = useHistory()
   const location = useLocation()
   const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
+
+  console.log(RS_BUTTON_CUSTOM_COLORS)
 
   return (
     <div id="rs-header-container" data-testid="rs-header-container">

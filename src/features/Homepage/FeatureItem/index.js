@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Card, Icon, Image, Popup } from 'semantic-ui-react'
 
-import IconButton from 'components/Button/IconButton'
+import IconButton from 'components/Buttons/IconButton'
 
 import useAppCommand from 'hooks/useAppCommand'
 

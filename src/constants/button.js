@@ -34,7 +34,7 @@ export const RS_BUTTON_SIZES = {
   massive: 'massive'
 }
 
-// PROP TYPES
+// ***** PROP TYPES *****
 export const RS_BUTTON_COLOR_TYPES = [
   'red',
   'orange',

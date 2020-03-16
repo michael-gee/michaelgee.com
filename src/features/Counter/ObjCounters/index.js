@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import IconButton from 'components/Button/IconButton'
+import IconButton from 'components/Buttons/IconButton'
 
-import { RS_BUTTON_COLORS, RS_BUTTON_SIZES } from 'components/Button/constants'
+import { RS_BUTTON_COLORS, RS_BUTTON_SIZES } from 'constants/button'
 
 const ObjCounter = ({ counters }) => {
   // for related values that you expect to update together at the same time can be stored in an object. If the state is unrelated and updated separately, it is better to use multiple useState() constants

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import IconButton from 'components/Button/IconButton'
+import IconButton from 'components/Buttons/IconButton'
 
 import './Pagination.css'
 
@@ -23,6 +23,7 @@ const Pagination = props => {
               customColor={currentTab === tab ? 'tertiary' : 'primary'}
               size="mini"
               onClick={() => _handleTabChange(tab)}
+              style={{ padding: '8px 12px', borderRadius: 'none' }}
               key={`key-${tab}`}
             >
               {tab}

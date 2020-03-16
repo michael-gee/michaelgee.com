@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import Button from 'components/Button'
+import Button from 'components/Buttons/Button'
 
-import { RS_BUTTON_COLORS } from 'components/Button/constants'
+import { RS_BUTTON_COLORS } from 'constants/button'
 
 const SimpleCounter = () => {
   const [count, setCount] = useState(0)

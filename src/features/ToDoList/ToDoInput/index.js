@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 
 import { Input } from 'semantic-ui-react'
 
-import IconButton from 'components/Button/IconButton'
+import IconButton from 'components/Buttons/IconButton'
 
 const ToDoInput = ({ onAddToDo }) => {
   const [toDoInput, setToDoInput] = useState('')
