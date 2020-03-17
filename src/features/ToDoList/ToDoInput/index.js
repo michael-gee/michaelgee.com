@@ -29,7 +29,13 @@ const ToDoInput = ({ onAddToDo }) => {
         autoFocus
       />
 
-      <IconButton onClick={_onEnterToDo} iconName="add" size="small" customColor="primary" />
+      <IconButton
+        onClick={_onEnterToDo}
+        iconName="add"
+        size="medium"
+        customColor="primary"
+        disabled={toDoInput === '' ? true : false}
+      />
     </div>
   )
 

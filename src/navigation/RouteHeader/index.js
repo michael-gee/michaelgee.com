@@ -14,8 +14,6 @@ const RouteHeader = () => {
   const location = useLocation()
   const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
 
-  console.log(RS_BUTTON_CUSTOM_COLORS)
-
   return (
     <div id="rs-header-container" data-testid="rs-header-container">
       {!isHomepage ? (

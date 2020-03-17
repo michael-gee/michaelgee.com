@@ -5,13 +5,13 @@ import { Card, Icon, Image, Popup } from 'semantic-ui-react'
 
 import IconButton from 'components/Buttons/IconButton'
 
-import useAppCommand from 'hooks/useAppCommand'
+import useNavigation from 'hooks/useNavigation'
 
 import reactSVG from './react.svg'
 
 const FeatureItem = props => {
-  const { title, command, commandOpts, date, description } = props
-  const appCommand = useAppCommand(command)
+  const { title, route, routeOpts, date, description } = props
+  const { navigateTo } = useNavigation()
 
   // CSS from Homepage.css & styles.js
   return (
@@ -44,14 +44,14 @@ const FeatureItem = props => {
   }
 
   function _handleItemClick() {
-    appCommand.execute({ commandOpts })
+    navigateTo(route, routeOpts)
   }
 }
 
 FeatureItem.propTypes = {
   title: PropTypes.string.isRequired,
-  command: PropTypes.string.isRequired,
-  commandOpts: PropTypes.object,
+  route: PropTypes.string.isRequired,
+  routeOpts: PropTypes.object,
   date: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 }
