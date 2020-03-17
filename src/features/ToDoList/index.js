@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import ToDoItem from './ToDoItem'
 import ToDoInput from './ToDoInput'
@@ -18,8 +18,17 @@ const ToDoList = () => {
     initialData: null
   })
 
+  useEffect(() => {
+    if (!isLoading && data) {
+      const mappedToDos = data.map(item => ({ id: v4(), value: item.title }))
+      setToDos(mappedToDos)
+    }
+  }, [isLoading, data])
+
   return (
     <div id="rs-todo-list">
+      {isLoading && <div>Loading...</div>}
+
       {toDos.length > 0 ? (
         <ul>
           {toDos.map(todo => {
