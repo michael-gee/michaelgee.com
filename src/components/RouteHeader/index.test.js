@@ -3,7 +3,7 @@ import { Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { render, fireEvent } from '@testing-library/react'
 
-import RouteHeader from './'
+import RouteHeader from '.'
 
 describe('<RouteHeader />', () => {
   let wrapper, history

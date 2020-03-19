@@ -1,30 +1,28 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import RouteHeader from './navigation/RouteHeader'
+import RouteHeader from './components/RouteHeader'
 
-import routes from './navigation/routes'
+import routes from './routes'
 
 const App = () => {
   return (
     <div id="rs-app-container">
       <Router>
-        <>
-          <RouteHeader />
+        <RouteHeader />
 
-          <div style={{ maxWidth: 1154, margin: '24px auto' }} data-testid="rs-routeViewer">
-            {routes &&
-              routes.length > 0 &&
-              routes.map(route => {
-                const { exact, path, component } = route
-                return (
-                  <div key={path} data-testid="rs-routeViewer-route">
-                    <Route exact={exact || false} path={path} component={component} />
-                  </div>
-                )
-              })}
-          </div>
-        </>
+        <div id="rs-route-container">
+          {routes &&
+            routes.length > 0 &&
+            routes.map(route => {
+              const { exact, path, component } = route
+              return (
+                <div key={path} data-testid="rs-routeViewer-route">
+                  <Route exact={exact || false} path={path} component={component} />
+                </div>
+              )
+            })}
+        </div>
       </Router>
     </div>
   )

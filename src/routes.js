@@ -6,6 +6,7 @@
 //   Homepage: lazy(() => import('../routes/Homepage')),
 //   Counter: lazy(() => import('../routes/Counter'))
 // }
+
 import React from 'react'
 
 import Homepage from 'features/Homepage'
