@@ -4,6 +4,13 @@ import { RS_ROUTE_PATHS } from 'constants/navigation'
 
 export default [
   {
+    uid: v4(),
+    title: 'Hooks Examples',
+    route: RS_ROUTE_PATHS.hooksExamples,
+    date: 'March 18th, 2020',
+    description: ''
+  },
+  {
     // Note: generates new uids on every refresh
     uid: v4(),
     title: 'Simple Hooks Counters',
