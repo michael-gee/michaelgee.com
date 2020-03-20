@@ -1,16 +1,18 @@
 import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
 import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 
 import { Input, Icon } from 'semantic-ui-react'
 
 import Pagination from './Pagination'
 
+import makeColumns from './static'
+import makeData from './makeData'
+
 import './DataTable.css'
 
-const DataTable = props => {
-  const { data } = props
-  const columns = useMemo(() => props.columns, [props.columns])
+const DataTable = () => {
+  const data = makeData(100)
+  const columns = useMemo(() => makeColumns, [makeColumns])
 
   const filterTypes = useMemo(
     () => ({
@@ -160,10 +162,6 @@ const DataTable = props => {
       />
     )
   }
-}
-
-DataTable.propTypes = {
-  columns: PropTypes.array.isRequired
 }
 
 export default DataTable
