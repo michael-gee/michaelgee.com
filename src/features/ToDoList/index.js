@@ -13,7 +13,7 @@ import './ToDoList.css'
 const ToDoList = () => {
   const [toDos, setToDos] = useState([])
 
-  const { isLoading, data, hasError } = useApi(_fetchMockToDoItems, {
+  const { isLoading, data } = useApi(_fetchMockToDoItems, {
     onMount: true,
     initialData: null
   })

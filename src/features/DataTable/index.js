@@ -12,7 +12,7 @@ import './DataTable.css'
 
 const DataTable = () => {
   const data = makeData(100)
-  const columns = useMemo(() => makeColumns, [makeColumns])
+  const columns = useMemo(() => makeColumns, [])
 
   const filterTypes = useMemo(
     () => ({

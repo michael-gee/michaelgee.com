@@ -63,7 +63,7 @@ Button.propTypes = {
   iconName: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string,
-  ['data-testid']: PropTypes.string
+  'data-testid': PropTypes.string
 }
 
 export default Button

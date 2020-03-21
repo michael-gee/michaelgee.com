@@ -65,7 +65,7 @@ IconButton.propTypes = {
   size: PropTypes.oneOf(RS_BUTTON_SIZE_TYPES),
   disabled: PropTypes.bool,
   title: PropTypes.string,
-  ['data-testid']: PropTypes.string
+  'data-testid': PropTypes.string
 }
 
 export default IconButton

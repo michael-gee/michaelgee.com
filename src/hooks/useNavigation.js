@@ -16,7 +16,7 @@ const useNavigation = () => {
     }
 
     setNavigation({ navigateTo })
-  }, [])
+  }, [history])
 
   return { ...navigation }
 }
