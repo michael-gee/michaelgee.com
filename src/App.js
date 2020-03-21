@@ -9,11 +9,11 @@ const Loading = () => <div>Loading...</div>
 
 const App = () => {
   return (
-    <div id="rs-app-container">
+    <div id="mg-app-container">
       <Router>
         <RouteHeader />
 
-        <div id="rs-route-container">
+        <div id="mg-route-container">
           <Suspense fallback={<Loading />}>
             {routes &&
               routes.length > 0 &&
@@ -25,7 +25,7 @@ const App = () => {
                     path={path}
                     component={component}
                     key={path}
-                    data-testid="rs-routeViewer-route"
+                    data-testid="mg-routeViewer-route"
                   />
                 )
               })}

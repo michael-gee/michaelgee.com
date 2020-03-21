@@ -11,16 +11,16 @@ const Pagination = props => {
   const tabOptions = [10, 25, 50, 100]
 
   return (
-    <div id="rs-dataTable-pagination-container">
-      <div className="rs-dataTable-pagination-section">{currentItemsCount} results</div>
+    <div id="mg-dataTable-pagination-container">
+      <div className="mg-dataTable-pagination-section">{currentItemsCount} results</div>
 
       {_renderPagination()}
 
-      <div className="rs-dataTable-pagination-section rs-dataTable-pagination-pivot">
+      <div className="mg-dataTable-pagination-section mg-dataTable-pagination-pivot">
         {tabOptions.map(tab => {
           return (
             <IconButton
-              customColor={currentTab === tab ? 'tertiary' : 'primary'}
+              customColor={currentTab === tab ? 'react' : undefined}
               size="mini"
               onClick={() => _handleTabChange(tab)}
               style={{ padding: '8px 12px', borderRadius: 'none' }}
@@ -38,17 +38,17 @@ const Pagination = props => {
     const { canNextPage, canPreviousPage, nextPage, previousPage, pageIndex, pageCount, gotoPage } = props
 
     return (
-      <div id="rs-dataTable-pagination-content" className="rs-dataTable-pagination-section">
+      <div id="mg-dataTable-pagination-content" className="mg-dataTable-pagination-section">
         <button
           onClick={() => gotoPage(0)}
-          className={pageIndex === 0 ? 'rs-dataTable-pagination-disabled' : ''}
+          className={pageIndex === 0 ? 'mg-dataTable-pagination-disabled' : ''}
           disabled={pageIndex === 0}
         >
           {'<<'}
         </button>
         <button
           onClick={previousPage}
-          className={!canPreviousPage ? 'rs-dataTable-pagination-disabled' : ''}
+          className={!canPreviousPage ? 'mg-dataTable-pagination-disabled' : ''}
           disabled={!canPreviousPage}
         >
           {'<'}
@@ -60,14 +60,14 @@ const Pagination = props => {
 
         <button
           onClick={nextPage}
-          className={!canNextPage ? 'rs-dataTable-pagination-disabled' : ''}
+          className={!canNextPage ? 'mg-dataTable-pagination-disabled' : ''}
           disabled={!canNextPage}
         >
           {'>'}
         </button>
         <button
           onClick={() => gotoPage(pageCount - 1)}
-          className={pageIndex === pageCount - 1 ? 'rs-dataTable-pagination-disabled' : ''}
+          className={pageIndex === pageCount - 1 ? 'mg-dataTable-pagination-disabled' : ''}
           disabled={pageIndex === pageCount - 1}
         >
           {'>>'}

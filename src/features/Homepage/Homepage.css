@@ -1,12 +1,12 @@
-#rs-homepage-container {
+#mg-homepage-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 /* FeatureItem CSS */
-.rs-homepage-ftItem .ui.card {
+.mg-homepage-ftItem .ui.card {
   color: white;
-  background-color: var(--rs-tertiary-color);
+  background-color: var(--react-secondary-color);
   font-size: 1.8em;
   width: 264px;
   margin: 12px;
@@ -15,17 +15,17 @@
   -moz-user-select: none;
 }
 /* Card.Header */
-.rs-homepage-ftItem .ui.card .header { 
+.mg-homepage-ftItem .ui.card .header { 
   color: white;
   margin: 0 12px;
 }
 /* Card.Meta */
-.rs-homepage-ftItem .ui.card .meta { 
+.mg-homepage-ftItem .ui.card .meta { 
   color: rgba(155,155,155,.9);
   margin: 8px 12px;
 }
 
-.rs-featureItem-cardIcons {
+.mg-featureItem-cardIcons {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,28 +1,28 @@
-#rs-header-container {
+#mg-header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 3.2em;
   max-width: 1154px;
-  color: var(--rs-primary-color);
-  background-color: var(--rs-tertiary-color);
+  color: var(--react-primary-color);
+  background-color: var(--react-secondary-color);
   margin: 0 auto;
   padding: 20px 24px;
   border-radius: 3px;
 }
 
-#rs-header-icon {
-  background-color: var(--rs-primary-color);
-  color: var(--rs-tertiary-color);
+#mg-header-icon {
+  background-color: var(--react-primary-color);
+  color: var(--react-secondary-color);
   padding: 8px;
   transition: .5s;
 }
-#rs-header-icon:hover {
-  color: var(--rs-tertiary-color);
+#mg-header-icon:hover {
+  color: var(--react-secondary-color);
   background-color: white;
 }
 
-.rs-header-hidden {
+.mg-header-hidden {
   width: 40px;
   height: 40px;
 }

@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import Button from 'components/Buttons/Button'
 
-import { RS_BUTTON_COLORS } from 'constants/button'
-
 const SimpleCounter = () => {
   const [count, setCount] = useState(0)
   // useRef can be used more for just DOM access. here we use it to store the amount of times we have clicked the increment/decrement buttons
@@ -23,24 +21,24 @@ const SimpleCounter = () => {
 
   return (
     <>
-      <div id="rs-simple-countText" data-testid="rs-counter-count">
+      <div id="mg-simple-countText" data-testid="mg-counter-count">
         Current Count: {count}
       </div>
 
       <Button
         text="Increment"
-        color={RS_BUTTON_COLORS.green}
+        color="green"
         onClick={() => {
           setCount(prevCount => prevCount + 1)
           clickCount.current++
           return
         }}
-        data-testid="rs-counter-incrementBtn"
+        data-testid="mg-counter-incrementBtn"
       />
 
       <Button
         text="Decrement"
-        color={RS_BUTTON_COLORS.red}
+        color="red"
         onClick={() => {
           // // https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous
           // when updating state that to a value that relies on the value of the previous state, it is best practice to pass a callback function to the setState function which will prevent stale state updates and renders
@@ -49,7 +47,7 @@ const SimpleCounter = () => {
           clickCount.current++
           return
         }}
-        data-testid="rs-counter-decrementBtn"
+        data-testid="mg-counter-decrementBtn"
       />
     </>
   )

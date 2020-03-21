@@ -27,7 +27,7 @@ const FeatureItem = props => {
 
   function _renderCardIcons() {
     return (
-      <div className="rs-featureItem-cardIcons">
+      <div className="mg-featureItem-cardIcons">
         {description ? (
           <Popup
             content={description}
@@ -38,7 +38,7 @@ const FeatureItem = props => {
           <span />
         )}
 
-        <IconButton onClick={_handleItemClick} customColor="primary" iconName="arrow right" />
+        <IconButton onClick={_handleItemClick} customColor="react" iconName="arrow right" />
       </div>
     )
   }

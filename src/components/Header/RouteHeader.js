@@ -3,12 +3,12 @@ import React from 'react'
 import Header from './'
 
 import { useHistory, useLocation } from 'react-router-dom'
-import { RS_ROUTE_PATHS } from 'constants/navigation'
+import { MG_ROUTE_PATHS } from 'constants/navigation'
 
 const RouteHeader = () => {
   const history = useHistory()
   const location = useLocation()
-  const isHomepage = location.pathname === RS_ROUTE_PATHS.homepage
+  const isHomepage = location.pathname === MG_ROUTE_PATHS.homepage
 
   return (
     <Header
@@ -19,7 +19,7 @@ const RouteHeader = () => {
 
   function _configureHeaderTitle() {
     if (isHomepage) {
-      return 'React Sandbox'
+      return 'MG Sandbox'
     } else {
       const routePath = location.pathname
         .split('/')[1]

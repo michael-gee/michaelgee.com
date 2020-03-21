@@ -26,7 +26,7 @@ const ToDoList = () => {
   }, [isLoading, data])
 
   return (
-    <div id="rs-todo-list">
+    <div id="mg-todo-list">
       {isLoading && <div>Loading...</div>}
 
       {toDos.length > 0 ? (
@@ -36,7 +36,7 @@ const ToDoList = () => {
           })}
         </ul>
       ) : (
-        <div id="rs-todo-noData">There are currently no to-dos.</div>
+        <div id="mg-todo-noData">There are currently no to-dos.</div>
       )}
 
       <ToDoInput onAddToDo={_onAddToDo} />

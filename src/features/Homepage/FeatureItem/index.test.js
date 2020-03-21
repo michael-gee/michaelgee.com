@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 
 import FeatureItem from './'
 
-import { RS_ROUTE_PATHS } from 'constants/navigation'
+import { MG_ROUTE_PATHS } from 'constants/navigation'
 
 let mockNavigateTo = jest.fn()
 
@@ -36,13 +36,13 @@ describe.skip('<FeatureItem />', () => {
   it('should NOT display the item description by default', () => {
     // isExpanded state is set to false by default
     const { queryByTestId } = wrapper
-    const ItemDescription = queryByTestId('rs-featureItem-collapse')
+    const ItemDescription = queryByTestId('mg-featureItem-collapse')
     expect(ItemDescription).toBeNull()
   })
 
   it('should display the item description when the expand icon button is clicked', () => {
     const { queryByText, queryByTestId } = wrapper
-    const ExpandedIconButton = queryByTestId('rs-featureItem-expandIconBtn')
+    const ExpandedIconButton = queryByTestId('mg-featureItem-expandIconBtn')
 
     expect(queryByText(mockDescription)).toBeNull()
     fireEvent.click(ExpandedIconButton)
@@ -52,7 +52,7 @@ describe.skip('<FeatureItem />', () => {
   // @@@@@ fix test
   xit('should navigate to the route prop when the go to navigation button is clicked', () => {
     const { queryByTestId } = wrapper
-    const NavigationIconButton = queryByTestId('rs-featureItem-navIconBtn')
+    const NavigationIconButton = queryByTestId('mg-featureItem-navIconBtn')
 
     expect(mockNavigateTo).not.toHaveBeenCalled()
     fireEvent.click(NavigationIconButton)

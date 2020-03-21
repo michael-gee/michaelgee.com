@@ -13,6 +13,6 @@ describe('<Homepage />', () => {
   xit('should render a <FeatureItem /> component for each item in the data array', () => {
     const { queryAllByTestId } = wrapper
 
-    expect(queryAllByTestId('rs-homepage-ftItem').length).toEqual(2)
+    expect(queryAllByTestId('mg-homepage-ftItem').length).toEqual(2)
   })
 })

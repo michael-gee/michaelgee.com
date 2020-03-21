@@ -24,15 +24,15 @@ describe('<Header />', () => {
 
   it('should ONLY render an action IconButton if iconProps are passed from props', () => {
     const { getByTestId, queryByTestId, rerender } = wrapper
-    expect(getByTestId('rs-header-iconBtn')).toBeInTheDocument()
+    expect(getByTestId('mg-header-iconBtn')).toBeInTheDocument()
 
     rerender(<Header title={mockTitle} />)
-    expect(queryByTestId('rs-header-iconBtn')).not.toBeInTheDocument()
+    expect(queryByTestId('mg-header-iconBtn')).not.toBeInTheDocument()
   })
 
   // it('should navigate back to the homepage when the navigation icon button is clicked', () => {
   //   const { queryByTestId, rerender } = wrapper
-  //   const NavigationIconButton = queryByTestId('rs-header-iconBtn')
+  //   const NavigationIconButton = queryByTestId('mg-header-iconBtn')
 
   //   history.replace('/simple-hooks-counter')
   //   history.goBack = jest.fn()

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Button as SUIButton } from 'semantic-ui-react'
 
-import { RS_BUTTON_COLOR_TYPES, RS_BUTTON_CUSTOM_COLOR_TYPES, RS_BUTTON_SIZE_TYPES } from 'constants/button'
+import { MG_BUTTON_COLORS, MG_BUTTON_CUSTOM_COLORS, MG_BUTTON_SIZES } from '../types'
 
 import '../Button.css'
 
@@ -29,20 +29,18 @@ const Button = props => {
 
   function _configureClassNames() {
     if (disabled) return className
-    let classNames = `rs-custom-btn${className ? ' ' + className : ''}`
+    let classNames = `mg-custom-btn${className ? ' ' + className : ''}`
     if (color) return classNames
 
     switch (customColor) {
       case 'primary':
-        classNames = `rs-primary-btn ${classNames}`
+        classNames = `mg-primary-btn ${classNames}`
         break
-      case 'secondary':
-        classNames = `rs-secondary-btn ${classNames}`
+      case 'react':
+        classNames = `mg-react-btn ${classNames}`
         break
-      case 'tertiary':
-        classNames = `rs-tertiary-btn ${classNames}`
-        break
-
+      // secondary
+      // tertiary
       default:
         break
     }
@@ -57,9 +55,9 @@ Button.propTypes = {
   style: PropTypes.object,
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  color: PropTypes.oneOf(RS_BUTTON_COLOR_TYPES),
-  customColor: PropTypes.oneOf(RS_BUTTON_CUSTOM_COLOR_TYPES),
-  size: PropTypes.oneOf(RS_BUTTON_SIZE_TYPES),
+  color: PropTypes.oneOf(MG_BUTTON_COLORS),
+  customColor: PropTypes.oneOf(MG_BUTTON_CUSTOM_COLORS),
+  size: PropTypes.oneOf(MG_BUTTON_SIZES),
   iconName: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string,

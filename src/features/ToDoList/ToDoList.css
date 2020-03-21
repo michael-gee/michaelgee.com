@@ -1,4 +1,4 @@
-#rs-todo-list {
+#mg-todo-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,17 +7,17 @@
   font-size: 1.6em;  
 }
 
-#rs-todo-noData {
+#mg-todo-noData {
   margin-top: 16px;
   text-align: center;
 }
 
 /* ToDoInput CSS */
-#rs-todos-input {
+#mg-todos-input {
   display: flex;
   margin-top: 40px;
 }
-#rs-todos-input .ui.input {
+#mg-todos-input .ui.input {
   width: 100%;
   margin-right: 16px;
 }

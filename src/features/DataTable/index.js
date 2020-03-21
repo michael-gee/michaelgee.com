@@ -65,24 +65,24 @@ const DataTable = () => {
   )
 
   return (
-    <div className="rs-dataTable-container">
-      <table {...getTableProps()} className="rs-dataTable">
+    <div className="mg-dataTable-container">
+      <table {...getTableProps()} className="mg-dataTable">
         {headerGroups.map(headerGroup => {
           return (
-            <thead {...headerGroup.getHeaderGroupProps()} className="rs-dataTable-header">
+            <thead {...headerGroup.getHeaderGroupProps()} className="mg-dataTable-header">
               <tr>
                 {headerGroup.headers.map(column => {
                   return (
                     <th key={column.id}>
                       <div
                         {...column.getHeaderProps(column.getSortByToggleProps())}
-                        className="rs-dataTable-header-content"
+                        className="mg-dataTable-header-content"
                       >
                         {column.render('Header')}
                         <span>{_renderSortIcon(column)}</span>
                       </div>
 
-                      <div className="rs-dataTable-rowFilter">
+                      <div className="mg-dataTable-rowFilter">
                         {column.canFilter ? (
                           column.render('Filter')
                         ) : (
@@ -102,7 +102,7 @@ const DataTable = () => {
           )
         })}
 
-        <tbody className="rs-dataTable-body">
+        <tbody className="mg-dataTable-body">
           {page.map(
             (item, i) =>
               prepareRow(item) || (

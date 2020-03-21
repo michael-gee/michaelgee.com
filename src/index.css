@@ -13,16 +13,17 @@ h4 { font-size: 1.6em; }
 h5 { font-size: 1.3em; }
 h6 { font-size: 1.2em; }
 
-#rs-app-container {
+#mg-app-container {
   padding: 24px 0;
 
   /* CSS Variables Palette */
-  --rs-primary-color: #62DAFB;
-  --rs-secondary-color: #4267B2;
-  --rs-tertiary-color: #424242;
+  --mg-primary-color: #3749A2;
+
+  --react-primary-color: #62DAFB;
+  --react-secondary-color: #424242;
 }
 
-#rs-route-container {
+#mg-route-container {
   max-width: 1154px;
   margin: 24px auto;
 }

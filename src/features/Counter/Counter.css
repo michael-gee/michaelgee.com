@@ -1,4 +1,4 @@
-#rs-counter-container {
+#mg-counter-container {
   display: flex;
   width: 100%;
   background-color: white;
@@ -8,13 +8,13 @@
   font-size: 2em;
 }
 
-.rs-counter-section { width: 50%; }
+.mg-counter-section { width: 50%; }
 
-#rs-simple-countText {
+#mg-simple-countText {
   margin: 24px 0 28px 0;
 }
 
-.rs-objCounter-counter {
+.mg-objCounter-counter {
   display: flex;
   justify-content: space-between;
   align-items: center;

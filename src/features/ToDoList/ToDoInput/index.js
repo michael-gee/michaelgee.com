@@ -12,7 +12,7 @@ const ToDoInput = ({ onAddToDo }) => {
 
   return (
     // CSS styles from ToDoList.css
-    <div id="rs-todos-input">
+    <div id="mg-todos-input">
       <Input
         value={toDoInput}
         onChange={(ev, data) => {
@@ -33,7 +33,7 @@ const ToDoInput = ({ onAddToDo }) => {
         onClick={_onEnterToDo}
         iconName="add"
         size="medium"
-        customColor="primary"
+        customColor="react"
         disabled={toDoInput === '' ? true : false}
       />
     </div>

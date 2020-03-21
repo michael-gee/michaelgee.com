@@ -7,12 +7,12 @@ import './Counter.css'
 
 const Counter = () => {
   return (
-    <div id="rs-counter-container">
-      <div className="rs-counter-section">
+    <div id="mg-counter-container">
+      <div className="mg-counter-section">
         <SimpleCounter />
       </div>
 
-      <div className="rs-counter-section">
+      <div className="mg-counter-section">
         <ObjCounters
           counters={[
             { label: 'Counter 1', value: 0, key: 'count1' },

@@ -22,7 +22,7 @@ describe('<RouteHeader />', () => {
     const { getByText } = wrapper
 
     history.replace('/')
-    expect(getByText('React Sandbox')).toBeInTheDocument()
+    expect(getByText('MG Sandbox')).toBeInTheDocument()
 
     // for all routes that aren't homepage, title should be capitalized and remove - from the pathname from the current location
     history.push('/mock-route-test')

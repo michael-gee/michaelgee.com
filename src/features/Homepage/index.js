@@ -8,9 +8,9 @@ import './Homepage.css'
 
 const Homepage = () => {
   return (
-    <div id="rs-homepage-container">
+    <div id="mg-homepage-container">
       {data.map(item => (
-        <div className="rs-homepage-ftItem" key={item.uid}>
+        <div className="mg-homepage-ftItem" key={item.uid}>
           <FeatureItem title={item.title} route={item.route} date={item.date} description={item.description} />
         </div>
       ))}

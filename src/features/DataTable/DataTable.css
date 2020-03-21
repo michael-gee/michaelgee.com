@@ -1,54 +1,54 @@
-.rs-dataTable-container {
+.mg-dataTable-container {
   padding: 0 16px;
   background-color: white;
   font-size: 1.6em;
 }
 
-.rs-dataTable {
+.mg-dataTable {
   width: 100%;
   border-radius: 5px;
   color: #212121;
   border-collapse: collapse;
 }
 
-.rs-dataTable-header {
+.mg-dataTable-header {
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
 }
-.rs-dataTable-header th {
+.mg-dataTable-header th {
   font-weight: 400;
   padding: 8px;
 }
 
-.rs-dataTable-header-content {
+.mg-dataTable-header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 32px;
 }
 
-.rs-dataTable-header-icon {
+.mg-dataTable-header-icon {
   color: #cecece;
 }
 
-.rs-dataTable-body tr { border-bottom: 1px solid #ddd; }
-.rs-dataTable-body tr:hover { background-color: #f5f5f5; }
-.rs-dataTable-body tr td { 
+.mg-dataTable-body tr { border-bottom: 1px solid #ddd; }
+.mg-dataTable-body tr:hover { background-color: #f5f5f5; }
+.mg-dataTable-body tr td { 
   padding: 6px 16px;
   padding-left: 24px;
   line-height: 1.43;  
 }
 
-.rs-dataTable-rowFilter { padding: 4px 0; }
-.rs-dataTable-rowFilter .ui.icon.button {
+.mg-dataTable-rowFilter { padding: 4px 0; }
+.mg-dataTable-rowFilter .ui.icon.button {
   display: flex;
   justify-content: center;
   padding: 0; 
   min-width: 32px;
-  background-color: var(--rs-primary-color);
-  color: var(--rs-tertiary-color);
+  background-color: var(--react-primary-color);
+  color: var(--react-secondary-color);
 }
-.rs-dataTable-rowFilter .ui.icon.button:hover {
+.mg-dataTable-rowFilter .ui.icon.button:hover {
   opacity: .7;
   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
 }

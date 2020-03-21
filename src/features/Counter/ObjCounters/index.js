@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 
 import IconButton from 'components/Buttons/IconButton'
 
-import { RS_BUTTON_COLORS, RS_BUTTON_SIZES } from 'constants/button'
-
 const ObjCounter = ({ counters }) => {
   // for related values that you expect to update together at the same time can be stored in an object. If the state is unrelated and updated separately, it is better to use multiple useState() constants
 
@@ -15,7 +13,7 @@ const ObjCounter = ({ counters }) => {
 
   return Object.keys(objCounters).map(counter => {
     return (
-      <div className="rs-objCounter-counter" key={counter}>
+      <div className="mg-objCounter-counter" key={counter}>
         <span>
           {objCounters[counter].label}: {objCounters[counter].value}
         </span>
@@ -23,8 +21,8 @@ const ObjCounter = ({ counters }) => {
         <div>
           <IconButton
             iconName="add"
-            color={RS_BUTTON_COLORS.green}
-            size={RS_BUTTON_SIZES.mini}
+            color="green"
+            size="mini"
             onClick={() => {
               _incrementCount(counter)
             }}
@@ -32,8 +30,8 @@ const ObjCounter = ({ counters }) => {
 
           <IconButton
             iconName="minus"
-            color={RS_BUTTON_COLORS.red}
-            size={RS_BUTTON_SIZES.mini}
+            color="red"
+            size="mini"
             onClick={() => {
               _decrementCount(counter)
             }}

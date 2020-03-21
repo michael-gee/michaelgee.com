@@ -1,4 +1,4 @@
-#rs-dataTable-pagination-container {
+#mg-dataTable-pagination-container {
   display: flex;
   align-items: center;
   background-color: white;
@@ -6,14 +6,14 @@
   padding: 40px 0 40px 8px;
 }
 
-.rs-dataTable-pagination-section { min-width: 33%; }
+.mg-dataTable-pagination-section { min-width: 33%; }
 
-#rs-dataTable-pagination-content {
+#mg-dataTable-pagination-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#rs-dataTable-pagination-content button {
+#mg-dataTable-pagination-content button {
   display: flex;
   align-items: center;
   font-size: .9em;
@@ -22,18 +22,18 @@
   border: none;
   outline: none;
 }
-#rs-dataTable-pagination-content button:hover { 
+#mg-dataTable-pagination-content button:hover { 
   cursor: pointer;
   background-color: #f5f5f5;;
 }
 
-.rs-dataTable-pagination-disabled { color: #777 !important; }
-.rs-dataTable-pagination-disabled:hover { 
+.mg-dataTable-pagination-disabled { color: #777 !important; }
+.mg-dataTable-pagination-disabled:hover { 
   background-color: white !important;
   cursor: not-allowed !important;
  }
 
-.rs-dataTable-pagination-pivot {
+.mg-dataTable-pagination-pivot {
   display: flex;
   justify-content: flex-end;
 }
