@@ -23,6 +23,7 @@ const IconButton = props => {
       size={size}
       disabled={disabled ? true : undefined}
       title={title}
+      data-testid={props['data-testid']}
     >
       {props.children}
     </SUIButton>
@@ -63,7 +64,8 @@ IconButton.propTypes = {
   customColor: PropTypes.oneOf(RS_BUTTON_CUSTOM_COLOR_TYPES),
   size: PropTypes.oneOf(RS_BUTTON_SIZE_TYPES),
   disabled: PropTypes.bool,
-  title: PropTypes.string
+  title: PropTypes.string,
+  ['data-testid']: PropTypes.string
 }
 
 export default IconButton

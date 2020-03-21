@@ -23,6 +23,7 @@ const Button = props => {
       icon={iconName}
       disabled={disabled ? true : undefined}
       title={title}
+      data-testid={props['data-testid']}
     />
   )
 
@@ -61,7 +62,8 @@ Button.propTypes = {
   size: PropTypes.oneOf(RS_BUTTON_SIZE_TYPES),
   iconName: PropTypes.string,
   disabled: PropTypes.bool,
-  title: PropTypes.string
+  title: PropTypes.string,
+  ['data-testid']: PropTypes.string
 }
 
 export default Button

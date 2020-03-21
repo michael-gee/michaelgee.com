@@ -13,7 +13,7 @@ const FeatureItem = props => {
   const { title, route, routeOpts, date, description } = props
   const { navigateTo } = useNavigation()
 
-  // CSS from Homepage.css & styles.js
+  // CSS from Homepage.css
   return (
     <Card>
       <Card.Content>

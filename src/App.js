@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import RouteHeader from './components/RouteHeader'
+import RouteHeader from './components/Header/RouteHeader'
 
 import routes from './routes'
 
