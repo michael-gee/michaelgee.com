@@ -22,7 +22,7 @@ export const MG_BUTTON_COLORS = [
   'youtube'
 ]
 
-export const MG_BUTTON_CUSTOM_COLORS = ['primary', 'react']
+export const MG_BUTTON_CUSTOM_COLORS = ['primary', 'react', 'react-secondary']
 // @@@@@ add secondary
 // @@@@@ add tertiary
 

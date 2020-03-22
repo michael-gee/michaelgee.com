@@ -8,6 +8,11 @@
   color: var(--react-secondary);
 }
 
+.ui.button.mg-reactSecondary-btn {
+  background-color: var(--react-secondary);
+  color: #fff;
+}
+
 .ui.button.mg-custom-btn {
   transition: .3s;
 }

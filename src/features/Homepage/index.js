@@ -9,7 +9,7 @@ import './Homepage.css'
 const Homepage = () => {
   return (
     <>
-      <h4>
+      <h4 style={{ paddingTop: 24 }}>
         Improve homepage styles with more modern and UI focused header and portfolio items (cards or maybe a full width
         item layout?)
       </h4>

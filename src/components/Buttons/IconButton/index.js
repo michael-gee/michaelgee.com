@@ -42,6 +42,9 @@ const IconButton = props => {
       case 'react':
         classNames = `mg-react-btn ${classNames}`
         break
+      case 'react-secondary':
+        classNames = `mg-reactSecondary-btn ${classNames}`
+        break
       // secondary
       // tertiary
       default:

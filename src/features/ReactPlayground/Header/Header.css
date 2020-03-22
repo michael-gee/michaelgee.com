@@ -1,0 +1,24 @@
+#mg-reactPlayground-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  background-color: var(--react-secondary);
+  color: white;
+}
+#mg-reactPlayground-header i {
+  color: var(--react-primary);
+  margin-right: 8px;
+}
+
+#mg-reactPlayground-nav {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.ui.button.mg-reactPlayground-navBtn {
+  width: 124px;
+  margin: 0 4px;
+}
