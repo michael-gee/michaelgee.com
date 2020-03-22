@@ -4,22 +4,11 @@
   align-items: center;
   font-size: 3.2em;
   max-width: 1154px;
-  color: var(--react-primary-color);
-  background-color: var(--react-secondary-color);
+  color: var(--mg-light-gray);
+  background-color: var(--mg-dark-gray);
   margin: 0 auto;
   padding: 20px 24px;
   border-radius: 3px;
-}
-
-#mg-header-icon {
-  background-color: var(--react-primary-color);
-  color: var(--react-secondary-color);
-  padding: 8px;
-  transition: .5s;
-}
-#mg-header-icon:hover {
-  color: var(--react-secondary-color);
-  background-color: white;
 }
 
 .mg-header-hidden {

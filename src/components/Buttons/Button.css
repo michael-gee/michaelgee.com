@@ -1,11 +1,11 @@
 .ui.button.mg-primary-btn {
-  background-color: var(--mg-primary-color);
+  background-color: var(--mg-primary-red);
   color: white;
 }
 
 .ui.button.mg-react-btn {
-  background-color: var(--react-primary-color);
-  color: var(--react-secondary-color);
+  background-color: var(--react-primary);
+  color: var(--react-secondary);
 }
 
 .ui.button.mg-custom-btn {

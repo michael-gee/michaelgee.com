@@ -14,7 +14,7 @@ const Header = props => {
         <IconButton
           iconName={iconProps.icon}
           onClick={iconProps.onClick}
-          customColor="react"
+          customColor="primary"
           size="large"
           title={iconProps.title}
           data-testid="mg-header-iconBtn"

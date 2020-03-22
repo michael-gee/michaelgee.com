@@ -3,30 +3,33 @@
   flex-wrap: wrap;
 }
 
-/* FeatureItem CSS */
-.mg-homepage-ftItem .ui.card {
+/* PortfolioItem CSS */
+.mg-homepage-portfolioItem .ui.card {
   color: white;
-  background-color: var(--react-secondary-color);
+  background-color: var(--mg-dark-gray);
   font-size: 1.8em;
   width: 264px;
   margin: 12px;
+  padding-top: 12px;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
 /* Card.Header */
-.mg-homepage-ftItem .ui.card .header { 
+.mg-homepage-portfolioItem .ui.card .header { 
   color: white;
   margin: 0 12px;
 }
 /* Card.Meta */
-.mg-homepage-ftItem .ui.card .meta { 
-  color: rgba(155,155,155,.9);
+.mg-homepage-portfolioItem .ui.card .meta { 
+  color: var(--mg-carbon-gray);
   margin: 8px 12px;
 }
 
-.mg-featureItem-cardIcons {
+.mg-portfolioItem-cardIcons {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 36px;
 }
+.mg-portfolioItem-cardIcons i.info { color: var(--mg-carbon-gray) }

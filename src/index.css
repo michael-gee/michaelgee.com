@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-size: 62.5%;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  background-color: #EDF1F5;
+  background-color: #EFEFEF;
 }
 
 h1 { font-size: 3.2em; }
@@ -17,10 +17,18 @@ h6 { font-size: 1.2em; }
   padding: 24px 0;
 
   /* CSS Variables Palette */
-  --mg-primary-color: #3749A2;
+  --mg-primary-red: #C3073F;
+  --mg-secondary-red: #950740;
+  --mg-tertiary-red: #6F2232;
+  --mg-watermelon-red: #FF3B3F;
 
-  --react-primary-color: #62DAFB;
-  --react-secondary-color: #424242;
+  --mg-light-gray: #EFEFEF;
+  --mg-carbon-gray: #A9A9A9;
+  --mg-dark-gray: #4E4E50;
+  --mg-dark: #1A1A1D;
+
+  --react-primary: #62DAFB;
+  --react-secondary: #424242;
 }
 
 #mg-route-container {

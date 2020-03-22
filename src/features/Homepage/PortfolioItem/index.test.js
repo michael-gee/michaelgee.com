@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
-import FeatureItem from './'
+import PortfolioItem from '.'
 
 import { MG_ROUTE_PATHS } from 'constants/navigation'
 
@@ -13,7 +13,7 @@ jest.mock('hooks/useNavigation', () => {
   })
 })
 
-describe.skip('<FeatureItem />', () => {
+describe.skip('<PortfolioItem />', () => {
   let wrapper, mockTitle, mockRoute, mockDate, mockDescription
 
   beforeEach(() => {
@@ -23,7 +23,9 @@ describe.skip('<FeatureItem />', () => {
     mockDescription = 'Mock Description'
     mockNavigateTo = jest.fn()
 
-    wrapper = render(<FeatureItem title={mockTitle} route={mockRoute} date={mockDate} description={mockDescription} />)
+    wrapper = render(
+      <PortfolioItem title={mockTitle} route={mockRoute} date={mockDate} description={mockDescription} />
+    )
   })
 
   it('should render the title and created by date props in the card header', () => {
