@@ -1,11 +1,12 @@
 .mg-dataTable-container {
-  padding: 0 16px;
   background-color: white;
   font-size: 1.6em;
+  padding: 24px 0;
 }
 
 .mg-dataTable {
-  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   border-radius: 5px;
   color: #212121;
   border-collapse: collapse;

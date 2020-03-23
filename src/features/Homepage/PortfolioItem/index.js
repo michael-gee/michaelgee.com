@@ -44,10 +44,10 @@ const PortfolioItem = props => {
 
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
-  route: PropTypes.string.isRequired,
+  route: PropTypes.string,
   routeOpts: PropTypes.object,
-  date: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  date: PropTypes.string,
+  description: PropTypes.string
 }
 
 export default PortfolioItem

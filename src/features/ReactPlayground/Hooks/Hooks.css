@@ -1,0 +1,6 @@
+#mg-reactHooks-container {
+  background-color: white;
+  width: 100%;
+  min-height: calc(100vh - 148px);
+  overflow-y: auto;
+}

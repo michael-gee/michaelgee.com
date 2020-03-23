@@ -3,7 +3,7 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 export default [
   {
     title: 'React Playground',
-    route: MG_ROUTE_PATHS.reactPlayground,
+    route: MG_ROUTE_PATHS.reactHooks,
     date: 'March 22nd, 2020',
     description: ''
   },

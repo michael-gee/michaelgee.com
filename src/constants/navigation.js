@@ -1,7 +1,9 @@
 export const MG_ROUTE_PATHS = {
   homepage: '/',
-  // counter: '/react-hooks-counters',
-  // dataTable: '/react-table-v7',
-  // toDoList: '/to-do-list',
-  reactPlayground: '/react-playground'
+
+  // React Playground routes
+  reactPlayground: '/react-playground/:route',
+  // reactAnimations: '/react-playground/animations',
+  reactDataTable: '/react-playground/data-table',
+  reactHooks: '/react-playground/hooks'
 }
