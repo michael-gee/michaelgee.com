@@ -1,12 +1,31 @@
-import { lazy } from 'react'
+import React from 'react'
+import Loadable from 'react-loadable'
+
+import ReactPlaygroundHeader from 'features/ReactPlayground/Header'
 
 import { MG_ROUTE_PATHS } from 'constants/navigation'
 
-const Homepage = lazy(() => import('./features/Homepage'))
-// ReactPlayground
-const ReactPlaygroundHeader = lazy(() => import('./features/ReactPlayground/Header'))
-const ReactDataTable = lazy(() => import('./features/ReactPlayground/DataTable'))
-const ReactHooks = lazy(() => import('./features/ReactPlayground/Hooks'))
+const Homepage = Loadable({
+  loader: () => import('./features/Homepage'),
+  loading() {
+    return <div>Loading Homepage...</div>
+  }
+})
+
+const ReactDataTable = Loadable({
+  loader: () => import('./features/ReactPlayground/DataTable'),
+  loading() {
+    // @@@@@@ Create reusable loader for all reacct playground routes -- (white background with remainder of height of the page blurred with a loading message/spinner?)
+    return <h1>Loading DataTable</h1>
+  }
+})
+
+const ReactHooks = Loadable({
+  loader: () => import('./features/ReactPlayground/Hooks'),
+  loading() {
+    return <h1>Loading Hooks</h1>
+  }
+})
 
 export default [
   { path: MG_ROUTE_PATHS.homepage, component: Homepage, exact: true },
