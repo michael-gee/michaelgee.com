@@ -4,13 +4,12 @@ import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 import { Input, Icon } from 'semantic-ui-react'
 import Pagination from './Pagination'
 
-// import makeColumns from './static'
 import makeData from './makeData'
 
 import './DataTable.css'
 
 const DataTable = () => {
-  const data = makeData(100)
+  const data = useMemo(() => makeData(100), [])
   const columns = _configureColumns()
 
   const filterTypes = useMemo(
@@ -73,14 +72,17 @@ const DataTable = () => {
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map(column => {
                   return (
-                    <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
-                      <div className="mg-dataTable-header-content">
+                    <th key={column.id}>
+                      <div
+                        {...column.getHeaderProps(column.getSortByToggleProps())}
+                        className="mg-dataTable-header-content"
+                      >
                         {column.render('Header')}
                         <span>{_renderSortIcon(column)}</span>
                       </div>
 
                       <div className="mg-dataTable-rowFilter">
-                        {column.filter ? (
+                        {column.canFilter ? (
                           column.render('Filter')
                         ) : (
                           <Input
@@ -133,15 +135,37 @@ const DataTable = () => {
       return [
         {
           Header: 'First Name',
-          accessor: 'firstName',
-          filter: DefaultColumnFilter
+          accessor: 'firstName'
         },
         {
           Header: 'Last Name',
-          accessor: 'lastName',
-          canFilter: false
-          // filter: DefaultColumnFilter
-          // filter: TextColumnFilter
+          accessor: 'lastName'
+        },
+        {
+          Header: 'Age',
+          accessor: 'age'
+        },
+        {
+          Header: 'Visits',
+          accessor: 'visits'
+        },
+        {
+          Header: 'Status',
+          accessor: 'status',
+          disableFilters: true,
+          Cell: row => (
+            <span>
+              <span
+                style={{
+                  color: row.value === 'relationship' ? '#ff2e00' : row.value === 'complicated' ? '#ffbf00' : '#57d500',
+                  transition: 'all .5s ease'
+                }}
+              >
+                &#x25cf;
+              </span>{' '}
+              {row.value === 'relationship' ? 'Relationship' : row.value === 'complicated' ? `Complicated` : 'Single'}
+            </span>
+          )
         }
       ]
     }, [])
@@ -164,23 +188,23 @@ const DataTable = () => {
       return null
     }
   }
-}
 
-function DefaultColumnFilter({ column: { filterValue, setFilter } }) {
-  return (
-    <Input
-      value={filterValue || undefined}
-      onChange={(ev, data) => {
-        setFilter(data.value || undefined)
-      }}
-      action={{
-        icon: 'filter',
-        onClick: () => {
-          console.log('hello')
-        }
-      }}
-    />
-  )
+  function DefaultColumnFilter({ column: { filterValue, setFilter } }) {
+    return (
+      <Input
+        value={filterValue || ''}
+        onChange={(ev, data) => {
+          setFilter(data.value || undefined)
+        }}
+        action={{
+          icon: 'filter',
+          onClick: () => {
+            console.log('hello')
+          }
+        }}
+      />
+    )
+  }
 }
 
 export default DataTable
