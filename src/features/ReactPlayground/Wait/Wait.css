@@ -1,0 +1,6 @@
+#mg-reactPlayground-wait {
+  width: 100%;
+  height: calc(100vh - 148px);
+  font-size: 1.6em;
+  background-color: white;
+}

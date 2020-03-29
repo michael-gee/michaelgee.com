@@ -4,14 +4,14 @@ import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 import { Input, Icon } from 'semantic-ui-react'
 import Pagination from './Pagination'
 
-import makeColumns from './static'
+// import makeColumns from './static'
 import makeData from './makeData'
 
 import './DataTable.css'
 
 const DataTable = () => {
   const data = makeData(100)
-  const columns = useMemo(() => makeColumns, [])
+  const columns = _configureColumns()
 
   const filterTypes = useMemo(
     () => ({
@@ -30,13 +30,14 @@ const DataTable = () => {
   )
   const defaultColumn = useMemo(
     () => ({
-      Filter: _renderDefaultFilter
+      Filter: DefaultColumnFilter
     }),
     []
   )
 
   const {
     getTableProps,
+    getTableBodyProps,
     headerGroups,
     prepareRow,
     rows,
@@ -66,28 +67,26 @@ const DataTable = () => {
   return (
     <div className="mg-dataTable-container">
       <table {...getTableProps()} className="mg-dataTable">
-        {headerGroups.map(headerGroup => {
-          return (
-            <thead {...headerGroup.getHeaderGroupProps()} className="mg-dataTable-header">
-              <tr>
+        <thead className="mg-dataTable-header">
+          {headerGroups.map(headerGroup => {
+            return (
+              <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map(column => {
                   return (
-                    <th key={column.id}>
-                      <div
-                        {...column.getHeaderProps(column.getSortByToggleProps())}
-                        className="mg-dataTable-header-content"
-                      >
+                    <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
+                      <div className="mg-dataTable-header-content">
                         {column.render('Header')}
                         <span>{_renderSortIcon(column)}</span>
                       </div>
 
                       <div className="mg-dataTable-rowFilter">
-                        {column.canFilter ? (
+                        {column.filter ? (
                           column.render('Filter')
                         ) : (
                           <Input
                             action={{
-                              icon: 'filter'
+                              icon: 'filter',
+                              disabled: true
                             }}
                             disabled
                           />
@@ -97,21 +96,21 @@ const DataTable = () => {
                   )
                 })}
               </tr>
-            </thead>
-          )
-        })}
+            )
+          })}
+        </thead>
 
-        <tbody className="mg-dataTable-body">
-          {page.map(
-            (item, i) =>
-              prepareRow(item) || (
-                <tr key={i}>
-                  {item.cells.map(cell => {
-                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                  })}
-                </tr>
-              )
-          )}
+        <tbody {...getTableBodyProps()} className="mg-dataTable-body">
+          {page.map((item, i) => {
+            prepareRow(item)
+            return (
+              <tr {...item.getRowProps()} key={i}>
+                {item.cells.map(cell => {
+                  return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                })}
+              </tr>
+            )
+          })}
         </tbody>
       </table>
 
@@ -129,6 +128,27 @@ const DataTable = () => {
     </div>
   )
 
+  function _configureColumns() {
+    const columns = useMemo(() => {
+      return [
+        {
+          Header: 'First Name',
+          accessor: 'firstName',
+          filter: DefaultColumnFilter
+        },
+        {
+          Header: 'Last Name',
+          accessor: 'lastName',
+          canFilter: false
+          // filter: DefaultColumnFilter
+          // filter: TextColumnFilter
+        }
+      ]
+    }, [])
+
+    return columns
+  }
+
   function _renderSortIcon(column) {
     if (column.canSort) {
       return column.isSorted ? (
@@ -144,23 +164,23 @@ const DataTable = () => {
       return null
     }
   }
+}
 
-  function _renderDefaultFilter({ column: { filterValue, setFilter } }) {
-    return (
-      <Input
-        value={filterValue || ''}
-        onChange={(ev, data) => {
-          setFilter(data.value)
-        }}
-        action={{
-          icon: 'filter',
-          onClick: () => {
-            console.log('hello')
-          }
-        }}
-      />
-    )
-  }
+function DefaultColumnFilter({ column: { filterValue, setFilter } }) {
+  return (
+    <Input
+      value={filterValue || undefined}
+      onChange={(ev, data) => {
+        setFilter(data.value || undefined)
+      }}
+      action={{
+        icon: 'filter',
+        onClick: () => {
+          console.log('hello')
+        }
+      }}
+    />
+  )
 }
 
 export default DataTable
