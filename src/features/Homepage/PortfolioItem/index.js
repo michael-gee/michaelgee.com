@@ -8,7 +8,6 @@ import IconButton from 'components/Buttons/IconButton'
 import useNavigation from 'hooks/useNavigation'
 
 const PortfolioItem = props => {
-  const { title, route, routeOpts, date, description } = props
   const { navigateTo } = useNavigation()
 
   // CSS from Homepage.css
@@ -17,8 +16,8 @@ const PortfolioItem = props => {
       {/* <Card.Content>
         <Image src={} size="medium" />
       </Card.Content> */}
-      <Card.Header>{title}</Card.Header>
-      <Card.Meta>{date}</Card.Meta>
+      <Card.Header>{props.title}</Card.Header>
+      <Card.Meta>{props.date}</Card.Meta>
       <Card.Content extra>{_renderCardIcons()}</Card.Content>
     </Card>
   )
@@ -26,19 +25,19 @@ const PortfolioItem = props => {
   function _renderCardIcons() {
     return (
       <div className="mg-portfolioItem-cardIcons">
-        {description ? (
-          <Popup content={description} trigger={<Icon name="info circle" size="big" />} position="bottom left" />
+        {props.description ? (
+          <Popup content={props.description} trigger={<Icon name="info circle" size="big" />} position="bottom left" />
         ) : (
           <span />
         )}
 
-        {route && <IconButton onClick={_handleItemClick} customColor="primary" iconName="arrow right" />}
+        {props.route && <IconButton onClick={_handleItemClick} customColor="primary" iconName="arrow right" />}
       </div>
     )
   }
 
   function _handleItemClick() {
-    navigateTo(route, routeOpts)
+    navigateTo(props.route, props.routeOpts)
   }
 }
 

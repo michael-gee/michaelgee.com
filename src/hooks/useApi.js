@@ -1,4 +1,5 @@
 import { useEffect, useState, useReducer, useRef } from 'react'
+import usePrevious from './usePrevious'
 
 const useApi = (apiFunc, { initialApiFuncArgs = {}, onMount = false, initialData = undefined } = {}) => {
   const [apiConfig, setApiConfig] = useState(_getApiState(apiFunc, initialApiFuncArgs))
@@ -8,7 +9,7 @@ const useApi = (apiFunc, { initialApiFuncArgs = {}, onMount = false, initialData
     data: initialData
   })
   const canFetchRef = useRef(onMount)
-  const prevIsLoading = _usePrevious(state.isLoading)
+  const prevIsLoading = usePrevious(state.isLoading)
 
   useEffect(() => {
     let cancel = false
@@ -61,16 +62,6 @@ function _apiReducer(state, action) {
     default:
       throw new Error()
   }
-}
-
-function _usePrevious(value) {
-  const ref = useRef()
-
-  useEffect(() => {
-    ref.current = value
-  })
-
-  return ref.current
 }
 
 async function _invocationHandler(api, apiArgs, dispatch, cancel) {

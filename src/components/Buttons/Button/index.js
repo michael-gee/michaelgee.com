@@ -8,31 +8,30 @@ import { MG_BUTTON_COLORS, MG_BUTTON_CUSTOM_COLORS, MG_BUTTON_SIZES } from '../t
 import '../Button.css'
 
 const Button = props => {
-  const { text, onClick, color, customColor, size, iconName, disabled, id, className, style, title } = props
   const btnClassNames = _configureClassNames()
 
   return (
     <SUIButton
-      id={id}
+      id={props.id}
       className={btnClassNames}
-      style={style}
-      color={customColor ? undefined : color}
-      content={text}
-      onClick={onClick}
-      size={size}
-      icon={iconName}
-      disabled={disabled ? true : undefined}
-      title={title}
+      style={props.style}
+      color={props.customColor ? undefined : props.color}
+      content={props.text}
+      onClick={props.onClick}
+      size={props.size}
+      icon={props.iconName}
+      disabled={props.disabled ? true : undefined}
+      title={props.title}
       data-testid={props['data-testid']}
     />
   )
 
   function _configureClassNames() {
-    if (disabled) return className
-    let classNames = `mg-custom-btn${className ? ' ' + className : ''}`
-    if (color) return classNames
+    if (props.disabled) return props.className
+    let classNames = `mg-custom-btn${props.className ? ' ' + props.className : ''}`
+    if (props.color) return classNames
 
-    switch (customColor) {
+    switch (props.customColor) {
       case 'primary':
         classNames = `mg-primary-btn ${classNames}`
         break

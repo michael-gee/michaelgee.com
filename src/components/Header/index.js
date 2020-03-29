@@ -6,23 +6,21 @@ import IconButton from 'components/Buttons/IconButton'
 import './Header.css'
 
 const Header = props => {
-  const { title, iconProps } = props
-
   return (
     <div id="mg-header-container" data-testid="mg-header-container">
-      {iconProps ? (
+      {props.iconProps ? (
         <IconButton
-          iconName={iconProps.icon}
-          onClick={iconProps.onClick}
+          iconName={props.iconProps.icon}
+          onClick={props.iconProps.onClick}
           customColor="primary"
           size="large"
-          title={iconProps.title}
+          title={props.iconProps.title}
           data-testid="mg-header-iconBtn"
         />
       ) : (
         <div className="mg-header-hidden" />
       )}
-      <div>{title}</div>
+      <div>{props.title}</div>
       <div className="mg-header-hidden" />
     </div>
   )

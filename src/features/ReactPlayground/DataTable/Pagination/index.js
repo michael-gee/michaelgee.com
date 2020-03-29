@@ -6,13 +6,12 @@ import IconButton from 'components/Buttons/IconButton'
 import './Pagination.css'
 
 const Pagination = props => {
-  const { setPageSize, currentItemsCount } = props
   const [currentTab, setCurrentTab] = useState(10)
   const tabOptions = [10, 25, 50, 100]
 
   return (
     <div id="mg-dataTable-pagination-container">
-      <div className="mg-dataTable-pagination-section">{currentItemsCount} results</div>
+      <div className="mg-dataTable-pagination-section">{props.currentItemsCount} results</div>
 
       {_renderPagination()}
 
@@ -35,40 +34,38 @@ const Pagination = props => {
   )
 
   function _renderPagination() {
-    const { canNextPage, canPreviousPage, nextPage, previousPage, pageIndex, pageCount, gotoPage } = props
-
     return (
       <div id="mg-dataTable-pagination-content" className="mg-dataTable-pagination-section">
         <button
-          onClick={() => gotoPage(0)}
-          className={pageIndex === 0 ? 'mg-dataTable-pagination-disabled' : ''}
-          disabled={pageIndex === 0}
+          onClick={() => props.gotoPage(0)}
+          className={props.pageIndex === 0 ? 'mg-dataTable-pagination-disabled' : ''}
+          disabled={props.pageIndex === 0}
         >
           {'<<'}
         </button>
         <button
-          onClick={previousPage}
-          className={!canPreviousPage ? 'mg-dataTable-pagination-disabled' : ''}
-          disabled={!canPreviousPage}
+          onClick={props.previousPage}
+          className={!props.canPreviousPage ? 'mg-dataTable-pagination-disabled' : ''}
+          disabled={!props.canPreviousPage}
         >
           {'<'}
         </button>
 
         <div style={{ padding: '0 10px' }}>
-          Page {pageIndex + 1} of {pageCount}
+          Page {props.pageIndex + 1} of {props.pageCount}
         </div>
 
         <button
-          onClick={nextPage}
-          className={!canNextPage ? 'mg-dataTable-pagination-disabled' : ''}
-          disabled={!canNextPage}
+          onClick={props.nextPage}
+          className={!props.canNextPage ? 'mg-dataTable-pagination-disabled' : ''}
+          disabled={!props.canNextPage}
         >
           {'>'}
         </button>
         <button
-          onClick={() => gotoPage(pageCount - 1)}
-          className={pageIndex === pageCount - 1 ? 'mg-dataTable-pagination-disabled' : ''}
-          disabled={pageIndex === pageCount - 1}
+          onClick={() => props.gotoPage(props.pageCount - 1)}
+          className={props.pageIndex === props.pageCount - 1 ? 'mg-dataTable-pagination-disabled' : ''}
+          disabled={props.pageIndex === props.pageCount - 1}
         >
           {'>>'}
         </button>
@@ -77,14 +74,21 @@ const Pagination = props => {
   }
 
   function _handleTabChange(tab) {
-    setPageSize(Number(tab))
+    props.setPageSize(Number(tab))
     setCurrentTab(tab)
   }
 }
 
 Pagination.propTypes = {
   currentItemsCount: PropTypes.number.isRequired,
-  setPageSize: PropTypes.func.isRequired
+  setPageSize: PropTypes.func.isRequired,
+  canNextPage: PropTypes.bool.isRequired,
+  canPreviousPage: PropTypes.bool.isRequired,
+  nextPage: PropTypes.func.isRequired,
+  previousPage: PropTypes.func.isRequired,
+  pageIndex: PropTypes.number.isRequired,
+  pageCount: PropTypes.number.isRequired,
+  gotoPage: PropTypes.func.isRequired
 }
 
 export default Pagination
