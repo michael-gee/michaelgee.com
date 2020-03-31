@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import { Modal } from 'semantic-ui-react'
 import Button from '../Buttons/Button'
 
-import './Dialog.css'
-
 const Dialog = props => {
   const subText = _configureSubText()
 
@@ -16,10 +14,9 @@ const Dialog = props => {
       size="mini"
       dimmer="inverted"
       className="mg-dialog"
-      closeIcon={true}
       closeOnDimmerClick={false}
     >
-      <Modal.Header>{props.title}</Modal.Header>
+      {props.title && <Modal.Header>{props.title}</Modal.Header>}
       <Modal.Content>{subText}</Modal.Content>
       <Modal.Actions>
         <Button text={props.cancelButtonText} onClick={props.onDismiss} color="red" />
