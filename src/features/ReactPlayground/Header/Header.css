@@ -1,15 +1,25 @@
 #mg-reactPlayground-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   min-height: 80px;
+  padding: 0 16px;
   background-color: var(--react-secondary);
   color: #FFF;
 }
-#mg-reactPlayground-header i {
+
+
+#mg-reactPlayground-headerTitle { 
+  display: flex;
+}
+#mg-reactPlayground-headerTitle i {
   color: var(--react-primary);
   margin-right: 8px;
+}
+
+#mg-reactPlayground-headerSpacer {
+  width: 40px;
 }
 
 #mg-reactPlayground-nav {

@@ -28,6 +28,7 @@ function _configureRoutes() {
     />
   )
 
+  // ReactPlayground
   const ReactDataTable = () => (
     <Loadable
       render={componentProps => {
@@ -50,6 +51,7 @@ function _configureRoutes() {
 
   return {
     Homepage,
+    // ReactPlayground
     ReactDataTable,
     ReactHooks
   }

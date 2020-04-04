@@ -1,6 +1,7 @@
 .mg-dataTable-container {
   background-color: #FFF;
   font-size: 1.6em;
+  min-height: calc(100vh - 148px);
   padding: 24px 0;
 }
 

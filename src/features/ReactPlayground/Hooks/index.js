@@ -1,24 +1,21 @@
-// Hooks implementation
-
-// Linear list of all hooks implementations
-
-// eventually add search feature for all hooks?
-
-// react icon for React and other icon for custom hooks
-// import UseState from './ReactHooks/UseState'
-
 import React from 'react'
-
-import UseState from './ReactHooks/UseState'
 
 import './Hooks.css'
 
 const Hooks = props => {
   return (
     <main id="mg-reactHooks-container">
-      <h1>Hooks</h1>
+      <h1 id="mg-reactHooks-title">Select a Category</h1>
 
-      <UseState />
+      <div id="mg-reactHooks-categoryContainer">
+        <div id="mg-reactHooks-react" className="mg-reactHooks-category">
+          <h2>React</h2>
+        </div>
+
+        <div id="mg-reactHooks-custom" className="mg-reactHooks-category">
+          <h2>Custom</h2>
+        </div>
+      </div>
     </main>
   )
 }

@@ -3,4 +3,44 @@
   width: 100%;
   min-height: calc(100vh - 148px);
   overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+#mg-reactHooks-title {
+  text-align: center;
+  margin: 32px 0;
+}
+
+#mg-reactHooks-categoryContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 24px;
+}
+
+.mg-reactHooks-category {
+  width: 32%;
+  min-height: 500px;
+  border-radius: 8px;
+  transition: .5s;
+}
+.mg-reactHooks-category:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.mg-reactHooks-category h2 {
+  font-size: 3.2em;
+  text-align: center;
+}
+
+#mg-reactHooks-react {
+  background-color: var(--react-secondary);
+  color: var(--react-primary);
+}
+
+#mg-reactHooks-custom {
+  background-color: var(--mg-atl-gray);
+  color: var(--mg-primary-red);
 }

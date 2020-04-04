@@ -6,5 +6,7 @@
   "trailingComma": "none",
   "semi": false,
   "jsxBracketSameLine": false,
-  "parser": "typescript"
+  "parser": "typescript",
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
 }

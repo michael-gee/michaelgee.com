@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Icon } from 'semantic-ui-react'
 import Button from 'components/Buttons/Button'
+import IconButton from 'components/Buttons/IconButton'
 
 import { useParams } from 'react-router-dom'
 import useNavigation from 'hooks/useNavigation'
@@ -18,11 +19,17 @@ const ReactPlaygroundHeader = () => {
   return (
     <>
       <header id="mg-reactPlayground-header">
-        <Icon name="react" size="huge" />
-        <h1>React Playground</h1>
+        <IconButton iconName="home" onClick={() => navigateTo(MG_ROUTE_PATHS.homepage)} customColor="react" />
+
+        <div id="mg-reactPlayground-headerTitle">
+          <Icon name="react" size="huge" />
+          <h1>React Playground</h1>
+        </div>
+
+        <div id="mg-reactPlayground-headerSpacer" />
       </header>
 
-      <section id="mg-reactPlayground-nav">
+      <nav id="mg-reactPlayground-nav">
         {routes.map(item => (
           <Button
             text={item.text}
@@ -33,7 +40,7 @@ const ReactPlaygroundHeader = () => {
             key={item.key}
           />
         ))}
-      </section>
+      </nav>
     </>
   )
 

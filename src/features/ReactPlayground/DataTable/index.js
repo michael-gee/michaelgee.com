@@ -18,9 +18,7 @@ const DataTable = () => {
         return rows.filter(row => {
           const rowValue = row.values[id]
           return rowValue !== undefined
-            ? String(rowValue)
-                .toLowerCase()
-                .startsWith(String(filterValue).toLowerCase())
+            ? String(rowValue).toLowerCase().startsWith(String(filterValue).toLowerCase())
             : true
         })
       }
@@ -64,7 +62,7 @@ const DataTable = () => {
   )
 
   return (
-    <div className="mg-dataTable-container">
+    <main className="mg-dataTable-container">
       <table {...getTableProps()} className="mg-dataTable">
         <thead className="mg-dataTable-header">
           {headerGroups.map(headerGroup => {
@@ -127,7 +125,7 @@ const DataTable = () => {
         pageCount={pageCount}
         gotoPage={gotoPage}
       />
-    </div>
+    </main>
   )
 
   function _configureColumns() {
