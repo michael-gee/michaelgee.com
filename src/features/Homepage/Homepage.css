@@ -5,7 +5,7 @@
 
 /* PortfolioItem CSS */
 .mg-homepage-portfolioItem .ui.card {
-  color: white;
+  color: #FFF;
   background-color: var(--mg-dark-gray);
   font-size: 1.8em;
   width: 264px;
@@ -17,12 +17,12 @@
 }
 /* Card.Header */
 .mg-homepage-portfolioItem .ui.card .header { 
-  color: white;
+  color: #FFF;
   margin: 0 12px;
 }
 /* Card.Meta */
 .mg-homepage-portfolioItem .ui.card .meta { 
-  color: var(--mg-carbon-gray);
+  color: var(--mg-atl-gray);
   margin: 8px 12px;
 }
 
@@ -32,4 +32,4 @@
   justify-content: space-between;
   min-height: 36px;
 }
-.mg-portfolioItem-cardIcons i.info { color: var(--mg-carbon-gray) }
+.mg-portfolioItem-cardIcons i.info { color: var(--mg-atl-gray) }

@@ -1,6 +1,6 @@
 .ui.button.mg-primary-btn {
   background-color: var(--mg-primary-red);
-  color: white;
+  color: #FFF;
 }
 
 .ui.button.mg-react-btn {

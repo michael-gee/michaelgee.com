@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 80px;
   background-color: var(--react-secondary);
-  color: white;
+  color: #FFF;
 }
 #mg-reactPlayground-header i {
   color: var(--react-primary);

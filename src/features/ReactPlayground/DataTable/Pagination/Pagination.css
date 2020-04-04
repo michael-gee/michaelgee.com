@@ -1,7 +1,7 @@
 #mg-dataTable-pagination-container {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #FFF;
   max-width: 1124px;
   margin: 0 auto;
   padding: 40px 0;
@@ -30,7 +30,7 @@
 
 .mg-dataTable-pagination-disabled { color: #777 !important; }
 .mg-dataTable-pagination-disabled:hover { 
-  background-color: white !important;
+  background-color: #FFF !important;
   cursor: not-allowed !important;
  }
 

@@ -6,13 +6,12 @@ body {
   background-color: #EFEFEF;
 
   /* CSS Variables Palette */
-  --mg-primary-red: #C3073F;
-  --mg-secondary-red: #950740;
-  --mg-tertiary-red: #6F2232;
-  --mg-watermelon-red: #FF3B3F;
+  --mg-primary-red: #A9162D;
+  --mg-secondary-red: #ff0000;
 
   --mg-light-gray: #EFEFEF;
   --mg-carbon-gray: #A9A9A9;
+  --mg-atl-gray: #A5ACAF;
   --mg-dark-gray: #4E4E50;
   --mg-dark: #1A1A1D;
 
