@@ -14,6 +14,7 @@ export default [
   // ReactSandbox
   { path: MG_ROUTE_PATHS.reactSandbox, component: ReactSandboxHeader },
   { path: MG_ROUTE_PATHS.reactDataTable, component: routes.ReactDataTable, exact: true },
+  { path: MG_ROUTE_PATHS.reactHooksCategories, component: routes.ReactHooksCategorySelector, exact: true },
   { path: MG_ROUTE_PATHS.reactHooks, component: routes.ReactHooks, exact: true }
 ]
 
@@ -39,6 +40,16 @@ function _configureRoutes() {
     />
   )
 
+  const ReactHooksCategorySelector = () => (
+    <Loadable
+      render={componentProps => {
+        const Component = lazy(() => import('./features/ReactSandbox/Hooks/CategorySelector'))
+        return <Component {...componentProps} />
+      }}
+      fallback={() => <ReactSandboxWait />}
+    />
+  )
+
   const ReactHooks = () => (
     <Loadable
       render={componentProps => {
@@ -53,6 +64,7 @@ function _configureRoutes() {
     Homepage,
     // ReactSandbox
     ReactDataTable,
+    ReactHooksCategorySelector,
     ReactHooks
   }
 }

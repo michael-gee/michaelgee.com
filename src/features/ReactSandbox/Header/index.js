@@ -5,7 +5,7 @@ import Button from 'components/Buttons/Button'
 import IconButton from 'components/Buttons/IconButton'
 
 import { useParams } from 'react-router-dom'
-import useNavigation from 'hooks/useNavigation'
+import { useNavigation } from 'hooks/mg-hooks'
 
 import { MG_ROUTE_PATHS } from 'constants/navigation'
 

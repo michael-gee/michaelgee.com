@@ -7,7 +7,7 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 
 let mockNavigateTo = jest.fn()
 
-jest.mock('hooks/useNavigation', () => {
+jest.mock('hooks/mg-hooks/useNavigation', () => {
   return jest.fn().mockImplementation(() => {
     return { navigateTo: mockNavigateTo }
   })
