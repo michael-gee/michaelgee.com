@@ -3,12 +3,12 @@
   width: 100%;
   min-height: calc(100vh - 148px);
   overflow-y: auto;
-  padding-bottom: 80px;
 }
 
 #mg-reactHooks-title {
   text-align: center;
   margin: 32px 0;
+  font-size: 3.2em;
 }
 
 #mg-reactHooks-categoryContainer {
@@ -19,10 +19,17 @@
 }
 
 .mg-reactHooks-category {
-  width: 32%;
-  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  min-height: 400px;
   border-radius: 8px;
   transition: .5s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 .mg-reactHooks-category:hover {
   cursor: pointer;
@@ -31,7 +38,7 @@
 }
 
 .mg-reactHooks-category h2 {
-  font-size: 3.2em;
+  font-size: 4.4em;
   text-align: center;
 }
 
@@ -41,6 +48,23 @@
 }
 
 #mg-reactHooks-custom {
-  background-color: var(--mg-atl-gray);
+  background-color: var(--mg-carbon-gray);
   color: var(--mg-primary-red);
+}
+
+@media only screen and ( max-width: 768px ) {
+  #mg-reactHooks-title {
+    margin: 16px 0;
+  }
+
+  #mg-reactHooks-categoryContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .mg-reactHooks-category {
+    margin-bottom: 24px;
+    width: 60%;
+  }
 }

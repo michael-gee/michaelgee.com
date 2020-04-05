@@ -11,32 +11,32 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 
 import './Header.css'
 
-const ReactPlaygroundHeader = () => {
+const ReactSandboxHeader = () => {
   const { route } = useParams()
   const { navigateTo } = useNavigation()
   const routes = _configureRoutes()
 
   return (
     <>
-      <header id="mg-reactPlayground-header">
+      <header id="mg-reactSandbox-header">
         <IconButton iconName="home" onClick={() => navigateTo(MG_ROUTE_PATHS.homepage)} customColor="react" />
 
-        <div id="mg-reactPlayground-headerTitle">
+        <div id="mg-reactSandbox-headerTitle">
           <Icon name="react" size="huge" />
-          <h1>React Playground</h1>
+          <h1>React Sandbox</h1>
         </div>
 
-        <div id="mg-reactPlayground-headerSpacer" />
+        <div id="mg-reactSandbox-headerSpacer" />
       </header>
 
-      <nav id="mg-reactPlayground-nav">
+      <nav id="mg-reactSandbox-nav">
         {routes.map(item => (
           <Button
             text={item.text}
             onClick={() => navigateTo(item.pathname)}
             iconName={item.text.toLowerCase() === 'home' ? 'home' : undefined}
             customColor={route === item.key ? 'react' : 'react-secondary'}
-            className="mg-reactPlayground-navBtn"
+            className="mg-reactSandbox-navBtn"
             key={item.key}
           />
         ))}
@@ -53,4 +53,4 @@ const ReactPlaygroundHeader = () => {
   }
 }
 
-export default ReactPlaygroundHeader
+export default ReactSandboxHeader

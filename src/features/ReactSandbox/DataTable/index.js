@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react'
-import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 
 import { Input, Icon } from 'semantic-ui-react'
 import Pagination from './Pagination'
+
+import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
 
 import makeData from './makeData'
 

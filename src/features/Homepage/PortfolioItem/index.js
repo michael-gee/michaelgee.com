@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Card, Icon, Popup } from 'semantic-ui-react'
-
 import IconButton from 'components/Buttons/IconButton'
 
 import useNavigation from 'hooks/useNavigation'

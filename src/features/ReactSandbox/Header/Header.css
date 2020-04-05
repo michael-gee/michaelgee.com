@@ -1,4 +1,4 @@
-#mg-reactPlayground-header {
+#mg-reactSandbox-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,25 +10,25 @@
 }
 
 
-#mg-reactPlayground-headerTitle { 
+#mg-reactSandbox-headerTitle { 
   display: flex;
 }
-#mg-reactPlayground-headerTitle i {
+#mg-reactSandbox-headerTitle i {
   color: var(--react-primary);
   margin-right: 8px;
 }
 
-#mg-reactPlayground-headerSpacer {
+#mg-reactSandbox-headerSpacer {
   width: 40px;
 }
 
-#mg-reactPlayground-nav {
+#mg-reactSandbox-nav {
   display: flex;
   justify-content: center;
   padding: 16px 0;
 }
 
-.ui.button.mg-reactPlayground-navBtn {
+.ui.button.mg-reactSandbox-navBtn {
   width: 112px;
   margin: 0 4px;
 }

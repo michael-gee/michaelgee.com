@@ -1,6 +1,21 @@
+#mg-homepage-title {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 5em;
+  color: var(--mg-primary-red);
+}
+
 #mg-homepage-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+#mg-homepage-temporary {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 48px;
+  text-align: center;
 }
 
 /* PortfolioItem CSS */

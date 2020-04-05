@@ -1,8 +1,8 @@
 import React, { lazy } from 'react'
 import Loadable from 'components/Loadable'
 
-import ReactPlaygroundHeader from 'features/ReactPlayground/Header'
-import ReactPlaygroundWait from 'features/ReactPlayground/Wait'
+import ReactSandboxHeader from 'features/ReactSandbox/Header'
+import ReactSandboxWait from 'features/ReactSandbox/Wait'
 
 import { MG_ROUTE_PATHS } from 'constants/navigation'
 
@@ -11,8 +11,8 @@ const routes = _configureRoutes()
 export default [
   { path: MG_ROUTE_PATHS.homepage, component: routes.Homepage, exact: true },
 
-  // ReactPlayground
-  { path: MG_ROUTE_PATHS.reactPlayground, component: ReactPlaygroundHeader },
+  // ReactSandbox
+  { path: MG_ROUTE_PATHS.reactSandbox, component: ReactSandboxHeader },
   { path: MG_ROUTE_PATHS.reactDataTable, component: routes.ReactDataTable, exact: true },
   { path: MG_ROUTE_PATHS.reactHooks, component: routes.ReactHooks, exact: true }
 ]
@@ -28,30 +28,30 @@ function _configureRoutes() {
     />
   )
 
-  // ReactPlayground
+  // ReactSandbox
   const ReactDataTable = () => (
     <Loadable
       render={componentProps => {
-        const Component = lazy(() => import('./features/ReactPlayground/DataTable'))
+        const Component = lazy(() => import('./features/ReactSandbox/DataTable'))
         return <Component {...componentProps} />
       }}
-      fallback={() => <ReactPlaygroundWait />}
+      fallback={() => <ReactSandboxWait />}
     />
   )
 
   const ReactHooks = () => (
     <Loadable
       render={componentProps => {
-        const Component = lazy(() => import('./features/ReactPlayground/Hooks'))
+        const Component = lazy(() => import('./features/ReactSandbox/Hooks'))
         return <Component {...componentProps} />
       }}
-      fallback={() => <ReactPlaygroundWait />}
+      fallback={() => <ReactSandboxWait />}
     />
   )
 
   return {
     Homepage,
-    // ReactPlayground
+    // ReactSandbox
     ReactDataTable,
     ReactHooks
   }

@@ -8,11 +8,8 @@ import './Homepage.css'
 
 const Homepage = () => {
   return (
-    <>
-      <h4 style={{ paddingTop: 24 }}>
-        Improve homepage styles with more modern and UI focused header and portfolio items (cards or maybe a full width
-        item layout?)
-      </h4>
+    <main>
+      <h1 id="mg-homepage-title">MG SANDBOX</h1>
 
       <div id="mg-homepage-container">
         {data.map(item => (
@@ -21,7 +18,12 @@ const Homepage = () => {
           </div>
         ))}
       </div>
-    </>
+
+      <h4 id="mg-homepage-temporary">
+        Homepage is currently a placeholder and the default route will be Portfolio when it is refactored and
+        implemented into this project. This component will either no longer exist or need to be repurposed.
+      </h4>
+    </main>
   )
 }
 
