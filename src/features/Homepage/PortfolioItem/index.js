@@ -30,12 +30,12 @@ const PortfolioItem = props => {
           <span />
         )}
 
-        {props.route && <IconButton onClick={_handleItemClick} customColor="primary" iconName="arrow right" />}
+        {props.route && <IconButton onClick={_onItemClick} customColor="primary" iconName="arrow right" />}
       </div>
     )
   }
 
-  function _handleItemClick() {
+  function _onItemClick() {
     navigateTo(props.route, props.routeOpts)
   }
 }

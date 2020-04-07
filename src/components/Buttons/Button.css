@@ -1,5 +1,10 @@
 .ui.button.mg-primary-btn {
-  background-color: var(--mg-primary-red);
+  background-color: var(--mg-falcons-red);
+  color: #FFF;
+}
+
+.ui.button.mg-canada-btn {
+  background-color: var(--mg-canada-red);
   color: #FFF;
 }
 

@@ -30,21 +30,25 @@ const Button = props => {
     if (props.disabled) return props.className
     let classNames = `mg-custom-btn${props.className ? ' ' + props.className : ''}`
     if (props.color) return classNames
-
-    switch (props.customColor) {
-      case 'primary':
-        classNames = `mg-primary-btn ${classNames}`
-        break
-      case 'react':
-        classNames = `mg-react-btn ${classNames}`
-        break
-      case 'react-secondary':
-        classNames = `mg-reactSecondary-btn ${classNames}`
-        break
-      // secondary
-      // tertiary
-      default:
-        break
+    else if (props.customColor) {
+      switch (props.customColor.toLowerCase()) {
+        case 'primary':
+          classNames = `mg-primary-btn ${classNames}`
+          break
+        case 'canada':
+          classNames = `mg-canada-btn ${classNames}`
+          break
+        case 'react':
+          classNames = `mg-react-btn ${classNames}`
+          break
+        case 'react-secondary':
+          classNames = `mg-reactSecondary-btn ${classNames}`
+          break
+        // secondary
+        // tertiary
+        default:
+          break
+      }
     }
 
     return classNames

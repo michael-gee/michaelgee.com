@@ -46,7 +46,7 @@ const ReactSandboxHeader = () => {
 
   function _configureRoutes() {
     return [
-      { text: 'Hooks', pathname: MG_ROUTE_PATHS.reactHooks, key: 'hooks' },
+      { text: 'Hooks', pathname: MG_ROUTE_PATHS.reactHooksCategories, key: 'hooks' },
       // { text: 'Animations', pathname: MG_ROUTE_PATHS.reactAnimations, key: 'animations' },
       { text: 'Data Table', pathname: MG_ROUTE_PATHS.reactDataTable, key: 'data-table' }
     ]

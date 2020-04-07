@@ -8,7 +8,7 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 
 import './CategorySelector.css'
 
-const Hooks = () => {
+const HooksCategorySelector = () => {
   const { navigateTo } = useNavigation()
 
   return (
@@ -17,7 +17,7 @@ const Hooks = () => {
 
       <div id="mg-hooks-categoryContainer">
         <div
-          id="mg-hooks-react"
+          id="mg-hooks-reactCategory"
           className="mg-hooks-category"
           onClick={() => navigateTo(`${MG_ROUTE_PATHS.reactHooksCategories}/react`)}
         >
@@ -26,7 +26,7 @@ const Hooks = () => {
         </div>
 
         <div
-          id="mg-hooks-custom"
+          id="mg-hooks-customCategory"
           className="mg-hooks-category"
           onClick={() => navigateTo(`${MG_ROUTE_PATHS.reactHooksCategories}/custom`)}
         >
@@ -38,4 +38,4 @@ const Hooks = () => {
   )
 }
 
-export default Hooks
+export default HooksCategorySelector
