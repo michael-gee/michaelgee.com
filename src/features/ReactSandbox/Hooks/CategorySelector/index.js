@@ -3,7 +3,7 @@ import React from 'react'
 import { ReactComponent as ReactLogo } from './react.svg'
 import { ReactComponent as MgLogo } from './mapleLeaf.svg'
 
-import { useNavigation } from 'hooks/mg-hooks'
+import useNavigation from 'hooks/useNavigation'
 import { MG_ROUTE_PATHS } from 'constants/navigation'
 
 import './CategorySelector.css'
