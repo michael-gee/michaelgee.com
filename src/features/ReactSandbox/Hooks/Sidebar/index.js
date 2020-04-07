@@ -23,7 +23,16 @@ const HooksSidebar = props => {
       />
 
       {props.hooksList.map(hook => (
-        <div className="mg-hooks-sidebarItem">{hook}</div>
+        <div
+          onClick={() => {
+            if (props.currentHook !== hook) props.onSelectHookItem(hook)
+          }}
+          id={props.currentHook === hook ? 'mg-hook-currentlySelected' : undefined}
+          className="mg-hook-item"
+          key={hook}
+        >
+          {hook}
+        </div>
       ))}
     </aside>
   )
@@ -35,6 +44,8 @@ const HooksSidebar = props => {
 
 HooksSidebar.propTypes = {
   hooksList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  currentHook: PropTypes.string,
+  onSelectHookItem: PropTypes.func.isRequired,
   isCustom: PropTypes.bool.isRequired
 }
 

@@ -25,6 +25,7 @@ h3 { font-size: 1.8em; margin: 0; }
 h4 { font-size: 1.6em; margin: 0; }
 h5 { font-size: 1.3em; margin: 0; }
 h6 { font-size: 1.2em; margin: 0; }
+p { font-size: 1.6em; }
 
 /* Dialog close iconBtn style */
 .ui.modal.mg-dialog .close.icon { color: black; }
