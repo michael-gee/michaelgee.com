@@ -3,6 +3,12 @@ import { render } from '@testing-library/react'
 
 import Homepage from './'
 
+jest.mock('hooks/useNavigation', () => {
+  return jest.fn().mockImplementation(() => {
+    return { navigateTo: jest.fn() }
+  })
+})
+
 describe('<Homepage />', () => {
   let wrapper
 
@@ -10,9 +16,8 @@ describe('<Homepage />', () => {
     wrapper = render(<Homepage />)
   })
 
-  xit('should render a <FeatureItem /> component for each item in the data array', () => {
-    const { queryAllByTestId } = wrapper
-
-    expect(queryAllByTestId('mg-homepage-ftItem').length).toEqual(2)
+  it('should render a <FeatureItem /> component for each item in the data array', () => {
+    const { getAllByTestId } = wrapper
+    expect(getAllByTestId('portfolio-item').length).toEqual(2)
   })
 })

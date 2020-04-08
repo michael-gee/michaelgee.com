@@ -13,8 +13,16 @@ export default [
 
   // ReactSandbox
   { path: MG_ROUTE_PATHS.reactSandbox, component: ReactSandboxHeader },
-  { path: MG_ROUTE_PATHS.reactDataTable, component: routes.ReactDataTable, exact: true },
-  { path: MG_ROUTE_PATHS.reactHooksCategories, component: routes.ReactHooksCategorySelector, exact: true },
+  {
+    path: MG_ROUTE_PATHS.reactDataTable,
+    component: routes.ReactDataTable,
+    exact: true
+  },
+  {
+    path: MG_ROUTE_PATHS.reactHooksCategories,
+    component: routes.ReactHooksCategorySelector,
+    exact: true
+  },
   { path: MG_ROUTE_PATHS.reactHooks, component: routes.ReactHooks, exact: true }
 ]
 
@@ -25,7 +33,7 @@ function _configureRoutes() {
         const Component = lazy(() => import('./features/Homepage'))
         return <Component {...componentProps} />
       }}
-      fallback={() => <div>Loading Homepage...</div>}
+      fallback={() => <>Loading Homepage...</>}
     />
   )
 

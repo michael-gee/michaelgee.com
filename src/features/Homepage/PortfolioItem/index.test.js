@@ -3,9 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 
 import PortfolioItem from '.'
 
-import { MG_ROUTE_PATHS } from 'constants/navigation'
-
-let mockNavigateTo = jest.fn()
+let mockNavigateTo
 
 jest.mock('hooks/useNavigation', () => {
   return jest.fn().mockImplementation(() => {
@@ -13,51 +11,34 @@ jest.mock('hooks/useNavigation', () => {
   })
 })
 
-describe.skip('<PortfolioItem />', () => {
-  let wrapper, mockTitle, mockRoute, mockDate, mockDescription
+describe('<PortfolioItem />', () => {
+  let wrapper, mockTitle, mockPathname, mockDate, mockDescription
 
   beforeEach(() => {
     mockTitle = 'Mock Route'
-    mockRoute = '/mock-route'
+    mockPathname = '/mock-route'
     mockDate = 'May 22nd, 2019'
     mockDescription = 'Mock Description'
     mockNavigateTo = jest.fn()
 
     wrapper = render(
-      <PortfolioItem title={mockTitle} route={mockRoute} date={mockDate} description={mockDescription} />
+      <PortfolioItem title={mockTitle} pathname={mockPathname} date={mockDate} description={mockDescription} />
     )
   })
 
-  it('should render the title and created by date props in the card header', () => {
-    const { queryByText } = wrapper
-
-    expect(queryByText(mockTitle)).toBeTruthy()
-    expect(queryByText(mockDate)).toBeTruthy()
+  it('should render the expected card content & info passed from props', () => {
+    const { getByText, getByTestId } = wrapper
+    expect(getByText(mockTitle)).toBeInTheDocument()
+    expect(getByText(mockDate)).toBeInTheDocument()
+    // Description is displayed on hover of the info icon
+    expect(getByTestId('desc-icon')).toBeInTheDocument()
+    expect(getByTestId('item-navBtn')).toBeInTheDocument()
   })
 
-  it('should NOT display the item description by default', () => {
-    // isExpanded state is set to false by default
-    const { queryByTestId } = wrapper
-    const ItemDescription = queryByTestId('mg-featureItem-collapse')
-    expect(ItemDescription).toBeNull()
-  })
-
-  it('should display the item description when the expand icon button is clicked', () => {
-    const { queryByText, queryByTestId } = wrapper
-    const ExpandedIconButton = queryByTestId('mg-featureItem-expandIconBtn')
-
-    expect(queryByText(mockDescription)).toBeNull()
-    fireEvent.click(ExpandedIconButton)
-    expect(queryByText(mockDescription)).toBeTruthy()
-  })
-
-  // @@@@@ fix test
-  xit('should navigate to the route prop when the go to navigation button is clicked', () => {
-    const { queryByTestId } = wrapper
-    const NavigationIconButton = queryByTestId('mg-featureItem-navIconBtn')
-
+  it('should navigate to the expected route when the nav icon button is clicked', () => {
+    const { getByTestId } = wrapper
     expect(mockNavigateTo).not.toHaveBeenCalled()
-    fireEvent.click(NavigationIconButton)
-    expect(mockNavigateTo).toHaveBeenCalledWith(mockRoute)
+    fireEvent.click(getByTestId('item-navBtn'))
+    expect(mockNavigateTo).toHaveBeenCalledWith(mockPathname)
   })
 })

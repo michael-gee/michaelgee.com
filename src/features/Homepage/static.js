@@ -3,7 +3,7 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 export default [
   {
     title: 'React Sandbox',
-    route: MG_ROUTE_PATHS.reactHooksCategories,
+    pathname: MG_ROUTE_PATHS.reactHooksCategories,
     date: 'April 4th, 2020',
     description: ''
   },

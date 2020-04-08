@@ -25,25 +25,31 @@ const PortfolioItem = props => {
     return (
       <div className="mg-portfolioItem-cardIcons">
         {props.description ? (
-          <Popup content={props.description} trigger={<Icon name="info circle" size="big" />} position="bottom left" />
+          <Popup
+            content={props.description}
+            trigger={<Icon name="info circle" size="big" data-testid="desc-icon" />}
+            position="bottom left"
+            data-testid="item-desc"
+          />
         ) : (
           <span />
         )}
 
-        {props.route && <IconButton onClick={_onItemClick} customColor="primary" iconName="arrow right" />}
+        {props.pathname && (
+          <IconButton onClick={_onItemClick} customColor="primary" iconName="arrow right" data-testid="item-navBtn" />
+        )}
       </div>
     )
   }
 
   function _onItemClick() {
-    navigateTo(props.route, props.routeOpts)
+    navigateTo(props.pathname)
   }
 }
 
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
-  route: PropTypes.string,
-  routeOpts: PropTypes.object,
+  pathname: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string
 }

@@ -13,8 +13,13 @@ const Homepage = () => {
 
       <div id="mg-homepage-container">
         {data.map(item => (
-          <div className="mg-homepage-portfolioItem" key={item.title}>
-            <PortfolioItem title={item.title} route={item.route} date={item.date} description={item.description} />
+          <div className="mg-homepage-portfolioItem" data-testid="portfolio-item" key={item.title}>
+            <PortfolioItem
+              title={item.title}
+              pathname={item.pathname}
+              date={item.date}
+              description={item.description}
+            />
           </div>
         ))}
       </div>
