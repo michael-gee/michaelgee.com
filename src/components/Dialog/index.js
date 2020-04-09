@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Modal } from 'semantic-ui-react'
-import Button from '../Buttons/Button'
+import Button from '../Button'
 
 const Dialog = props => {
   const subText = _configureSubText()

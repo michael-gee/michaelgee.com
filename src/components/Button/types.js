@@ -22,6 +22,8 @@ export const MG_BUTTON_COLORS = [
   'youtube'
 ]
 
+export const MG_BUTTON_VARIANTS = ['default', 'icon']
+
 export const MG_BUTTON_CUSTOM_COLORS = ['primary', 'canada', 'react', 'react-secondary']
 // @@@@@ add secondary
 // @@@@@ add tertiary

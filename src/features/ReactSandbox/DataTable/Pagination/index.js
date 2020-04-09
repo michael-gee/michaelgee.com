@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import IconButton from 'components/Buttons/IconButton'
+import Button from 'components/Button'
 
 import './Pagination.css'
 
@@ -18,15 +18,16 @@ const Pagination = props => {
       <div className="mg-dataTable-pagination-section mg-dataTable-pagination-pivot">
         {tabOptions.map(tab => {
           return (
-            <IconButton
+            <Button
+              variant="icon"
+              onClick={() => _handleTabChange(tab)}
               customColor={currentTab === tab ? 'react' : undefined}
               size="mini"
-              onClick={() => _handleTabChange(tab)}
               style={{ padding: '8px 12px', borderRadius: 'none' }}
               key={`key-${tab}`}
             >
               {tab}
-            </IconButton>
+            </Button>
           )
         })}
       </div>

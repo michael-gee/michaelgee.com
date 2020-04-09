@@ -3,33 +3,18 @@ import PropTypes from 'prop-types'
 
 import { Button as SUIButton } from 'semantic-ui-react'
 
-import { MG_BUTTON_COLORS, MG_BUTTON_CUSTOM_COLORS, MG_BUTTON_SIZES } from '../types'
+import { MG_BUTTON_VARIANTS, MG_BUTTON_COLORS, MG_BUTTON_CUSTOM_COLORS, MG_BUTTON_SIZES } from './types'
 
-import '../Button.css'
+import './Button.css'
 
-const IconButton = props => {
-  const iconBtnClassNames = _configureClassNames()
+const Button = props => {
+  const btnClassNames = _configureClassNames()
+  const btnProps = _configureProps()
 
-  return (
-    <SUIButton
-      id={props.id}
-      className={iconBtnClassNames}
-      style={props.style}
-      color={props.customColor ? undefined : props.color}
-      icon={props.iconName}
-      onClick={props.onClick}
-      circular
-      size={props.size}
-      disabled={props.disabled ? true : undefined}
-      title={props.title}
-      data-testid={props['data-testid']}
-    >
-      {props.children}
-    </SUIButton>
-  )
+  return <SUIButton {...btnProps} />
 
   function _configureClassNames() {
-    if (props.disabled) return props.className
+    if (props.disabled) return props.className ? props.className : undefined
     let classNames = `mg-custom-btn${props.className ? ' ' + props.className : ''}`
     if (props.color) return classNames
     else if (props.customColor) {
@@ -55,20 +40,46 @@ const IconButton = props => {
 
     return classNames
   }
+
+  function _configureProps() {
+    const propsObj = {
+      ...props,
+      className: btnClassNames,
+      content: props.text,
+      color: props.customColor ? undefined : props.color
+    }
+
+    if (props.variant === 'icon') {
+      propsObj.circular = true
+      propsObj.text = undefined
+    }
+
+    delete propsObj.text
+    delete propsObj.customColor
+    delete propsObj.variant
+
+    return propsObj
+  }
 }
 
-IconButton.propTypes = {
+Button.defaultProps = {
+  variant: MG_BUTTON_VARIANTS[0] // default
+}
+
+Button.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
-  iconName: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  onClick: PropTypes.func,
+  variant: PropTypes.oneOf(MG_BUTTON_VARIANTS),
   color: PropTypes.oneOf(MG_BUTTON_COLORS),
   customColor: PropTypes.oneOf(MG_BUTTON_CUSTOM_COLORS),
   size: PropTypes.oneOf(MG_BUTTON_SIZES),
+  icon: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string,
   'data-testid': PropTypes.string
 }
 
-export default IconButton
+export default Button

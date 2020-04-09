@@ -11,7 +11,6 @@ const Modal = props => {
       size={props.size}
       closeIcon={true}
       closeOnDimmerClick={!props.isBlocking}
-      className="mg-modal"
     >
       {props.title && <SUIModal.Header>{props.title}</SUIModal.Header>}
       <SUIModal.Content scrolling>{props.children}</SUIModal.Content>

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from 'components/Buttons/Button'
+import Button from 'components/Button'
 
 import useNavigation from 'hooks/useNavigation'
 import { MG_ROUTE_PATHS } from 'constants/navigation'
@@ -16,8 +16,8 @@ const HooksSidebar = props => {
       <Button
         text="Back to Categories"
         onClick={_onBackBtnClick}
+        icon="arrow left"
         customColor={props.isCustom ? 'canada' : 'react'}
-        iconName="arrow left"
         id="mg-hooks-sidebar-backBtn"
       />
 

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Card, Icon, Popup } from 'semantic-ui-react'
-import IconButton from 'components/Buttons/IconButton'
+import Button from 'components/Button'
 
 import useNavigation from 'hooks/useNavigation'
 
@@ -36,7 +36,13 @@ const PortfolioItem = props => {
         )}
 
         {props.pathname && (
-          <IconButton onClick={_onItemClick} customColor="primary" iconName="arrow right" data-testid="item-navBtn" />
+          <Button
+            variant="icon"
+            icon="arrow right"
+            onClick={_onItemClick}
+            customColor="primary"
+            data-testid="item-navBtn"
+          />
         )}
       </div>
     )

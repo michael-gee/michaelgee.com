@@ -1,8 +1,7 @@
 import React from 'react'
 
 import { Icon } from 'semantic-ui-react'
-import Button from 'components/Buttons/Button'
-import IconButton from 'components/Buttons/IconButton'
+import Button from 'components/Button'
 
 import { useParams } from 'react-router-dom'
 import useNavigation from 'hooks/useNavigation'
@@ -19,7 +18,7 @@ const ReactSandboxHeader = () => {
   return (
     <>
       <header id="mg-reactSandbox-header">
-        <IconButton iconName="home" onClick={() => navigateTo(MG_ROUTE_PATHS.homepage)} customColor="react" />
+        <Button variant="icon" icon="home" onClick={() => navigateTo(MG_ROUTE_PATHS.homepage)} customColor="react" />
 
         <div id="mg-reactSandbox-headerTitle">
           <Icon name="react" size="huge" />
@@ -34,7 +33,7 @@ const ReactSandboxHeader = () => {
           <Button
             text={item.text}
             onClick={() => navigateTo(item.pathname)}
-            iconName={item.text.toLowerCase() === 'home' ? 'home' : undefined}
+            icon={item.text.toLowerCase() === 'home' ? 'home' : undefined}
             customColor={route === item.key ? 'react' : 'react-secondary'}
             className="mg-reactSandbox-navBtn"
             key={item.key}
