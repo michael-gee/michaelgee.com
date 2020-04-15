@@ -1,15 +1,15 @@
 import React from 'react'
 
-import Documentation from '../../Documentation'
-import Implementation from '../../Implementation'
-import Resources from '../../Resources'
+import Documentation from '../../HookDetails/Documentation'
+import Implementation from '../../HookDetails/Implementation'
+import Resources from '../../HookDetails/Resources'
 
 const UseStateDetails = () => {
   return (
     <section className="mg-hookDetails">
       <h1 className="mg-hookDetails-title">useEffect</h1>
       <Documentation link="https://reactjs.org/docs/hooks-reference.html#useeffect" />
-      <Implementation render={() => <div>testing 123</div>} />
+      <Implementation render={() => <p>useEffect - to be continued</p>} />
       <Resources
         list={[
           {

@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Documentation from '../../Documentation'
-import Implementation from '../../Implementation'
-import Resources from '../../Resources'
+import Documentation from '../../HookDetails/Documentation'
+import Implementation from '../../HookDetails/Implementation'
+import Resources from '../../HookDetails/Resources'
 import HookImplementation from './implementation'
 
 const UseStateDetails = () => {

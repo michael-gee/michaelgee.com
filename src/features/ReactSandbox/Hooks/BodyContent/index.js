@@ -14,6 +14,10 @@ const HooksBodyContent = props => {
         return hookComponents.UseStateDetails()
       case 'useEffect':
         return hookComponents.UseEffectDetails()
+      case 'useContext':
+        return hookComponents.UseContextDetails()
+      case 'useReducer':
+        return hookComponents.UseReducerDetails()
 
       default:
         return <p>The currently selected hook details page was not found.</p>
