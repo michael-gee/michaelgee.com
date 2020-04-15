@@ -1,4 +1,6 @@
-import UseEffectDetails from './UseEffect'
-import UseStateDetails from './UseState'
+import * as reactHooks from './ReactHooks'
+// import * as customHooks from './CustomHooks'
 
-export { UseEffectDetails, UseStateDetails }
+import './HookDetails.css'
+
+export default { ...reactHooks }

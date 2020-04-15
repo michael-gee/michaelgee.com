@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import * as hookComponents from './HookDetails'
+import hookComponents from './HookDetails'
 
 import './BodyContent.css'
 
 const HooksBodyContent = props => {
-  return <section id="mg-hooks-body">{_renderCurrentHook()}</section>
+  return <div id="mg-hooks-body">{_renderCurrentHook()}</div>
 
   function _renderCurrentHook() {
     switch (props.currentHook) {
