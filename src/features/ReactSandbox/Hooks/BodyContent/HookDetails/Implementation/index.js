@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const HookImplementation = props => {
   return (
+    // CSS FROM BodyContent.css
     <article className="mg-hookDetails-article">
       <h3>Implementation</h3>
 

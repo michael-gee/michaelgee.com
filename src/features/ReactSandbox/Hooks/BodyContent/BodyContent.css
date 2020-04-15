@@ -1,4 +1,48 @@
+/* #mg-hooks-react & #mg-hooks-custom from Hooks index.js */
+
 #mg-hooks-body {
   width: calc(100% - 300px);
   padding: 24px;
+}
+
+/* HookDetails CSS */
+.mg-hookDetails {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mg-hookDetails-title {
+  padding: 16px 0;
+}
+#mg-hooks-react .mg-hookDetails-title {
+  color: var(--react-primary);
+}
+
+#mg-hooks-custom .mg-hookDetails-title {
+  color: var(--mg-canada-red);
+}
+
+.mg-hookDetails-article {
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 4px;
+}
+.mg-hookDetails-article h3 {
+  color: var(--react-secondary);
+  text-transform: uppercase;
+  padding: 0 0 16px 0;
+}
+.mg-hookDetails-article ul {
+  font-size: 1.6em;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.mg-hookDetails-article ul a {
+  font-size: 1em;
+}
+#mg-hooks-react .mg-hookDetails-article {
+  border: 4px solid var(--react-primary);
+}
+#mg-hooks-custom .mg-hookDetails-article {
+  border: 4px solid var(--mg-canada-red);
 }
