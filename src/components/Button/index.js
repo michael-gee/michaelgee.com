@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Button as SUIButton } from 'semantic-ui-react'
 
-import { MG_BUTTON_VARIANTS, MG_BUTTON_COLORS, MG_BUTTON_CUSTOM_COLORS, MG_BUTTON_SIZES } from './types'
+import * as buttonTypes from './types'
 
 import './Button.css'
 
@@ -15,7 +15,9 @@ const Button = props => {
 
   function _configureClassNames() {
     if (props.disabled) return props.className ? props.className : undefined
+
     let classNames = `mg-custom-btn${props.className ? ' ' + props.className : ''}`
+
     if (props.color) return classNames
     else if (props.customColor) {
       switch (props.customColor.toLowerCase()) {
@@ -31,8 +33,6 @@ const Button = props => {
         case 'react-secondary':
           classNames = `mg-reactSecondary-btn ${classNames}`
           break
-        // secondary
-        // tertiary
         default:
           break
       }
@@ -45,8 +45,9 @@ const Button = props => {
     const propsObj = {
       ...props,
       className: btnClassNames,
-      content: props.text,
-      color: props.customColor ? undefined : props.color
+      content: props.variant !== 'icon' ? props.text : undefined,
+      color: props.customColor ? undefined : props.color,
+      'data-testid': props['data-testid'] ? props['data-testid'] : _configureDataTestId()
     }
 
     if (props.variant === 'icon') {
@@ -60,10 +61,20 @@ const Button = props => {
 
     return propsObj
   }
+
+  function _configureDataTestId() {
+    switch (props.variant) {
+      case 'icon':
+        return 'icon-btn'
+
+      default:
+        return 'default-btn'
+    }
+  }
 }
 
 Button.defaultProps = {
-  variant: MG_BUTTON_VARIANTS[0] // default
+  variant: buttonTypes.MG_BUTTON_VARIANTS[0] // default
 }
 
 Button.propTypes = {
@@ -72,10 +83,10 @@ Button.propTypes = {
   style: PropTypes.object,
   text: PropTypes.string,
   onClick: PropTypes.func,
-  variant: PropTypes.oneOf(MG_BUTTON_VARIANTS),
-  color: PropTypes.oneOf(MG_BUTTON_COLORS),
-  customColor: PropTypes.oneOf(MG_BUTTON_CUSTOM_COLORS),
-  size: PropTypes.oneOf(MG_BUTTON_SIZES),
+  variant: PropTypes.oneOf(buttonTypes.MG_BUTTON_VARIANTS),
+  color: PropTypes.oneOf(buttonTypes.MG_BUTTON_COLORS),
+  customColor: PropTypes.oneOf(buttonTypes.MG_BUTTON_CUSTOM_COLORS),
+  size: PropTypes.oneOf(buttonTypes.MG_BUTTON_SIZES),
   icon: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string,

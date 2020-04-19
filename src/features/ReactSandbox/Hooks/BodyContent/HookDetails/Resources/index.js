@@ -10,8 +10,8 @@ const HookResources = props => {
       <ul>
         {props.list.map(item => {
           return (
-            <li>
-              <a href={item.link} target="_blank">
+            <li key={item.title}>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </a>
             </li>

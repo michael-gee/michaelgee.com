@@ -13,8 +13,9 @@ const Dialog = props => {
       onClose={props.onDismiss}
       size="mini"
       dimmer="inverted"
-      className="mg-dialog"
       closeOnDimmerClick={false}
+      className="mg-dialog"
+      data-testid="mg-dialog"
     >
       {props.title && <Modal.Header>{props.title}</Modal.Header>}
       <Modal.Content>{subText}</Modal.Content>

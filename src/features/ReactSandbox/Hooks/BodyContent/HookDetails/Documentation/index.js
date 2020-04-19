@@ -7,7 +7,7 @@ const HookDocumentation = props => {
     <article className="mg-hookDetails-article">
       <h3>Documentation</h3>
 
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noopener noreferrer">
         {props.link}
       </a>
     </article>

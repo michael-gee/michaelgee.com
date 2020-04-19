@@ -28,4 +28,13 @@ export const MG_BUTTON_CUSTOM_COLORS = ['primary', 'canada', 'react', 'react-sec
 // @@@@@ add secondary
 // @@@@@ add tertiary
 
-export const MG_BUTTON_SIZES = ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']
+export const MG_BUTTON_SIZES = [
+  'mini',
+  'tiny',
+  'small',
+  'medium',
+  'large',
+  'big',
+  'huge',
+  'massive'
+]
