@@ -11,6 +11,7 @@ const Modal = props => {
       size={props.size}
       closeIcon={true}
       closeOnDimmerClick={!props.isBlocking}
+      data-testid="mg-modal"
     >
       {props.title && <SUIModal.Header>{props.title}</SUIModal.Header>}
       <SUIModal.Content scrolling>{props.children}</SUIModal.Content>
@@ -26,7 +27,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onDismiss: PropTypes.func.isRequired,
   title: PropTypes.string,
-  size: PropTypes.oneOf(['mini', 'tiny', 'small', 'large', 'fullscreen'])
+  size: PropTypes.oneOf(['mini', 'tiny', 'small', 'large', 'fullscreen']),
+  isBlocking: PropTypes.bool
 }
 
 export default Modal
