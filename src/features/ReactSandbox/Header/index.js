@@ -3,7 +3,7 @@ import React from 'react'
 import { Icon } from 'semantic-ui-react'
 import Button from 'components/Button'
 
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import useNavigation from 'hooks/useNavigation'
 
 import { MG_ROUTE_PATHS } from 'constants/navigation'
@@ -11,6 +11,7 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 import './Header.css'
 
 const ReactSandboxHeader = () => {
+  const { pathname } = useLocation()
   const { currentPage } = useParams()
   const { navigateTo } = useNavigation()
   const pageOptions = _configurePageOptions()
@@ -37,7 +38,9 @@ const ReactSandboxHeader = () => {
         {pageOptions.map(item => (
           <Button
             text={item.text}
-            onClick={() => navigateTo(item.pathname)}
+            onClick={() => {
+              if (pathname !== item.pathname) navigateTo(item.pathname)
+            }}
             icon={item.text.toLowerCase() === 'home' ? 'home' : undefined}
             customColor={currentPage === item.key ? 'react' : 'react-secondary'}
             className="mg-reactSandbox-navBtn"
