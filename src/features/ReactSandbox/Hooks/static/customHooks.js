@@ -1,3 +1,3 @@
 export default {
-  hookList: ['useApi', 'useHasChanges', 'useLocalStorage', 'useNavigation', 'usePrevious']
+  hooksList: ['useApi', 'useHasChanges', 'useLocalStorage', 'useNavigation', 'usePrevious']
 }

@@ -16,6 +16,10 @@ const UseMemoDetails = () => {
             title: 'Ben Awad - useMemo Tutorial',
             link:
               'https://www.youtube.com/watch?v=RkBg0gDTLU8&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=6'
+          },
+          {
+            title: 'React Performance Optimization with React.memo()',
+            link: 'https://felixgerschau.com/react-performance-react-memo'
           }
         ]}
       />

@@ -1,16 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { ReactComponent as ReactLogo } from './react.svg'
 import { ReactComponent as MgLogo } from './mapleLeaf.svg'
 
-import useNavigation from 'hooks/useNavigation'
-import { MG_ROUTE_PATHS } from 'constants/navigation'
-
 import './CategorySelector.css'
 
-const HooksCategorySelector = () => {
-  const { navigateTo } = useNavigation()
-
+const HooksCategorySelector = props => {
   return (
     <main id="mg-hooks-categorySelector">
       <h1 id="mg-hooks-categorySelector-title">Select a Category...</h1>
@@ -19,7 +15,7 @@ const HooksCategorySelector = () => {
         <div
           id="mg-hooks-reactCategory"
           className="mg-hooks-category"
-          onClick={() => navigateTo(`${MG_ROUTE_PATHS.reactHooksCategories}/react`)}
+          onClick={() => props.onUpdateCategory('react')}
         >
           <ReactLogo />
           <h2>React</h2>
@@ -28,7 +24,7 @@ const HooksCategorySelector = () => {
         <div
           id="mg-hooks-customCategory"
           className="mg-hooks-category"
-          onClick={() => navigateTo(`${MG_ROUTE_PATHS.reactHooksCategories}/custom`)}
+          onClick={() => props.onUpdateCategory('custom')}
         >
           <MgLogo />
           <h2>Custom</h2>
@@ -36,6 +32,10 @@ const HooksCategorySelector = () => {
       </div>
     </main>
   )
+}
+
+HooksCategorySelector.propTypes = {
+  onUpdateCategory: PropTypes.func.isRequired
 }
 
 export default HooksCategorySelector

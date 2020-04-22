@@ -1,42 +1,43 @@
 import React, { useState, useEffect, useMemo } from 'react'
 
+import CategorySelector from './CategorySelector'
 import BodyContent from './BodyContent'
 import Sidebar from './Sidebar'
-
-import { useParams } from 'react-router-dom'
 
 import { customStatic, reactStatic } from './static'
 
 import './Hooks.css'
 
 const Hooks = () => {
-  const [currentHook, setCurrentHook] = useState()
-  const { category } = useParams()
-  const isCustom = category.toLowerCase() === 'custom' ? true : false
-  const data = useMemo(() => {
-    return isCustom ? customStatic : reactStatic
+  const [category, setCategory] = useState(null)
+  const [currentHook, setCurrentHook] = useState(null)
+  const isCustom = category && category.toLowerCase() === 'custom' ? true : false
+  const hooksList = useMemo(() => {
+    return isCustom ? customStatic.hooksList : reactStatic.hooksList
   }, [isCustom])
 
   useEffect(() => {
-    setCurrentHook(data.hookList[0])
-  }, [data])
+    if (!category) setCurrentHook(null)
+    if (category && !currentHook) {
+      setCurrentHook(hooksList[0])
+    }
+  }, [category, currentHook, hooksList])
 
-  return (
+  return !category ? (
+    <CategorySelector onUpdateCategory={setCategory} />
+  ) : (
     <main id={isCustom ? 'mg-hooks-custom' : 'mg-hooks-react'} className="mg-hooks-container">
       <Sidebar
-        hooksList={data.hookList}
+        hooksList={hooksList}
         currentHook={currentHook}
-        onSelectHookItem={_onHookItemSelected}
+        onSelectHookItem={setCurrentHook}
+        onResetCategory={() => setCategory(null)}
         isCustom={isCustom}
       />
 
-      <BodyContent currentHook={currentHook} />
+      <BodyContent currentHook={currentHook} updateCurrentHook={setCurrentHook} />
     </main>
   )
-
-  function _onHookItemSelected(hookItem) {
-    setCurrentHook(hookItem)
-  }
 }
 
 export default Hooks

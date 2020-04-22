@@ -3,19 +3,14 @@ import PropTypes from 'prop-types'
 
 import Button from 'components/Button'
 
-import useNavigation from 'hooks/useNavigation'
-import { MG_ROUTE_PATHS } from 'constants/navigation'
-
 import './Sidebar.css'
 
 const HooksSidebar = props => {
-  const { navigateTo } = useNavigation()
-
   return (
     <aside id="mg-hooks-sidebar">
       <Button
         text="Back to Categories"
-        onClick={_onBackBtnClick}
+        onClick={props.onResetCategory}
         icon="arrow left"
         customColor={props.isCustom ? 'canada' : 'react'}
         id="mg-hooks-sidebar-backBtn"
@@ -35,16 +30,13 @@ const HooksSidebar = props => {
       ))}
     </aside>
   )
-
-  function _onBackBtnClick() {
-    navigateTo(MG_ROUTE_PATHS.reactHooksCategories)
-  }
 }
 
 HooksSidebar.propTypes = {
   hooksList: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentHook: PropTypes.string,
   onSelectHookItem: PropTypes.func.isRequired,
+  onResetCategory: PropTypes.func.isRequired,
   isCustom: PropTypes.bool.isRequired
 }
 

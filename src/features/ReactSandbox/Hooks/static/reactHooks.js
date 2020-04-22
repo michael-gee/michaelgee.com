@@ -1,5 +1,5 @@
 export default {
-  hookList: [
+  hooksList: [
     'useState',
     'useEffect',
     'useContext',

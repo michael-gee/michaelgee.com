@@ -11,14 +11,19 @@ import { MG_ROUTE_PATHS } from 'constants/navigation'
 import './Header.css'
 
 const ReactSandboxHeader = () => {
-  const { route } = useParams()
+  const { currentPage } = useParams()
   const { navigateTo } = useNavigation()
-  const routes = _configureRoutes()
+  const pageOptions = _configurePageOptions()
 
   return (
     <>
       <header id="mg-reactSandbox-header">
-        <Button variant="icon" icon="home" onClick={() => navigateTo(MG_ROUTE_PATHS.homepage)} customColor="react" />
+        <Button
+          variant="icon"
+          icon="home"
+          onClick={() => navigateTo(MG_ROUTE_PATHS.portfolio)}
+          customColor="react"
+        />
 
         <div id="mg-reactSandbox-headerTitle">
           <Icon name="react" size="huge" />
@@ -29,12 +34,12 @@ const ReactSandboxHeader = () => {
       </header>
 
       <nav id="mg-reactSandbox-nav">
-        {routes.map(item => (
+        {pageOptions.map(item => (
           <Button
             text={item.text}
             onClick={() => navigateTo(item.pathname)}
             icon={item.text.toLowerCase() === 'home' ? 'home' : undefined}
-            customColor={route === item.key ? 'react' : 'react-secondary'}
+            customColor={currentPage === item.key ? 'react' : 'react-secondary'}
             className="mg-reactSandbox-navBtn"
             key={item.key}
           />
@@ -43,10 +48,9 @@ const ReactSandboxHeader = () => {
     </>
   )
 
-  function _configureRoutes() {
+  function _configurePageOptions() {
     return [
       { text: 'Hooks', pathname: MG_ROUTE_PATHS.reactHooksCategories, key: 'hooks' },
-      // { text: 'Animations', pathname: MG_ROUTE_PATHS.reactAnimations, key: 'animations' },
       { text: 'Data Table', pathname: MG_ROUTE_PATHS.reactDataTable, key: 'data-table' }
     ]
   }
