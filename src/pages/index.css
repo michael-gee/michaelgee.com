@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFF;
+
+  --portfolio-primary: #3749A2;
+  --portfolio-secondary: #32408F;
+}
+
+h1 { font-size: 3.2em; margin: 0; }
+h2 { font-size: 2.4em; margin: 0; }
+h3 { font-size: 1.8em; margin: 0; }
+h4 { font-size: 1.6em; margin: 0; }
+h5 { font-size: 1.3em; margin: 0; }
+h6 { font-size: 1.2em; margin: 0; }
+p, a { font-size: 1.6em; }
+
+.ui.button {
+  transition: .3s;
+}
+.ui.button:hover {
+  opacity: .7;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}

@@ -1,0 +1,23 @@
+#header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: var(--portfolio-secondary);
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+#codeIcon {
+  color: #ccc;
+}
+
+
+.navButton {
+  background-color: transparent !important;
+  color: #ccc !important;
+}

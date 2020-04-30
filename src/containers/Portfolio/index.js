@@ -1,21 +1,19 @@
 import Head from 'next/head'
-import { Button } from '../../components/Button'
+import { Header } from './Header'
+
+import styles from './Portfolio.module.css'
 
 export const Portfolio = () => {
   return (
     <>
       <Head>
-        <title>Portfolio | Michael Gee</title>
+        <title>Michael Gee</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Portfolio</h1>
+      <Header />
 
-        <Button text="Test" />
-      </main>
-
-      <footer>Footer</footer>
+      <main id={styles.container}></main>
     </>
   )
 }

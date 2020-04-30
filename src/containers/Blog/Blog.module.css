@@ -1,0 +1,6 @@
+#container {
+  --primary: red;
+  --secondary: white;
+
+  color: var(--primary);
+}
