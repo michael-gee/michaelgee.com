@@ -10,13 +10,16 @@ export const Header = () => {
       <div id={styles.content}>
         <div id={styles.title}>
           <Icon name="code" size="huge" id={styles.codeIcon} />
-          <div></div>
-          <div></div>
+
+          <div id={styles.titleText}>
+            <h1>Michael Gee</h1>
+            <div id={styles.titleSubText}>Software Developer</div>
+          </div>
         </div>
 
         <div>
           {navButtons.map(item => (
-            <Button content={item} className={styles.navButton} />
+            <Button content={item} className={styles.navButton} key={item} />
           ))}
         </div>
       </div>

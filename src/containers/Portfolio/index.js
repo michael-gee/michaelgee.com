@@ -13,7 +13,9 @@ export const Portfolio = () => {
 
       <Header />
 
-      <main id={styles.container}></main>
+      <main id={styles.container}>
+        <h1>test</h1>
+      </main>
     </>
   )
 }
