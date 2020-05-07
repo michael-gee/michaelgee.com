@@ -1,0 +1,22 @@
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#sidebar {
+  background-color: #fafafb;
+  min-width: 250px;
+  min-height: 88vh;
+  border-radius: 8px;
+  margin-right: 40px;
+}
+
+#body {
+  background-color: #fafafb;
+  min-width: calc(100% - 650px);
+  min-height: 88vh;
+  border-radius: 8px;
+}

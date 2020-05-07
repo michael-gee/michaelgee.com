@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-
-import Modal from './'
+import { Modal } from './'
 
 describe('<Modal />', () => {
   it('should render a content overlay Modal if the isOpen prop is passed as true', () => {

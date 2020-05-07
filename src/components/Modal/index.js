@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Modal as SUIModal } from 'semantic-ui-react'
 
-const Modal = props => {
+export const Modal = props => {
   return (
     <SUIModal
       open={props.isOpen}
@@ -30,5 +30,3 @@ Modal.propTypes = {
   size: PropTypes.oneOf(['mini', 'tiny', 'small', 'large', 'fullscreen']),
   isBlocking: PropTypes.bool
 }
-
-export default Modal

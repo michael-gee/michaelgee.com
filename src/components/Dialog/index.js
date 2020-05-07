@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Modal } from 'semantic-ui-react'
-import Button from '../Button'
+import { Button } from '../Button'
 
-const Dialog = props => {
+export const Dialog = props => {
   const subText = _configureSubText()
 
   return (
@@ -47,5 +47,3 @@ Dialog.propTypes = {
   subText: PropTypes.string,
   renderSubText: PropTypes.func
 }
-
-export default Dialog

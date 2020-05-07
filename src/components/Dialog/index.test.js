@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-
-import Dialog from './'
+import { Dialog } from './'
 
 describe('<Dialog />', () => {
   it('should render a confirmation Dialog if the isOpen prop is passed as true', () => {
