@@ -1,3 +1,3 @@
-import { Portfolio } from '../containers/Portfolio'
+import { About } from '../containers/About'
 
-export default Portfolio
+export default About

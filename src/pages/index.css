@@ -3,10 +3,11 @@ body {
   margin: 0;
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #FFF;
+  background: #50a3a2;
+    background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
+    background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
 
-  --portfolio-primary: #3749A2;
-  --portfolio-secondary: #32408F;
+  --mg-primary: #78cc6d;
 }
 
 h1 { font-size: 3.2em; margin: 0; }
