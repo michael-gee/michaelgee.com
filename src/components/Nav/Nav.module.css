@@ -1,0 +1,35 @@
+#header {
+  width: 100%;
+  max-width: 70px;
+  height: 88vh;
+  max-height: 680px;
+}
+
+#nav {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#nav .navBtn:first-of-type {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+}
+#nav .navBtn:last-of-type {
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.navBtn {
+  background-color: #fafafb !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #eee !important;
+  width: 70px;
+  height: 70px;
+}
+#selected, .navBtn:hover {
+  color: var(--mg-primary) !important;
+}
+
+.navBtn span {
+  font-size: .6em !important;
+}
