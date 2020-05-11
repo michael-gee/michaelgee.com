@@ -1,20 +1,21 @@
+import React from 'react'
+
 import Head from 'next/head'
+import { Sidebar } from '../../components/Sidebar'
+import { Nav } from '../../components/Nav'
 
-import styles from './Blog.module.css'
-
-export const Blog = () => {
+export const Blog = props => {
   return (
-    <>
-      <Head>
-        <title>Blog | Michael Gee</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <main id="page">
+      <Nav />
 
-      <main id={styles.container}>
+      <div id="page-sidebar">
+        <Sidebar />
+      </div>
+
+      <section id="page-body">
         <h1>Blog</h1>
-      </main>
-
-      <footer>Footer</footer>
-    </>
+      </section>
+    </main>
   )
 }
