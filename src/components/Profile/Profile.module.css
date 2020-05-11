@@ -1,0 +1,68 @@
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafb;
+  color: #323232;
+  border-radius: 4px;
+  width: 100%;
+  height: 88vh;
+  max-width: 350px;
+  max-height: 680px;
+  margin: 0 16px 0 8px;
+}
+
+#profileImg {
+  margin: 24px;
+  max-width: 250px;
+  border: 8px solid var(--mg-primary);
+}
+
+
+#profile h1 {
+  font-weight: normal;
+  font-size: 3.4em;
+  margin-top: 8px;
+}
+
+#profile h3 {
+  color: var(--mg-primary);
+  font-weight: 400;
+  margin-top: 4px;
+  font-size: 2em;
+}
+
+#socialIcons {
+  margin: 24px 0;
+}
+
+.socialIcon {
+  background-color: transparent !important;
+  color: #323232 !important;
+}
+.socialIcon:hover {
+  color: var(--mg-primary) !important;
+}
+
+#mentorshipBtn {
+  width: 100%;
+  margin-top: auto;
+  padding: 24px 0;
+  background-color: transparent !important;
+  color: #323232 !important;
+  border-top: 1px solid #eee;
+}
+#mentorshipBtn:hover {
+  color: var(--mg-primary) !important;
+}
+
+.employmentItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+.employmentItem i {
+  margin-right: 16px;
+  margin-bottom: 4px;
+}

@@ -4,8 +4,8 @@ body {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
   background: #50a3a2;
-    background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
-    background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
+  background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
+  background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
 
   --mg-primary: #78cc6d;
 }
@@ -16,7 +16,6 @@ h3 { font-size: 1.8em; margin: 0; }
 h4 { font-size: 1.6em; margin: 0; }
 h5 { font-size: 1.3em; margin: 0; }
 h6 { font-size: 1.2em; margin: 0; }
-p, a { font-size: 1.6em; }
 
 #page {
   display: flex;
@@ -26,17 +25,12 @@ p, a { font-size: 1.6em; }
   height: 100vh;
 }
 
-#page-sidebar, #page-body {
+#page-body {
   background-color: #fafafb;
   border-radius: 4px;
   width: 100%;
   max-height: 680px;
   height: 88vh;
-  margin: 16px;
-}
-
-#page-sidebar {
-  max-width: 350px;
 }
 
 #page-body {

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Head from 'next/head'
-import { Sidebar } from '../../components/Sidebar'
+import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 
 export const Blog = props => {
@@ -9,9 +9,7 @@ export const Blog = props => {
     <main id="page">
       <Nav />
 
-      <div id="page-sidebar">
-        <Sidebar />
-      </div>
+      <Profile />
 
       <section id="page-body">
         <h1>Blog</h1>

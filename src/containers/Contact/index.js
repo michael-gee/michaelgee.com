@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Sidebar } from '../../components/Sidebar'
+import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 
 export const Contact = props => {
@@ -8,9 +8,7 @@ export const Contact = props => {
     <main id="page">
       <Nav />
 
-      <div id="page-sidebar">
-        <Sidebar />
-      </div>
+      <Profile />
 
       <section id="page-body">
         <h1>Contact</h1>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Sidebar } from '../../components/Sidebar'
+import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 
 export const About = props => {
@@ -8,9 +8,7 @@ export const About = props => {
     <main id="page">
       <Nav />
 
-      <div id="page-sidebar">
-        <Sidebar />
-      </div>
+      <Profile />
 
       <section id="page-body">
         <h1>About</h1>

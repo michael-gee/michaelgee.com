@@ -1,6 +1,6 @@
 #header {
   width: 100%;
-  max-width: 70px;
+  max-width: 80px;
   height: 88vh;
   max-height: 680px;
 }
@@ -9,6 +9,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  
 }
 #nav .navBtn:first-of-type {
   border-top-left-radius: 4px !important;
@@ -23,8 +24,8 @@
   background-color: #fafafb !important;
   border-radius: 0 !important;
   border-bottom: 1px solid #eee !important;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
 }
 #selected, .navBtn:hover {
   color: var(--mg-primary) !important;
