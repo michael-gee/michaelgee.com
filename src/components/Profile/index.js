@@ -7,10 +7,16 @@ import styles from './Profile.module.css'
 export const Profile = props => {
   return (
     <div id={styles.profile}>
-      <Image src="/images/michael.jpg" circular size="medium" id={styles.profileImg} />
+      <Image
+        src="/images/michael.jpg"
+        alt="Michael Gee profile image"
+        circular
+        size="medium"
+        id={styles.profileImg}
+      />
 
       <h1>Michael Gee</h1>
-      <h3>Software Developer</h3>
+      <h2>Software Developer</h2>
 
       <div id={styles.socialIcons}>
         <Button

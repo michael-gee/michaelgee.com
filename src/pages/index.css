@@ -29,10 +29,8 @@ h6 { font-size: 1.2em; margin: 0; }
   background-color: #fafafb;
   border-radius: 4px;
   width: 100%;
-  max-height: 680px;
   height: 88vh;
-}
-
-#page-body {
   max-width: 960px;
+  max-height: 680px;
+  margin-right: 16px; 
 }
