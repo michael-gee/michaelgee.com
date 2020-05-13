@@ -73,7 +73,7 @@ export const Profile = props => {
       </div>
 
       <Button id={styles.mentorshipBtn}>
-        <Icon name="users" />
+        <Icon name="university" />
         <span>Mentorship</span>
       </Button>
     </div>

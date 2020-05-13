@@ -7,7 +7,7 @@
 
 #intro {
   padding: 16px 32px 24px 32px;
-  font-size: 1.8em;
+  font-size: 2em;
   margin: 0;
 }
 #intro strong {
@@ -35,11 +35,12 @@
 #services p {
   padding: 16px 16px 0 16px;
   margin: 0;
+  text-align: center;
 }
 
 .service {
   width: 28%;
   border: 2px solid var(--mg-primary);
   border-radius: 8px;
-  padding: 16px 0;
+  padding: 24px 0;
 }

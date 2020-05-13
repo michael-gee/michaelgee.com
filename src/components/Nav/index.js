@@ -22,7 +22,7 @@ export const Nav = props => {
             key={btn.icon}
           >
             <Icon name={btn.icon} />
-            <span>{btn.text}</span>
+            <div>{btn.text}</div>
           </Button>
         ))}
       </nav>
@@ -35,6 +35,21 @@ export const Nav = props => {
         icon: 'user',
         text: 'About',
         pathname: '/'
+      },
+      {
+        icon: 'code',
+        text: 'Projects',
+        pathname: '/projects'
+      },
+      {
+        icon: 'book',
+        text: 'Blog',
+        pathname: '/blog'
+      },
+      {
+        icon: 'university',
+        text: 'Mentorship',
+        pathname: '/blog'
       },
       {
         icon: 'mail',

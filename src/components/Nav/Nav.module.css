@@ -21,9 +21,14 @@
 }
 
 .navBtn {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fafafb !important;
   border-radius: 0 !important;
   border-bottom: 1px solid #eee !important;
+  padding: 0 !important;
   width: 80px;
   height: 80px;
 }
@@ -31,6 +36,7 @@
   color: var(--mg-primary) !important;
 }
 
-.navBtn span {
+.navBtn div {
   font-size: .6em !important;
+  padding-top: 4px;
 }
