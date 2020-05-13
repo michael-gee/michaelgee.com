@@ -13,7 +13,7 @@ export const Contact = props => {
 
       <Profile />
 
-      <div id="page-body">
+      <div className="page-body">
         <section>
           <h2 id={styles.title}>Get In Touch</h2>
 
@@ -34,7 +34,7 @@ export const Contact = props => {
         </section>
 
         <section>
-          <h2 id={styles.otherTitle}>Other Ways To Contact</h2>
+          <h2 id={styles.otherTitle}>other ways to contact...</h2>
 
           <div id={styles.otherContact}>
             <div>

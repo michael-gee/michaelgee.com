@@ -11,9 +11,9 @@ export const Blog = props => {
 
       <Profile />
 
-      <section id="page-body">
+      <div className="page-body">
         <h1>Blog</h1>
-      </section>
+      </div>
     </main>
   )
 }
