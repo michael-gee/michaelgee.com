@@ -4,7 +4,7 @@ import { Nav } from '../../components/Nav'
 
 import styles from './Contact.module.css'
 
-export const Contact = props => {
+export const Contact = () => {
   return (
     <main id="page">
       <Nav />
