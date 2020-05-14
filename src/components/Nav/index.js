@@ -13,7 +13,7 @@ export const Nav = () => {
     <header id={styles.header}>
       <nav id={styles.nav}>
         {navButtons.map(btn => (
-          <Link as={btn.pathname} href={btn.pathname} key={btn.icon}>
+          <Link href={btn.pathname} key={btn.icon}>
             <Button
               as="a"
               icon
