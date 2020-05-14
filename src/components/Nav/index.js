@@ -57,7 +57,7 @@ export const Nav = () => {
       {
         icon: 'mail',
         text: 'Contact',
-        pathname: '/Contact'
+        pathname: '/contact'
       }
     ]
   }

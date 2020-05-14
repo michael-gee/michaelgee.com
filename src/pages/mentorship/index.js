@@ -1,3 +1,3 @@
-import { Contact } from '../../containers/Contact'
+import { Mentorship } from '../../containers/Mentorship'
 
-export default Contact
+export default Mentorship
