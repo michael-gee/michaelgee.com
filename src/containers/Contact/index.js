@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
 import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'

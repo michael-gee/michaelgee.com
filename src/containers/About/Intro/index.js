@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Icon } from 'semantic-ui-react'
 
 import styles from './Intro.module.css'

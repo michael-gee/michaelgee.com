@@ -1,9 +1,8 @@
-import React from 'react'
-
 import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 import { Intro } from './Intro'
 import { TechStack } from './TechStack'
+import { Hobbies } from './Hobbies'
 
 export const About = () => {
   return (
@@ -13,7 +12,10 @@ export const About = () => {
 
       <div className="page-body" style={{ overflowY: 'auto' }}>
         <Intro />
+
         <TechStack />
+
+        <Hobbies />
       </div>
     </main>
   )
