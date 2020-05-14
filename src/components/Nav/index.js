@@ -50,7 +50,7 @@ export const Nav = () => {
       {
         icon: 'university',
         text: 'Mentorship',
-        pathname: '/blog'
+        pathname: '/mentorship'
       },
       {
         icon: 'mail',

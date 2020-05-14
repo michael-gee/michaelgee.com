@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 
-export const Blog = props => {
+export const Blog = () => {
   return (
     <main id="page">
       <Nav />
