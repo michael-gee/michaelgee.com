@@ -1,10 +1,8 @@
-import React from 'react'
-
 import { Button, Image, Icon } from 'semantic-ui-react'
 
 import styles from './Profile.module.css'
 
-export const Profile = props => {
+export const Profile = () => {
   return (
     <div id={styles.profile}>
       <Image

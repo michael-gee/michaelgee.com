@@ -1,11 +1,11 @@
-import React from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Button, Icon } from 'semantic-ui-react'
 
 import styles from './Nav.module.css'
 
-export const Nav = props => {
+export const Nav = () => {
   const navButtons = _configureNavButtons()
   const router = useRouter()
 
@@ -13,17 +13,19 @@ export const Nav = props => {
     <header id={styles.header}>
       <nav id={styles.nav}>
         {navButtons.map(btn => (
-          <Button
-            icon
-            onClick={() => _handleNavChange(btn.pathname)}
-            size="huge"
-            id={btn.pathname === router.pathname ? styles.selected : undefined}
-            className={styles.navBtn}
-            key={btn.icon}
-          >
-            <Icon name={btn.icon} />
-            <div>{btn.text}</div>
-          </Button>
+          <Link href={btn.pathname}>
+            <Button
+              as="a"
+              icon
+              size="huge"
+              id={btn.pathname === router.pathname ? styles.selected : undefined}
+              className={styles.navBtn}
+              key={btn.icon}
+            >
+              <Icon name={btn.icon} />
+              <div>{btn.text}</div>
+            </Button>
+          </Link>
         ))}
       </nav>
     </header>
@@ -57,9 +59,5 @@ export const Nav = props => {
         pathname: '/contact'
       }
     ]
-  }
-
-  function _handleNavChange(pathname) {
-    if (pathname !== router.pathname) router.push(pathname)
   }
 }
