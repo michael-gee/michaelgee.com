@@ -13,7 +13,7 @@ export const Contact = () => {
 
       <div className="page-body">
         <section>
-          <h2 id={styles.title}>Get In Touch</h2>
+          <h2 className="page-title">Get In Touch</h2>
 
           <Form id={styles.form}>
             <div id={styles.userInfo}>

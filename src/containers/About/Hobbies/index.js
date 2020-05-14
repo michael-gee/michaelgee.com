@@ -5,7 +5,7 @@ import styles from './Hobbies.module.css'
 export const Hobbies = () => {
   return (
     <section>
-      <h2 id={styles.title}>Other Hobbies & Interests</h2>
+      <h2 className="page-title">Other Hobbies & Interests</h2>
 
       <div id={styles.hobbies}>
         <div className={styles.hobby}>

@@ -9,6 +9,7 @@
   height: 100%;
   max-width: 350px;
   max-height: 680px;
+  overflow-y: auto;
   margin: 0 16px 0 8px;
 }
 
@@ -18,7 +19,6 @@
   min-height: 250px;
   border: 8px solid var(--mg-primary);
 }
-
 
 #profile h1 {
   font-weight: normal;
@@ -45,16 +45,8 @@
   color: var(--mg-primary) !important;
 }
 
-#mentorshipBtn {
-  width: 100%;
-  margin-top: auto;
-  padding: 24px 0;
-  background-color: transparent !important;
-  color: #323232 !important;
-  border-top: 1px solid #eee;
-}
-#mentorshipBtn:hover {
-  color: var(--mg-primary) !important;
+#employment {
+  padding: 16px 0;
 }
 
 .employmentItem {
@@ -66,4 +58,16 @@
 .employmentItem i {
   margin-right: 16px !important;
   margin-bottom: 4px !important;
+}
+
+#mentorshipBtn {
+  width: 100%;
+  margin-top: auto;
+  padding: 24px 0;
+  background-color: transparent !important;
+  color: #323232 !important;
+  border-top: 1px solid #eee;
+}
+#mentorshipBtn:hover {
+  color: var(--mg-primary) !important;
 }

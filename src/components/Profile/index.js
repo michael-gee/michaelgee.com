@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Button, Image, Icon } from 'semantic-ui-react'
 
 import styles from './Profile.module.css'
@@ -70,10 +71,12 @@ export const Profile = () => {
         </div>
       </div>
 
-      <Button id={styles.mentorshipBtn}>
-        <Icon name="university" />
-        <span>Mentorship</span>
-      </Button>
+      <Link href="/mentorship">
+        <Button id={styles.mentorshipBtn}>
+          <Icon name="university" />
+          <span>Mentorship</span>
+        </Button>
+      </Link>
     </div>
   )
 }
