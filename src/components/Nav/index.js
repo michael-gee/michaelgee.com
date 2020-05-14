@@ -13,14 +13,13 @@ export const Nav = () => {
     <header id={styles.header}>
       <nav id={styles.nav}>
         {navButtons.map(btn => (
-          <Link as={btn.pathname} href={btn.pathname}>
+          <Link as={btn.pathname} href={btn.pathname} key={btn.icon}>
             <Button
               as="a"
               icon
               size="huge"
               id={btn.pathname === router.pathname ? styles.selected : undefined}
               className={styles.navBtn}
-              key={btn.icon}
             >
               <Icon name={btn.icon} />
               <div>{btn.text}</div>

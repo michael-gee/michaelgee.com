@@ -15,7 +15,10 @@
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "@testing-library/react-hooks": "^3.2.1",
-    "jest": "^25.5.4"
+    "file-loader": "^6.0.0",
+    "jest": "^25.5.4",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0"
   },
   "scripts": {
     "dev": "next dev",
