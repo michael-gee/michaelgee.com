@@ -56,8 +56,8 @@ export const Projects = () => {
                       // href="https://www.coreview.com/coreflow/"
                       // target="_blank"
                       // rel="noopener noreferrer"
-                      titile="Repository currently is private. Will be open sourced soon."
-                      disabled
+                      title="Repository currently is private. Will be open sourced soon."
+                      style={{ cursor: 'not-allowed' }}
                     />
                   </div>
                 </div>
