@@ -41,7 +41,7 @@
 #otherTitle {
   font-weight: normal;
   text-align: center;
-  margin: 32px 0;
+  margin: 48px 0 40px 0;
 }
 
 #otherContact {
@@ -56,7 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 #otherContact span {
   padding-left: 12px;

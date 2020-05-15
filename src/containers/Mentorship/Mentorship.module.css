@@ -1,0 +1,52 @@
+#container {
+  width: 100%;
+  min-height: calc(100vh - 16px);
+  max-width: 960px;
+  margin: 8px 48px 8px 8px;
+  border-radius: 4px;
+  background-color: #fafafb;
+}
+
+#rocketIcon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--mg-primary);
+  margin-top: 32px;
+  font-size: 10em;
+}
+
+#title, #mainSubTitle {
+  max-width: 640px;
+  text-align: center;
+}
+
+#title {
+  color: #141c3a;
+  font-size: 3.4em;
+  margin: 24px auto 8px auto;
+}
+
+#mainSubTitle {
+  font-weight: lighter;
+  margin: 0 auto;
+  padding: 0 40px;
+  color:rgba(10, 10, 10, 0.9);
+}
+
+#container section {
+  margin: 32px 0;
+}
+
+/* Remove this style */
+#container p {
+  font-size: 2em;
+  text-align: center;
+}
+
+.subTitle {
+  color: var(--mg-primary);
+  text-align: center;
+  font-size: 3em;
+  font-weight: normal;
+}
