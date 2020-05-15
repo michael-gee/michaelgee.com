@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Button, Icon, Popup } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
 
@@ -33,12 +33,6 @@ export const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     />
-
-                    <Popup
-                      trigger={<Icon name="info circle" size="big" />}
-                      position="bottom center"
-                      basic
-                    />
                   </div>
                 </div>
               </div>
@@ -55,10 +49,15 @@ export const Projects = () => {
                   </p>
 
                   <div className={styles.overlayIcons}>
-                    <Popup
-                      trigger={<Icon name="info circle" size="big" />}
-                      position="bottom center"
-                      basic
+                    <Button
+                      icon="code branch"
+                      size="massive"
+                      as="a"
+                      // href="https://www.coreview.com/coreflow/"
+                      // target="_blank"
+                      // rel="noopener noreferrer"
+                      titile="Repository currently is private. Will be open sourced soon."
+                      disabled
                     />
                   </div>
                 </div>
@@ -73,7 +72,23 @@ export const Projects = () => {
               {/* CEGMAG Solutions */}
               <div id={styles.cegmag} className={styles.project}>
                 <img src="/images/projects/cegmag.png" alt="CEGMAG Solutions Inc. company logo" />
-                <div className={styles.overlay}></div>
+                <div className={styles.overlay}>
+                  <p>
+                    Built and maintained websites for clients using Wordpress CMS or building from
+                    scrath with various technologies.
+                  </p>
+
+                  <div className={styles.overlayIcons}>
+                    <Button
+                      icon="linkify"
+                      size="massive"
+                      as="a"
+                      href="https://www.cegmag.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
