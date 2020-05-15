@@ -5,7 +5,7 @@ import styles from './Intro.module.css'
 export const Intro = () => {
   return (
     <section>
-      <h2 id={styles.title}>About Me</h2>
+      <h2 className="page-title">About Me</h2>
       <p id={styles.intro}>
         <strong>Hello! I'm Michael Gee.</strong> I am a passionate, energetic, and self-motivated
         full-stack software developer eager to turn ideas into applications. My ambitions are to

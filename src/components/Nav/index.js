@@ -9,8 +9,6 @@ export const Nav = () => {
   const navButtons = _configureNavButtons()
   const router = useRouter()
 
-  console.log(navButtons)
-
   return (
     <header id={styles.header}>
       <nav id={styles.nav}>
