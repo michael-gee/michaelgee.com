@@ -28,9 +28,9 @@
 
 #profile h2 {
   color: var(--mg-primary);
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 4px;
-  font-size: 2em;
+  font-size: 2.4em;
 }
 
 #socialIcons {
@@ -43,10 +43,6 @@
 }
 .socialIcon:hover {
   color: var(--mg-primary) !important;
-}
-
-#employment {
-  padding: 16px 0;
 }
 
 .employmentItem {

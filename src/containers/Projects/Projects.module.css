@@ -1,0 +1,85 @@
+.projectContainer {
+  display: flex;
+  padding: 0 15px;
+  font-size: 1.8em;
+  color: white;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  max-width: 100%;
+  margin: 24px 15px;
+  border-radius: 8px;
+}
+.project img {
+  max-width: 240px;
+}
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #52A59F;
+  border-radius: 8px;
+}
+.project:hover .overlay {
+  opacity: 1;
+}
+.overlay p {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0 8px;
+}
+
+.overlayIcons {
+  display: flex;
+  align-items: center;
+}
+.overlay a {
+  background-color: transparent !important;
+  color: #fff !important;
+  padding: 0 !important;
+  margin: 0 8px !important;
+}
+.overlay i {
+  margin: 0 8px;
+}
+
+#coreView {
+  background-color: #4A90E2;
+  background: -webkit-linear-gradient(top left,#4A90E2 0%,#7DDEE7 100%);
+  background: linear-gradient(to bottom right,#4A90E2 0%,#7DDEE7 100%);
+}
+#mgCom, #mgSandbox {
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
+  background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
+}
+#mgCom img {
+  width: 100px;
+  height: 100px;
+}
+#mgCom h4 {
+  margin-top: 8px;
+}
+#cegmag {
+  background: #FC1D14;
+  background: -webkit-linear-gradient(top left,#FC1D14 0%,#000 100%);
+  background: linear-gradient(to bottom right,#FC1D14 0%,#000 100%);
+}
+
