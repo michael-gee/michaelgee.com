@@ -10,7 +10,7 @@ export const About = () => {
       <Nav />
       <Profile />
 
-      <div className="page-body" style={{ overflowY: 'auto' }}>
+      <div className="page-body">
         <Intro />
 
         <TechStack />

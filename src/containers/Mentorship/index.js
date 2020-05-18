@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Icon } from 'semantic-ui-react'
+import { Icon, Divider } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 
 import styles from './Mentorship.module.css'
@@ -21,13 +21,60 @@ export const Mentorship = () => {
         <section>
           <h2 className={styles.subTitle}>Benefits</h2>
 
-          <p>Icons with text (6)</p>
+          <div id={styles.benefits}>
+            <div className={styles.benefit}>
+              <Icon name="chart line" size="big" />
+              <h3>Growth</h3>
+              <p>fill with content</p>
+            </div>
+            <div className={styles.benefit}>
+              <Icon name="comments" size="big" />
+              <h3>Collaboration</h3>
+              <p>fill with content</p>
+            </div>
+            <div className={styles.benefit}>
+              <Icon name="star" size="big" />
+              <h3>Best Practices</h3>
+              <p>test</p>
+            </div>
+            <div className={styles.benefit}>
+              <Icon name="list" size="big" />
+              <h3>Resources</h3>
+              <p>fill with content</p>
+            </div>
+            <div className={styles.benefit}>
+              <Icon name="lightbulb" size="big" />
+              <h3>Ideas</h3>
+              <p>fill with content</p>
+            </div>
+            <div className={styles.benefit}>
+              <Icon name="code" size="big" />
+              <h3>Projects</h3>
+              <p>fill with content</p>
+            </div>
+          </div>
         </section>
 
         <section>
           <h2 className={styles.subTitle}>How It Works</h2>
 
-          <p>Numbered list or stepper explaining process</p>
+          <ul id={styles.howItWorks}>
+            <li>
+              <h3>Introduction / Consultation</h3>
+            </li>
+            <Divider horizontal>Or</Divider>
+            <li>
+              <h3>Schedule A Session</h3>
+              <Icon name="arrow down" size="large" />
+            </li>
+            <li>
+              <h3>Quick Initial Payment</h3>
+              <Icon name="arrow down" size="large" />
+            </li>
+            <li>
+              <h3>Learn!</h3>
+            </li>
+          </ul>
         </section>
 
         <section>
@@ -40,6 +87,14 @@ export const Mentorship = () => {
           <h2 className={styles.subTitle}>Pricing</h2>
 
           <p>3 column pricing model</p>
+        </section>
+
+        <section>
+          <h2 className={styles.subTitle}>FAQ</h2>
+
+          <ul>
+            <li>what languages do I speak</li>
+          </ul>
         </section>
       </div>
     </main>

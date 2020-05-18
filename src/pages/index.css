@@ -40,4 +40,5 @@ h6 { font-size: 1.2em; margin: 0; }
   max-width: 960px;
   max-height: 680px;
   margin-right: 16px; 
+  overflow-y: auto;
 }
