@@ -33,6 +33,7 @@
   color: white;
   max-width: 250px;
   margin-left: 32px;
+  transition: .5s;
 }
 #submitBtn:hover {
   opacity: .8;

@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import { Icon, Divider } from 'semantic-ui-react'
+import { Button, Icon, Divider, Statistic } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
+
+import { benefits, howItWorks } from './content'
 
 import styles from './Mentorship.module.css'
 
@@ -22,36 +24,15 @@ export const Mentorship = () => {
           <h2 className={styles.subTitle}>Benefits</h2>
 
           <div id={styles.benefits}>
-            <div className={styles.benefit}>
-              <Icon name="chart line" size="big" />
-              <h3>Growth</h3>
-              <p>fill with content</p>
-            </div>
-            <div className={styles.benefit}>
-              <Icon name="comments" size="big" />
-              <h3>Collaboration</h3>
-              <p>fill with content</p>
-            </div>
-            <div className={styles.benefit}>
-              <Icon name="star" size="big" />
-              <h3>Best Practices</h3>
-              <p>test</p>
-            </div>
-            <div className={styles.benefit}>
-              <Icon name="list" size="big" />
-              <h3>Resources</h3>
-              <p>fill with content</p>
-            </div>
-            <div className={styles.benefit}>
-              <Icon name="lightbulb" size="big" />
-              <h3>Ideas</h3>
-              <p>fill with content</p>
-            </div>
-            <div className={styles.benefit}>
-              <Icon name="code" size="big" />
-              <h3>Projects</h3>
-              <p>fill with content</p>
-            </div>
+            {benefits.map(item => {
+              return (
+                <div className={styles.benefit} key={item.title}>
+                  <Icon name={item.icon} size="big" />
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              )
+            })}
           </div>
         </section>
 
@@ -61,18 +42,30 @@ export const Mentorship = () => {
           <ul id={styles.howItWorks}>
             <li>
               <h3>Introduction / Consultation</h3>
+              <p>{howItWorks.intro} </p>
+              <Button id={styles.introductionBtn}>Introduce Yourself</Button>
             </li>
-            <Divider horizontal>Or</Divider>
+            <Divider horizontal style={{ maxWidth: 400, margin: '0px auto', color: '#78cc6d' }}>
+              Or
+            </Divider>
             <li>
-              <h3>Schedule A Session</h3>
+              <h3>Schedule Session</h3>
+              <p>{howItWorks.schedule} </p>
               <Icon name="arrow down" size="large" />
             </li>
             <li>
               <h3>Quick Initial Payment</h3>
+              <p>{howItWorks.payment} </p>
               <Icon name="arrow down" size="large" />
             </li>
             <li>
-              <h3>Learn!</h3>
+              <h3>LEARN</h3>
+              <p>{howItWorks.learn}</p>
+              <Icon name="arrow down" size="large" />
+            </li>
+            <li>
+              <h3>Stay In Touch</h3>
+              <p>{howItWorks.stayInTouch} </p>
             </li>
           </ul>
         </section>
@@ -86,7 +79,12 @@ export const Mentorship = () => {
         <section>
           <h2 className={styles.subTitle}>Pricing</h2>
 
-          <p>3 column pricing model</p>
+          <div id={styles.pricing}>
+            <Statistic horizontal>
+              <Statistic.Value>$20</Statistic.Value>
+              <Statistic.Label>per 30 minutes</Statistic.Label>
+            </Statistic>
+          </div>
         </section>
 
         <section>
@@ -94,6 +92,7 @@ export const Mentorship = () => {
 
           <ul>
             <li>what languages do I speak</li>
+            <li>Requirements or Recommendations (having discord, etc)</li>
           </ul>
         </section>
       </div>

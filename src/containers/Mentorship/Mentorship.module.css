@@ -68,7 +68,7 @@
   color: var(--mg-primary);
 }
 .benefit h3 {
-  font-weight: lighter;
+  font-weight: 300;
   margin: 16px 0 8px 0;
   font-size: 1.1em;
 }
@@ -82,18 +82,39 @@
 
 /* How It Works section */
 #howItWorks {
-  max-width: 280px;
-  margin: 16px auto;
   padding: 0;
   font-size: 1.4em;
   list-style-type: none;
+  text-align: center;
 }
 #howItWorks li h3 {
   font-weight: lighter;
-  text-align: center;
+  padding: 16px 0;
 }
-#howItWorks li i {
-  display: flex;
-  margin: 16px auto;
+#howItWorks p {
+  font-size: 1.2em;
+  padding: 0 24px;
+  padding-bottom: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#howItWorks i {
   color: var(--mg-primary);
+}
+
+#introductionBtn {
+  background-color: var(--mg-primary) !important;
+  color: #fff !important;
+  margin-bottom: 24px;
+  transition: .3s;
+}
+#introductionBtn:hover {
+  opacity: .8;
+}
+
+/* Pricing section */
+#pricing {
+  font-size: 1.6em;
+  text-align: center;
+  margin: 32px 0 24px 0;
 }
