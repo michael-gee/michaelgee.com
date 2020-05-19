@@ -24,7 +24,9 @@ export const Mentorship = () => {
         </h2>
 
         <section>
-          <h2 className={styles.subTitle}>Benefits</h2>
+          <h2 className={styles.subTitle} style={{ paddingTop: 24 }}>
+            Benefits
+          </h2>
 
           <div id={styles.benefits}>
             {benefits.map(item => {
@@ -76,7 +78,28 @@ export const Mentorship = () => {
         <section>
           <h2 className={styles.subTitle}>Who Is This Mentorship For?</h2>
 
-          <p>Bulleted list (primary green bullets)</p>
+          <div id={styles.targetAudience}>
+            <ul className={styles.targetList}>
+              <li>Beginners interested in starting a career in software development</li>
+              <li>Developers currently learning but have no job or team development experience</li>
+              <li>
+                Developers who are tired of endless courses and documentation looking for new
+                resources and ideas
+              </li>
+            </ul>
+
+            <ul className={styles.targetList}>
+              <li>Junior developers with ~2 years of experience or less</li>
+              <li>
+                React devs looking to sharpen their skills with best practices and professional
+                advice
+              </li>
+              <li>
+                Front-end devs looking to expand their knowledge in the vast web development
+                ecosystem
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section>
@@ -84,7 +107,7 @@ export const Mentorship = () => {
 
           <div id={styles.pricing}>
             <Statistic horizontal>
-              <Statistic.Value>$20</Statistic.Value>
+              <Statistic.Value>$15</Statistic.Value>
               <Statistic.Label>per 30 minutes</Statistic.Label>
             </Statistic>
           </div>

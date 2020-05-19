@@ -36,7 +36,7 @@
 }
 
 #container section {
-  margin: 32px 0;
+  padding-bottom: 24px;
 }
 
 .subTitle {
@@ -92,7 +92,7 @@
   padding: 16px 0;
 }
 #howItWorks p {
-  font-size: 1.2em;
+  font-size: 1.24em;
   padding: 0 24px;
   padding-bottom: 16px;
   max-width: 600px;
@@ -110,6 +110,32 @@
 }
 #introductionBtn:hover {
   opacity: .8;
+}
+
+/* Target Audience section */
+#targetAudience {
+  display: flex;
+  width: 700px;
+  justify-content: space-evenly;
+  margin: 24px auto 0 auto;
+  font-size: 1.8em;
+}
+
+.targetList {
+  list-style-type: none;
+  margin: 0;
+}
+.targetList li::before {
+  content: "\2022";
+  color: var(--mg-primary);
+  font-weight: bold;
+  padding-right: 24px;
+}
+.targetList li {
+  display: flex;
+  padding: 8px 0;
+  width: 350px;
+  line-height: 1.4;
 }
 
 /* Pricing section */

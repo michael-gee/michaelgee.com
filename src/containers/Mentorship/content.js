@@ -1,32 +1,32 @@
 export const benefits = [
   {
     title: 'Growth',
-    text: 'fill with content',
+    text: 'Improve every day with a helping hand to speed up the process',
     icon: 'chart line'
   },
   {
     title: 'Collaboration',
-    text: 'fill with content',
+    text: 'Save time with questions instead of researching for hours',
     icon: 'comments'
   },
   {
     title: 'Best Practices',
-    text: 'fill with content',
+    text: 'Use best practices to write cleaner code and prevent refactoring',
     icon: 'star'
   },
   {
     title: 'Resources',
-    text: 'fill with content',
+    text: 'Get new resources to progress your learning faster',
     icon: 'list'
   },
   {
     title: 'Ideas',
-    text: 'fill with content',
+    text: 'Come up with new ideas to help you improve your portfolio',
     icon: 'lightbulb'
   },
   {
     title: 'Projects',
-    text: 'fill with content',
+    text: 'Work on projects with me with code reviews to help you improve',
     icon: 'code'
   }
 ]
@@ -37,7 +37,7 @@ export const howItWorks = {
   schedule:
     'After our initial session, feel free to reach out at any time to schedule another at a time most ideal for the both of us.',
   payment:
-    'At the time of the scheduled session, you pay for a specified amount of time (minumum of 30 minutes) to get the session.',
+    'At the time of the scheduled session, you pay for a specified amount of time (minumum of 30 minutes) to start the session.',
   learn:
     'We make the most of our time together focusing on your immediate end goals as a developer.',
   stayInTouch:
