@@ -10,7 +10,14 @@ export const Nav = () => {
   const router = useRouter()
 
   return (
-    <header id={styles.header}>
+    <header
+      id={styles.header}
+      style={
+        router.pathname === '/mentorship'
+          ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%', paddingTop: 8 }
+          : {}
+      }
+    >
       <nav id={styles.nav}>
         {navButtons.map(btn => (
           <Link href={btn.pathname} key={btn.icon}>

@@ -1,0 +1,154 @@
+#container {
+  width: 100%;
+  max-height: calc(100vh - 16px);
+  max-width: 960px;
+  margin: 8px 48px 8px 8px;
+  border-radius: 4px;
+  background-color: #fafafb;
+  overflow-y: auto;
+}
+
+#rocketIcon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--mg-primary);
+  margin-top: 32px;
+  font-size: 10em;
+}
+
+#title, #mainSubTitle {
+  max-width: 640px;
+  text-align: center;
+}
+
+#title {
+  color: #141c3a;
+  font-size: 3.4em;
+  margin: 24px auto 8px auto;
+}
+
+#mainSubTitle {
+  font-weight: lighter;
+  margin: 0 auto;
+  padding: 0 40px;
+  color:rgba(10, 10, 10, 0.9);
+}
+
+#container section {
+  padding-bottom: 24px;
+}
+
+.subTitle {
+  color: var(--mg-primary);
+  text-align: center;
+  font-size: 3.2em;
+  font-weight: normal;
+}
+
+/* Benefits Section */
+#benefits {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.2em;
+  max-width: 864px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: 16px 1.5%;
+}
+.benefit i {
+  color: var(--mg-primary);
+}
+.benefit h3 {
+  font-weight: 300;
+  margin: 16px 0 8px 0;
+  font-size: 1.1em;
+}
+.benefit p  {
+  font-weight: lighter;
+  margin: 0;
+  font-size: .8em;
+  text-align: center;
+  padding: 0 8px;
+}
+
+/* How It Works section */
+#howItWorks {
+  padding: 0;
+  font-size: 1.4em;
+  list-style-type: none;
+  text-align: center;
+}
+#howItWorks li h3 {
+  font-weight: lighter;
+  padding: 16px 0;
+}
+#howItWorks p {
+  font-size: 1.24em;
+  padding: 0 24px;
+  padding-bottom: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#howItWorks i {
+  color: var(--mg-primary);
+}
+
+#introductionBtn {
+  background-color: var(--mg-primary) !important;
+  color: #fff !important;
+  margin-bottom: 24px;
+  transition: .3s;
+}
+#introductionBtn:hover {
+  opacity: .8;
+}
+
+/* Target Audience section */
+#targetAudience {
+  display: flex;
+  width: 700px;
+  justify-content: space-evenly;
+  margin: 24px auto 0 auto;
+  font-size: 1.8em;
+}
+
+.targetList {
+  list-style-type: none;
+  margin: 0;
+}
+.targetList li::before {
+  content: "\2022";
+  color: var(--mg-primary);
+  font-weight: bold;
+  padding-right: 24px;
+}
+.targetList li {
+  display: flex;
+  padding: 8px 0;
+  width: 350px;
+  line-height: 1.4;
+}
+
+/* Pricing section */
+#pricing {
+  font-size: 1.6em;
+  text-align: center;
+  margin: 32px 0 24px 0;
+}
+
+/* FAQ section */
+#faq {
+  max-width: 500px;
+  margin: 24px auto;
+  font-size: 1.8em;
+  line-height: 1.4;
+}
