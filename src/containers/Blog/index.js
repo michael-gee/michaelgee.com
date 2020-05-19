@@ -4,14 +4,24 @@ import { Nav } from '../../components/Nav'
 
 export const Blog = () => {
   return (
-    <main id="page">
-      <Nav />
+    <>
+      <Head>
+        <title>Blog | Michael Gee</title>
+        <meta
+          name="description"
+          content="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+        />
+      </Head>
 
-      <Profile />
+      <main id="page">
+        <Nav />
 
-      <div className="page-body">
-        <h1>Blog</h1>
-      </div>
-    </main>
+        <Profile />
+
+        <div className="page-body">
+          <h1>Blog</h1>
+        </div>
+      </main>
+    </>
   )
 }

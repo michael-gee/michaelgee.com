@@ -49,11 +49,11 @@ export const Nav = () => {
         text: 'Projects',
         pathname: '/projects'
       },
-      {
-        icon: 'book',
-        text: 'Blog',
-        pathname: '/blog'
-      },
+      // {
+      //   icon: 'book',
+      //   text: 'Blog',
+      //   pathname: '/blog'
+      // },
       {
         icon: 'university',
         text: 'Mentorship',
