@@ -8,6 +8,14 @@ import styles from './Projects.module.css'
 export const Projects = () => {
   return (
     <>
+      <Head>
+        <title>Projects | Michael Gee</title>
+        <meta
+          name="description"
+          content="A list of Michael Gee's past and present code projects."
+        />
+      </Head>
+
       <main id="page">
         <Nav />
 
@@ -53,9 +61,6 @@ export const Projects = () => {
                       icon="code branch"
                       size="massive"
                       as="a"
-                      // href="https://www.coreview.com/coreflow/"
-                      // target="_blank"
-                      // rel="noopener noreferrer"
                       title="Repository currently is private. Will be open sourced soon."
                       style={{ cursor: 'not-allowed' }}
                     />
