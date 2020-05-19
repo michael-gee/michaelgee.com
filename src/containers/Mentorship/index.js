@@ -1,12 +1,15 @@
+import { useState } from 'react'
 import Head from 'next/head'
-import { Button, Icon, Divider, Statistic } from 'semantic-ui-react'
+import { Accordion, Button, Icon, Divider, Statistic } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 
-import { benefits, howItWorks } from './content'
+import { benefits, howItWorks, faq } from './content'
 
 import styles from './Mentorship.module.css'
 
 export const Mentorship = () => {
+  const [activeAccodion, setActiveAccordion] = useState(-1)
+
   return (
     <main id="page">
       <Nav />
@@ -71,7 +74,7 @@ export const Mentorship = () => {
         </section>
 
         <section>
-          <h2 className={styles.subTitle}>Target Audience</h2>
+          <h2 className={styles.subTitle}>Who Is This Mentorship For?</h2>
 
           <p>Bulleted list (primary green bullets)</p>
         </section>
@@ -90,12 +93,33 @@ export const Mentorship = () => {
         <section>
           <h2 className={styles.subTitle}>FAQ</h2>
 
-          <ul>
-            <li>what languages do I speak</li>
-            <li>Requirements or Recommendations (having discord, etc)</li>
-          </ul>
+          <Accordion id={styles.faq} styled>
+            {faq.map((item, index) => {
+              return (
+                <>
+                  <Accordion.Title
+                    active={activeAccodion === index}
+                    index={index}
+                    onClick={() => _onAccordionClick(index)}
+                  >
+                    <Icon name="dropdown" />
+                    {item.question}
+                  </Accordion.Title>
+
+                  <Accordion.Content active={activeAccodion === index}>
+                    {item.answer}
+                  </Accordion.Content>
+                </>
+              )
+            })}
+          </Accordion>
         </section>
       </div>
     </main>
   )
+
+  function _onAccordionClick(newIndex) {
+    if (newIndex === activeAccodion) setActiveAccordion(-1)
+    else setActiveAccordion(newIndex)
+  }
 }

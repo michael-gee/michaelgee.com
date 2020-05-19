@@ -50,7 +50,7 @@
 #benefits {
   display: flex;
   flex-wrap: wrap;
-  font-size: 2em;
+  font-size: 2.2em;
   max-width: 864px;
   margin: 0 auto;
   margin-top: 16px;
@@ -117,4 +117,12 @@
   font-size: 1.6em;
   text-align: center;
   margin: 32px 0 24px 0;
+}
+
+/* FAQ section */
+#faq {
+  max-width: 500px;
+  margin: 24px auto;
+  font-size: 1.8em;
+  line-height: 1.4;
 }

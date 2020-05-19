@@ -43,3 +43,36 @@ export const howItWorks = {
   stayInTouch:
     'Mentorship does not end immediately after our sessions. I am always available to stay connected and answer any questions you may have after.'
 }
+
+export const faq = [
+  {
+    question: 'What communcation platform do you use?',
+    answer:
+      'I prefer using Discord for calls and collaboration although I am flexible to use whatever you are comfortable with.'
+  },
+
+  {
+    question: 'How do you take payment?',
+    answer:
+      'I take one-time payments from a payment page that I will provide you at the time of our session.'
+  },
+  {
+    question: 'Are payment methods secure?',
+    answer:
+      'Yes. All transactions are through Paypal to give you the piece of mind knowing that your information is secure.'
+  },
+  {
+    question: 'Are there refunds?',
+    answer: 'No. To prevent unnecessary disputes all transactions are final once made.'
+  },
+  {
+    question: 'Do sessions end right when scheduled time runs out?',
+    answer:
+      'No. I do not want you or me to feel rushed so our session may go a bit longer than scheduled. If it continues longer than that I may ask we extend the session or schedule a new one at another time.'
+  },
+  {
+    question: 'What timezone are you in?',
+    answer: 'EST (UTC -5)'
+  },
+  { question: 'What languages do you speak?', answer: 'English' }
+]
