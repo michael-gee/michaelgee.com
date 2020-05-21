@@ -22,15 +22,24 @@ export const Contact = () => {
           <section>
             <h2 className="page-title">Get In Touch</h2>
 
-            <Form id={styles.form}>
+            <Form
+              method="POST"
+              name="Contact"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              // onSubmit={() => console.log('Submit!')}
+              id={styles.form}
+            >
               <div id={styles.userInfo}>
-                <Input placeholder="Full Name" icon="user" iconPosition="left" />
-                <Input placeholder="Email Address" icon="at" iconPosition="left" />
+                <Input name="name" placeholder="Full Name" icon="user" iconPosition="left" />
+                <Input name="email" placeholder="Email Address" icon="at" iconPosition="left" />
               </div>
 
-              <TextArea placeholder="Your Message" rows="5" />
+              <TextArea name="message" placeholder="Your Message" rows="5" />
 
-              <Button id={styles.submitBtn}>
+              <div data-netlify-recaptcha="true" />
+
+              <Button type="submit" id={styles.submitBtn}>
                 <Icon name="send" />
                 Send Message
               </Button>

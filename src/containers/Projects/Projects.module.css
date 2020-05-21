@@ -34,7 +34,7 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #52A59F;
+  background-color: #50a3a2;
   border-radius: 8px;
 }
 .project:hover .overlay {
