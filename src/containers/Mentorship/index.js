@@ -1,7 +1,8 @@
-import { useState } from 'react'
 import Head from 'next/head'
 import { Accordion, Button, Icon, Divider, Statistic } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
+
+import { useState } from 'react'
 
 import { benefits, howItWorks, faq } from './content'
 
