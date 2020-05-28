@@ -1,0 +1,53 @@
+/* Price step CSS */
+#price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+#price button {
+  margin: 32px 0;
+  background-color: var(--mg-primary);
+  color: white;
+}
+#price button:hover {
+  opacity: .8;
+}
+
+#price img {
+  max-width: 300px;
+}
+
+/* Checkout step CSS  */
+#checkout {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6em;
+}
+
+#backBtn {
+  max-width: 100px;
+  background-color: transparent;
+  margin-top: 8px;
+}
+
+#paypal {
+  padding: 24px 40px;
+}
+
+/* Other */
+#error {
+  display: flex;
+  width: 100%;
+  line-height: 1.4;
+  padding: 8px 0;
+  margin: 24px auto 0 auto;
+  background-color: #f8d7da;
+  color: #721c24;
+  font-size: 1.6em;
+}
+#error i {
+  margin: 0 8px;
+}

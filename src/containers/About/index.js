@@ -12,7 +12,7 @@ export const About = () => {
         <title>Michael Gee</title>
         <meta
           name="description"
-          content="Software developer eager to learn, share, and teach web development along with turning ideas into applications."
+          content="Michael Gee is a software developer eager to learn, share, and teach web development along with turning ideas into applications."
         />
       </Head>
 
