@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="https://www.paypal.com/sdk/js?client-id=AUP4HaGd0gKMWtZBb7Cyst3zp-fpT6juY3F1e39GN0DZTvDAXkSTRffHCGAIWezb25-wr5Q2auM8HBnk"></script>
+          <script src="https://www.paypal.com/sdk/js?client-id=AVXhU2PW14ToxUo32Usgtaiwc9p9Hn_Vxq0rB5rMZV_7Ms4IrNyR-61qqxvczyAT67MoMKkb5S_HClDj"></script>
         </body>
       </Html>
     )

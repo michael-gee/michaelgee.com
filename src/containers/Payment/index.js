@@ -16,6 +16,7 @@ export const Payment = () => {
   const [price, setPrice] = useState('')
   const [error, setError] = useState(null)
   const paypalRef = useRef()
+  const router = useRouter()
 
   useEffect(() => {
     setError(null)
@@ -38,7 +39,7 @@ export const Payment = () => {
           },
           onApprove: async (data, actions) => {
             const order = await actions.order.capture()
-            console.log(order)
+            if (order.status.toLowerCase() === 'completed') router.push('/success')
           },
           onError: err => {
             setError(err)
