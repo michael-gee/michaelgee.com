@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Button, Icon, Input, Statistic } from 'semantic-ui-react'
+import { Button, Icon, Input, Loader, Statistic } from 'semantic-ui-react'
 
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -14,6 +14,7 @@ const PAYMENT_STEPS = {
 export const Payment = () => {
   const [currentStep, setCurrentStep] = useState(PAYMENT_STEPS.price)
   const [price, setPrice] = useState('')
+  const [isProcessing, setIsProcessing] = useState(false)
   const [error, setError] = useState(null)
   const paypalRef = useRef()
   const router = useRouter()
@@ -25,6 +26,7 @@ export const Payment = () => {
       window.paypal
         .Buttons({
           createOrder: (data, actions) => {
+            setIsProcessing(true)
             return actions.order.create({
               purchase_units: [
                 {
@@ -39,9 +41,11 @@ export const Payment = () => {
           },
           onApprove: async (data, actions) => {
             const order = await actions.order.capture()
+            setIsProcessing(false)
             if (order.status.toLowerCase() === 'completed') router.push('/success')
           },
           onError: err => {
+            setIsProcessing(false)
             setError(err)
           }
         })
@@ -60,7 +64,7 @@ export const Payment = () => {
       </Head>
 
       <main id="page">
-        <div className="page-body" style={{ maxWidth: 600, maxHeight: 600 }}>
+        <div className="page-body" style={{ maxWidth: 600, maxHeight: 524 }}>
           <>
             <h1 className="page-title">Payment & Contributions</h1>
             {_renderCurrentStep()}
@@ -71,6 +75,16 @@ export const Payment = () => {
   )
 
   function _renderCurrentStep() {
+    if (isProcessing) {
+      return (
+        <div id={styles.processing}>
+          <Loader active inline="centered" size="big">
+            Processing Payment...
+          </Loader>
+        </div>
+      )
+    }
+
     if (currentStep === PAYMENT_STEPS.price) {
       // Price step
       return (

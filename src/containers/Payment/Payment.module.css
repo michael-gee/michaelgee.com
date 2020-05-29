@@ -1,3 +1,10 @@
+/* Processing CSS */
+#processing {
+  font-size: 1.8em;
+  line-height: 2;
+  margin-top: 64px;
+}
+
 /* Price step CSS */
 #price {
   display: flex;
