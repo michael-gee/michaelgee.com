@@ -26,7 +26,6 @@ export const Payment = () => {
       window.paypal
         .Buttons({
           createOrder: (data, actions) => {
-            setIsProcessing(true)
             return actions.order.create({
               purchase_units: [
                 {
@@ -40,12 +39,12 @@ export const Payment = () => {
             })
           },
           onApprove: async (data, actions) => {
+            setIsProcessing(true)
             const order = await actions.order.capture()
-            setIsProcessing(false)
             if (order.status.toLowerCase() === 'completed') router.push('/success')
           },
           onError: err => {
-            setIsProcessing(false)
+            if (isProcessing) setIsProcessing(false)
             setError(err)
           }
         })
