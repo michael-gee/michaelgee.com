@@ -63,7 +63,7 @@ export const Payment = () => {
       </Head>
 
       <main id="page">
-        <div className="page-body" style={{ maxWidth: 600, maxHeight: 524 }}>
+        <div className="page-body" style={{ maxWidth: 600, maxHeight: 532 }}>
           <>
             <h1 className="page-title">Payment & Contributions</h1>
             {_renderCurrentStep()}
@@ -74,16 +74,6 @@ export const Payment = () => {
   )
 
   function _renderCurrentStep() {
-    if (isProcessing) {
-      return (
-        <div id={styles.processing}>
-          <Loader active inline="centered" size="big">
-            Processing Payment...
-          </Loader>
-        </div>
-      )
-    }
-
     if (currentStep === PAYMENT_STEPS.price) {
       // Price step
       return (
@@ -99,7 +89,7 @@ export const Payment = () => {
           />
 
           {error && (
-            <div id={styles.error}>
+            <div id={styles.error} style={{ fontSize: '1.6em', margin: '16px 0 -16px 0' }}>
               <Icon name="warning circle" />
               <span>{error.message}</span>
             </div>
@@ -117,24 +107,38 @@ export const Payment = () => {
 
     // Checkout step
     return (
-      <div id={styles.checkout}>
-        {error && (
-          <div id={styles.error}>
-            <Icon name="warning circle" />
-            <span>{error.message}</span>
-          </div>
-        )}
-        <Button onClick={_onBackButtonClick} id={styles.backBtn}>
-          <Icon name="arrow left" />
-          <span>Back</span>
-        </Button>
+      <div id={styles.container}>
+        {isProcessing && _renderLoadingState()}
 
-        <Statistic size="large">
-          <Statistic.Label>Amount</Statistic.Label>
-          <Statistic.Value>${price}</Statistic.Value>
-        </Statistic>
+        <div id={isProcessing ? styles.loadingContainer : styles.checkout}>
+          {error && (
+            <div id={styles.error}>
+              <Icon name="warning circle" />
+              <span>{error.message}</span>
+            </div>
+          )}
+          <Button onClick={_onBackButtonClick} id={styles.backBtn}>
+            <Icon name="arrow left" />
+            <span>Back</span>
+          </Button>
 
-        <div id={styles.paypal} ref={paypalRef} />
+          <Statistic size="large">
+            <Statistic.Label>Amount</Statistic.Label>
+            <Statistic.Value>${price}</Statistic.Value>
+          </Statistic>
+
+          <div id={styles.paypal} ref={paypalRef} />
+        </div>
+      </div>
+    )
+  }
+
+  function _renderLoadingState() {
+    return (
+      <div id={styles.processingOverlay}>
+        <Loader active inline="centered" size="big" inverted>
+          Processing Payment...
+        </Loader>
       </div>
     )
   }
