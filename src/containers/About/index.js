@@ -24,14 +24,17 @@ export const About = () => {
 
       <main id="page">
         <Nav />
-        <Profile />
 
         <div className="page-body">
-          <Intro />
+          <Profile />
 
-          <TechStack />
+          <div className="page-content">
+            <Intro />
 
-          <Hobbies />
+            <TechStack />
+
+            <Hobbies />
+          </div>
         </div>
       </main>
     </>

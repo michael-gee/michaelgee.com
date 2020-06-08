@@ -7,16 +7,16 @@
   border-radius: 4px;
   width: 100%;
   height: 100%;
-  max-width: 350px;
+  max-width: 280px;
   max-height: 680px;
   overflow-y: auto;
-  margin: 0 16px 0 8px;
+  margin-right: 12px;
 }
 
 #profileImg {
   margin: 24px;
-  max-width: 250px;
-  min-height: 250px;
+  max-width: 240px;
+  min-height: 240px;
   border: 8px solid var(--mg-primary);
 }
 
@@ -66,4 +66,12 @@
 }
 #mentorshipBtn:hover {
   color: var(--mg-primary) !important;
+}
+
+@media screen and (max-width: 960px) {
+  #profile {
+    max-width: 100%;
+    max-height: auto;
+    margin-bottom: 24px;
+  }
 }
