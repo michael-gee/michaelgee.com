@@ -2,6 +2,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Button, Icon } from 'semantic-ui-react'
+// import { MobileNav } from './MobileNav'
+
+// import { useMediaQuery } from 'react-responsive'
 
 import styles from './Nav.module.css'
 

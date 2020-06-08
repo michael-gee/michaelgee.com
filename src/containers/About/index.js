@@ -5,7 +5,13 @@ import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
 
+import { useMediaQuery } from 'react-responsive'
+
 export const About = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 960px)'
+  })
+
   return (
     <>
       <Head>
