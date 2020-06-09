@@ -119,7 +119,7 @@ export const Mentorship = () => {
 
             <div id={styles.pricing}>
               <Statistic horizontal>
-                <Statistic.Value>$20</Statistic.Value>
+                <Statistic.Value>$25</Statistic.Value>
                 <Statistic.Label>per 30 minutes</Statistic.Label>
               </Statistic>
             </div>

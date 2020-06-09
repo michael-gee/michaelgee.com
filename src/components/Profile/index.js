@@ -1,9 +1,15 @@
 import Link from 'next/link'
 import { Button, Image, Icon } from 'semantic-ui-react'
 
+import { useMediaQuery } from 'react-responsive'
+
 import styles from './Profile.module.css'
 
 export const Profile = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 960px)'
+  })
+
   return (
     <div id={styles.profile}>
       <Image
@@ -14,8 +20,10 @@ export const Profile = () => {
         id={styles.profileImg}
       />
 
-      <h1>Michael Gee</h1>
-      <h2>Software Developer</h2>
+      <div id={styles.titleContainer}>
+        <h1>Michael Gee</h1>
+        <h2>Software Developer</h2>
+      </div>
 
       <div id={styles.socialIcons}>
         <Button
@@ -52,31 +60,35 @@ export const Profile = () => {
         </Button>
       </div>
 
-      <div id={styles.employment}>
-        <div className={styles.employmentItem}>
-          <Icon name="briefcase" size="large" />
-          <a
-            href="https://www.coreview.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialIcon}
-          >
-            CoreView
-          </a>
-        </div>
+      {isDesktopOrLaptop && (
+        <>
+          <div id={styles.employment}>
+            <div className={styles.employmentItem}>
+              <Icon name="briefcase" size="large" />
+              <a
+                href="https://www.coreview.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                CoreView
+              </a>
+            </div>
 
-        <div className={styles.employmentItem}>
-          <Icon name="map marker alternate" size="large" />
-          <span>Atlanta, GA</span>
-        </div>
-      </div>
+            <div className={styles.employmentItem}>
+              <Icon name="map marker alternate" size="large" />
+              <span>Atlanta, GA</span>
+            </div>
+          </div>
 
-      <Link href="/mentorship">
-        <Button id={styles.mentorshipBtn}>
-          <Icon name="university" />
-          <span>Mentorship</span>
-        </Button>
-      </Link>
+          <Link href="/mentorship">
+            <Button id={styles.mentorshipBtn}>
+              <Icon name="university" />
+              <span>Mentorship</span>
+            </Button>
+          </Link>
+        </>
+      )}
     </div>
   )
 }

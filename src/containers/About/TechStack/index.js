@@ -27,7 +27,7 @@ export const TechStack = () => {
             </div>
           </article>
           <article>
-            <h3>Platforms</h3>
+            <h3>Cloud</h3>
 
             <div className={styles.tech}>
               <Icon name="amazon" size="huge" style={{ color: '#F19227' }} />
