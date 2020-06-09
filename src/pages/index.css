@@ -6,6 +6,7 @@ body {
   background: #50a3a2;
   background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
   background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
+  background-attachment: fixed;
 
   --mg-primary: #78cc6d;
 }
@@ -23,6 +24,7 @@ h6 { font-size: 1.2em; margin: 0; }
   justify-content: center;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .page-title {
@@ -33,12 +35,35 @@ h6 { font-size: 1.2em; margin: 0; }
 }
 
 .page-body {
-  background-color: #fafafb;
+  display: flex;
+  width: 100%;
+  height: 94%;
+  max-width: 1200px;
+  max-height: 640px;
   border-radius: 4px;
+  margin: 0 16px 0 8px;
+  overflow: hidden;
+}
+
+.page-content {
   width: 100%;
   height: 100%;
-  max-width: 960px;
-  max-height: 680px;
-  margin-right: 16px; 
+  background-color: #fafafb;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 960px) {
+  #page {
+    height: auto;
+    overflow-y: auto;
+    align-items: flex-start;
+    margin: 16px 0;
+  }
+
+  .page-body {
+    flex-direction: column;
+    max-width: calc(100% - 48px);
+    max-height: 100%;
+    overflow: hidden;
+  }
 }

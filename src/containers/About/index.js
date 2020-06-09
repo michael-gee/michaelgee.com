@@ -5,7 +5,13 @@ import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
 
+import { useMediaQuery } from 'react-responsive'
+
 export const About = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 960px)'
+  })
+
   return (
     <>
       <Head>
@@ -18,14 +24,17 @@ export const About = () => {
 
       <main id="page">
         <Nav />
-        <Profile />
 
         <div className="page-body">
-          <Intro />
+          <Profile />
 
-          <TechStack />
+          <div className="page-content">
+            <Intro />
 
-          <Hobbies />
+            <TechStack />
+
+            <Hobbies />
+          </div>
         </div>
       </main>
     </>

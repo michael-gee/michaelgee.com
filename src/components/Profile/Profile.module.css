@@ -7,26 +7,27 @@
   border-radius: 4px;
   width: 100%;
   height: 100%;
-  max-width: 350px;
+  max-width: 280px;
   max-height: 680px;
   overflow-y: auto;
-  margin: 0 16px 0 8px;
+  margin-right: 12px;
 }
 
 #profileImg {
   margin: 24px;
-  max-width: 250px;
-  min-height: 250px;
+  max-width: 240px;
+  min-height: 240px;
   border: 8px solid var(--mg-primary);
 }
 
-#profile h1 {
+#titleContainer h1 {
   font-weight: normal;
   font-size: 3.4em;
   margin-top: 8px;
+  min-height: auto;
 }
 
-#profile h2 {
+#titleContainer h2 {
   color: var(--mg-primary);
   font-weight: 500;
   margin-top: 4px;
@@ -58,6 +59,7 @@
 
 #mentorshipBtn {
   width: 100%;
+  min-height: 64px;
   margin-top: auto;
   padding: 24px 0;
   background-color: transparent !important;
@@ -66,4 +68,25 @@
 }
 #mentorshipBtn:hover {
   color: var(--mg-primary) !important;
+}
+
+@media screen and (max-width: 960px) {
+  #profile {
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    max-height: auto;
+    margin-bottom: 16px;
+  }
+
+  #profileImg {
+    max-width: 100px;
+    min-height: 100px;
+    margin: 8px 16px 8px 24px;
+    border: 5px solid var(--mg-primary);
+  }
+
+  #socialIcons {
+    margin: 0 24px 0 auto;
+  }
 }

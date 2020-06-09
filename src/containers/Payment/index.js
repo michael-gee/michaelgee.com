@@ -42,6 +42,12 @@ export const Payment = () => {
             setIsProcessing(true)
             const order = await actions.order.capture()
             if (order.status.toLowerCase() === 'completed') router.push('/success')
+            else {
+              setIsProcessing(false)
+              setError(
+                'The payment through Paypal was approved but not completed. Please contact me directly to address this issue.'
+              )
+            }
           },
           onError: err => {
             if (isProcessing) setIsProcessing(false)
