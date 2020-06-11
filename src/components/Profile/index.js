@@ -9,6 +9,11 @@ export const Profile = () => {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 960px)'
   })
+  const isMobile = useMediaQuery({
+    query: '(max-width: 650px)'
+  })
+
+  if (isMobile) return () => {}
 
   return (
     <div id={styles.profile}>
@@ -92,4 +97,3 @@ export const Profile = () => {
     </div>
   )
 }
-4

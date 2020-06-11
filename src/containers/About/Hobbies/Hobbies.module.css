@@ -1,7 +1,7 @@
 #hobbies {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
+  width: 100%;
   padding: 24px 0;
   font-size: 2em;
 }
@@ -18,4 +18,11 @@
 }
 .hobby i {
   color: var(--mg-primary);
+}
+
+@media screen and (max-width: 600px) {
+  #hobbies {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -2,17 +2,21 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Button, Icon } from 'semantic-ui-react'
-// import { MobileNav } from './MobileNav'
+import { MobileNav } from './MobileNav'
 
-// import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive'
 
 import styles from './Nav.module.css'
 
 export const Nav = () => {
-  const navButtons = _configureNavButtons()
   const router = useRouter()
+  const isMobile = useMediaQuery({
+    query: '(max-width: 650px)'
+  })
 
-  return (
+  const navButtons = _configureNavButtons()
+
+  return !isMobile ? (
     <header
       id={styles.header}
       style={
@@ -38,6 +42,8 @@ export const Nav = () => {
         ))}
       </nav>
     </header>
+  ) : (
+    <MobileNav />
   )
 
   function _configureNavButtons() {

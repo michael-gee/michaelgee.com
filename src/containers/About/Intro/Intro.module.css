@@ -38,3 +38,20 @@
   border-radius: 8px;
   padding: 24px 0;
 }
+
+@media screen and (max-width: 600px) {
+  #intro {
+    padding: 16px;
+  }
+
+  #services {
+    flex-direction: column;
+  }
+
+  .service {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    border: none;
+    padding: 8px 0;
+  }
+}

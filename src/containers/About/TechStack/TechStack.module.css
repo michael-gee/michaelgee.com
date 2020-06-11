@@ -5,7 +5,6 @@
 #techStack article {
   display: flex;
   align-items: center;
-  padding: 16px 0;
 }
 #techStack h3 {
   min-width: 116px;
@@ -20,7 +19,7 @@
   margin-left: 32px;
 }
 .tech i {
-  margin: 0 16px;
+  margin: 16px;
 }
 
 #otherTitle {
@@ -52,4 +51,20 @@
   text-align: center;
   margin: 8px 0 16px 0;
   font-size: 1.4em;
+}
+
+@media screen and (max-width: 650px) {
+  #techStack article {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #techStack h3 {
+    text-align: center;
+  }
+
+  .tech {
+    margin: 8px 0;
+    justify-content: center;
+  }
 }

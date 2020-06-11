@@ -50,6 +50,7 @@ h6 { font-size: 1.2em; margin: 0; }
   height: 100%;
   background-color: #fafafb;
   overflow-y: auto;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 960px) {
@@ -65,5 +66,20 @@ h6 { font-size: 1.2em; margin: 0; }
     max-width: calc(100% - 48px);
     max-height: 100%;
     overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #page {
+    flex-direction: column;
+  }
+
+  .page-title {
+    padding: 16px;
+  }
+
+  .page-body {
+    max-width: calc(100% - 32px);
+    margin: 0 auto;
   }
 }
