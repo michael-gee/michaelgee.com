@@ -1,3 +1,13 @@
+#payment {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: calc(100% - 48px);
+  height: 532px;
+  margin: 0 24px;
+  background-color: #fafafb;
+}
+
 /* Price step CSS */
 #price {
   display: flex;
@@ -5,6 +15,7 @@
   align-items: center;
   max-width: 400px;
   margin: 40px auto;
+  padding: 0 16px;
 }
 
 #price button {
@@ -17,7 +28,8 @@
 }
 
 #price img {
-  max-width: 300px;
+  width: 300px;
+  max-width: 100%;
 }
 
 /* Checkout step CSS  */
@@ -52,7 +64,7 @@
 }
 
 #paypal {
-  padding: 24px 40px;
+  padding: 24px;
 }
 
 #processing {

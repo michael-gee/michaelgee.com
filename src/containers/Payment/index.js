@@ -69,7 +69,7 @@ export const Payment = () => {
       </Head>
 
       <main id="page">
-        <div className="page-body" style={{ maxWidth: 600, maxHeight: 532 }}>
+        <div id={styles.payment} className="page-body">
           <>
             <h1 className="page-title">Payment & Contributions</h1>
             {_renderCurrentStep()}

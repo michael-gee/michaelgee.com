@@ -12,7 +12,7 @@ export const Success = () => {
       </Head>
 
       <main id="page">
-        <div className="page-body" style={{ maxWidth: 600, maxHeight: 600 }}>
+        <div id={styles.success}>
           <h1 id={styles.title}>Thank You!</h1>
 
           <p className={styles.info}>Your submission was sent successfully.</p>

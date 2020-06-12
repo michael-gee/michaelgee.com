@@ -152,3 +152,40 @@
   font-size: 1.8em;
   line-height: 1.4;
 }
+
+@media screen and (max-width: 960px)  {
+  #targetAudience {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .targetList li {
+    width: 100%;
+    padding-right: 16px;
+  }
+}
+
+
+@media screen and (max-width: 650px)  {
+  #container {
+    max-width: calc(100% - 48px);
+    margin: 16px 24px;
+  }
+
+  #faq {
+    max-width: calc(100% - 32px);
+    margin: 24px 16px;
+  }
+}
+
+@media screen and (max-width: 550px)  {
+  #benefits {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .benefit {
+    width: 100%;
+    margin: 16px 0;
+  }
+}
