@@ -88,17 +88,6 @@ export const Projects = () => {
                       Built and maintained websites for clients using Wordpress CMS or building from
                       scrath with various technologies.
                     </p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="linkify"
-                        size="massive"
-                        as="a"
-                        href="https://www.cegmag.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>

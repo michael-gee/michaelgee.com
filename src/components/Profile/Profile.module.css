@@ -70,7 +70,7 @@
   color: var(--mg-primary) !important;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px){
   #profile {
     flex-direction: row;
     align-items: center;
@@ -88,5 +88,11 @@
 
   #socialIcons {
     margin: 0 24px 0 auto;
+  }
+}
+
+@media screen and (max-width: 650px)  {
+  #profile {
+    display: none;
   }
 }

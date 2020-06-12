@@ -1,5 +1,7 @@
 .projectContainer {
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 0 15px;
   font-size: 1.8em;
   color: white;
@@ -11,14 +13,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 30%;
   height: 200px;
-  max-width: 100%;
-  margin: 16px 15px;
+  min-width: 200px;
+  margin: 16px 1.5%;
   border-radius: 8px;
 }
 .project img {
-  max-width: 240px;
+  max-width: 200px;
 }
 .overlay {
   position: absolute;
