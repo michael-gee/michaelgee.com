@@ -1,22 +1,17 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
-import { Button, Icon } from 'semantic-ui-react'
-import { MobileNav } from './MobileNav'
-
-import { useMediaQuery } from 'react-responsive'
+import { Button, Icon, Image, Sidebar } from 'semantic-ui-react'
 
 import styles from './Nav.module.css'
 
 export const Nav = () => {
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const router = useRouter()
-  const isMobile = useMediaQuery({
-    query: '(max-width: 650px)'
-  })
-
   const navButtons = _configureNavButtons()
 
-  return !isMobile ? (
+  return (
     <header
       id={styles.header}
       style={
@@ -25,25 +20,50 @@ export const Nav = () => {
           : {}
       }
     >
-      <nav id={styles.nav}>
-        {navButtons.map(btn => (
-          <Link href={btn.pathname} key={btn.icon}>
-            <Button
-              as="a"
-              icon
-              size="huge"
-              id={btn.pathname === router.pathname ? styles.selected : undefined}
-              className={styles.navBtn}
-            >
-              <Icon name={btn.icon} />
-              <div>{btn.text}</div>
-            </Button>
-          </Link>
-        ))}
+      <nav>
+        <div id={styles.nav}>
+          {navButtons.map(btn => (
+            <Link href={btn.pathname} key={btn.icon}>
+              <Button
+                as="a"
+                icon
+                size="huge"
+                id={btn.pathname === router.pathname ? styles.selected : undefined}
+                className={styles.navBtn}
+              >
+                <Icon name={btn.icon} />
+                <div>{btn.text}</div>
+              </Button>
+            </Link>
+          ))}
+        </div>
+
+        <div id={styles.mobileNav}>
+          <div id={styles.mobileNavContent}>
+            <Image
+              src="/images/mg-transparent-logo.png"
+              alt="Michael Gee logo image"
+              id={styles.mobileImg}
+            />
+
+            <div>
+              <h1 id={styles.mobileTitle}>Michael Gee</h1>
+              <h2 id={styles.mobileSubtitle}>Software Developer</h2>
+            </div>
+          </div>
+
+          <Button onClick={_toggleSidebar} icon id={styles.menuBtn}>
+            <Icon name="bars" />
+          </Button>
+        </div>
+
+        {sidebarIsOpen && (
+          <Sidebar visible={sidebarIsOpen} onHide={_toggleSidebar} width="wide" direction="right">
+            <div>test</div>
+          </Sidebar>
+        )}
       </nav>
     </header>
-  ) : (
-    <MobileNav />
   )
 
   function _configureNavButtons() {
@@ -74,5 +94,9 @@ export const Nav = () => {
         pathname: '/contact'
       }
     ]
+  }
+
+  function _toggleSidebar() {
+    setSidebarIsOpen(!sidebarIsOpen)
   }
 }

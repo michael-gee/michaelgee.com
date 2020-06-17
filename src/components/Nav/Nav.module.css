@@ -1,15 +1,17 @@
 #header {
-  width: 100%;
   height: 94%;
-  max-width: 80px;
   max-height: 640px;
-  margin-left: 8px;
 }
 
 #nav {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
+  height: 94%;
+  max-width: 80px;
+  max-height: 640px;
+  margin-left: 8px;
   
 }
 #nav .navBtn:first-of-type {
@@ -40,4 +42,59 @@
 .navBtn div {
   font-size: .6em !important;
   padding-top: 4px;
+}
+
+#mobileNav {
+  display: none;
+}
+
+#mobileNavContent {
+  display: flex;
+}
+
+#mobileImg {
+  max-width: 64px;
+  max-height: 64px;
+  margin: 4px 8px;
+}
+
+#mobileTitle {
+  padding-top: 10px;
+  font-size: 2.8em;
+}
+
+#mobileSubtitle {
+  color: var(--mg-primary);
+  font-weight: normal;
+  font-size: 1.9em;
+}
+
+#menuBtn {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8em;
+  padding: 0;
+}
+
+@media screen and (max-width: 650px)  {
+  #header {
+    width: 100%;
+    max-width: calc(100% - 32px);
+    background-color: #fafafb;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    padding-top: 0;
+    border-radius: 4px;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #mobileNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

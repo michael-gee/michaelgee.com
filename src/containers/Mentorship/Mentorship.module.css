@@ -124,6 +124,7 @@
 .targetList {
   list-style-type: none;
   margin: 0;
+  padding-left: 24px;
 }
 .targetList li::before {
   content: "\2022";
@@ -168,8 +169,9 @@
 
 @media screen and (max-width: 650px)  {
   #container {
-    max-width: calc(100% - 48px);
-    margin: 16px 24px;
+    max-width: calc(100% - 32px);
+    margin: 16px;
+    margin-top: 0;
   }
 
   #faq {

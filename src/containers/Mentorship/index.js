@@ -131,7 +131,7 @@ export const Mentorship = () => {
             <Accordion id={styles.faq} styled>
               {faq.map((item, index) => {
                 return (
-                  <>
+                  <div key={index}>
                     <Accordion.Title
                       active={activeAccodion === index}
                       index={index}
@@ -144,7 +144,7 @@ export const Mentorship = () => {
                     <Accordion.Content active={activeAccodion === index}>
                       {item.answer}
                     </Accordion.Content>
-                  </>
+                  </div>
                 )
               })}
             </Accordion>

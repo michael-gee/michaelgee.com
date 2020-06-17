@@ -50,10 +50,7 @@ export const Projects = () => {
 
                 {/* michaelgee.com */}
                 <div id={styles.mgCom} className={styles.project}>
-                  <img
-                    src="/images/projects/michaelgeelogo.png"
-                    alt="michaelgee.com website logo"
-                  />
+                  <img src="/images/mg-logo.png" alt="michaelgee.com website logo" />
                   <h4>michaelgee.com</h4>
 
                   <div className={styles.overlay}>

@@ -89,6 +89,10 @@
   #socialIcons {
     margin: 0 24px 0 auto;
   }
+
+  #employment, #mentorshipBtn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 650px)  {
