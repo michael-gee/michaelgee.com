@@ -169,14 +169,14 @@
 
 @media screen and (max-width: 650px)  {
   #container {
-    max-width: calc(100% - 32px);
-    margin: 16px;
+    max-width: calc(100% - 48px);
+    margin: 16px 24px;
     margin-top: 0;
   }
 
   #faq {
-    max-width: calc(100% - 32px);
-    margin: 24px 16px;
+    max-width: calc(100% - 48px);
+    margin: 24px;
   }
 }
 

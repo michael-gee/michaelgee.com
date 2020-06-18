@@ -58,8 +58,27 @@ export const Nav = () => {
         </div>
 
         {sidebarIsOpen && (
-          <Sidebar visible={sidebarIsOpen} onHide={_toggleSidebar} width="wide" direction="right">
-            <div>test</div>
+          <Sidebar visible={sidebarIsOpen} onHide={_toggleSidebar}>
+            <div id={styles.sidebarContainer}>
+              <Button onClick={_toggleSidebar} id={styles.sidebarCloseBtn}>
+                <Icon name="close" />
+              </Button>
+
+              <section className={styles.sidebarSection}>
+                <h3 className={styles.sidebarTitle}>Pages</h3>
+              </section>
+
+              <section className={styles.sidebarSection}>
+                <h3 className={styles.sidebarTitle}>Recent Blog Posts</h3>
+                <p style={{ textAlign: 'center', fontSize: '1.8em', margin: '8px 0' }}>
+                  New blog posts coming soon.
+                </p>
+              </section>
+
+              <section className={styles.sidebarSection}>
+                <h3 className={styles.sidebarTitle}>Social</h3>
+              </section>
+            </div>
           </Sidebar>
         )}
       </nav>
