@@ -67,4 +67,8 @@
     margin: 8px 0;
     justify-content: center;
   }
+
+  #otherTech {
+    padding: 0 8px;
+  }
 }

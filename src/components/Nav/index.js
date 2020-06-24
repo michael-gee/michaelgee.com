@@ -2,14 +2,16 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-import { Button, Icon, Image, Sidebar } from 'semantic-ui-react'
+import { Button, Icon, Image } from 'semantic-ui-react'
+import { Sidebar } from '../Sidebar'
+
+import { MG_NAV_PAGES } from '../../constants'
 
 import styles from './Nav.module.css'
 
 export const Nav = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const router = useRouter()
-  const navButtons = _configureNavButtons()
 
   return (
     <header
@@ -20,9 +22,9 @@ export const Nav = () => {
           : {}
       }
     >
-      <nav>
+      <nav style={{ width: '100%' }}>
         <div id={styles.nav}>
-          {navButtons.map(btn => (
+          {MG_NAV_PAGES.map(btn => (
             <Link href={btn.pathname} key={btn.icon}>
               <Button
                 as="a"
@@ -57,63 +59,10 @@ export const Nav = () => {
           </Button>
         </div>
 
-        {sidebarIsOpen && (
-          <Sidebar visible={sidebarIsOpen} onHide={_toggleSidebar}>
-            <div id={styles.sidebarContainer}>
-              <Button onClick={_toggleSidebar} id={styles.sidebarCloseBtn}>
-                <Icon name="close" />
-              </Button>
-
-              <section className={styles.sidebarSection}>
-                <h3 className={styles.sidebarTitle}>Pages</h3>
-              </section>
-
-              <section className={styles.sidebarSection}>
-                <h3 className={styles.sidebarTitle}>Recent Blog Posts</h3>
-                <p style={{ textAlign: 'center', fontSize: '1.8em', margin: '8px 0' }}>
-                  New blog posts coming soon.
-                </p>
-              </section>
-
-              <section className={styles.sidebarSection}>
-                <h3 className={styles.sidebarTitle}>Social</h3>
-              </section>
-            </div>
-          </Sidebar>
-        )}
+        {sidebarIsOpen && <Sidebar onHide={_toggleSidebar} />}
       </nav>
     </header>
   )
-
-  function _configureNavButtons() {
-    return [
-      {
-        icon: 'user',
-        text: 'About',
-        pathname: '/'
-      },
-      {
-        icon: 'code',
-        text: 'Projects',
-        pathname: '/projects'
-      },
-      // {
-      //   icon: 'book',
-      //   text: 'Blog',
-      //   pathname: '/blog'
-      // },
-      {
-        icon: 'university',
-        text: 'Mentorship',
-        pathname: '/mentorship'
-      },
-      {
-        icon: 'mail',
-        text: 'Contact',
-        pathname: '/contact'
-      }
-    ]
-  }
 
   function _toggleSidebar() {
     setSidebarIsOpen(!sidebarIsOpen)

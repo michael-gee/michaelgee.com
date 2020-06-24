@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { Button, Image, Icon } from 'semantic-ui-react'
 
+import { MG_SOCIAL_MEDIA } from '../../constants'
+
 import styles from './Profile.module.css'
 
 export const Profile = () => {
@@ -20,38 +22,20 @@ export const Profile = () => {
       </div>
 
       <div id={styles.socialIcons}>
-        <Button
-          icon
-          as="a"
-          href="https://www.github.com/michaelgee22"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.socialIcon}
-        >
-          <Icon name="github" size="big" />
-        </Button>
-
-        <Button
-          icon
-          as="a"
-          href="https://www.linkedin.com/in/michael-gee/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.socialIcon}
-        >
-          <Icon name="linkedin" size="big" />
-        </Button>
-
-        <Button
-          icon
-          as="a"
-          href="https://www.twitter.com/michaelgee7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.socialIcon}
-        >
-          <Icon name="twitter" size="big" />
-        </Button>
+        {MG_SOCIAL_MEDIA.map(item => {
+          return (
+            <Button
+              icon
+              as="a"
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+            >
+              <Icon name={item.icon} size="big" />
+            </Button>
+          )
+        })}
       </div>
 
       <div id={styles.employment}>

@@ -53,7 +53,7 @@ h6 { font-size: 1.2em; margin: 0; }
   border-radius: 4px;
 }
 
-.ui.visible.left.sidebar {
+.ui.visible.right.sidebar {
   background-color: #fafafb !important;
   width: 316px;
 }
