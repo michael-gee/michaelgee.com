@@ -31,6 +31,7 @@ export const Profile = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}
+              key={item.icon}
             >
               <Icon name={item.icon} size="big" />
             </Button>
