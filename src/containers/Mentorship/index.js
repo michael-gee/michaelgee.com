@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Accordion, Button, Icon, Divider, Statistic } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 
@@ -58,7 +59,12 @@ export const Mentorship = () => {
               <li>
                 <h3>Introduction / Consultation</h3>
                 <p>{howItWorks.intro} </p>
-                <Button id={styles.introductionBtn}>Introduce Yourself</Button>
+                <Link href="/contact">
+                  <Button id={styles.introductionBtn}>
+                    <Icon name="handshake" />
+                    Introduce Yourself
+                  </Button>
+                </Link>
               </li>
               <Divider horizontal style={{ maxWidth: 400, margin: '0px auto', color: '#78cc6d' }}>
                 Or
@@ -124,6 +130,14 @@ export const Mentorship = () => {
               </Statistic>
             </div>
           </section>
+
+          <div id={styles.getStarted}>
+            <h3>Have any additional questions? Introduce yourself and let's get started!</h3>
+
+            <Link href="/contact">
+              <Button id={styles.getStartedBtn}>Get Started</Button>
+            </Link>
+          </div>
 
           <section>
             <h2 className={styles.subTitle}>FAQ</h2>
