@@ -16,13 +16,26 @@ export const Contact = () => {
 
   useEffect(() => {
     if (isSubmitting) {
-      // fetch('/', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      // })
-      //   .then(() => router.push('/success'))
-      //   .catch(() => setError('Form was unsuccessfully submitted. Please try again later.'))
-      //   .finally(() => setIsSubmitting(false))
+      const form = new FormData()
+      form.append('name', fields.name)
+      form.append('email', fields.email)
+      form.append('text', fields.text)
+
+      const xhr = new XMLHttpRequest()
+      xhr.open('POST', 'https://formspree.io/myynlapp')
+      xhr.setRequestHeader('Accept', 'application/json')
+
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return
+        if (xhr.status === 200) {
+          router.push('/success')
+        } else {
+          setError('Form was unsuccessfully submitted. Please try again later.')
+          setIsSubmitting(false)
+        }
+      }
+
+      xhr.send(form)
     }
   }, [isSubmitting])
 
@@ -68,17 +81,24 @@ export const Contact = () => {
                   rows="5"
                 />
 
+                <div id={styles.submitContainer}>
+                  <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
+                    <Icon name="send" />
+                    Send Message
+                  </Button>
+
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LeMQLcZAAAAAHvSaSEtdKS2beTr90a2Q1LEcATJ"
+                  />
+                </div>
+
                 {error && (
                   <div id={styles.error}>
                     <Icon name="warning sign" />
                     <span>{error}</span>
                   </div>
                 )}
-
-                <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
-                  <Icon name="send" />
-                  Send Message
-                </Button>
               </Form>
             </section>
 
@@ -110,10 +130,10 @@ export const Contact = () => {
   function _onSubmit(ev) {
     ev.preventDefault()
 
-    const { name, email, message } = fields
+    const { name, email, text } = fields
     const emailRegex = /^\S+@\S+\.\S+$/g
 
-    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+    if (name.trim() === '' || email.trim() === '' || text.trim() === '') {
       setError('Please fill all fields before submitting the form.')
       return
     }
