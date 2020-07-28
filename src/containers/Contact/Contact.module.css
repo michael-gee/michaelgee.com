@@ -9,7 +9,7 @@
 #userInfo {
   display: flex;
   justify-content: space-between;
-  margin: 32px 0;
+  margin: 8px 0;
 }
 #userInfo input {
   min-width: 324px;
@@ -21,26 +21,40 @@
 
 #form textarea {
   max-width: 100%;
-  margin: 0 auto;
-  margin-bottom: 32px;
+  margin: 8px auto 24px auto;
   outline: none;
   border: 2px solid rgba(34,36,38,.15);
+}
+
+#submitContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 24px);
 }
 
 #submitBtn {
   background-color: var(--mg-primary);
   color: white;
+  min-width: 200px;
   max-width: 250px;
+  margin-top: 8px;
   transition: .5s;
 }
 #submitBtn:hover {
   opacity: .8;
 }
 
+#error {
+  text-align: center;
+  margin-top: 32px;
+  color: red;
+}
+
 #otherTitle {
   font-weight: normal;
   text-align: center;
-  margin: 40px 0;
+  margin: 32px 0;
 }
 
 #otherContact {
@@ -55,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 #otherContact span {
   padding-left: 12px;
@@ -78,5 +92,15 @@
 
   #submitBtn {
     margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  #submitContainer {
+    flex-direction: column-reverse;
+  }
+
+  #submitBtn {
+    margin-top: 24px;
   }
 }

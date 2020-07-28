@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+
 import Head from 'next/head'
 import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
 import { Profile } from '../../components/Profile'
@@ -6,6 +9,36 @@ import { Nav } from '../../components/Nav'
 import styles from './Contact.module.css'
 
 export const Contact = () => {
+  const [fields, setFields] = useState({ name: '', email: '', text: '' })
+  const [error, setError] = useState(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    if (isSubmitting) {
+      const form = new FormData()
+      form.append('name', fields.name)
+      form.append('email', fields.email)
+      form.append('text', fields.text)
+
+      const xhr = new XMLHttpRequest()
+      xhr.open('POST', 'https://formspree.io/myynlapp')
+      xhr.setRequestHeader('Accept', 'application/json')
+
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return
+        if (xhr.status === 200) {
+          router.push('/success')
+        } else {
+          setError('Form was unsuccessfully submitted. Please try again later.')
+          setIsSubmitting(false)
+        }
+      }
+
+      xhr.send(form)
+    }
+  }, [isSubmitting])
+
   return (
     <>
       <Head>
@@ -23,27 +56,49 @@ export const Contact = () => {
             <section>
               <h2 className="page-title">Get In Touch</h2>
 
-              <Form
-                method="POST"
-                name="Contact"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                // onSubmit={() => console.log('Submit!')}
-                id={styles.form}
-              >
+              <Form onSubmit={_onSubmit} id={styles.form}>
                 <div id={styles.userInfo}>
-                  <Input name="name" placeholder="Full Name" icon="user" iconPosition="left" />
-                  <Input name="email" placeholder="Email Address" icon="at" iconPosition="left" />
+                  <Input
+                    name="name"
+                    onChange={_onInputChange}
+                    placeholder="Full Name"
+                    icon="user"
+                    iconPosition="left"
+                  />
+                  <Input
+                    name="email"
+                    onChange={_onInputChange}
+                    placeholder="Email Address"
+                    icon="at"
+                    iconPosition="left"
+                  />
                 </div>
 
-                <TextArea name="message" placeholder="Your Message" rows="5" />
+                <TextArea
+                  name="text"
+                  onChange={_onInputChange}
+                  placeholder="Your Message"
+                  rows="5"
+                />
 
-                <div data-netlify-recaptcha="true" />
+                <div id={styles.submitContainer}>
+                  <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
+                    <Icon name="send" />
+                    Send Message
+                  </Button>
 
-                <Button type="submit" id={styles.submitBtn}>
-                  <Icon name="send" />
-                  Send Message
-                </Button>
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LeMQLcZAAAAAHvSaSEtdKS2beTr90a2Q1LEcATJ"
+                  />
+                </div>
+
+                {error && (
+                  <div id={styles.error}>
+                    <Icon name="warning sign" />
+                    <span>{error}</span>
+                  </div>
+                )}
               </Form>
             </section>
 
@@ -67,4 +122,27 @@ export const Contact = () => {
       </main>
     </>
   )
+
+  function _onInputChange(ev, data) {
+    setFields({ ...fields, [ev.target.name]: data.value })
+  }
+
+  function _onSubmit(ev) {
+    ev.preventDefault()
+
+    const { name, email, text } = fields
+    const emailRegex = /^\S+@\S+\.\S+$/g
+
+    if (name.trim() === '' || email.trim() === '' || text.trim() === '') {
+      setError('Please fill all fields before submitting the form.')
+      return
+    }
+
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address before submitting the form.')
+      return
+    }
+
+    setIsSubmitting(true)
+  }
 }
