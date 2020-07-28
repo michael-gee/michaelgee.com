@@ -1,9 +1,8 @@
 {
   "name": "michaelgee.com",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@next/mdx": "^9.4.4",
     "next": "^9.4.4",
     "prop-types": "^15.7.2",
     "react": "16.13.1",

@@ -9,7 +9,7 @@
 #userInfo {
   display: flex;
   justify-content: space-between;
-  margin: 8px 0;
+  margin: 16px 0;
 }
 #userInfo input {
   min-width: 324px;
@@ -29,8 +29,6 @@
 #submitContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: calc(100% - 24px);
 }
 
 #submitBtn {
@@ -46,8 +44,8 @@
 }
 
 #error {
-  text-align: center;
-  margin-top: 32px;
+  margin-left: 16px;
+  margin-top: 12px;
   color: red;
 }
 
@@ -97,7 +95,7 @@
 
 @media screen and (max-width: 600px)  {
   #submitContainer {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   #submitBtn {

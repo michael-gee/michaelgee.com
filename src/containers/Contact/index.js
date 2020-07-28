@@ -9,7 +9,7 @@ import { Nav } from '../../components/Nav'
 import styles from './Contact.module.css'
 
 export const Contact = () => {
-  const [fields, setFields] = useState({ name: '', email: '', text: '' })
+  const [fields, setFields] = useState({ name: '', email: '', text: '', _gotcha: undefined })
   const [error, setError] = useState(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
@@ -20,6 +20,7 @@ export const Contact = () => {
       form.append('name', fields.name)
       form.append('email', fields.email)
       form.append('text', fields.text)
+      form.append('_gotcha', fields._gotcha)
 
       const xhr = new XMLHttpRequest()
       xhr.open('POST', 'https://formspree.io/myynlapp')
@@ -81,24 +82,26 @@ export const Contact = () => {
                   rows="5"
                 />
 
+                <Input
+                  type="text"
+                  name="_gotcha"
+                  onChange={_onInputChange}
+                  style={{ display: 'none' }}
+                />
+
                 <div id={styles.submitContainer}>
                   <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
                     <Icon name="send" />
                     Send Message
                   </Button>
 
-                  <div
-                    class="g-recaptcha"
-                    data-sitekey="6LeMQLcZAAAAAHvSaSEtdKS2beTr90a2Q1LEcATJ"
-                  />
+                  {error && (
+                    <div id={styles.error}>
+                      <Icon name="warning sign" />
+                      <span>{error}</span>
+                    </div>
+                  )}
                 </div>
-
-                {error && (
-                  <div id={styles.error}>
-                    <Icon name="warning sign" />
-                    <span>{error}</span>
-                  </div>
-                )}
               </Form>
             </section>
 
