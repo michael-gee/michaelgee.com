@@ -9,7 +9,7 @@ import { Nav } from '../../components/Nav'
 import styles from './Contact.module.css'
 
 export const Contact = () => {
-  const [fields, setFields] = useState({ name: '', email: '', text: '', _gotcha: undefined })
+  const [fields, setFields] = useState({ name: '', email: '', text: '', _gotcha: '' })
   const [error, setError] = useState(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
