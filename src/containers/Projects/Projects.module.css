@@ -67,18 +67,24 @@
   background: -webkit-linear-gradient(top left,#4A90E2 0%,#7DDEE7 100%);
   background: linear-gradient(to bottom right,#4A90E2 0%,#7DDEE7 100%);
 }
-#mgCom, #mgSandbox {
+#mgCom{
   background: #50a3a2;
   background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
   background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
 }
-#mgCom img {
+#mgSandbox {
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left,#78cc6d 0%,#50a3a2 100%);
+  background: linear-gradient(to bottom right,#78cc6d 0%,#50a3a2 100%);
+}
+#mgCom img, #mgSandbox img {
   width: 100px;
   height: 100px;
 }
-#mgCom h4 {
+#mgCom h4, #mgSandbox h4 {
   margin-top: 8px;
 }
+
 #cegmag {
   background: #FC1D14;
   background: -webkit-linear-gradient(top left,#FC1D14 0%,#000 100%);

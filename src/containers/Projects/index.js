@@ -61,11 +61,33 @@ export const Projects = () => {
 
                     <div className={styles.overlayIcons}>
                       <Button
-                        icon="code branch"
+                        icon="code"
                         size="massive"
                         as="a"
-                        title="Repository currently is private. Will be open sourced soon."
-                        style={{ cursor: 'not-allowed' }}
+                        href="https://github.com/michaelgee22/michaelgee.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* MG Sandbox */}
+                <div id={styles.mgSandbox} className={styles.project}>
+                  <img src="/images/mg-logo.png" alt="MG Sandbox project logo" />
+                  <h4>MG Sandbox</h4>
+
+                  <div className={styles.overlay}>
+                    <p>Sandbox project where I learn and build new things.</p>
+
+                    <div className={styles.overlayIcons}>
+                      <Button
+                        icon="code"
+                        size="massive"
+                        as="a"
+                        href="https://github.com/michaelgee22/mg-sandbox"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       />
                     </div>
                   </div>
