@@ -36,6 +36,11 @@
 }
 .sidebarMenuItem:active, .sidebarMenuItem:hover {
   color: var(--mg-primary);
+  cursor: pointer;
+}
+
+.selectedMenuItem {
+  color: var(--mg-primary);
 }
 
 .sidebarMenuItemText {

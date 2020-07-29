@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
 import { Button, Icon, Sidebar as SUISidebar } from 'semantic-ui-react'
@@ -8,6 +9,8 @@ import { MG_NAV_PAGES, MG_SOCIAL_MEDIA } from '../../constants'
 import styles from './Sidebar.module.css'
 
 export const Sidebar = props => {
+  const router = useRouter()
+
   return (
     <SUISidebar visible={true} onHide={props.onHide} direction="right">
       <div id={styles.sidebarContainer}>
@@ -21,7 +24,11 @@ export const Sidebar = props => {
             return (
               <Link href={navItem.pathname}>
                 <div
-                  className={styles.sidebarMenuItem}
+                  className={
+                    router.pathname === navItem.pathname
+                      ? `${styles.sidebarMenuItem} ${styles.selectedMenuItem}`
+                      : styles.sidebarMenuItem
+                  }
                   style={
                     index === MG_NAV_PAGES.length - 1 ? { borderBottom: '1px solid #eee' } : {}
                   }
