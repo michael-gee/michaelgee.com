@@ -63,7 +63,6 @@ h6 { font-size: 1.2em; margin: 0; }
     height: auto;
     overflow-y: auto;
     align-items: flex-start;
-    margin: 16px 0 24px 0;
   }
 
   .page-body {
@@ -71,6 +70,7 @@ h6 { font-size: 1.2em; margin: 0; }
     max-width: calc(100% - 48px);
     height: 100%;
     max-height: 100%;
+    padding: 16px 0 24px 0;
     overflow: hidden;
   }
 }
@@ -78,8 +78,7 @@ h6 { font-size: 1.2em; margin: 0; }
 @media screen and (max-width: 650px) {
   #page {
     flex-direction: column;
-    margin: 8px 0 0 0;
-    padding-bottom: 32px;
+    margin: 0;
   }
 
   .page-title {
