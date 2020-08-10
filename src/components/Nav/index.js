@@ -18,7 +18,7 @@ export const Nav = () => {
       id={styles.header}
       style={
         router.pathname === '/mentorship'
-          ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%' }
+          ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%', paddingTop: 8 }
           : {}
       }
     >
