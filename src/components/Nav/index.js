@@ -54,7 +54,7 @@ export const Nav = () => {
             </div>
           </div>
 
-          <Button onClick={_toggleSidebar} icon id={styles.menuBtn}>
+          <Button onClick={_toggleSidebar} icon id={styles.menuBtn} aria-label="Open Side Menu">
             <Icon name="bars" />
           </Button>
         </div>

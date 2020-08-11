@@ -22,7 +22,7 @@ export const Sidebar = props => {
           <h3 className={styles.sidebarTitle}>Pages</h3>
           {MG_NAV_PAGES.map((navItem, index) => {
             return (
-              <Link href={navItem.pathname}>
+              <Link href={navItem.pathname} key={navItem.text}>
                 <div
                   className={
                     router.pathname === navItem.pathname
@@ -59,6 +59,7 @@ export const Sidebar = props => {
                 style={
                   index === MG_SOCIAL_MEDIA.length - 1 ? { borderBottom: '1px solid #eee' } : {}
                 }
+                key={socialItem.text}
               >
                 <Icon name={socialItem.icon} />
                 <span className={styles.sidebarMenuItemText}>{socialItem.text}</span>

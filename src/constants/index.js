@@ -37,11 +37,7 @@ export const MG_SOCIAL_MEDIA = [
     text: 'Twitter',
     href: 'https://www.twitter.com/michaelgee7'
   },
-  {
-    icon: 'instagram',
-    text: 'Instagram',
-    href: 'https://www.instagram.com/michaelgee7'
-  },
+
   {
     icon: 'linkedin',
     text: 'LinkedIn',
