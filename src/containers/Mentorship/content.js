@@ -54,12 +54,12 @@ export const faq = [
   {
     question: 'How do you take payment?',
     answer:
-      'I take one-time payments from a payment page that I will provide you at the time of our session.'
+      'I take one-time payments through Paypal invoices sent to your email before the session begins.'
   },
   {
     question: 'Are payment methods secure?',
     answer:
-      'Yes. All transactions are through Paypal to give you the piece of mind knowing that your information is secure.'
+      'Yes. All transactions are through Paypal to give you peace of mind knowing that your information is secure.'
   },
   {
     question: 'Are there refunds?',
