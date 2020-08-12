@@ -7,12 +7,15 @@ export const Intro = () => {
     <section>
       <h2 className="page-title">About Me</h2>
       <p id={styles.intro}>
-        <strong>Hello! I'm Michael Gee.</strong> I am a passionate, energetic, and self-motivated
-        full-stack software developer eager to turn ideas into applications. My ambitions are to
-        stay on the leading edge of the web development industry which include utilizing serverless
-        technologies, building elegant user interfaces/experiences, and eventually incorporating
-        artificial intelligence in the software I build. I always look to find new learning
-        opportunities or projects to rapidly keep improving as a developer.
+        <strong>
+          <em>Hello! I'm Michael Gee.</em>
+        </strong>{' '}
+        I am a passionate, energetic, and self-motivated full-stack software developer eager to turn
+        ideas into applications. My ambitions are to stay on the leading edge of the web development
+        industry which include utilizing serverless technologies, building elegant user
+        interfaces/experiences, and eventually incorporating artificial intelligence in the software
+        I build. I always look to find new learning opportunities or projects to rapidly keep
+        improving as a developer.
       </p>
 
       <div id={styles.services}>

@@ -36,7 +36,7 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #50a3a2;
+  background-color: var(--mg-primary);
   border-radius: 8px;
 }
 .project:hover .overlay {
@@ -68,14 +68,14 @@
   background: linear-gradient(to bottom right,#4A90E2 0%,#7DDEE7 100%);
 }
 #mgCom{
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left,#50a3a2 0%,#78cc6d 100%);
-  background: linear-gradient(to bottom right,#50a3a2 0%,#78cc6d 100%);
+  background: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #004e92, #000428);
+  background: linear-gradient(to bottom right, #004e92, #000428);
 }
 #mgSandbox {
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left,#78cc6d 0%,#50a3a2 100%);
-  background: linear-gradient(to bottom right,#78cc6d 0%,#50a3a2 100%);
+  background: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #000428, #004e92);
+  background: linear-gradient(to bottom right, #000428, #004e92);
 }
 #mgCom img, #mgSandbox img {
   width: 100px;

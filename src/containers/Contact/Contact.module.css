@@ -32,7 +32,8 @@
 }
 
 #submitBtn {
-  background-color: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #004e92 40%, #000428);
+  background: linear-gradient(to bottom right, #004e92 40%, #000428);
   color: white;
   min-width: 200px;
   max-width: 250px;
