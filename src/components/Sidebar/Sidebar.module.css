@@ -1,6 +1,5 @@
 #sidebarContainer {
   position: relative;
-  height: calc(100vh - 72px);
   overflow-y: auto;
   margin-top: 72px;
   padding: 0 16px;

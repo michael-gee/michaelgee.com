@@ -66,7 +66,7 @@ export const Mentorship = () => {
                   </Button>
                 </Link>
               </li>
-              <Divider horizontal style={{ maxWidth: 400, margin: '0px auto', color: '#78cc6d' }}>
+              <Divider horizontal style={{ maxWidth: 400, margin: '0px auto', color: '#004e92' }}>
                 Or
               </Divider>
               <li>

@@ -103,7 +103,8 @@
 }
 
 #introductionBtn {
-  background-color: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #004e92 40%, #000428);
+  background: linear-gradient(to bottom right, #004e92 40%, #000428);
   color: #fff;
   margin-bottom: 24px;
   transition: .3s;
@@ -154,7 +155,8 @@
   display: flex;
   align-items: center;
   max-width: 500px;
-  background-color: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #004e92 30%, #000428);
+  background: linear-gradient(to bottom right, #004e92 30%, #000428);
   color: white;
   margin: 0 auto;
   margin-bottom: 24px;
