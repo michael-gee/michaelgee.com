@@ -53,6 +53,10 @@
   font-size: 1.4em;
 }
 
+#iconLink a {
+color: var(--mg-primary);
+}
+
 @media screen and (max-width: 650px) {
   #techStack article {
     flex-direction: column;

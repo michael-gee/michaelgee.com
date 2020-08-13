@@ -1,7 +1,9 @@
 import Head from 'next/head'
-import { Button } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
+import { ProjectItem } from './ProjectItem'
+
+import { currentProjects, previousProjects } from './content'
 
 import styles from './Projects.module.css'
 
@@ -25,10 +27,23 @@ export const Projects = () => {
           <div className="page-content">
             <section>
               <h2 className="page-title">Current Projects</h2>
-
               <div className={styles.projectContainer}>
+                {currentProjects.map(cp => {
+                  return (
+                    <ProjectItem
+                      id={cp.id}
+                      dates={cp.dates}
+                      imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
+                      title={cp.title}
+                      description={cp.description}
+                      externalLinks={cp.externalLinks}
+                      key={cp.id}
+                    />
+                  )
+                })}
+
                 {/* CoreView */}
-                <div id={styles.coreView} className={styles.project}>
+                {/* <div id={styles.coreView} className={styles.project}>
                   <img src="/images/projects/coreview.png" alt="CoreView company logo" />
                   <div className={styles.overlay}>
                     <p>
@@ -46,10 +61,10 @@ export const Projects = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* michaelgee.com */}
-                <div id={styles.mgCom} className={styles.project}>
+                {/* <div id={styles.mgCom} className={styles.project}>
                   <img src="/images/mg-logo.png" alt="michaelgee.com website logo" />
                   <h4>michaelgee.com</h4>
 
@@ -70,10 +85,10 @@ export const Projects = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* MG Sandbox */}
-                <div id={styles.mgSandbox} className={styles.project}>
+                {/* <div id={styles.mgSandbox} className={styles.project}>
                   <img src="/images/mg-logo.png" alt="MG Sandbox project logo" />
                   <h4>MG Sandbox</h4>
 
@@ -91,7 +106,7 @@ export const Projects = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
 
@@ -99,8 +114,22 @@ export const Projects = () => {
               <h2 className="page-title">Past Projects</h2>
 
               <div className={styles.projectContainer}>
+                {previousProjects.map(cp => {
+                  return (
+                    <ProjectItem
+                      id={cp.id}
+                      dates={cp.dates}
+                      imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
+                      title={cp.title}
+                      description={cp.description}
+                      externalLinks={cp.externalLinks}
+                      key={cp.id}
+                    />
+                  )
+                })}
+
                 {/* CEGMAG Solutions */}
-                <div id={styles.cegmag} className={styles.project}>
+                {/* <div id={styles.cegmag} className={styles.project}>
                   <img src="/images/projects/cegmag.png" alt="CEGMAG Solutions Inc. company logo" />
                   <div className={styles.overlay}>
                     <p>
@@ -108,7 +137,7 @@ export const Projects = () => {
                       scrath with various technologies.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>

@@ -30,6 +30,7 @@ export const Profile = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${item.text} Profile Link`}
               className={styles.socialIcon}
               key={item.icon}
             >
