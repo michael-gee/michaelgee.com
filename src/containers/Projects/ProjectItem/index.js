@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Button, Icon, Popup } from 'semantic-ui-react'
 
 import styles from './ProjectItem.module.css'
 
@@ -18,7 +18,28 @@ export const ProjectItem = props => {
         <div className={styles.projectSubtext}>{props.dates}</div>
       </Card.Meta>
 
-      <Card.Content extra>Extra</Card.Content>
+      <Card.Content style={{ padding: 8 }} extra>
+        <div className={styles.projectIconsContainer}>
+          <div>
+            <Button icon size="big" className={styles.projectIcon}>
+              <Icon name="linkify" />
+            </Button>
+            <Button icon size="big" className={styles.projectIcon}>
+              <Icon name="github" />
+            </Button>
+          </div>
+
+          <Popup
+            content="Testing"
+            on="click"
+            trigger={
+              <Button icon size="big" className={styles.projectIcon}>
+                <Icon name="info circle" />
+              </Button>
+            }
+          ></Popup>
+        </div>
+      </Card.Content>
     </Card>
   )
 }
