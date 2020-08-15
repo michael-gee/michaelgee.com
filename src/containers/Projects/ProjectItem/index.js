@@ -21,23 +21,58 @@ export const ProjectItem = props => {
       <Card.Content style={{ padding: 8 }} extra>
         <div className={styles.projectIconsContainer}>
           <div>
-            <Button icon size="big" className={styles.projectIcon}>
-              <Icon name="linkify" />
+            <Button
+              icon
+              size="big"
+              as="a"
+              href={props.externalLinks.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              disabled={!props.externalLinks.site}
+              className={styles.projectIcon}
+              title="Website Link"
+              aria-label={`${props.title} Website Link`}
+            >
+              <Icon name="linkify" style={!props.externalLinks.site ? { color: '#B5B5B5' } : {}} />
             </Button>
-            <Button icon size="big" className={styles.projectIcon}>
-              <Icon name="github" />
+
+            <Button
+              icon
+              size="big"
+              as="a"
+              href={props.externalLinks.sourceCode}
+              target="_blank"
+              rel="noopener noreferrer"
+              disabled={!props.externalLinks.sourceCode}
+              className={styles.projectIcon}
+              title="Source Code"
+              aria-label={`${props.title} Source Code`}
+            >
+              <Icon
+                name="github"
+                style={!props.externalLinks.sourceCode ? { color: '#B5B5B5' } : {}}
+              />
             </Button>
           </div>
 
           <Popup
-            content="Testing"
             on="click"
             trigger={
-              <Button icon size="big" className={styles.projectIcon}>
+              <Button
+                icon
+                size="big"
+                className={styles.projectIcon}
+                title="Description"
+                aria-label={`${props.title} Description`}
+              >
                 <Icon name="info circle" />
               </Button>
             }
-          ></Popup>
+            position="top right"
+            size="small"
+          >
+            <p id={styles.projectDesc}>{props.description}</p>
+          </Popup>
         </div>
       </Card.Content>
     </Card>

@@ -41,72 +41,6 @@ export const Projects = () => {
                     />
                   )
                 })}
-
-                {/* CoreView */}
-                {/* <div id={styles.coreView} className={styles.project}>
-                  <img src="/images/projects/coreview.png" alt="CoreView company logo" />
-                  <div className={styles.overlay}>
-                    <p>
-                      Actively developing CoreFlow, the workflow automation engine for CoreView.
-                    </p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="linkify"
-                        size="massive"
-                        as="a"
-                        href="https://www.coreview.com/coreflow/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
-                  </div>
-                </div> */}
-
-                {/* michaelgee.com */}
-                {/* <div id={styles.mgCom} className={styles.project}>
-                  <img src="/images/mg-logo.png" alt="michaelgee.com website logo" />
-                  <h4>michaelgee.com</h4>
-
-                  <div className={styles.overlay}>
-                    <p>
-                      Continuously maintaining and improving this site as well as generating new
-                      ideas and content.
-                    </p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="code"
-                        size="massive"
-                        as="a"
-                        href="https://github.com/michaelgee22/michaelgee.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
-                  </div>
-                </div> */}
-
-                {/* MG Sandbox */}
-                {/* <div id={styles.mgSandbox} className={styles.project}>
-                  <img src="/images/mg-logo.png" alt="MG Sandbox project logo" />
-                  <h4>MG Sandbox</h4>
-
-                  <div className={styles.overlay}>
-                    <p>Sandbox project where I learn and build new things.</p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="code"
-                        size="massive"
-                        as="a"
-                        href="https://github.com/michaelgee22/mg-sandbox"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </section>
 
@@ -127,17 +61,6 @@ export const Projects = () => {
                     />
                   )
                 })}
-
-                {/* CEGMAG Solutions */}
-                {/* <div id={styles.cegmag} className={styles.project}>
-                  <img src="/images/projects/cegmag.png" alt="CEGMAG Solutions Inc. company logo" />
-                  <div className={styles.overlay}>
-                    <p>
-                      Built and maintained websites for clients using Wordpress CMS or building from
-                      scrath with various technologies.
-                    </p>
-                  </div>
-                </div> */}
               </div>
             </section>
           </div>

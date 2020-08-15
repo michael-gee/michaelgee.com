@@ -25,7 +25,10 @@ export const currentProjects = [
     title: 'MG Sandbox',
     dates: 'May 2020 - Present',
     description: 'Sandbox project where I build and learn new things.',
-    externalLinks: { sourceCode: 'https://github.com/michaelgee22/mg-sandbox' }
+    externalLinks: {
+      site: 'https://mg-sandbox.com',
+      sourceCode: 'https://github.com/michaelgee22/mg-sandbox'
+    }
   }
 ]
 

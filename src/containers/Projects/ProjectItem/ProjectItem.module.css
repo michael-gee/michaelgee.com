@@ -48,6 +48,10 @@
   color: white !important;
 }
 
+#projectDesc {
+  text-align: center;
+}
+
 #coreView {
   background-color: #4A90E2;
   background: -webkit-linear-gradient(top left,#4A90E2 0%,#7DDEE7 100%);
