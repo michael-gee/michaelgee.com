@@ -1,7 +1,9 @@
 import Head from 'next/head'
-import { Button } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
+import { ProjectItem } from './ProjectItem'
+
+import { currentProjects, previousProjects } from './content'
 
 import styles from './Projects.module.css'
 
@@ -25,73 +27,20 @@ export const Projects = () => {
           <div className="page-content">
             <section>
               <h2 className="page-title">Current Projects</h2>
-
               <div className={styles.projectContainer}>
-                {/* CoreView */}
-                <div id={styles.coreView} className={styles.project}>
-                  <img src="/images/projects/coreview.png" alt="CoreView company logo" />
-                  <div className={styles.overlay}>
-                    <p>
-                      Actively developing CoreFlow, the workflow automation engine for CoreView.
-                    </p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="linkify"
-                        size="massive"
-                        as="a"
-                        href="https://www.coreview.com/coreflow/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* michaelgee.com */}
-                <div id={styles.mgCom} className={styles.project}>
-                  <img src="/images/mg-logo.png" alt="michaelgee.com website logo" />
-                  <h4>michaelgee.com</h4>
-
-                  <div className={styles.overlay}>
-                    <p>
-                      Continuously maintaining and improving this site as well as generating new
-                      ideas and content.
-                    </p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="code"
-                        size="massive"
-                        as="a"
-                        href="https://github.com/michaelgee22/michaelgee.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* MG Sandbox */}
-                <div id={styles.mgSandbox} className={styles.project}>
-                  <img src="/images/mg-logo.png" alt="MG Sandbox project logo" />
-                  <h4>MG Sandbox</h4>
-
-                  <div className={styles.overlay}>
-                    <p>Sandbox project where I learn and build new things.</p>
-
-                    <div className={styles.overlayIcons}>
-                      <Button
-                        icon="code"
-                        size="massive"
-                        as="a"
-                        href="https://github.com/michaelgee22/mg-sandbox"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-                    </div>
-                  </div>
-                </div>
+                {currentProjects.map(cp => {
+                  return (
+                    <ProjectItem
+                      id={cp.id}
+                      dates={cp.dates}
+                      imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
+                      title={cp.title}
+                      description={cp.description}
+                      externalLinks={cp.externalLinks}
+                      key={cp.id}
+                    />
+                  )
+                })}
               </div>
             </section>
 
@@ -99,16 +48,19 @@ export const Projects = () => {
               <h2 className="page-title">Past Projects</h2>
 
               <div className={styles.projectContainer}>
-                {/* CEGMAG Solutions */}
-                <div id={styles.cegmag} className={styles.project}>
-                  <img src="/images/projects/cegmag.png" alt="CEGMAG Solutions Inc. company logo" />
-                  <div className={styles.overlay}>
-                    <p>
-                      Built and maintained websites for clients using Wordpress CMS or building from
-                      scrath with various technologies.
-                    </p>
-                  </div>
-                </div>
+                {previousProjects.map(cp => {
+                  return (
+                    <ProjectItem
+                      id={cp.id}
+                      dates={cp.dates}
+                      imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
+                      title={cp.title}
+                      description={cp.description}
+                      externalLinks={cp.externalLinks}
+                      key={cp.id}
+                    />
+                  )
+                })}
               </div>
             </section>
           </div>

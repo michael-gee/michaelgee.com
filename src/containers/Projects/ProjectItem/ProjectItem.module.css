@@ -1,0 +1,82 @@
+.project {
+  width: 30% !important;
+  min-width: 200px !important;
+  margin: 16px 1.5% !important;
+}
+
+.projectHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 164px;
+}
+
+.projectImg {
+  max-width: 200px;
+}
+
+.projectTitle {
+  font-size: 1.2em;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--mg-primary);
+  padding: 16px 0 8px 8px;
+}
+
+.projectSubtext {
+  padding-left: 8px;
+  padding-bottom: 8px;
+  font-size: .8em;
+}
+
+.projectIconsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectIcon {
+  background-color: transparent !important;
+  color: var(--mg-primary) !important;
+  padding: 8px !important;
+  transition: .3s !important;
+}
+
+.projectIcon:hover {
+  background-color: var(--mg-primary) !important;
+  color: white !important;
+}
+
+#projectDesc {
+  text-align: center;
+}
+
+#coreView {
+  background-color: #4A90E2;
+  background: -webkit-linear-gradient(top left,#4A90E2 0%,#7DDEE7 100%);
+  background: linear-gradient(to bottom right,#4A90E2 0%,#7DDEE7 100%);
+}
+#mgCom{
+  background: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #004e92, #000428);
+  background: linear-gradient(to bottom right, #004e92, #000428);
+}
+#mgSandbox {
+  background: var(--mg-primary);
+  background: -webkit-linear-gradient(to bottom right, #000428, #004e92);
+  background: linear-gradient(to bottom right, #000428, #004e92);
+}
+#mgCom img, #mgSandbox img {
+  width: 100px;
+  height: 100px;
+}
+#mgCom h4, #mgSandbox h4 {
+  margin-top: 8px;
+}
+
+#cegmag {
+  background: #FC1D14;
+  background: -webkit-linear-gradient(top left,#FC1D14 0%,#000 100%);
+  background: linear-gradient(to bottom right,#FC1D14 0%,#000 100%);
+}
