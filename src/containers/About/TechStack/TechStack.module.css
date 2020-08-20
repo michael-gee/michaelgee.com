@@ -63,12 +63,6 @@ color: var(--mg-primary);
 }
 
 @media screen and (max-width: 768px) {
-  #serverTech {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 650px) {
   #techStack article {
     flex-direction: column;
     padding: 0;
@@ -76,6 +70,10 @@ color: var(--mg-primary);
 
   #techStack h3 {
     text-align: center;
+  }
+
+  #serverTech {
+    flex-direction: column;
   }
 
   .tech {
