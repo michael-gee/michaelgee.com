@@ -33,7 +33,8 @@ export const Sidebar = props => {
                     index === MG_NAV_PAGES.length - 1 ? { borderBottom: '1px solid #eee' } : {}
                   }
                 >
-                  {navItem.text}
+                  <Icon name={navItem.icon} />
+                  <span className={styles.sidebarMenuItemText}>{navItem.text}</span>
                 </div>
               </Link>
             )

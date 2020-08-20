@@ -5,18 +5,23 @@
 #techStack article {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #techStack h3 {
-  min-width: 116px;
   font-size: 1.6em;
   color: var(--mg-primary);
+}
+
+#serverTech {
+  display: flex;
+  justify-content: space-around;
 }
 
 .tech {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: 32px;
+  margin-left: 16px;
 }
 .tech i {
   margin: 16px;
@@ -55,6 +60,12 @@
 
 #iconLink a {
 color: var(--mg-primary);
+}
+
+@media screen and (max-width: 768px) {
+  #serverTech {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 650px) {

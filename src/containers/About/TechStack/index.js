@@ -18,22 +18,26 @@ export const TechStack = () => {
               <Icon name="react" size="huge" style={{ color: '#00D8FF' }} />
             </div>
           </article>
-          <article>
-            <h3>Back-End</h3>
 
-            <div className={styles.tech}>
-              <Icon name="node" size="huge" style={{ color: '#82C106', marginRight: 36 }} />
-              <img src="/icons/csharp.png" alt="" />
-            </div>
-          </article>
-          <article>
-            <h3>Cloud</h3>
+          <div id={styles.serverTech}>
+            <article>
+              <h3>Back-End</h3>
 
-            <div className={styles.tech}>
-              <Icon name="amazon" size="huge" style={{ color: '#F19227' }} />
-              <Icon name="microsoft" size="huge" style={{ color: '#00A9E9' }} />
-            </div>
-          </article>
+              <div className={styles.tech}>
+                <Icon name="node" size="huge" style={{ color: '#82C106', marginRight: 36 }} />
+                <img src="/icons/csharp.png" alt="" />
+              </div>
+            </article>
+
+            <article>
+              <h3>Cloud</h3>
+
+              <div className={styles.tech}>
+                <Icon name="amazon" size="huge" style={{ color: '#F19227' }} />
+                <Icon name="microsoft" size="huge" style={{ color: '#00A9E9' }} />
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 

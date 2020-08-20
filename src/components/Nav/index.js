@@ -41,18 +41,20 @@ export const Nav = () => {
         </div>
 
         <div id={styles.mobileNav}>
-          <div id={styles.mobileNavContent}>
-            <Image
-              src="/images/mg-transparent-logo.png"
-              alt="Michael Gee logo image"
-              id={styles.mobileImg}
-            />
+          <Link href="/">
+            <div id={styles.mobileNavContent}>
+              <Image
+                src="/images/mg-transparent-logo.png"
+                alt="Michael Gee logo image"
+                id={styles.mobileImg}
+              />
 
-            <div>
-              <h1 id={styles.mobileTitle}>Michael Gee</h1>
-              <h2 id={styles.mobileSubtitle}>Software Developer</h2>
+              <div>
+                <h1 id={styles.mobileTitle}>Michael Gee</h1>
+                <h2 id={styles.mobileSubtitle}>Software Developer</h2>
+              </div>
             </div>
-          </div>
+          </Link>
 
           <Button onClick={_toggleSidebar} icon id={styles.menuBtn} aria-label="Open Side Menu">
             <Icon name="bars" />
