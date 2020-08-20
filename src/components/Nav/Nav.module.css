@@ -75,6 +75,7 @@
   height: 64px;
   font-size: 1.8em;
   padding: 0;
+  margin-left: auto;
 }
 
 
@@ -109,7 +110,8 @@
   }
 
   #mobileNavContent {
-    margin-right: auto;
+    /* margin-right: auto; */
+    cursor: pointer;
   }
 }
 

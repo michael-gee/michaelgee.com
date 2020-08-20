@@ -4,16 +4,16 @@ export const MG_NAV_PAGES = [
     text: 'About',
     pathname: '/'
   },
-  {
-    icon: 'code',
-    text: 'Projects',
-    pathname: '/projects'
-  },
   // {
   //   icon: 'book',
   //   text: 'Blog',
   //   pathname: '/blog'
   // },
+  {
+    icon: 'code',
+    text: 'Projects',
+    pathname: '/projects'
+  },
   {
     icon: 'university',
     text: 'Mentorship',
