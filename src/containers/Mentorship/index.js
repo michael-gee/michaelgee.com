@@ -132,11 +132,14 @@ export const Mentorship = () => {
               <h4>
                 Premium Tier <Icon name="star" id={styles.premiumStar} />
               </h4>
-              <Statistic horizontal>
+              <p>{pricing.premium}</p>
+              <Statistic
+                horizontal
+                style={{ display: 'flex', justifyContent: 'center', margin: 0 }}
+              >
                 <Statistic.Value>$20</Statistic.Value>
                 <Statistic.Label>per 30 minutes</Statistic.Label>
               </Statistic>
-              <p>{pricing.premium}</p>
             </div>
           </section>
 

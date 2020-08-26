@@ -146,12 +146,11 @@
 /* Pricing section */
 #pricing {
   max-width: 700px;
-  margin: 24px auto 8px auto;
+  margin: 16px auto;
   font-size: 1.8em;
   line-height: 1.4;
-  text-align: center;
 }
-#pricing p:first-of-type {
+#pricing p {
   margin: 16px 0 24px 0;
 }
 #premiumStar {
