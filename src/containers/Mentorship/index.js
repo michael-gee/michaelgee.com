@@ -5,7 +5,7 @@ import { Nav } from '../../components/Nav'
 
 import { useState } from 'react'
 
-import { benefits, howItWorks, faq } from './content'
+import { benefits, howItWorks, faq, pricing } from './content'
 
 import styles from './Mentorship.module.css'
 
@@ -124,10 +124,19 @@ export const Mentorship = () => {
             <h2 className={styles.subTitle}>Pricing</h2>
 
             <div id={styles.pricing}>
+              <h4>Free Tier</h4>
+              <p>{pricing.free}</p>
+
+              <hr size="20" />
+
+              <h4>
+                Premium Tier <Icon name="star" id={styles.premiumStar} />
+              </h4>
               <Statistic horizontal>
                 <Statistic.Value>$20</Statistic.Value>
                 <Statistic.Label>per 30 minutes</Statistic.Label>
               </Statistic>
+              <p>{pricing.premium}</p>
             </div>
           </section>
 

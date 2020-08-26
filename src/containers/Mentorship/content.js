@@ -44,6 +44,13 @@ export const howItWorks = {
     'Mentorship does not end immediately after our sessions. I am always available to stay connected and answer any questions you may have after.'
 }
 
+export const pricing = {
+  free:
+    'I am available to answer your questions when I can spare some free time! Reach out to me through the Contact page or my social media links and I will get back to you as soon as I can.',
+  premium:
+    'With premium you can expect more in depth and immediate responses. In video calls I can answer any questions in real time, provide feedback, code reviews, project assignments or ideas, career recommendations, and much more!'
+}
+
 export const faq = [
   {
     question: 'What communcation platform do you use?',
