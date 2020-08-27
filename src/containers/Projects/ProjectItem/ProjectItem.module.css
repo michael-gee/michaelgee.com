@@ -80,3 +80,11 @@
   background: -webkit-linear-gradient(top left,#FC1D14 0%,#000 100%);
   background: linear-gradient(to bottom right,#FC1D14 0%,#000 100%);
 }
+
+
+@media screen and (max-width: 650px)  {
+  .project {
+    width: 80% !important;
+    margin: 16px 0 !important;
+  }
+}

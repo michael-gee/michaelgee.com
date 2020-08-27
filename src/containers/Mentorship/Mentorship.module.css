@@ -147,6 +147,7 @@
 #pricing {
   max-width: 700px;
   margin: 16px auto;
+  padding: 0 24px;
   font-size: 1.8em;
   line-height: 1.4;
 }
