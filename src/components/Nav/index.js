@@ -12,12 +12,13 @@ import styles from './Nav.module.css'
 export const Nav = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const router = useRouter()
+  const isRaised = router.pathname.includes('/mentorship') || router.pathname.includes('/blog')
 
   return (
     <header
       id={styles.header}
       style={
-        router.pathname === '/mentorship'
+        isRaised
           ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%', paddingTop: 8 }
           : {}
       }

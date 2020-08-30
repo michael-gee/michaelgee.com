@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 
-export const Blog = () => {
+export const Blog = props => {
+  console.log(props)
+
   return (
     <>
       <Head>
@@ -16,12 +17,27 @@ export const Blog = () => {
       <main id="page">
         <Nav />
 
-        <Profile />
-
         <div className="page-body">
           <h1>Blog</h1>
         </div>
       </main>
     </>
   )
+}
+
+export async function getStaticProps(context) {
+  const res = await fetch('https://dev.to/api/articles/me', {
+    method: 'GET',
+    headers: { 'api-key': '7Xv4TtxJ1oPizeWxx1PC4L11' }
+  })
+  const data = await res.json()
+
+  console.log(res)
+  console.log(data)
+
+  return {
+    props: {
+      data
+    } // will be passed to the page component as props
+  }
 }
