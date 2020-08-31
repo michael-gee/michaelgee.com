@@ -1,8 +1,8 @@
 #container {
   width: 100%;
-  max-height: calc(94% - 16px);
+  max-height: calc(100% - 48px);
   max-width: 960px;
-  margin: 8px 16px 8px 8px;
+  margin: 24px 16px 24px 12px;
   border-radius: 4px;
   background-color: #fafafb;
   overflow-y: auto;

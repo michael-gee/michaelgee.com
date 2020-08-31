@@ -11,7 +11,6 @@ Continuously improving this along with my [MG Sandbox](https://github.com/michae
 Feedback is always welcome in any form whether it is positive or negative. Please feel free to open an issue, create a pull request, or even contact me directly if you find any issues or ways you think the project can be improved.
 
 ## Social
-Always looking to connect with software (currently web) developers so follow my socials if interested!
-[Dev.to](https://dev.to/michaelgee22)
-[Twitter](https://www.twitter.com/michaelgee7)
+Always looking to connect with software (currently web) developers so follow my socials if interested!<br/>
+[DEV](https://dev.to/michaelgee22) • [Twitter](https://twitter.com/michaelgee7) • [LinkedIn](https://www.linkedin.com/in/michael-gee)
 

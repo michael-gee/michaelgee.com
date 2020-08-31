@@ -45,3 +45,11 @@
 .sidebarMenuItemText {
   padding-left: 8px;
 }
+
+#blogPostsContainer {
+  font-size: 1.6em;
+}
+#blogPostsContainer li {
+  padding: 4px 0;
+  line-height: 1.4;
+}

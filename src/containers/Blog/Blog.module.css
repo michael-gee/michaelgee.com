@@ -1,0 +1,25 @@
+#container {
+  width: 100%;
+  max-height: calc(100% - 48px);
+  max-width: 960px;
+  margin: 24px 16px 24px 12px;
+  border-radius: 4px;
+  background-color: #F6F5F7;
+  overflow-y: auto;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 24px 28px;
+}
+
+@media screen and (max-width: 650px)  {
+  #container {
+    max-width: calc(100% - 48px);
+    margin: 16px 24px;
+    margin-top: 88px;
+  }
+}
