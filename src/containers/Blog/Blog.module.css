@@ -1,0 +1,9 @@
+#container {
+  width: 100%;
+  max-height: calc(100% - 48px);
+  max-width: 960px;
+  margin: 24px 16px 24px 12px;
+  border-radius: 4px;
+  background-color: #F6F5F7;
+  overflow-y: auto;
+}

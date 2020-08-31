@@ -19,7 +19,7 @@ export const Nav = () => {
       id={styles.header}
       style={
         isRaised
-          ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%', paddingTop: 8 }
+          ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%', paddingTop: 24 }
           : {}
       }
     >
