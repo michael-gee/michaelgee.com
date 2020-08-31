@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
-
 import { Image, Icon } from 'semantic-ui-react'
 
 import styles from './PostItem.module.css'
 
 export const PostItem = props => {
   return (
-    <div className={styles.itemContainer}>
+    <a href={props.url} target="_blank" rel="noopener noreferrer" className={styles.itemContainer}>
       <Image src={props.image} size="medium" />
 
       <div className={styles.itemContent}>
@@ -33,7 +32,7 @@ export const PostItem = props => {
 
         <p>{props.description}</p>
       </div>
-    </div>
+    </a>
   )
 
   function _formatDate() {

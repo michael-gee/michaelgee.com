@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { Button, Icon, Sidebar as SUISidebar } from 'semantic-ui-react'
 
 import { MG_NAV_PAGES, MG_SOCIAL_MEDIA } from '../../constants'
+import { blogPosts } from './content'
 
 import styles from './Sidebar.module.css'
 
@@ -43,9 +44,17 @@ export const Sidebar = props => {
 
         <section className={styles.sidebarSection}>
           <h3 className={styles.sidebarTitle}>Recent Blog Posts</h3>
-          <p style={{ textAlign: 'center', fontSize: '1.8em', margin: '8px 0' }}>
-            New blog posts coming soon.
-          </p>
+          <ul id={styles.blogPostsContainer}>
+            {blogPosts.map((blogPost, index) => {
+              return (
+                <li key={`blog-post=${index}`}>
+                  <a href={blogPost.url} target="_blank" rel="noopener noreferrer">
+                    {blogPost.title}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
         </section>
 
         <section className={styles.sidebarSection}>

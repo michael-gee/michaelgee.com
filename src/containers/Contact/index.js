@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
 import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
