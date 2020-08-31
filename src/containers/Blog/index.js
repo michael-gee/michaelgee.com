@@ -20,9 +20,17 @@ export const Blog = props => {
         <Nav />
 
         <div id={styles.container}>
-          <h2 className="page-title" style={{ backgroundColor: '#fff' }}>
-            Blog Posts
-          </h2>
+          <div id={styles.title} className="page-title">
+            <span>Blog Posts</span>
+            <a href="https://dev.to/michaelgee22" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+                alt="Michael Gee's DEV Profile"
+                height="30"
+                width="30"
+              />
+            </a>
+          </div>
 
           <div id={styles.postsContainer}>
             {props.data.map(item => {
