@@ -5,7 +5,7 @@ export const MG_NAV_PAGES = [
     pathname: '/'
   },
   {
-    icon: 'book',
+    icon: 'newspaper outline',
     text: 'Blog',
     pathname: '/blog'
   },

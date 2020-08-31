@@ -2,7 +2,7 @@
   display: flex;
   background-color: #fff;
   padding: 16px;
-  margin: 24px;
+  margin: 16px 24px;
   box-shadow: 0 3px 10px rgba(25, 17, 34, .05);
   border-radius: 4px;
   transition: .3s;
@@ -24,9 +24,19 @@
 }
 
 .itemMeta {
+  display: flex;
+  align-items: center;
+  color: #BEBEBE;
   margin: 8px 0;
 }
 
 .itemDate {
-  color: #BEBEBE;
+  margin-right: 16px;
+}
+
+.itemIcons span {
+  margin: 0 8px;
+}
+.itemIcons span i {
+  margin-right: 6px;
 }
