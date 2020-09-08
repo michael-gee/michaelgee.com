@@ -14,4 +14,6 @@ export async function getStaticProps(context) {
   }
 }
 
-export default props => <Blog data={props.data} />
+const BlogContainer = props => <Blog data={props.data} />
+
+export default BlogContainer

@@ -3,18 +3,12 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "next": "^9.4.4",
+    "next": "^9.5.3",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^1.0.0"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.9.0",
-    "@testing-library/react": "^10.2.1",
-    "@testing-library/react-hooks": "^3.3.0",
-    "jest": "^25.5.4"
+    "semantic-ui-react": "^1.2.1"
   },
   "scripts": {
     "dev": "next dev",
@@ -24,5 +18,9 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5"
   }
 }
