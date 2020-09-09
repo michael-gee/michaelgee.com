@@ -4,10 +4,9 @@ body {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
   background: #004e92;
-  background: -webkit-linear-gradient(to bottom right, #004e92 10%, #000428);
-  background: linear-gradient(to bottom right, #004e92 10%, #000428);
+  background: -webkit-linear-gradient(to bottom right, #004e92 4%, #000428);
+  background: linear-gradient(to bottom right, #004e92 4%, #000428);
   background-attachment: fixed;
-
   --mg-primary: #004e92;
 }
 
@@ -89,5 +88,105 @@ h6 { font-size: 1.2em; margin: 0; }
     max-width: calc(100% - 48px);
     margin: 0 auto;
     margin-top: 72px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  @-webkit-keyframes backgroundAnimate {
+    from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: -10000px;
+      top: -2000px;
+    }
+  }
+
+  @-moz-keyframes backgroundAnimate {
+    from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: -10000px;
+      top: -2000px;
+    }
+  }
+
+  @-o-keyframes backgroundAnimate {
+    from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: -10000px;
+      top: -2000px;
+    }
+  }
+
+  @keyframes backgroundAnimate {
+    from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: -10000px;
+      top: -2000px;
+    }
+  }
+
+  #bg-back {
+    background: url(http://www.tranexnet.com/img/back.png) repeat 20% 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    z-index: -1;
+    -webkit-animation-name: backgroundAnimate;
+    -webkit-animation-duration: 500s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: backgroundAnimate;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-name: backgroundAnimate;
+    -o-animation-duration: 500s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+    animation-name: backgroundAnimate;
+    animation-duration: 500s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #bg-front {
+    background: url(http://www.tranexnet.com/img/front.png) repeat 35% 35%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    z-index: -1;
+    -webkit-animation-name: backgroundAnimate;
+    -webkit-animation-duration: 300s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: backgroundAnimate;
+    -moz-animation-duration: 300s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-name: backgroundAnimate;
+    -o-animation-duration: 300s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+    animation-name: backgroundAnimate;
+    animation-duration: 300s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 }
