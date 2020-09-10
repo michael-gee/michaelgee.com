@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Button, Icon } from 'semantic-ui-react'
 
+import { motion } from 'framer-motion'
 import styles from './Success.module.css'
 
 export const Success = () => {
@@ -12,7 +13,25 @@ export const Success = () => {
       </Head>
 
       <main id="page">
-        <div id={styles.success}>
+        <motion.div
+          id={styles.success}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.4
+              }
+            }
+          }}
+          exit={{ opacity: 0 }}
+        >
           <h1 id={styles.title}>Thank You!</h1>
 
           <p className={styles.info}>Your submission was sent successfully.</p>
@@ -26,7 +45,7 @@ export const Success = () => {
               <span>Navigate to Homepage</span>
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </main>
     </>
   )

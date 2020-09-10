@@ -5,6 +5,7 @@ import { ProjectItem } from './ProjectItem'
 
 import { currentProjects, previousProjects } from './content'
 
+import { motion } from 'framer-motion'
 import styles from './Projects.module.css'
 
 export const Projects = () => {
@@ -24,7 +25,25 @@ export const Projects = () => {
         <div className="page-body">
           <Profile />
 
-          <div className="page-content">
+          <motion.div
+            className="page-content"
+            initial="hidden"
+            animate="visible"
+            // variants={{
+            //   hidden: {
+            //     scale: 0.8,
+            //     opacity: 0
+            //   },
+            //   visible: {
+            //     scale: 1,
+            //     opacity: 1,
+            //     transition: {
+            //       delay: 0.4
+            //     }
+            //   }
+            // }}
+            exit={{ opacity: 0 }}
+          >
             <section>
               <h2 className="page-title">Current Projects</h2>
               <div className={styles.projectContainer}>
@@ -63,7 +82,7 @@ export const Projects = () => {
                 })}
               </div>
             </section>
-          </div>
+          </motion.div>
         </div>
       </main>
     </>

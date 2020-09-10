@@ -7,6 +7,7 @@ import { useState } from 'react'
 
 import { benefits, howItWorks, faq, pricing } from './content'
 
+import { motion } from 'framer-motion'
 import styles from './Mentorship.module.css'
 
 export const Mentorship = () => {
@@ -25,7 +26,25 @@ export const Mentorship = () => {
       <main id="page">
         <Nav />
 
-        <div id={styles.container}>
+        <motion.div
+          id={styles.container}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.4
+              }
+            }
+          }}
+          exit={{ opacity: 0 }}
+        >
           <Icon name="rocket" size="massive" id={styles.rocketIcon} />
           <h1 id={styles.title}>Accelerate your software development journey</h1>
 
@@ -175,7 +194,7 @@ export const Mentorship = () => {
               })}
             </Accordion>
           </section>
-        </div>
+        </motion.div>
       </main>
     </>
   )

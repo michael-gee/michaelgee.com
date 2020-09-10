@@ -5,6 +5,7 @@ import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
 import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
 
+import { motion } from 'framer-motion'
 import styles from './Contact.module.css'
 
 export const Contact = () => {
@@ -52,7 +53,25 @@ export const Contact = () => {
         <div className="page-body">
           <Profile />
 
-          <div className="page-content">
+          <motion.div
+            className="page-content"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {
+                scale: 0.8,
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: 0.4
+                }
+              }
+            }}
+            exit={{ opacity: 0 }}
+          >
             <section>
               <h2 className="page-title">Get In Touch</h2>
 
@@ -119,7 +138,7 @@ export const Contact = () => {
                 </div>
               </div>
             </section>
-          </div>
+          </motion.div>
         </div>
       </main>
     </>

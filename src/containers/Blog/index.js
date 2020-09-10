@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Nav } from '../../components/Nav'
 import { PostItem } from './PostItem'
 
+import { motion } from 'framer-motion'
 import styles from './Blog.module.css'
 
 export const Blog = props => {
@@ -19,7 +20,25 @@ export const Blog = props => {
       <main id="page" style={{ alignItems: 'flex-start' }}>
         <Nav />
 
-        <div id={styles.container}>
+        <motion.div
+          id={styles.container}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.4
+              }
+            }
+          }}
+          exit={{ opacity: 0 }}
+        >
           <div id={styles.title} className="page-title">
             <span>Blog Posts</span>
             <a href="https://dev.to/michaelgee22" target="_blank" rel="noopener noreferrer">
@@ -51,7 +70,7 @@ export const Blog = props => {
               )
             })}
           </div>
-        </div>
+        </motion.div>
       </main>
     </>
   )

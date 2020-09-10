@@ -5,6 +5,8 @@ import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
 
+import { motion } from 'framer-motion'
+
 export const About = () => {
   return (
     <>
@@ -22,13 +24,31 @@ export const About = () => {
         <div className="page-body">
           <Profile />
 
-          <div className="page-content">
+          <motion.div
+            className="page-content"
+            initial="hidden"
+            animate="visible"
+            // variants={{
+            //   hidden: {
+            //     scale: 0.8,
+            //     opacity: 0
+            //   },
+            //   visible: {
+            //     scale: 1,
+            //     opacity: 1,
+            //     transition: {
+            //       delay: 0.4
+            //     }
+            //   }
+            // }}
+            exit={{ opacity: 0 }}
+          >
             <Intro />
 
             <TechStack />
 
             <Hobbies />
-          </div>
+          </motion.div>
         </div>
       </main>
     </>
