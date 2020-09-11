@@ -22,7 +22,7 @@ export const Blog = props => {
         <div id={styles.container}>
           <div id={styles.title} className="page-title">
             <span>Blog Posts</span>
-            <a href="https://dev.to/michaelgee22" target="_blank" rel="noopener noreferrer">
+            <a href="https://dev.to/michaelgee" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
                 alt="Michael Gee's DEV Profile"
