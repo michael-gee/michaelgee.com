@@ -25,6 +25,8 @@ export const Projects = () => {
         <div className="page-body">
           <Profile />
 
+          {/* @@@@@ https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i&ab_channel=TheNetNinja */}
+
           <motion.div
             className="page-content"
             initial="hidden"
