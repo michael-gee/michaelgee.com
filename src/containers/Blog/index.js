@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
-import { PageContent } from '../../components/PageContent'
 import { PostItem } from './PostItem'
 
 import styles from './Blog.module.css'
@@ -25,7 +24,7 @@ export const Blog = props => {
         <div className="page-body">
           <Profile />
 
-          <PageContent>
+          <div className="page-content">
             <div id={styles.title} className="page-title">
               <span>Blog Posts</span>
               <a href="https://dev.to/michaelgee" target="_blank" rel="noopener noreferrer">
@@ -57,7 +56,7 @@ export const Blog = props => {
                 )
               })}
             </div>
-          </PageContent>
+          </div>
         </div>
       </main>
     </>

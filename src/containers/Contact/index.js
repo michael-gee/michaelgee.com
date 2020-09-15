@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
-import { PageContent } from '../../components/PageContent'
 
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
@@ -54,7 +53,7 @@ export const Contact = () => {
         <div className="page-body">
           <Profile />
 
-          <PageContent>
+          <div className="page-content">
             <section>
               <h2 className="page-title">Get In Touch</h2>
 
@@ -121,7 +120,7 @@ export const Contact = () => {
                 </div>
               </div>
             </section>
-          </PageContent>
+          </div>
         </div>
       </main>
     </>

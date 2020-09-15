@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Accordion, Button, Icon, Divider, Statistic } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
-import { PageContent } from '../../components/PageContent'
 
 import { useState } from 'react'
 
@@ -30,7 +29,7 @@ export const Mentorship = () => {
         <div className="page-body">
           <Profile />
 
-          <PageContent id={styles.container}>
+          <div id={styles.container} className="page-content">
             <Icon name="rocket" size="massive" id={styles.rocketIcon} />
             <h1 id={styles.title}>Accelerate your software development journey</h1>
 
@@ -182,7 +181,7 @@ export const Mentorship = () => {
                 })}
               </Accordion>
             </section>
-          </PageContent>
+          </div>
         </div>
       </main>
     </>

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
-import { PageContent } from '../../components/PageContent'
 import { ProjectItem } from './ProjectItem'
 
 import { currentProjects, previousProjects } from './content'
@@ -25,7 +24,7 @@ export const Projects = () => {
         <div className="page-body">
           <Profile />
 
-          <PageContent>
+          <div className="page-content">
             <section>
               <h2 className="page-title">Current Projects</h2>
               <div className={styles.projectContainer}>
@@ -64,7 +63,7 @@ export const Projects = () => {
                 })}
               </div>
             </section>
-          </PageContent>
+          </div>
         </div>
       </main>
     </>
