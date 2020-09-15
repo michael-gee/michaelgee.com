@@ -7,22 +7,15 @@ import { Sidebar } from '../Sidebar'
 
 import { MG_NAV_PAGES } from '../../constants'
 
+import { motion } from 'framer-motion'
 import styles from './Nav.module.css'
 
 export const Nav = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const router = useRouter()
-  const isRaised = router.pathname.includes('/mentorship') || router.pathname.includes('/blog')
 
   return (
-    <header
-      id={styles.header}
-      style={
-        isRaised
-          ? { display: 'flex', alignItems: 'flex-start', maxHeight: '100%', paddingTop: 24 }
-          : {}
-      }
-    >
+    <header id={styles.header}>
       <nav style={{ width: '100%' }}>
         <div id={styles.nav}>
           {MG_NAV_PAGES.map(btn => (

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
@@ -23,21 +22,18 @@ export const Sidebar = props => {
           <h3 className={styles.sidebarTitle}>Pages</h3>
           {MG_NAV_PAGES.map((navItem, index) => {
             return (
-              <Link href={navItem.pathname} key={navItem.text}>
-                <div
-                  className={
-                    router.pathname === navItem.pathname
-                      ? `${styles.sidebarMenuItem} ${styles.selectedMenuItem}`
-                      : styles.sidebarMenuItem
-                  }
-                  style={
-                    index === MG_NAV_PAGES.length - 1 ? { borderBottom: '1px solid #eee' } : {}
-                  }
-                >
-                  <Icon name={navItem.icon} />
-                  <span className={styles.sidebarMenuItemText}>{navItem.text}</span>
-                </div>
-              </Link>
+              <div
+                onClick={() => _onChangePage(navItem.pathname)}
+                className={
+                  router.pathname === navItem.pathname
+                    ? `${styles.sidebarMenuItem} ${styles.selectedMenuItem}`
+                    : styles.sidebarMenuItem
+                }
+                style={index === MG_NAV_PAGES.length - 1 ? { borderBottom: '1px solid #eee' } : {}}
+              >
+                <Icon name={navItem.icon} />
+                <span className={styles.sidebarMenuItemText}>{navItem.text}</span>
+              </div>
             )
           })}
         </section>
@@ -80,6 +76,11 @@ export const Sidebar = props => {
       </div>
     </SUISidebar>
   )
+
+  function _onChangePage(pathname) {
+    props.onHide()
+    router.push(pathname)
+  }
 }
 
 Sidebar.propTypes = {

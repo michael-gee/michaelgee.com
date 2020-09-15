@@ -25,26 +25,12 @@ export const Projects = () => {
         <div className="page-body">
           <Profile />
 
-          {/* @@@@@ https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i&ab_channel=TheNetNinja */}
-
           <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: 'easeIn', duration: 0.6 }}
+            exit={{ opacity: 0, transition: 0 }}
             className="page-content"
-            initial="hidden"
-            animate="visible"
-            // variants={{
-            //   hidden: {
-            //     scale: 0.8,
-            //     opacity: 0
-            //   },
-            //   visible: {
-            //     scale: 1,
-            //     opacity: 1,
-            //     transition: {
-            //       delay: 0.4
-            //     }
-            //   }
-            // }}
-            exit={{ opacity: 0 }}
           >
             <section>
               <h2 className="page-title">Current Projects</h2>
