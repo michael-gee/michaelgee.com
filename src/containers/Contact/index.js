@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
+import { Nav } from '../../components/Nav'
+import { Profile } from '../../components/Profile'
+import { PageContent } from '../../components/PageContent'
+
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
-import { Profile } from '../../components/Profile'
-import { Nav } from '../../components/Nav'
 
 import styles from './Contact.module.css'
 
@@ -52,7 +54,7 @@ export const Contact = () => {
         <div className="page-body">
           <Profile />
 
-          <div className="page-content">
+          <PageContent>
             <section>
               <h2 className="page-title">Get In Touch</h2>
 
@@ -119,7 +121,7 @@ export const Contact = () => {
                 </div>
               </div>
             </section>
-          </div>
+          </PageContent>
         </div>
       </main>
     </>

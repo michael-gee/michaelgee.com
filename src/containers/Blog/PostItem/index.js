@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+
 import { Image, Icon } from 'semantic-ui-react'
 
 import styles from './PostItem.module.css'

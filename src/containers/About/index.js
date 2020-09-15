@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
+import { Profile } from '../../components/Profile'
+import { PageContent } from '../../components/PageContent'
+
 import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
@@ -22,13 +24,13 @@ export const About = () => {
         <div className="page-body">
           <Profile />
 
-          <div className="page-content">
+          <PageContent>
             <Intro />
 
             <TechStack />
 
             <Hobbies />
-          </div>
+          </PageContent>
         </div>
       </main>
     </>

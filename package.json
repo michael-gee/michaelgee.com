@@ -1,8 +1,9 @@
 {
   "name": "michaelgee.com",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "dependencies": {
+    "framer-motion": "^2.6.10",
     "next": "^9.5.3",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
