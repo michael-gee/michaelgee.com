@@ -79,6 +79,12 @@ export const Sidebar = props => {
   )
 
   function _onChangePage(pathname) {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+
     props.onHide()
     router.push(pathname)
   }
