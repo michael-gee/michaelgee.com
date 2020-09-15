@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types'
+
 import Head from 'next/head'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
 import { PageContent } from '../../components/PageContent'
 import { PostItem } from './PostItem'
-
-import PropTypes from 'prop-types'
 
 import styles from './Blog.module.css'
 
