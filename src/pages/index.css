@@ -103,7 +103,7 @@ h6 { font-size: 1.2em; margin: 0; }
   }
 
   #bg-back {
-    background: url(http://www.tranexnet.com/img/back.png) repeat 20% 20%;
+    background: url(https://www.tranexnet.com/img/back.png) repeat 20% 20%;
     position: fixed;
     top: 0;
     left: 0;
@@ -130,7 +130,7 @@ h6 { font-size: 1.2em; margin: 0; }
   }
 
   #bg-front {
-    background: url(http://www.tranexnet.com/img/front.png) repeat 35% 35%;
+    background: url(https://www.tranexnet.com/img/front.png) repeat 35% 35%;
     position: fixed;
     top: 0;
     left: 0;

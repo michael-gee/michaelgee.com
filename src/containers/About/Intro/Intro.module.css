@@ -39,6 +39,10 @@
   padding: 24px 0;
 }
 
+.service i:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
   #intro {
     padding: 16px;

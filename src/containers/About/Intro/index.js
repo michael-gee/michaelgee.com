@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Icon } from 'semantic-ui-react'
 
 import styles from './Intro.module.css'
@@ -20,7 +21,10 @@ export const Intro = () => {
 
       <div id={styles.services}>
         <div className={styles.service}>
-          <Icon name="code" size="huge" />
+          <Link href="/projects">
+            <Icon name="code" size="huge" />
+          </Link>
+
           <h2>Developer</h2>
           <p>
             I consider myself lucky that I get to wake up and do what I love every day. I see code
@@ -29,7 +33,10 @@ export const Intro = () => {
           </p>
         </div>
         <div className={styles.service}>
-          <Icon name="university" size="huge" />
+          <Link href="/mentorship">
+            <Icon name="university" size="huge" />
+          </Link>
+
           <h2>Mentor</h2>
           <p>
             I have a strong passion for continuous learning and collaborating with others along with
@@ -37,7 +44,10 @@ export const Intro = () => {
           </p>
         </div>
         <div className={styles.service}>
-          <Icon name="write" size="huge" />
+          <Link href="/blog">
+            <Icon name="write" size="huge" />
+          </Link>
+
           <h2>Blogger</h2>
           <p>
             I am in no way a writer but I like to share my past experiences and cool things I have
