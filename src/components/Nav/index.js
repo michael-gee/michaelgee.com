@@ -1,13 +1,12 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-
 import { Button, Icon, Image } from 'semantic-ui-react'
 import { Sidebar } from '../Sidebar'
 
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+
 import { MG_NAV_PAGES } from '../../constants'
 
-import { motion } from 'framer-motion'
 import styles from './Nav.module.css'
 
 export const Nav = () => {

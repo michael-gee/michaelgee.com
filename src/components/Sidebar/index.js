@@ -1,7 +1,8 @@
-import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
 import { Button, Icon, Sidebar as SUISidebar } from 'semantic-ui-react'
+
+import { useRouter } from 'next/router'
 
 import { MG_NAV_PAGES, MG_SOCIAL_MEDIA } from '../../constants'
 import { blogPosts } from './content'

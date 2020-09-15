@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { Accordion, Button, Icon, Divider, Statistic } from 'semantic-ui-react'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
+import { PageContent } from '../../components/PageContent'
 
 import { useState } from 'react'
 
 import { benefits, howItWorks, faq, pricing } from './content'
 
-import { motion } from 'framer-motion'
 import styles from './Mentorship.module.css'
 
 export const Mentorship = () => {
@@ -30,14 +30,7 @@ export const Mentorship = () => {
         <div className="page-body">
           <Profile />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: 'easeIn', duration: 0.6 }}
-            exit={{ opacity: 0, transition: 0 }}
-            id={styles.container}
-            className="page-content"
-          >
+          <PageContent id={styles.container}>
             <Icon name="rocket" size="massive" id={styles.rocketIcon} />
             <h1 id={styles.title}>Accelerate your software development journey</h1>
 
@@ -189,7 +182,7 @@ export const Mentorship = () => {
                 })}
               </Accordion>
             </section>
-          </motion.div>
+          </PageContent>
         </div>
       </main>
     </>

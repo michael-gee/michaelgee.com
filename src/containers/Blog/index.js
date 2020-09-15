@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import PropTypes from 'prop-types'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
+import { PageContent } from '../../components/PageContent'
 import { PostItem } from './PostItem'
 
-import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
+
 import styles from './Blog.module.css'
 
 export const Blog = props => {
@@ -24,13 +25,7 @@ export const Blog = props => {
         <div className="page-body">
           <Profile />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: 'easeIn', duration: 0.6 }}
-            exit={{ opacity: 0, transition: 0 }}
-            className="page-content"
-          >
+          <PageContent>
             <div id={styles.title} className="page-title">
               <span>Blog Posts</span>
               <a href="https://dev.to/michaelgee" target="_blank" rel="noopener noreferrer">
@@ -62,7 +57,7 @@ export const Blog = props => {
                 )
               })}
             </div>
-          </motion.div>
+          </PageContent>
         </div>
       </main>
     </>

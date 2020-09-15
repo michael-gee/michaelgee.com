@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { Nav } from '../../components/Nav'
 import { Profile } from '../../components/Profile'
+import { PageContent } from '../../components/PageContent'
 import { ProjectItem } from './ProjectItem'
 
 import { currentProjects, previousProjects } from './content'
 
-import { motion } from 'framer-motion'
 import styles from './Projects.module.css'
 
 export const Projects = () => {
@@ -25,13 +25,7 @@ export const Projects = () => {
         <div className="page-body">
           <Profile />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: 'easeIn', duration: 0.6 }}
-            exit={{ opacity: 0, transition: 0 }}
-            className="page-content"
-          >
+          <PageContent>
             <section>
               <h2 className="page-title">Current Projects</h2>
               <div className={styles.projectContainer}>
@@ -70,7 +64,7 @@ export const Projects = () => {
                 })}
               </div>
             </section>
-          </motion.div>
+          </PageContent>
         </div>
       </main>
     </>

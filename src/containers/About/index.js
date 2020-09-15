@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import { Profile } from '../../components/Profile'
 import { Nav } from '../../components/Nav'
+import { Profile } from '../../components/Profile'
+import { PageContent } from '../../components/PageContent'
+
 import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
-
-import { motion } from 'framer-motion'
 
 export const About = () => {
   return (
@@ -24,19 +24,13 @@ export const About = () => {
         <div className="page-body">
           <Profile />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: 'easeIn', duration: 0.6 }}
-            exit={{ opacity: 0, transition: 0 }}
-            className="page-content"
-          >
+          <PageContent>
             <Intro />
 
             <TechStack />
 
             <Hobbies />
-          </motion.div>
+          </PageContent>
         </div>
       </main>
     </>
