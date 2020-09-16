@@ -15,7 +15,7 @@ export const Nav = () => {
 
   return (
     <header id={styles.header}>
-      <nav style={{ width: '100%' }}>
+      <nav style={{ width: '100%', height: '100%' }}>
         <div id={styles.nav}>
           {MG_NAV_PAGES.map(btn => (
             <Link href={btn.pathname} key={btn.icon}>
