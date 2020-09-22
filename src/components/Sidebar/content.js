@@ -1,5 +1,9 @@
 export const blogPosts = [
   {
+    title: 'Start Using React.js',
+    url: 'https://dev.to/michaelgee/start-using-react-js-cnn'
+  },
+  {
     title: 'My React.js Library Bookmarks',
     url: 'https://dev.to/michaelgee/my-react-js-library-bookmarks-o6e'
   },
