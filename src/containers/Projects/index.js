@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import { Nav } from '../../components/Nav'
-import { Profile } from '../../components/Profile'
 import { ProjectItem } from './ProjectItem'
 
 import { currentProjects, previousProjects } from './content'
@@ -18,54 +16,46 @@ export const Projects = () => {
         />
       </Head>
 
-      <main id="page">
-        <Nav />
-
-        <div className="page-body">
-          <Profile />
-
-          <div className="page-content">
-            <section>
-              <h2 className="page-title">Current Projects</h2>
-              <div className={styles.projectContainer}>
-                {currentProjects.map(cp => {
-                  return (
-                    <ProjectItem
-                      id={cp.id}
-                      dates={cp.dates}
-                      imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
-                      title={cp.title}
-                      description={cp.description}
-                      externalLinks={cp.externalLinks}
-                      key={cp.id}
-                    />
-                  )
-                })}
-              </div>
-            </section>
-
-            <section>
-              <h2 className="page-title">Past Projects</h2>
-
-              <div className={styles.projectContainer}>
-                {previousProjects.map(cp => {
-                  return (
-                    <ProjectItem
-                      id={cp.id}
-                      dates={cp.dates}
-                      imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
-                      title={cp.title}
-                      description={cp.description}
-                      externalLinks={cp.externalLinks}
-                      key={cp.id}
-                    />
-                  )
-                })}
-              </div>
-            </section>
+      <div className="page-content">
+        <section>
+          <h2 className="page-title">Current Projects</h2>
+          <div className={styles.projectContainer}>
+            {currentProjects.map(cp => {
+              return (
+                <ProjectItem
+                  id={cp.id}
+                  dates={cp.dates}
+                  imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
+                  title={cp.title}
+                  description={cp.description}
+                  externalLinks={cp.externalLinks}
+                  key={cp.id}
+                />
+              )
+            })}
           </div>
-        </div>
-      </main>
+        </section>
+
+        <section>
+          <h2 className="page-title">Past Projects</h2>
+
+          <div className={styles.projectContainer}>
+            {previousProjects.map(cp => {
+              return (
+                <ProjectItem
+                  id={cp.id}
+                  dates={cp.dates}
+                  imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
+                  title={cp.title}
+                  description={cp.description}
+                  externalLinks={cp.externalLinks}
+                  key={cp.id}
+                />
+              )
+            })}
+          </div>
+        </section>
+      </div>
     </>
   )
 }

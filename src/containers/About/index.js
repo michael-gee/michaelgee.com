@@ -1,7 +1,4 @@
 import Head from 'next/head'
-import { Nav } from '../../components/Nav'
-import { Profile } from '../../components/Profile'
-
 import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
@@ -17,21 +14,11 @@ export const About = () => {
         />
       </Head>
 
-      <main id="page">
-        <Nav />
-
-        <div className="page-body">
-          <Profile />
-
-          <div className="page-content">
-            <Intro />
-
-            <TechStack />
-
-            <Hobbies />
-          </div>
-        </div>
-      </main>
+      <div className="page-content">
+        <Intro />
+        <TechStack />
+        <Hobbies />
+      </div>
     </>
   )
 }

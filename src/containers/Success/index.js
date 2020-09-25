@@ -11,23 +11,21 @@ export const Success = () => {
         <title>Michael Gee</title>
       </Head>
 
-      <main id="page">
-        <div className="page-content">
-          <h1 id={styles.title}>Thank You!</h1>
+      <div className="page-content">
+        <h1 id={styles.title}>Thank You!</h1>
 
-          <p className={styles.info}>Your submission was sent successfully.</p>
-          <p className={styles.info}>
-            For messages and inquiries, look for me to get back to you within 24 hours.
-          </p>
+        <p className={styles.info}>Your submission was sent successfully.</p>
+        <p className={styles.info}>
+          For messages and inquiries, look for me to get back to you within 24 hours.
+        </p>
 
-          <Link href="/">
-            <Button as="a" id={styles.navBtn}>
-              <Icon name="home" />
-              <span>Navigate to Homepage</span>
-            </Button>
-          </Link>
-        </div>
-      </main>
+        <Link href="/">
+          <Button as="a" id={styles.navBtn}>
+            <Icon name="home" />
+            <span>Navigate to Homepage</span>
+          </Button>
+        </Link>
+      </div>
     </>
   )
 }
