@@ -8,8 +8,6 @@ import delay from 'lodash/delay'
 export const PageContent = props => {
   const [renderAfterDelay, setRenderAfterDelay] = useState(false)
 
-  console.log(renderAfterDelay)
-
   useEffect(() => {
     if (props.isLoading) {
       delay(() => {

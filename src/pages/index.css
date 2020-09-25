@@ -53,7 +53,13 @@ h6 { font-size: 1.2em; margin: 0; }
 }
 
 #current-page .ui.loader {
+  font-size: 1.8em;
   top: 25%;
+  padding-top: 68px;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
 }
 
 .page-content {
@@ -210,6 +216,10 @@ h6 { font-size: 1.2em; margin: 0; }
     max-width: calc(100% - 48px);
     margin: 0 auto;
     margin-top: 72px;
+  }
+
+  .page-content {
+    min-height: calc(100vh - 112px);
   }
 }
 
