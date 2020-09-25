@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import { Form, Button, Input, TextArea, Icon } from 'semantic-ui-react'
-import { Nav } from '../../components/Nav'
-import { Profile } from '../../components/Profile'
 
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
@@ -47,82 +45,69 @@ export const Contact = () => {
         <meta name="description" content="Contact Michael Gee" />
       </Head>
 
-      <main id="page">
-        <Nav />
+      <div className="page-content">
+        <section>
+          <h2 className="page-title">Get In Touch</h2>
 
-        <div className="page-body">
-          <Profile />
+          <Form onSubmit={_onSubmit} id={styles.form}>
+            <div id={styles.userInfo}>
+              <Input
+                name="name"
+                onChange={_onInputChange}
+                placeholder="Full Name"
+                icon="user"
+                iconPosition="left"
+              />
+              <Input
+                name="email"
+                onChange={_onInputChange}
+                placeholder="Email Address"
+                icon="at"
+                iconPosition="left"
+              />
+            </div>
 
-          <div className="page-content">
-            <section>
-              <h2 className="page-title">Get In Touch</h2>
+            <TextArea name="text" onChange={_onInputChange} placeholder="Your Message" rows="5" />
 
-              <Form onSubmit={_onSubmit} id={styles.form}>
-                <div id={styles.userInfo}>
-                  <Input
-                    name="name"
-                    onChange={_onInputChange}
-                    placeholder="Full Name"
-                    icon="user"
-                    iconPosition="left"
-                  />
-                  <Input
-                    name="email"
-                    onChange={_onInputChange}
-                    placeholder="Email Address"
-                    icon="at"
-                    iconPosition="left"
-                  />
+            <Input
+              type="text"
+              name="_gotcha"
+              onChange={_onInputChange}
+              style={{ display: 'none' }}
+            />
+
+            <div id={styles.submitContainer}>
+              <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
+                <Icon name="send" />
+                Send Message
+              </Button>
+
+              {error && (
+                <div id={styles.error}>
+                  <Icon name="warning sign" />
+                  <span>{error}</span>
                 </div>
+              )}
+            </div>
+          </Form>
+        </section>
 
-                <TextArea
-                  name="text"
-                  onChange={_onInputChange}
-                  placeholder="Your Message"
-                  rows="5"
-                />
+        <section>
+          <h2 id={styles.otherTitle}>other ways to contact...</h2>
 
-                <Input
-                  type="text"
-                  name="_gotcha"
-                  onChange={_onInputChange}
-                  style={{ display: 'none' }}
-                />
+          <div id={styles.otherContact}>
+            <div>
+              <Icon name="at" size="large" />
+              <span>michaelgee221@gmail.com</span>
+            </div>
 
-                <div id={styles.submitContainer}>
-                  <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
-                    <Icon name="send" />
-                    Send Message
-                  </Button>
-
-                  {error && (
-                    <div id={styles.error}>
-                      <Icon name="warning sign" />
-                      <span>{error}</span>
-                    </div>
-                  )}
-                </div>
-              </Form>
-            </section>
-
-            <section>
-              <h2 id={styles.otherTitle}>other ways to contact...</h2>
-
-              <div id={styles.otherContact}>
-                <div>
-                  <Icon name="at" size="large" />
-                  <span>michaelgee221@gmail.com</span>
-                </div>
-
-                <div>
-                  <Icon name="discord" size="large" />
-                  <span>michaelg33#9503</span>
-                </div>
-              </div>
-            </section>
+            <div>
+              <Icon name="discord" size="large" />
+              <span>michaelg33#9503</span>
+            </div>
           </div>
-        </div>
-      </main>
+        </section>
+      </div>
     </>
   )
 
