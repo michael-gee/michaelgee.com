@@ -1,5 +1,6 @@
 import { Nav } from '../components/Nav'
 import { Profile } from '../components/Profile'
+import { PageContent } from '../components/PageContent'
 
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
@@ -17,8 +18,6 @@ const App = ({ Component, pageProps }) => {
     router.events.on('routeChangeError', () => setIsLoading(false))
   }, [])
 
-  // Add loading spinner if isLoading is true
-
   return (
     <main id="page">
       <Nav />
@@ -26,7 +25,9 @@ const App = ({ Component, pageProps }) => {
       <div className="page-body">
         <Profile />
 
-        {!isLoading && <Component {...pageProps} />}
+        <PageContent isLoading={isLoading}>
+          <Component {...pageProps} />
+        </PageContent>
       </div>
 
       <div id="bg-back" />

@@ -16,9 +16,7 @@ export const About = () => {
 
       <div className="page-content">
         <Intro />
-
         <TechStack />
-
         <Hobbies />
       </div>
     </>
