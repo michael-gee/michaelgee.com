@@ -1,8 +1,5 @@
 import PropTypes from 'prop-types'
-
 import Head from 'next/head'
-import { Nav } from '../../components/Nav'
-import { Profile } from '../../components/Profile'
 import { PostItem } from './PostItem'
 
 import styles from './Blog.module.css'
@@ -18,47 +15,39 @@ export const Blog = props => {
         />
       </Head>
 
-      <main id="page">
-        <Nav />
-
-        <div className="page-body">
-          <Profile />
-
-          <div className="page-content">
-            <div id={styles.title} className="page-title">
-              <span>Blog Posts</span>
-              <a href="https://dev.to/michaelgee" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
-                  alt="Michael Gee's DEV Profile"
-                  height="30"
-                  width="30"
-                />
-              </a>
-            </div>
-
-            <div id={styles.postsContainer}>
-              {props.data.map(item => {
-                return (
-                  <PostItem
-                    title={item.title}
-                    description={item.description}
-                    date={item.published_at}
-                    image={item.cover_image}
-                    url={item.url}
-                    counters={{
-                      views: item.page_views_count,
-                      reactions: item.public_reactions_count,
-                      comments: item.comments_count
-                    }}
-                    key={item.id}
-                  />
-                )
-              })}
-            </div>
-          </div>
+      <div className="page-content">
+        <div id={styles.title} className="page-title">
+          <span>Blog Posts</span>
+          <a href="https://dev.to/michaelgee" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+              alt="Michael Gee's DEV Profile"
+              height="30"
+              width="30"
+            />
+          </a>
         </div>
-      </main>
+
+        <div id={styles.postsContainer}>
+          {props.data.map(item => {
+            return (
+              <PostItem
+                title={item.title}
+                description={item.description}
+                date={item.published_at}
+                image={item.cover_image}
+                url={item.url}
+                counters={{
+                  views: item.page_views_count,
+                  reactions: item.public_reactions_count,
+                  comments: item.comments_count
+                }}
+                key={item.id}
+              />
+            )
+          })}
+        </div>
+      </div>
     </>
   )
 }

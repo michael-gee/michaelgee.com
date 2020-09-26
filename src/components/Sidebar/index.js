@@ -31,6 +31,7 @@ export const Sidebar = props => {
                     : styles.sidebarMenuItem
                 }
                 style={index === MG_NAV_PAGES.length - 1 ? { borderBottom: '1px solid #eee' } : {}}
+                key={navItem.text}
               >
                 <Icon name={navItem.icon} />
                 <span className={styles.sidebarMenuItemText}>{navItem.text}</span>
