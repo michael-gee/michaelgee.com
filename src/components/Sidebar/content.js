@@ -1,5 +1,9 @@
 export const blogPosts = [
   {
+    title: 'Prevent Your Codebase From Becoming A Spaghetti Factory',
+    url: 'https://dev.to/michaelgee/prevent-your-codebase-from-becoming-a-spaghetti-factory-3cfn'
+  },
+  {
     title: 'Start Using React.js',
     url: 'https://dev.to/michaelgee/start-using-react-js-cnn'
   },
@@ -15,9 +19,5 @@ export const blogPosts = [
     title: "Cloning Existing Projects: Why It's Not A Waste Of Your Time",
     url:
       'https://dev.to/michaelgee/cloning-existing-projects-why-it-s-not-a-waste-of-your-time-5he3'
-  },
-  {
-    title: 'Personal Website Launch: Would Love Some Feedback',
-    url: 'https://dev.to/michaelgee/personal-website-launch-would-love-some-feedback-2348'
   }
 ]
