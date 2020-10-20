@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Accordion, Button, Icon, Divider, Statistic } from 'semantic-ui-react'
+import { Accordion, Button, Icon } from 'semantic-ui-react'
 
 import { useState } from 'react'
 
-import { benefits, howItWorks, faq, pricing } from './content'
+import { benefits, faq, pricing } from './content'
 
 import styles from './Mentorship.module.css'
 
@@ -49,46 +49,7 @@ export const Mentorship = () => {
         </section>
 
         <section>
-          <h2 className={styles.subTitle}>How It Works</h2>
-
-          <ul id={styles.howItWorks}>
-            <li>
-              <h3>Introduction / Consultation</h3>
-              <p>{howItWorks.intro} </p>
-              <Link href="/contact">
-                <Button id={styles.introductionBtn}>
-                  <Icon name="handshake" />
-                  Introduce Yourself
-                </Button>
-              </Link>
-            </li>
-            <Divider horizontal style={{ maxWidth: 400, margin: '0px auto', color: '#004e92' }}>
-              Or
-            </Divider>
-            <li>
-              <h3>Schedule Session</h3>
-              <p>{howItWorks.schedule} </p>
-              <Icon name="arrow down" size="large" />
-            </li>
-            <li>
-              <h3>Quick Initial Payment</h3>
-              <p>{howItWorks.payment} </p>
-              <Icon name="arrow down" size="large" />
-            </li>
-            <li>
-              <h3>LEARN</h3>
-              <p>{howItWorks.learn}</p>
-              <Icon name="arrow down" size="large" />
-            </li>
-            <li>
-              <h3>Stay In Touch</h3>
-              <p>{howItWorks.stayInTouch} </p>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className={styles.subTitle}>Who Is This Mentorship For?</h2>
+          <h2 className={styles.subTitle}>Who Is This For?</h2>
 
           <div id={styles.targetAudience}>
             <ul className={styles.targetList}>
@@ -118,27 +79,19 @@ export const Mentorship = () => {
           <h2 className={styles.subTitle}>Pricing</h2>
 
           <div id={styles.pricing}>
-            <h4>Free Tier</h4>
-            <p>{pricing.free}</p>
-
-            <hr size="20" />
-
             <h4>
-              Premium Tier <Icon name="star" id={styles.premiumStar} />
+              <Icon name="star" id={styles.premiumStar} />
+              Free
             </h4>
-            <p>{pricing.premium}</p>
-            <Statistic horizontal style={{ display: 'flex', justifyContent: 'center', margin: 0 }}>
-              <Statistic.Value>$20</Statistic.Value>
-              <Statistic.Label>per 30 minutes</Statistic.Label>
-            </Statistic>
+            <p>{pricing.free}</p>
           </div>
         </section>
 
         <div id={styles.getStarted}>
-          <h3>Have any additional questions? Introduce yourself and let's get started!</h3>
+          <h3>Have any questions? Introduce yourself and let's get connect!</h3>
 
           <Link href="/contact">
-            <Button id={styles.getStartedBtn}>Get Started</Button>
+            <Button id={styles.getStartedBtn}>Contact</Button>
           </Link>
         </div>
 

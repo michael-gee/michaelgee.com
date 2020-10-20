@@ -63,9 +63,7 @@
   background: linear-gradient(to bottom right, #004e92, #000428);
 }
 #mgSandbox {
-  background: var(--mg-primary);
-  background: -webkit-linear-gradient(to bottom right, #000428, #004e92);
-  background: linear-gradient(to bottom right, #000428, #004e92);
+  background: #000;
 }
 #mgCom img, #mgSandbox img {
   width: 100px;

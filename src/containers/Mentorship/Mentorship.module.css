@@ -8,7 +8,6 @@
 }
 
 #title, #mainSubTitle {
-  max-width: 640px;
   text-align: center;
 }
 
@@ -70,42 +69,6 @@
   padding: 0 8px;
 }
 
-/* How It Works section */
-#howItWorks {
-  padding: 0;
-  font-size: 1.4em;
-  list-style-type: none;
-  text-align: center;
-}
-#howItWorks li h3 {
-  font-weight: lighter;
-  padding: 16px 0;
-}
-#howItWorks p {
-  font-size: 1.24em;
-  padding: 0 24px;
-  padding-bottom: 16px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-#howItWorks i {
-  color: var(--mg-primary);
-}
-
-#introductionBtn {
-  background: -webkit-linear-gradient(to bottom right, #004e92 40%, #000428);
-  background: linear-gradient(to bottom right, #004e92 40%, #000428);
-  color: #fff;
-  margin-bottom: 24px;
-  transition: .3s;
-}
-#introductionBtn:hover {
-  opacity: .8;
-}
-#introductionBtn i {
-  color: #fff;
-}
-
 /* Target Audience section */
 #targetAudience {
   display: flex;
@@ -158,7 +121,8 @@
 #getStarted {
   display: flex;
   align-items: center;
-  max-width: 600px;
+  justify-content: space-between;
+  max-width: 652px;
   background: -webkit-linear-gradient(to bottom right, #004e92 30%, #000428);
   background: linear-gradient(to bottom right, #004e92 30%, #000428);
   color: white;
@@ -183,7 +147,7 @@
 
 /* FAQ section */
 #faq {
-  max-width: 600px;
+  max-width: 700px;
   margin: 24px auto;
   font-size: 1.8em;
   line-height: 1.4;
