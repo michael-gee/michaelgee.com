@@ -14,7 +14,7 @@ export const Sidebar = props => {
 
   return (
     <SUISidebar visible={true} onHide={props.onHide} direction="right">
-      <div id={styles.sidebarContainer}>
+      <div className={styles.sidebarContainer}>
         <Button onClick={props.onHide} id={styles.sidebarCloseBtn}>
           <Icon name="close" />
         </Button>
@@ -42,7 +42,7 @@ export const Sidebar = props => {
 
         <section className={styles.sidebarSection}>
           <h3 className={styles.sidebarTitle}>Recent Blog Posts</h3>
-          <ul id={styles.blogPostsContainer}>
+          <ul className={styles.blogPostsContainer}>
             {blogPosts.map((blogPost, index) => {
               return (
                 <li key={`blog-post=${index}`}>

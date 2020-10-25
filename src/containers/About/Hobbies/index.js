@@ -7,7 +7,7 @@ export const Hobbies = () => {
     <section>
       <h2 className="page-title">Other Hobbies & Interests</h2>
 
-      <div id={styles.hobbies}>
+      <div className={styles.hobbies}>
         <div className={styles.hobby}>
           <Icon name="golf ball" size="large" />
           <span>Golf</span>

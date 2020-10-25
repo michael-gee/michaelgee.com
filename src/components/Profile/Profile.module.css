@@ -1,4 +1,4 @@
-#profile {
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,21 +20,21 @@
   border: 8px solid var(--mg-primary);
 }
 
-#titleContainer h1 {
+.titleContainer h1 {
   font-weight: normal;
   font-size: 3.4em;
   margin-top: 8px;
   min-height: auto;
 }
 
-#titleContainer h2 {
+.titleContainer h2 {
   color: var(--mg-primary);
   font-weight: 500;
   margin-top: 4px;
   font-size: 2.4em;
 }
 
-#socialIcons {
+.socialIcons {
   margin: 24px 0 16px 0;
 }
 
@@ -62,16 +62,16 @@
   min-height: 64px;
   margin-top: auto;
   padding: 24px 0;
-  background-color: transparent !important;
-  color: #323232 !important;
+  background-color: transparent;
+  color: #323232;
   border-top: 1px solid #eee;
 }
 #mentorshipBtn:hover {
-  color: var(--mg-primary) !important;
+  color: var(--mg-primary);
 }
 
 @media screen and (max-width: 960px){
-  #profile {
+  .profile {
     flex-direction: row;
     align-items: center;
     max-width: 100%;
@@ -86,17 +86,17 @@
     border: 5px solid var(--mg-primary);
   }
 
-  #socialIcons {
+  .socialIcons {
     margin: 0 24px 0 auto;
   }
 
-  #employment, #mentorshipBtn {
+  .employment, #mentorshipBtn {
     display: none;
   }
 }
 
 @media screen and (max-width: 650px)  {
-  #profile {
+  .profile {
     display: none;
   }
 }

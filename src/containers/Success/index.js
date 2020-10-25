@@ -12,7 +12,7 @@ export const Success = () => {
       </Head>
 
       <div className="page-content">
-        <h1 id={styles.title}>Thank You!</h1>
+        <h1 className={styles.title}>Thank You!</h1>
 
         <p className={styles.info}>Your submission was sent successfully.</p>
         <p className={styles.info}>

@@ -5,20 +5,6 @@
   max-width: 700px;
   margin: 0 auto;
 }
-
-#userInfo {
-  display: flex;
-  justify-content: space-between;
-  margin: 16px 0;
-}
-#userInfo input {
-  min-width: 324px;
-  border: 2px solid rgba(34,36,38,.15);
-}
-#userInfo input:focus, #form textarea:focus {
-  border: 2px solid var(--mg-primary); 
-}
-
 #form textarea {
   max-width: 100%;
   margin: 8px auto 24px auto;
@@ -26,7 +12,20 @@
   border: 2px solid rgba(34,36,38,.15);
 }
 
-#submitContainer {
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 16px;
+}
+.userInfo input {
+  min-width: 324px;
+  border: 2px solid rgba(34,36,38,.15);
+}
+.userInfo input:focus, #form textarea:focus {
+  border: 2px solid var(--mg-primary); 
+}
+
+.submitContainer {
   display: flex;
   align-items: center;
 }
@@ -37,49 +36,48 @@
   color: white;
   min-width: 200px;
   max-width: 250px;
-  margin-top: 8px;
   transition: .5s;
 }
 #submitBtn:hover {
   opacity: .8;
 }
 
-#error {
+.error {
   margin-left: 16px;
   margin-top: 12px;
   color: red;
 }
 
-#otherTitle {
+.otherTitle {
   font-weight: normal;
   text-align: center;
   margin: 32px 0;
 }
 
-#otherContact {
+.otherContact {
   width: 100%;
   text-align: center;
   font-size: 2em;
 }
-#otherContact i {
+.otherContact i {
   color: var(--mg-primary);
 }
-#otherContact div {
+.otherContact div {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
 }
-#otherContact span {
+.otherContact span {
   padding-left: 12px;
 }
 
 @media screen and (max-width: 1050px)  {
-  #userInfo {
+  .userInfo {
     flex-direction: column;
     margin: 8px 24px;
   }
-  #userInfo input {
+  .userInfo input {
     margin: 16px 0;
     min-width: 100%;
   }
@@ -95,7 +93,7 @@
 }
 
 @media screen and (max-width: 600px)  {
-  #submitContainer {
+  .submitContainer {
     flex-direction: column;
   }
 

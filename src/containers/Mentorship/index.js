@@ -21,11 +21,11 @@ export const Mentorship = () => {
         />
       </Head>
 
-      <div id={styles.container} className="page-content">
+      <div className={styles.container} className="page-content">
         <Icon name="rocket" size="massive" id={styles.rocketIcon} />
-        <h1 id={styles.title}>Accelerate your software development journey</h1>
+        <h1 className={styles.title}>Accelerate your software development journey</h1>
 
-        <h2 id={styles.mainSubTitle}>
+        <h2 className={styles.mainSubTitle}>
           Interested in getting started in software development? Tired of getting stuck or want to
           rapidly speed up your growth and reach your end goals? Let's get started today!
         </h2>
@@ -35,7 +35,7 @@ export const Mentorship = () => {
             Benefits
           </h2>
 
-          <div id={styles.benefits}>
+          <div className={styles.benefits}>
             {benefits.map(item => {
               return (
                 <div className={styles.benefit} key={item.title}>
@@ -51,7 +51,7 @@ export const Mentorship = () => {
         <section>
           <h2 className={styles.subTitle}>Who Is This For?</h2>
 
-          <div id={styles.targetAudience}>
+          <div className={styles.targetAudience}>
             <ul className={styles.targetList}>
               <li>Beginners interested in starting a career in software development</li>
               <li>Developers currently learning but have no job or team development experience</li>
@@ -78,7 +78,7 @@ export const Mentorship = () => {
         <section>
           <h2 className={styles.subTitle}>Pricing</h2>
 
-          <div id={styles.pricing}>
+          <div className={styles.pricing}>
             <h4>
               <Icon name="star" id={styles.premiumStar} />
               Free
@@ -87,7 +87,7 @@ export const Mentorship = () => {
           </div>
         </section>
 
-        <div id={styles.getStarted}>
+        <div className={styles.getStarted}>
           <h3>Have any questions? Introduce yourself and let's get connect!</h3>
 
           <Link href="/contact">

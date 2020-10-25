@@ -71,7 +71,7 @@ export const ProjectItem = props => {
             position="top right"
             size="small"
           >
-            <p id={styles.projectDesc}>{props.description}</p>
+            <p className={styles.projectDesc}>{props.description}</p>
           </Popup>
         </div>
       </Card.Content>

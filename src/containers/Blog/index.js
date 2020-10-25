@@ -16,7 +16,7 @@ export const Blog = props => {
       </Head>
 
       <div className="page-content">
-        <div id={styles.title} className="page-title">
+        <div className={`page-title ${styles.title} `}>
           <span>Blog Posts</span>
           <a href="https://dev.to/michaelgee" target="_blank" rel="noopener noreferrer">
             <img
@@ -28,25 +28,23 @@ export const Blog = props => {
           </a>
         </div>
 
-        <div id={styles.postsContainer}>
-          {props.data.map(item => {
-            return (
-              <PostItem
-                title={item.title}
-                description={item.description}
-                date={item.published_at}
-                image={item.cover_image}
-                url={item.url}
-                counters={{
-                  views: item.page_views_count,
-                  reactions: item.public_reactions_count,
-                  comments: item.comments_count
-                }}
-                key={item.id}
-              />
-            )
-          })}
-        </div>
+        {props.data.map(item => {
+          return (
+            <PostItem
+              title={item.title}
+              description={item.description}
+              date={item.published_at}
+              image={item.cover_image}
+              url={item.url}
+              counters={{
+                views: item.page_views_count,
+                reactions: item.public_reactions_count,
+                comments: item.comments_count
+              }}
+              key={item.id}
+            />
+          )
+        })}
       </div>
     </>
   )

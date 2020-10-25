@@ -50,7 +50,7 @@ export const Contact = () => {
           <h2 className="page-title">Get In Touch</h2>
 
           <Form onSubmit={_onSubmit} id={styles.form}>
-            <div id={styles.userInfo}>
+            <div className={styles.userInfo}>
               <Input
                 name="name"
                 onChange={_onInputChange}
@@ -76,14 +76,14 @@ export const Contact = () => {
               style={{ display: 'none' }}
             />
 
-            <div id={styles.submitContainer}>
+            <div className={styles.submitContainer}>
               <Button type="submit" id={styles.submitBtn} disabled={isSubmitting}>
                 <Icon name="send" />
                 Send Message
               </Button>
 
               {error && (
-                <div id={styles.error}>
+                <div className={styles.error}>
                   <Icon name="warning sign" />
                   <span>{error}</span>
                 </div>
@@ -93,9 +93,9 @@ export const Contact = () => {
         </section>
 
         <section>
-          <h2 id={styles.otherTitle}>other ways to contact...</h2>
+          <h2 className={styles.otherTitle}>other ways to contact...</h2>
 
-          <div id={styles.otherContact}>
+          <div className={styles.otherContact}>
             <div>
               <Icon name="at" size="large" />
               <span>michaelgee221@gmail.com</span>

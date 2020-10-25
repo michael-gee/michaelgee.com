@@ -17,7 +17,7 @@ h4 { font-size: 1.6em; margin: 0; }
 h5 { font-size: 1.3em; margin: 0; }
 h6 { font-size: 1.2em; margin: 0; }
 
-#page {
+.page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@ h6 { font-size: 1.2em; margin: 0; }
   overflow: hidden;
 }
 
-#current-page, .page-content {
+.current-page, .page-content {
   width: 100%;
   height: 100%;
   background-color: #fafafb;
@@ -52,7 +52,7 @@ h6 { font-size: 1.2em; margin: 0; }
   border-radius: 4px;
 }
 
-#current-page .ui.loader {
+.current-page .ui.loader {
   font-size: 1.8em;
   top: 25%;
   padding-top: 68px;
@@ -130,7 +130,7 @@ h6 { font-size: 1.2em; margin: 0; }
     }
   }
 
-  #bg-back {
+  .bg-back {
     background: url(https://www.tranexnet.com/img/back.png) repeat 20% 20%;
     position: fixed;
     top: 0;
@@ -157,7 +157,7 @@ h6 { font-size: 1.2em; margin: 0; }
     animation-iteration-count: infinite;
   }
 
-  #bg-front {
+  .bg-front {
     background: url(https://www.tranexnet.com/img/front.png) repeat 35% 35%;
     position: fixed;
     top: 0;
@@ -186,7 +186,7 @@ h6 { font-size: 1.2em; margin: 0; }
 }
 
 @media screen and (max-width: 960px) {
-  #page {
+  .page {
     height: auto;
     overflow-y: auto;
     align-items: flex-start;
@@ -203,7 +203,7 @@ h6 { font-size: 1.2em; margin: 0; }
 }
 
 @media screen and (max-width: 650px) {
-  #page {
+  .page {
     flex-direction: column;
     margin: 0;
   }

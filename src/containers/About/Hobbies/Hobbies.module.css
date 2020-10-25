@@ -1,4 +1,4 @@
-#hobbies {
+.hobbies {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  #hobbies {
+  .hobbies {
     flex-direction: column;
     align-items: center;
     padding-top: 8px;

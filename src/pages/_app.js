@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <main id="page">
+    <main className="page">
       <Nav />
 
       <div className="page-body">
@@ -30,8 +30,8 @@ const App = ({ Component, pageProps }) => {
         </PageContent>
       </div>
 
-      <div id="bg-back" />
-      <div id="bg-front" />
+      <div className="bg-back" />
+      <div className="bg-front" />
     </main>
   )
 }

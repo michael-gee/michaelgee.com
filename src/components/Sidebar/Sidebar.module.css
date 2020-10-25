@@ -1,4 +1,4 @@
-#sidebarContainer {
+.sidebarContainer {
   position: relative;
   overflow-y: auto;
   margin-top: 72px;
@@ -46,10 +46,10 @@
   padding-left: 8px;
 }
 
-#blogPostsContainer {
+.blogPostsContainer {
   font-size: 1.6em;
 }
-#blogPostsContainer li {
+.blogPostsContainer li {
   padding: 4px 0;
   line-height: 1.4;
 }

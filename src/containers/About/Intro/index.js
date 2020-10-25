@@ -7,7 +7,7 @@ export const Intro = () => {
   return (
     <section>
       <h2 className="page-title">About Me</h2>
-      <p id={styles.intro}>
+      <p className={styles.intro}>
         <strong>
           <em>Hello! I'm Michael Gee.</em>
         </strong>{' '}
@@ -19,7 +19,7 @@ export const Intro = () => {
         improving as a developer.
       </p>
 
-      <div id={styles.services}>
+      <div className={styles.services}>
         <div className={styles.service}>
           <Link href="/projects">
             <Icon name="code" size="huge" />

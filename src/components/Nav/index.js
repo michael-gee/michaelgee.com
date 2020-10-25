@@ -14,9 +14,9 @@ export const Nav = () => {
   const router = useRouter()
 
   return (
-    <header id={styles.header}>
+    <header className={styles.header}>
       <nav style={{ width: '100%', height: '100%' }}>
-        <div id={styles.nav}>
+        <div className={styles.nav}>
           {MG_NAV_PAGES.map(btn => (
             <Link href={btn.pathname} key={btn.icon}>
               <Button
@@ -33,9 +33,9 @@ export const Nav = () => {
           ))}
         </div>
 
-        <div id={styles.mobileNav}>
+        <div className={styles.mobileNav}>
           <Link href="/">
-            <div id={styles.mobileNavContent}>
+            <div className={styles.mobileNavContent}>
               <Image
                 src="/images/mg-transparent-logo.png"
                 alt="Michael Gee logo image"
@@ -43,8 +43,8 @@ export const Nav = () => {
               />
 
               <div>
-                <h1 id={styles.mobileTitle}>Michael Gee</h1>
-                <h2 id={styles.mobileSubtitle}>Software Developer</h2>
+                <h1 className={styles.mobileTitle}>Michael Gee</h1>
+                <h2 className={styles.mobileSubtitle}>Software Developer</h2>
               </div>
             </div>
           </Link>

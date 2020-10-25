@@ -7,7 +7,7 @@ export const TechStack = () => {
     <>
       <section>
         <h2 className="page-title">Tech Stack</h2>
-        <div id={styles.techStack}>
+        <div className={styles.techStack}>
           <article>
             <h3>Front-End</h3>
 
@@ -19,7 +19,7 @@ export const TechStack = () => {
             </div>
           </article>
 
-          <div id={styles.serverTech}>
+          <div className={styles.serverTech}>
             <article>
               <h3>Back-End</h3>
 
@@ -42,8 +42,8 @@ export const TechStack = () => {
       </section>
 
       <section>
-        <h3 id={styles.otherTitle}>Other Skills</h3>
-        <div id={styles.otherTech}>
+        <h3 className={styles.otherTitle}>Other Skills</h3>
+        <div className={styles.otherTech}>
           <div className={styles.otherTechItem}>MongoDB</div>
           <div className={styles.otherTechItem}>.NET Core</div>
           <div className={styles.otherTechItem}>Git</div>
@@ -52,7 +52,7 @@ export const TechStack = () => {
           <div className={styles.otherTechItem}>OOP</div>
         </div>
 
-        <div id={styles.iconLink}>
+        <div className={styles.iconLink}>
           <a
             target="_blank"
             href="https://icons8.com/icons/set/c-sharp-logo"

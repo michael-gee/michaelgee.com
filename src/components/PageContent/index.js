@@ -21,7 +21,7 @@ export const PageContent = props => {
   }, [props.isLoading])
 
   return (
-    <div id="current-page">
+    <div className="current-page">
       {!props.isLoading ? (
         props.children
       ) : (

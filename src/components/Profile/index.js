@@ -7,7 +7,7 @@ import styles from './Profile.module.css'
 
 export const Profile = () => {
   return (
-    <div id={styles.profile}>
+    <div className={styles.profile}>
       <Image
         src="/images/michael.jpg"
         alt="Michael Gee profile image"
@@ -16,12 +16,12 @@ export const Profile = () => {
         id={styles.profileImg}
       />
 
-      <div id={styles.titleContainer}>
+      <div className={styles.titleContainer}>
         <h1>Michael Gee</h1>
         <h2>Software Developer</h2>
       </div>
 
-      <div id={styles.socialIcons}>
+      <div className={styles.socialIcons}>
         {MG_SOCIAL_MEDIA.map(item => {
           return (
             <Button
@@ -40,7 +40,7 @@ export const Profile = () => {
         })}
       </div>
 
-      <div id={styles.employment}>
+      <div className={styles.employment}>
         <div className={styles.employmentItem}>
           <Icon name="briefcase" size="large" />
           <a
