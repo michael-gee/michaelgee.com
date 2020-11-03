@@ -13,10 +13,12 @@
   margin-right: 12px;
 }
 
-#profileImg {
-  margin: 24px;
-  max-width: 240px;
-  min-height: 240px;
+.profileImg {
+  margin: 24px 0;
+}
+
+.profileImg img {
+  border-radius: 50%;
   border: 8px solid var(--mg-primary);
 }
 

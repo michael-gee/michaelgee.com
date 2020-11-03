@@ -14,6 +14,10 @@
   cursor: pointer;
 }
 
+.itemContainer img {
+  min-width: 300px;
+}
+
 .itemContent {
   padding: 0 24px;
   font-size: 1.6em;

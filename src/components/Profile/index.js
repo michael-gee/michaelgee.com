@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Button, Image, Icon } from 'semantic-ui-react'
+import Image from 'next/image'
+import { Button, Icon } from 'semantic-ui-react'
 
 import { MG_SOCIAL_MEDIA } from '../../constants'
 
@@ -8,13 +9,9 @@ import styles from './Profile.module.css'
 export const Profile = () => {
   return (
     <div className={styles.profile}>
-      <Image
-        src="/images/michael.jpg"
-        alt="Michael Gee profile image"
-        circular
-        size="medium"
-        id={styles.profileImg}
-      />
+      <div className={styles.profileImg}>
+        <Image src="/images/michael.jpg" alt="Michael Gee profile image" width={240} height={240} />
+      </div>
 
       <div className={styles.titleContainer}>
         <h1>Michael Gee</h1>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Button, Icon, Image } from 'semantic-ui-react'
+import Image from 'next/image'
+import { Button, Icon } from 'semantic-ui-react'
 import { Sidebar } from '../Sidebar'
 
 import { useRouter } from 'next/router'
@@ -39,7 +40,8 @@ export const Nav = () => {
               <Image
                 src="/images/mg-transparent-logo.png"
                 alt="Michael Gee logo image"
-                id={styles.mobileImg}
+                width={64}
+                height={64}
               />
 
               <div>

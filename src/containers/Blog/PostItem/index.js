@@ -1,13 +1,14 @@
-import PropTypes from 'prop-types'
+import Image from 'next/image'
+import { Icon } from 'semantic-ui-react'
 
-import { Image, Icon } from 'semantic-ui-react'
+import PropTypes from 'prop-types'
 
 import styles from './PostItem.module.css'
 
 export const PostItem = props => {
   return (
     <a href={props.url} target="_blank" rel="noopener noreferrer" className={styles.itemContainer}>
-      <Image src={props.image} size="medium" />
+      <Image src={props.image} width={400} height={168} />
 
       <div className={styles.itemContent}>
         <h3 className={styles.itemTitle}>{props.title}</h3>
