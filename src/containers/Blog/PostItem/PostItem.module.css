@@ -14,8 +14,9 @@
   cursor: pointer;
 }
 
-.itemContainer img {
-  min-width: 300px;
+.imgContainer {
+  max-width: 300px;
+  max-height: 100%;
 }
 
 .itemContent {
@@ -49,15 +50,22 @@
 @media screen and (max-width: 850px)  {
   .itemContainer {
     flex-direction: column;
+    align-items: center;
   }
 
-  .itemContainer img {
-    width: 100% !important;
+  .imgContainer {
+    width: 100%;
     margin-bottom: 8px;
   }
 
   .itemContent {
     padding: 0;
+    padding-top: 8px;
+    text-align: center;
+  }
+
+  .itemMeta {
+    justify-content: center;
   }
 }
 

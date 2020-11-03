@@ -81,10 +81,13 @@
     margin-bottom: 16px;
   }
 
-  #profileImg {
-    max-width: 100px;
-    min-height: 100px;
+  .profileImg {
+    width: 100px;
+    height: 100px;
     margin: 8px 16px 8px 24px;
+  }
+
+  .profileImg img {
     border: 5px solid var(--mg-primary);
   }
 

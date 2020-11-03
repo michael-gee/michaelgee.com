@@ -8,7 +8,9 @@ import styles from './PostItem.module.css'
 export const PostItem = props => {
   return (
     <a href={props.url} target="_blank" rel="noopener noreferrer" className={styles.itemContainer}>
-      <Image src={props.image} width={400} height={168} />
+      <div className={styles.imgContainer}>
+        <Image src={props.image} width={400} height={168} />
+      </div>
 
       <div className={styles.itemContent}>
         <h3 className={styles.itemTitle}>{props.title}</h3>
