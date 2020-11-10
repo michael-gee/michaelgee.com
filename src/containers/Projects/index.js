@@ -8,13 +8,7 @@ import styles from './Projects.module.css'
 export const Projects = () => {
   return (
     <>
-      <Head>
-        <title>Projects | Michael Gee</title>
-        <meta
-          name="description"
-          content="A list of Michael Gee's past and present code projects."
-        />
-      </Head>
+      {_renderHead()}
 
       <div className="page-content">
         <section>
@@ -58,4 +52,23 @@ export const Projects = () => {
       </div>
     </>
   )
+
+  function _renderHead() {
+    return (
+      <Head>
+        <title>Projects | Michael Gee</title>
+        <meta
+          name="description"
+          content="A list of Michael Gee's past and present code projects."
+        />
+        <meta property="og:title" content="Projects | Michael Gee" />
+        <meta
+          property="og:description"
+          content="A list of Michael Gee's past and present code projects."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.michaelgee.com/projects" />
+      </Head>
+    )
+  }
 }

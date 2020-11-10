@@ -7,13 +7,7 @@ import styles from './Blog.module.css'
 export const Blog = props => {
   return (
     <>
-      <Head>
-        <title>Blog | Michael Gee</title>
-        <meta
-          name="description"
-          content="Michael Gee's personal blog sharing past experiences and cool things he has learned."
-        />
-      </Head>
+      {_renderHead()}
 
       <div className="page-content">
         <div className={`page-title ${styles.title} `}>
@@ -48,6 +42,25 @@ export const Blog = props => {
       </div>
     </>
   )
+
+  function _renderHead() {
+    return (
+      <Head>
+        <title>Blog | Michael Gee</title>
+        <meta
+          name="description"
+          content="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+        />
+        <meta property="og:title" content="Blog | Michael Gee" />
+        <meta
+          property="og:description"
+          content="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.michaelgee.com/blog" />
+      </Head>
+    )
+  }
 }
 
 Blog.propTypes = {

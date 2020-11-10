@@ -10,8 +10,15 @@ export const About = () => {
         <title>Michael Gee</title>
         <meta
           name="description"
-          content="Michael Gee is a software developer eager to learn, share, and teach web development along with turning ideas into applications."
+          content="Michael Gee is a full-stack software developer eager to learn, share, and teach web development along with turning ideas into applications."
         />
+        <meta property="og:title" content="Michael Gee" />
+        <meta
+          property="og:description"
+          content="Michael Gee is a full-stack software developer eager to learn, share, and teach web development along with turning ideas into applications."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.michaelgee.com" />
       </Head>
 
       <div className="page-content">

@@ -13,13 +13,7 @@ export const Mentorship = () => {
 
   return (
     <>
-      <Head>
-        <title>Mentorship | Michael Gee</title>
-        <meta
-          name="description"
-          content="Rapidly grow as a developer and reach your end goals through mentorship with Michael Gee."
-        />
-      </Head>
+      {_renderHead()}
 
       <div className={styles.container} className="page-content">
         <Icon name="rocket" size="massive" id={styles.rocketIcon} />
@@ -124,6 +118,25 @@ export const Mentorship = () => {
       </div>
     </>
   )
+
+  function _renderHead() {
+    return (
+      <Head>
+        <title>Mentorship | Michael Gee</title>
+        <meta
+          name="description"
+          content="Rapidly grow as a developer and reach your end goals through free mentorship with Michael Gee."
+        />
+        <meta property="og:title" content="Mentorship | Michael Gee" />
+        <meta
+          property="og:description"
+          content="Rapidly grow as a developer and reach your end goals through free mentorship with Michael Gee."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.michaelgee.com/mentorship" />
+      </Head>
+    )
+  }
 
   function _onAccordionClick(newIndex) {
     if (newIndex === activeAccodion) setActiveAccordion(-1)

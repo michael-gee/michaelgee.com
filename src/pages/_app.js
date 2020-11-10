@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Nav } from '../components/Nav'
 import { Profile } from '../components/Profile'
 import { PageContent } from '../components/PageContent'
@@ -19,21 +20,34 @@ const App = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <main className="page">
-      <Nav />
+    <>
+      {_renderHead()}
 
-      <div className="page-body">
-        <Profile />
+      <main className="page">
+        <Nav />
 
-        <PageContent isLoading={isLoading}>
-          <Component {...pageProps} />
-        </PageContent>
-      </div>
+        <div className="page-body">
+          <Profile />
 
-      <div className="bg-back" />
-      <div className="bg-front" />
-    </main>
+          <PageContent isLoading={isLoading}>
+            <Component {...pageProps} />
+          </PageContent>
+        </div>
+
+        <div className="bg-back" />
+        <div className="bg-front" />
+      </main>
+    </>
   )
+
+  function _renderHead() {
+    return (
+      <Head>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Michael Gee's Website" />
+      </Head>
+    )
+  }
 }
 
 export default App

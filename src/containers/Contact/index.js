@@ -40,10 +40,7 @@ export const Contact = () => {
 
   return (
     <>
-      <Head>
-        <title>Contact | Michael Gee</title>
-        <meta name="description" content="Contact Michael Gee" />
-      </Head>
+      {_renderHead()}
 
       <div className="page-content">
         <section>
@@ -110,6 +107,25 @@ export const Contact = () => {
       </div>
     </>
   )
+
+  function _renderHead() {
+    return (
+      <Head>
+        <title>Contact | Michael Gee</title>
+        <meta
+          name="description"
+          content="For more information about Michael Gee please feel free to reach out through the social media links or contact form."
+        />
+        <meta property="og:title" content="Contact | Michael Gee" />
+        <meta
+          property="og:description"
+          content="For more information about Michael Gee please feel free to reach out through the social media links or contact form."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.michaelgee.com/contact" />
+      </Head>
+    )
+  }
 
   function _onInputChange(ev, data) {
     setFields({ ...fields, [ev.target.name]: data.value })
