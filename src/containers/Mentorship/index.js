@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import { PageHead } from '../../components/PageHead'
 import { Accordion, Button, Icon } from 'semantic-ui-react'
 
 import { useState } from 'react'
@@ -13,7 +13,11 @@ export const Mentorship = () => {
 
   return (
     <>
-      {_renderHead()}
+      <PageHead
+        title="Mentorship | Michael Gee"
+        description="Rapidly grow as a developer and reach your end goals through free mentorship with Michael Gee."
+        url="https://www.michaelgee.com/mentorship"
+      />
 
       <div className={styles.container} className="page-content">
         <Icon name="rocket" size="massive" id={styles.rocketIcon} />
@@ -118,25 +122,6 @@ export const Mentorship = () => {
       </div>
     </>
   )
-
-  function _renderHead() {
-    return (
-      <Head>
-        <title>Mentorship | Michael Gee</title>
-        <meta
-          name="description"
-          content="Rapidly grow as a developer and reach your end goals through free mentorship with Michael Gee."
-        />
-        <meta property="og:title" content="Mentorship | Michael Gee" />
-        <meta
-          property="og:description"
-          content="Rapidly grow as a developer and reach your end goals through free mentorship with Michael Gee."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.michaelgee.com/mentorship" />
-      </Head>
-    )
-  }
 
   function _onAccordionClick(newIndex) {
     if (newIndex === activeAccodion) setActiveAccordion(-1)
