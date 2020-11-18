@@ -3,7 +3,7 @@ import { Intro } from './Intro'
 import { TechStack } from './TechStack'
 import { Hobbies } from './Hobbies'
 
-export const About = () => {
+export const About = props => {
   return (
     <>
       <PageHead
@@ -13,11 +13,11 @@ export const About = () => {
         url="https://www.michaelgee.com"
       />
 
-      <div className="page-content">
-        <Intro />
-        <TechStack />
-        <Hobbies />
-      </div>
+      <div className="page-content">{props.children}</div>
     </>
   )
 }
+
+About.Intro = Intro
+About.TechStack = TechStack
+About.Hobbies = Hobbies
