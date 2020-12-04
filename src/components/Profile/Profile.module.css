@@ -16,10 +16,9 @@
 .profileImg {
   margin: 24px 0;
 }
-
 .profileImg img {
   border-radius: 50%;
-  border: 8px solid var(--mg-primary);
+  border: 8px solid var(--mg-primary) !important;
 }
 
 .titleContainer h1 {
