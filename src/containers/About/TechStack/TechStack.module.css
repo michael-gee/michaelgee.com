@@ -1,5 +1,5 @@
 .techStack {
-  padding: 16px 32px;
+  padding: 16px 24px;
   font-size: 1.6em;
 }
 .techStack article {
@@ -10,11 +10,6 @@
 .techStack h3 {
   font-size: 1.6em;
   color: var(--mg-primary);
-}
-
-.serverTech {
-  display: flex;
-  justify-content: space-around;
 }
 
 .tech {
@@ -52,16 +47,6 @@
   font-weight: 500;
 }
 
-.iconLink {
-  text-align: center;
-  margin: 8px 0 16px 0;
-  font-size: 1.4em;
-}
-
-.iconLink a {
-color: var(--mg-primary);
-}
-
 @media screen and (max-width: 768px) {
   .techStack article {
     flex-direction: column;
@@ -70,10 +55,6 @@ color: var(--mg-primary);
 
   .techStack h3 {
     text-align: center;
-  }
-
-  .serverTech {
-    flex-direction: column;
   }
 
   .tech {

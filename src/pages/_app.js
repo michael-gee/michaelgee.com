@@ -34,8 +34,17 @@ const App = ({ Component, pageProps }) => {
           </PageContent>
         </div>
 
-        <div className="bg-back" />
-        <div className="bg-front" />
+        <ul className="bg-circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </main>
     </>
   )

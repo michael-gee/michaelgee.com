@@ -12,7 +12,6 @@ export const ProjectsPage = () => {
             return (
               <Projects.ProjectItem
                 id={cp.id}
-                dates={cp.dates}
                 imageProps={{ src: cp.imageSrc, alt: cp.imageAlt }}
                 title={cp.title}
                 description={cp.description}
@@ -31,7 +30,6 @@ export const ProjectsPage = () => {
             return (
               <Projects.ProjectItem
                 id={pp.id}
-                dates={pp.dates}
                 imageProps={{ src: pp.imageSrc, alt: pp.imageAlt }}
                 title={pp.title}
                 description={pp.description}
