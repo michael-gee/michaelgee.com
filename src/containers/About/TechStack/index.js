@@ -13,11 +13,19 @@ export const TechStack = () => {
             <h3>Front-End</h3>
 
             <div className={styles.tech}>
-              <Icon name="html5" size="huge" style={{ color: '#F0652A' }} />
-              <Icon name="css3" size="huge" style={{ color: '#1C88C7' }} />
-              <SiTypescript style={{ fontSize: '3.75em', margin: '0 24px', color: '#3074BF' }} />
-              <Icon name="js" size="huge" style={{ color: '#F1D91C', fontSize: '4.35em' }} />
-              <Icon name="react" size="huge" style={{ color: '#00D8FF' }} />
+              <Icon name="html5" size="huge" style={{ color: '#F0652A' }} title="HTML" />
+              <Icon name="css3" size="huge" style={{ color: '#1C88C7' }} title="CSS" />
+              <SiTypescript
+                style={{ fontSize: '3.75em', margin: '0 24px', color: '#3074BF' }}
+                title="TypeScript"
+              />
+              <Icon
+                name="js"
+                size="huge"
+                style={{ color: '#F1D91C', fontSize: '4.35em' }}
+                title="JavaScript"
+              />
+              <Icon name="react" size="huge" style={{ color: '#00D8FF' }} title="React.js" />
             </div>
           </article>
 
@@ -25,11 +33,17 @@ export const TechStack = () => {
             <h3>Back-End</h3>
 
             <div className={styles.tech}>
-              <Icon name="node js" size="huge" style={{ color: '#82C106' }} />
-              <SiTypescript style={{ fontSize: '3.75em', color: '#3074BF', margin: '0 24px' }} />
-              <SiCsharp style={{ fontSize: '3.75em', color: '#642176', margin: '0 24px' }} />
-              <SiDotNet style={{ fontSize: '3.75em', margin: '0 24px 0 16px' }} />
-              <SiMongodb style={{ fontSize: '3.75em', color: '#3E9738' }} />
+              <Icon name="node js" size="huge" style={{ color: '#82C106' }} title="Node.js" />
+              <SiTypescript
+                style={{ fontSize: '3.75em', color: '#3074BF', margin: '0 24px' }}
+                title="TypeScript"
+              />
+              <SiCsharp
+                style={{ fontSize: '3.75em', color: '#642176', margin: '0 24px' }}
+                title="C#"
+              />
+              <SiDotNet style={{ fontSize: '3.75em', margin: '0 24px 0 16px' }} title=".NET Core" />
+              <SiMongodb style={{ fontSize: '3.75em', color: '#3E9738' }} title="Mongo DB" />
             </div>
           </article>
 
@@ -37,9 +51,15 @@ export const TechStack = () => {
             <h3>Cloud</h3>
 
             <div className={styles.tech}>
-              <Icon name="aws" size="huge" style={{ color: '#F19227' }} />
+              <Icon
+                name="aws"
+                size="huge"
+                style={{ color: '#F19227' }}
+                title="Amazon Web Services"
+              />
               <SiMicrosoftazure
                 style={{ fontSize: '3.75em', color: '#2171B2', margin: '0 24px' }}
+                title="Microsoft Azure"
               />
             </div>
           </article>

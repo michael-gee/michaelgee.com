@@ -27,7 +27,7 @@
 
 .projectIconsContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .projectIcon {
@@ -43,7 +43,12 @@
 }
 
 .projectDesc {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  padding: 0 8px;
+  min-height: 64px;
+  font-size: .94em;
 }
 
 #coreView {

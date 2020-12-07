@@ -11,6 +11,7 @@
   max-height: 680px;
   overflow-y: auto;
   margin-right: 12px;
+  user-select: none;
 }
 
 .profileImg {
