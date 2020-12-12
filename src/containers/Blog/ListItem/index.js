@@ -3,9 +3,9 @@ import { Icon } from 'semantic-ui-react'
 
 import PropTypes from 'prop-types'
 
-import styles from './PostItem.module.css'
+import styles from './ListItem.module.css'
 
-export const PostItem = props => {
+export const ListItem = props => {
   return (
     <a href={props.url} target="_blank" rel="noopener noreferrer" className={styles.itemContainer}>
       <div className={styles.imgContainer}>
@@ -45,7 +45,7 @@ export const PostItem = props => {
   }
 }
 
-PostItem.propTypes = {
+ListItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,

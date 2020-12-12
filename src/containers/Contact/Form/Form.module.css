@@ -66,13 +66,12 @@
     margin: 8px 24px;
   }
   .userInfo input {
-    margin: 16px 0;
+    margin: 8px 0 !important;
     min-width: 100%;
   }
 
   #form textarea {
     width: calc(100% - 48px);
-    margin-top: 8px;
   }
 
   #submitBtn {

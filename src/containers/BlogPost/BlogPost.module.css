@@ -1,0 +1,7 @@
+.blogPostContainer {
+  padding: 8px 40px;
+}
+
+.blogPostContainer p, .blogPostContainer a{
+  font-size: 2em;
+} 
