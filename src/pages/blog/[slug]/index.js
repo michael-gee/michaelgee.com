@@ -1,6 +1,19 @@
+import { PageHead } from '../../../components/PageHead'
 import { BlogPost } from '../../../containers/BlogPost'
 
-const BlogPostPage = props => <BlogPost data={props} />
+const BlogPostPage = ({ post }) =>
+  post ? (
+    <>
+      <PageHead title={post.title} />
+      <BlogPost post={post} />
+    </>
+  ) : (
+    <>
+      <PageHead title="404 - Post Not Found" />
+      <h1 style={{ textAlign: 'center' }}>404 - Blog post was not found.</h1>
+      {/* ErrorComponent */}
+    </>
+  )
 
 export async function getServerSideProps(context) {
   const slug = context.params.slug
@@ -10,11 +23,22 @@ export async function getServerSideProps(context) {
     headers: { 'api-key': process.env.DEVTO_API_KEY }
   })
   const data = await res.json()
+  let post = null
 
-  console.log(data)
+  if (data)
+    post = {
+      title: data.title,
+      description: data.description,
+      body: data['body_markdown'],
+      coverImageSrc: data['cover_image'],
+      date: data['published_at'],
+      tags: data['tag_list'],
+      commentsCount: data['comments_count'],
+      reactionsCount: data['public_reactions_count']
+    }
 
   return {
-    props: {}
+    props: { post }
   }
 }
 

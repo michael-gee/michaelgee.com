@@ -1,29 +1,36 @@
-import Head from 'next/head'
-// import ReactMarkdown from 'react-markdown'
-// import emoji from 'emoji-dictionary'
+import PropTypes from 'prop-types'
+
+import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
+import emoji from 'remark-emoji'
 
 import styles from './BlogPost.module.css'
 
-export const BlogPost = props => {
-  // const title = props.data.title
-  // const post =
-  //   props.data && props.data['body_markdown']
-  //     ? props.data['body_markdown']
-  //     : 'Blog post was not found.'
-  // const emojiSupport = text => text.value.replace(/:\w+:/gi, name => emoji.getUnicode(name))
-
+export const BlogPost = ({ post }) => {
   return (
     <>
-      <h1>Blog Post</h1>
-      {/* <Head>
-        <title>Michael Gee</title>
-      </Head>
+      <h2 className={`page-title ${styles.postTitle}`}>{post.title}</h2>
 
-      <h2 className="page-title">{title}</h2>
+      <div className={styles.coverImageContainer}>
+        <Image src={post.coverImageSrc} width={600} height={252} />
+      </div>
 
       <div className={styles.blogPostContainer}>
-        <ReactMarkdown renderers={{ text: emojiSupport }}>{post}</ReactMarkdown>
-      </div> */}
+        <ReactMarkdown plugins={[[emoji, { emoticon: true }]]}>{post.body}</ReactMarkdown>
+      </div>
     </>
   )
+}
+
+BlogPost.propTypes = {
+  post: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    body: PropTypes.string,
+    coverImageSrc: PropTypes.string,
+    date: PropTypes.string,
+    tags: PropTypes.string,
+    commentsCount: PropTypes.number,
+    reactionsCount: PropTypes.number
+  })
 }

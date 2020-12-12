@@ -1,7 +1,31 @@
-.blogPostContainer {
-  padding: 8px 40px;
+.postTitle {
+  border-bottom: none;
+  text-align: center;
+  font-weight: bold;
+  color: var(--mg-primary);
+  font-size: 3.6em;
 }
 
-.blogPostContainer p, .blogPostContainer a{
+.coverImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.coverImageContainer img {
+  border-radius: 4px;
+}
+
+.blogPostContainer {
+  max-width: 584px;
+  padding: 24px 8px;
+  margin: 0 auto;
+}
+.blogPostContainer h1, .blogPostContainer h2, .blogPostContainer h3, .blogPostContainer h4, .blogPostContainer h5, .blogPostContainer h6 {
+  margin: 16px 0;
+}
+.blogPostContainer > p, .blogPostContainer > a {
   font-size: 2em;
-} 
+}
+.blogPostContainer img {
+  max-width: 100%;
+}

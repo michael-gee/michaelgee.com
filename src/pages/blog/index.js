@@ -12,12 +12,7 @@ const BlogPage = ({ posts }) => {
             description={item.description}
             date={item.published_at}
             image={item.cover_image}
-            url={item.url}
-            counters={{
-              views: item.page_views_count,
-              reactions: item.public_reactions_count,
-              comments: item.comments_count
-            }}
+            href={`/blog/${item.slug}`}
             key={item.id}
           />
         ))

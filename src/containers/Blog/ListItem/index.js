@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Icon } from 'semantic-ui-react'
+import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 
@@ -7,36 +7,19 @@ import styles from './ListItem.module.css'
 
 export const ListItem = props => {
   return (
-    <a href={props.url} target="_blank" rel="noopener noreferrer" className={styles.itemContainer}>
-      <div className={styles.imgContainer}>
-        <Image src={props.image} width={400} height={168} />
-      </div>
-
-      <div className={styles.itemContent}>
-        <h3 className={styles.itemTitle}>{props.title}</h3>
-
-        <div className={styles.itemMeta}>
-          <span className={styles.itemDate}>{_formatDate()}</span>
-
-          <div className={styles.itemIcons}>
-            <span>
-              <Icon name="eye" />
-              {props.counters.views}
-            </span>
-            <span>
-              <Icon name="heart" />
-              {props.counters.reactions}
-            </span>
-            <span>
-              <Icon name="chat" />
-              {props.counters.comments}
-            </span>
-          </div>
+    <Link href={props.href}>
+      <a className={styles.itemContainer}>
+        <div className={styles.imgContainer}>
+          <Image src={props.image} width={400} height={168} />
         </div>
 
-        <p>{props.description}</p>
-      </div>
-    </a>
+        <div className={styles.itemContent}>
+          <h3 className={styles.itemTitle}>{props.title}</h3>
+          <p className={styles.itemDesc}>{props.description}</p>
+          <div className={styles.itemDate}>{_formatDate()}</div>
+        </div>
+      </a>
+    </Link>
   )
 
   function _formatDate() {
@@ -50,10 +33,5 @@ ListItem.propTypes = {
   description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  counters: PropTypes.shape({
-    views: PropTypes.number,
-    reactions: PropTypes.number,
-    comments: PropTypes.number
-  }).isRequired
+  href: PropTypes.string.isRequired
 }
