@@ -4,7 +4,7 @@ import { BlogPost } from '../../../containers/BlogPost'
 const BlogPostPage = ({ post }) =>
   post ? (
     <>
-      <PageHead title={post.title} />
+      <PageHead title={post.title} description={post.description} />
       <BlogPost post={post} />
     </>
   ) : (
@@ -32,7 +32,7 @@ export async function getServerSideProps(context) {
       body: data['body_markdown'],
       coverImageSrc: data['cover_image'],
       date: data['published_at'],
-      tags: data['tag_list'],
+      url: data.url,
       commentsCount: data['comments_count'],
       reactionsCount: data['public_reactions_count']
     }

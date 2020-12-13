@@ -1,9 +1,9 @@
-.header {
+.nav {
   height: 94%;
   max-height: 640px;
 }
 
-.nav {
+.navContent {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -13,11 +13,11 @@
   max-height: 640px;
   margin-left: 8px;
 }
-.nav .navBtn:first-of-type {
+.navContent .navBtn:first-of-type {
   border-top-left-radius: 4px !important;
   border-top-right-radius: 4px !important;
 }
-.nav .navBtn:last-of-type {
+.navContent .navBtn:last-of-type {
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
 }
@@ -77,13 +77,13 @@
 
 
 @media screen and (max-width: 960px) {
-  .header {
+  .nav {
     padding: 16px 0;
   }
 }
 
 @media screen and (max-width: 650px)  {
-  .header {
+  .nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -96,7 +96,7 @@
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
   }
 
-  .nav {
+  .navContent {
     display: none;
     height: 100%;
   }

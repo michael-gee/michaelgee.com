@@ -1,9 +1,16 @@
+.blogPost {
+  max-width: 584px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
 .postTitle {
   border-bottom: none;
   text-align: center;
   font-weight: bold;
   color: var(--mg-primary);
   font-size: 3.6em;
+
 }
 
 .coverImageContainer {
@@ -15,17 +22,62 @@
   border-radius: 4px;
 }
 
-.blogPostContainer {
-  max-width: 584px;
-  padding: 24px 8px;
-  margin: 0 auto;
+.datePublished {
+  color: var(--mg-primary);
+  font-size: 1.8em;
+  font-style: italic;
+  text-align: center;
+  padding: 24px 0 16px 0;
 }
-.blogPostContainer h1, .blogPostContainer h2, .blogPostContainer h3, .blogPostContainer h4, .blogPostContainer h5, .blogPostContainer h6 {
+
+.markdownContainer h1, .markdownContainer h2, .markdownContainer h3, .markdownContainer h4, .markdownContainer h5, .markdownContainer h6 {
   margin: 16px 0;
 }
-.blogPostContainer > p, .blogPostContainer > a {
+.markdownContainer > p, .markdownContainer > a, .markdownContainer > ol, .markdownContainer > ul, .markdownContainer > blockquote, .markdownContainer > pre {
   font-size: 2em;
 }
-.blogPostContainer img {
+.markdownContainer > ol, .markdownContainer > ul, .markdownContainer > pre  {
+  line-height: 1.4;
+}
+.markdownContainer > blockquote {
+  border-left: 4px solid #737C85;
+  margin: 16px 0;
+  padding: 8px 24px;
+}
+.markdownContainer > pre > code, .markdownContainer > p > code {
+  background-color: #2C2D31;
+  color: #99DCFD;
+  padding: 8px;
+  border-radius: 4px;
+  white-space: normal;
+}
+.markdownContainer img {
   max-width: 100%;
+}
+
+.footer {
+  font-size: 1.8em;
+  margin: 24px 0 32px 0;
+}
+
+.counters {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--mg-primary);
+  margin: 24px 0;
+}
+.counters i {
+  padding: 0 24px;
+}
+
+.contribute {
+  border: 1px solid var(--mg-primary);
+  padding: 16px;
+  border-radius: 4px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.contribute i {
+  color: var(--mg-primary);
 }

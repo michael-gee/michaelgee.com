@@ -8,7 +8,7 @@ import styles from './Profile.module.css'
 
 export const Profile = () => {
   return (
-    <div className={styles.profile}>
+    <header className={styles.profile}>
       <div className={styles.profileImg}>
         <Image src="/images/michael.jpg" alt="Michael Gee profile image" width={240} height={240} />
       </div>
@@ -62,6 +62,6 @@ export const Profile = () => {
           <span>Mentorship</span>
         </Button>
       </Link>
-    </div>
+    </header>
   )
 }
