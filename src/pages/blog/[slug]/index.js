@@ -4,12 +4,22 @@ import { BlogPost } from '../../../containers/BlogPost'
 const BlogPostPage = ({ post }) =>
   post ? (
     <>
-      <PageHead title={post.title} description={post.description} />
+      <PageHead
+        title={post.title}
+        description={post.description}
+        type="article"
+        url={`https://michaelgee.com/blog/${post.slug}`}
+        image={post.coverImageSrc}
+      >
+        <meta property="twitter:card" content="summary_large_image" />
+      </PageHead>
+
       <BlogPost post={post} />
     </>
   ) : (
     <>
       <PageHead title="404 - Post Not Found" />
+
       <h1 style={{ textAlign: 'center' }}>404 - Blog post was not found.</h1>
       {/* ErrorComponent */}
     </>
@@ -33,6 +43,7 @@ export async function getServerSideProps(context) {
       coverImageSrc: data['cover_image'],
       date: data['published_at'],
       url: data.url,
+      slug: data.slug,
       commentsCount: data['comments_count'],
       reactionsCount: data['public_reactions_count']
     }

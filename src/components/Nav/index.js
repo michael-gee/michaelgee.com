@@ -23,7 +23,7 @@ export const Nav = () => {
               as="a"
               icon
               size="huge"
-              id={btn.pathname === router.pathname ? styles.selected : undefined}
+              id={_returnRouteSelectedId(btn.pathname)}
               className={styles.navBtn}
             >
               <Icon name={btn.icon} />
@@ -61,5 +61,10 @@ export const Nav = () => {
 
   function _toggleSidebar() {
     setSidebarIsOpen(!sidebarIsOpen)
+  }
+
+  function _returnRouteSelectedId(btnPathname) {
+    if (btnPathname === '/blog' && router.pathname.includes('/blog')) return styles.selected
+    return btnPathname === router.pathname ? styles.selected : undefined
   }
 }

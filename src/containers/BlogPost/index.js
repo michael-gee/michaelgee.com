@@ -59,6 +59,7 @@ BlogPost.propTypes = {
     coverImageSrc: PropTypes.string,
     date: PropTypes.string,
     url: PropTypes.string,
+    slug: PropTypes.string,
     commentsCount: PropTypes.number,
     reactionsCount: PropTypes.number
   })
