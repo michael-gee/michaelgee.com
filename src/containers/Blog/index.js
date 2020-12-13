@@ -1,6 +1,6 @@
 import { PageHead } from '../../components/PageHead'
 import { Title } from './Title'
-import { PostItem } from './PostItem'
+import { ListItem } from './ListItem'
 
 export const Blog = props => {
   return (
@@ -17,4 +17,4 @@ export const Blog = props => {
 }
 
 Blog.Title = Title
-Blog.PostItem = PostItem
+Blog.ListItem = ListItem

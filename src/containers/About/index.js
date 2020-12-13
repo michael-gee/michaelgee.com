@@ -10,7 +10,7 @@ export const About = props => {
         title="Michael Gee"
         description="Michael Gee is a full-stack software developer eager to learn, share, and teach web development along with turning ideas into applications."
         type="website"
-        url="https://www.michaelgee.com"
+        url="https://michaelgee.com"
       />
 
       <div className="page-content">{props.children}</div>

@@ -15,53 +15,56 @@ export const Nav = () => {
   const router = useRouter()
 
   return (
-    <header className={styles.header}>
-      <nav style={{ width: '100%', height: '100%' }}>
-        <div className={styles.nav}>
-          {MG_NAV_PAGES.map(btn => (
-            <Link href={btn.pathname} key={btn.icon}>
-              <Button
-                as="a"
-                icon
-                size="huge"
-                id={btn.pathname === router.pathname ? styles.selected : undefined}
-                className={styles.navBtn}
-              >
-                <Icon name={btn.icon} />
-                <div>{btn.text}</div>
-              </Button>
-            </Link>
-          ))}
-        </div>
-
-        <div className={styles.mobileNav}>
-          <Link href="/">
-            <div className={styles.mobileNavContent}>
-              <Image
-                src="/images/mg-transparent-logo.png"
-                alt="Michael Gee logo image"
-                width={64}
-                height={64}
-              />
-
-              <div>
-                <h1 className={styles.mobileTitle}>Michael Gee</h1>
-                <h2 className={styles.mobileSubtitle}>Software Developer</h2>
-              </div>
-            </div>
+    <nav className={styles.nav}>
+      <div className={styles.navContent}>
+        {MG_NAV_PAGES.map(btn => (
+          <Link href={btn.pathname} key={btn.icon}>
+            <Button
+              as="a"
+              icon
+              size="huge"
+              id={_returnRouteSelectedId(btn.pathname)}
+              className={styles.navBtn}
+            >
+              <Icon name={btn.icon} />
+              <div>{btn.text}</div>
+            </Button>
           </Link>
+        ))}
+      </div>
 
-          <Button onClick={_toggleSidebar} icon id={styles.menuBtn} aria-label="Open Side Menu">
-            <Icon name="bars" />
-          </Button>
-        </div>
+      <div className={styles.mobileNav}>
+        <Link href="/">
+          <div className={styles.mobileNavContent}>
+            <Image
+              src="/images/mg-transparent-logo.png"
+              alt="Michael Gee logo image"
+              width={64}
+              height={64}
+            />
 
-        {sidebarIsOpen && <Sidebar onHide={_toggleSidebar} />}
-      </nav>
-    </header>
+            <div>
+              <h1 className={styles.mobileTitle}>Michael Gee</h1>
+              <h2 className={styles.mobileSubtitle}>Software Developer</h2>
+            </div>
+          </div>
+        </Link>
+
+        <Button onClick={_toggleSidebar} icon id={styles.menuBtn} aria-label="Open Side Menu">
+          <Icon name="bars" />
+        </Button>
+      </div>
+
+      {sidebarIsOpen && <Sidebar onHide={_toggleSidebar} />}
+    </nav>
   )
 
   function _toggleSidebar() {
     setSidebarIsOpen(!sidebarIsOpen)
+  }
+
+  function _returnRouteSelectedId(btnPathname) {
+    if (btnPathname === '/blog' && router.pathname.includes('/blog')) return styles.selected
+    return btnPathname === router.pathname ? styles.selected : undefined
   }
 }
