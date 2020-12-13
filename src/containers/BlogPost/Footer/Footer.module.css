@@ -1,0 +1,26 @@
+.footer {
+  font-size: 1.8em;
+  margin: 24px 0 32px 0;
+}
+
+.counters {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--mg-primary);
+  margin: 24px 0;
+}
+.counters i {
+  padding: 0 24px;
+}
+
+.contribute {
+  border: 1px solid var(--mg-primary);
+  padding: 16px;
+  border-radius: 4px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.contribute i {
+  color: var(--mg-primary);
+}

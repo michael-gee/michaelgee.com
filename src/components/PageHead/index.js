@@ -7,6 +7,7 @@ export const PageHead = props => {
       <title>{props.title}</title>
       <meta property="title" content={props.title} />
       <meta name="description" content={props.description} />
+      <meta name="author" content="Michael Gee" />
       <meta property="og:title" content={props.title} />
       <meta property="og:description" content={props.description} />
       <meta property="og:type" content={props.type} />
@@ -15,6 +16,7 @@ export const PageHead = props => {
 
       <meta property="twitter:title" content={props.title} />
       <meta property="twitter:description" content={props.description} />
+      <meta name="twitter:creator" content="Michael Gee" />
       <meta property="twitter:url" content={props.url} />
       {props.image ? <meta property="twitter:image" content={props.image} /> : undefined}
 

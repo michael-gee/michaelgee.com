@@ -14,14 +14,30 @@ const BlogPostPage = ({ post }) =>
         <meta property="twitter:card" content="summary_large_image" />
       </PageHead>
 
-      <BlogPost post={post} />
+      <BlogPost>
+        <BlogPost.Header title={post.title} coverImageSrc={post.coverImageSrc} date={post.date} />
+
+        <BlogPost.Body markdown={post.body} />
+
+        <BlogPost.Footer
+          url={post.url}
+          reactionsCount={post.reactionsCount}
+          commentsCount={post.commentsCount}
+        />
+      </BlogPost>
     </>
   ) : (
     <>
-      <PageHead title="404 - Post Not Found" />
+      <PageHead
+        title="Error - Article Not Found"
+        description="Error - Article Not Found"
+        type="article"
+        url={`https://michaelgee.com/blog`}
+      />
 
-      <h1 style={{ textAlign: 'center' }}>404 - Blog post was not found.</h1>
-      {/* ErrorComponent */}
+      <BlogPost>
+        <BlogPost.ErrorPage />
+      </BlogPost>
     </>
   )
 
@@ -35,7 +51,7 @@ export async function getServerSideProps(context) {
   const data = await res.json()
   let post = null
 
-  if (data)
+  if (data && !data.error)
     post = {
       title: data.title,
       description: data.description,

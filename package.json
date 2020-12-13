@@ -1,6 +1,6 @@
 {
   "name": "michaelgee.com",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "dependencies": {
     "next": "^10.0.3",
