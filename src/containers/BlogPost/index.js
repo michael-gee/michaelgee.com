@@ -5,7 +5,7 @@ import { ErrorPage } from './Error'
 
 export const BlogPost = props => {
   return (
-    <article style={{ maxWidth: 584, margin: '0 auto', padding: '0 8px' }}>
+    <article style={{ maxWidth: 584, margin: '0 auto', padding: '0 16px' }}>
       {props.children}
     </article>
   )

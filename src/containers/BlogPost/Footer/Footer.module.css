@@ -3,6 +3,12 @@
   margin: 24px 0 32px 0;
 }
 
+.devLogo {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -6px;
+}
+
 .counters {
   display: flex;
   justify-content: flex-end;

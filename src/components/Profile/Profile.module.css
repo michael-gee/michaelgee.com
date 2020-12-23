@@ -48,6 +48,9 @@
   color: var(--mg-primary) !important;
 }
 
+.employment {
+  margin-top: 6px;
+}
 .employmentItem {
   display: flex;
   align-items: center;
@@ -59,7 +62,17 @@
   margin-bottom: 4px !important;
 }
 
-#mentorshipBtn {
+.resumeBtnContainer {
+  width: 100%;
+}
+.resumeBtnContainer svg {
+  font-size: 1.4em;
+  margin-right: 6px;
+}
+#resumeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 64px;
   margin-top: auto;
@@ -68,7 +81,7 @@
   color: #323232;
   border-top: 1px solid #eee;
 }
-#mentorshipBtn:hover {
+#resumeBtn:hover {
   color: var(--mg-primary);
 }
 
@@ -95,7 +108,7 @@
     margin: 0 24px 0 auto;
   }
 
-  .employment, #mentorshipBtn {
+  .employment, .resumeBtnContainer {
     display: none;
   }
 }

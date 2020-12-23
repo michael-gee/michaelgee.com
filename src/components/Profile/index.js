@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { Button, Icon } from 'semantic-ui-react'
+import { FcDocument } from 'react-icons/fc'
 
 import { MG_SOCIAL_MEDIA } from '../../constants'
 
@@ -56,12 +56,17 @@ export const Profile = () => {
         </div>
       </div>
 
-      <Link href="/mentorship">
-        <Button id={styles.mentorshipBtn}>
-          <Icon name="university" />
-          <span>Mentorship</span>
+      <a
+        href="https://drive.google.com/file/d/1evQaxVmXenXp39aJC6jO0u4-PyhG9TkQ/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.resumeBtnContainer}
+      >
+        <Button id={styles.resumeBtn}>
+          <FcDocument />
+          <span>Resume</span>
         </Button>
-      </Link>
+      </a>
     </header>
   )
 }
