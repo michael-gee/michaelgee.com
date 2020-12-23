@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: #fafafb;
   color: #323232;
   border-radius: 4px;
@@ -15,7 +16,7 @@
 }
 
 .profileImg {
-  margin: 24px 0;
+  margin: 20px 0 24px 0;
 }
 .profileImg img {
   border-radius: 50%;
@@ -37,7 +38,7 @@
 }
 
 .socialIcons {
-  margin: 24px 0 16px 0;
+  margin: 16px 0 8px 0;
 }
 
 .socialIcon {
@@ -48,9 +49,6 @@
   color: var(--mg-primary) !important;
 }
 
-.employment {
-  margin-top: 6px;
-}
 .employmentItem {
   display: flex;
   align-items: center;
