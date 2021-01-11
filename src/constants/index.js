@@ -15,11 +15,6 @@ export const MG_NAV_PAGES = [
     pathname: '/projects'
   },
   {
-    icon: 'university',
-    text: 'Mentorship',
-    pathname: '/mentorship'
-  },
-  {
     icon: 'mail',
     text: 'Contact',
     pathname: '/contact'

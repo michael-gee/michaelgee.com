@@ -32,17 +32,7 @@ export const Intro = () => {
             to mind.
           </p>
         </div>
-        <div className={styles.service}>
-          <Link href="/mentorship">
-            <Icon name="university" size="huge" />
-          </Link>
 
-          <h2>Mentor</h2>
-          <p>
-            I have a strong passion for continuous learning and collaborating with others along with
-            helping people learn related material or finding their path in their developer journey.
-          </p>
-        </div>
         <div className={styles.service}>
           <Link href="/blog">
             <Icon name="write" size="huge" />
@@ -53,6 +43,19 @@ export const Intro = () => {
             I am in no way a writer but I like to share my past experiences and cool things I have
             learned. I hope that some people can benefit from them and even provide valuable
             feedback.
+          </p>
+        </div>
+
+        <div className={styles.service}>
+          <a href="https://michaelgee.dev" target="_blank" rel="noopener noreferrer">
+            <Icon name="university" size="huge" />
+          </a>
+
+          <h2>Learner</h2>
+          <p>
+            I have a strong passion for continuous learning and collaborating with others to rapidly
+            expand upon my developer journey while staying open-minded to new technologies and
+            ideas.
           </p>
         </div>
       </div>

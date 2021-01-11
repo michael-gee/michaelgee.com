@@ -9,7 +9,7 @@ export const OtherContactMethods = () => {
       <div className={styles.otherContact}>
         <div>
           <Icon name="at" size="large" />
-          <span>michaelgee221@gmail.com</span>
+          <span>michaelgee.dev@protonmail.com</span>
         </div>
 
         <div>
