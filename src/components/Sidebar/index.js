@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 
 import { Button, Icon, Sidebar as SUISidebar } from 'semantic-ui-react'
-import { FcDocument } from 'react-icons/fc'
 
 import { useRouter } from 'next/router'
 
@@ -54,22 +53,6 @@ export const Sidebar = props => {
               )
             })}
           </ul>
-        </section>
-
-        <section className={styles.sidebarSection}>
-          <h3 className={styles.sidebarTitle}>Resume</h3>
-          <a
-            href="https://drive.google.com/file/d/1evQaxVmXenXp39aJC6jO0u4-PyhG9TkQ/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.sidebarMenuItem}
-            style={{ display: 'flex' }}
-          >
-            <FcDocument />
-            <span className={styles.sidebarMenuItemText} style={{ marginTop: 3 }}>
-              Resume
-            </span>
-          </a>
         </section>
 
         <section className={styles.sidebarSection}>

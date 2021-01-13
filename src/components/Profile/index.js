@@ -18,54 +18,31 @@ export const Profile = () => {
         <h2>Software Developer</h2>
       </div>
 
-      <div className={styles.socialIcons}>
-        {MG_SOCIAL_MEDIA.map(item => {
+      <div className={styles.linkItems}>
+        {MG_SOCIAL_MEDIA.map((item, index) => {
           return (
-            <Button
-              icon
-              as="a"
+            <a
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`${item.text} Profile Link`}
-              className={styles.socialIcon}
-              key={item.icon}
+              className={styles.linkItem}
+              key={item.text}
             >
-              <Icon name={item.icon} size="big" />
-            </Button>
+              <Icon name={item.icon} size="large" />
+              <span>{item.text}</span>
+            </a>
           )
         })}
       </div>
 
-      <div className={styles.employment}>
-        <div className={styles.employmentItem}>
-          <Icon name="briefcase" size="large" />
-          <a
-            href="https://www.coreview.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialIcon}
-          >
-            CoreView
-          </a>
-        </div>
-
-        <div className={styles.employmentItem}>
-          <Icon name="map marker alternate" size="large" />
-          <span>Atlanta, GA</span>
-        </div>
-      </div>
-
       <a
-        href="https://drive.google.com/file/d/1evQaxVmXenXp39aJC6jO0u4-PyhG9TkQ/view"
+        href="https://www.coreview.com/"
         target="_blank"
         rel="noopener noreferrer"
-        className={styles.resumeBtnContainer}
+        className={styles.linkItem}
       >
-        <Button id={styles.resumeBtn}>
-          <FcDocument />
-          <span>Resume</span>
-        </Button>
+        <Icon name="briefcase" size="large" />
+        <span>CoreView</span>
       </a>
     </header>
   )

@@ -1,12 +1,11 @@
 export const blogPosts = [
   {
-    title: "Build Side Projects You'll Actually Be Passionate About",
-    url: 'https://dev.to/michaelgee/build-side-projects-you-ll-actually-be-passionate-about-164b'
+    title: 'Prioritizing Privacy in 2021',
+    url: 'https://dev.to/michaelgee/prioritizing-privacy-in-2021-25l1'
   },
   {
-    title: 'Simplify The Job Application Process',
-    url:
-      'https://dev.to/michaelgee/applying-for-dev-jobs-can-be-exhausting-simplify-the-process-d98'
+    title: "Build Side Projects You'll Actually Be Passionate About",
+    url: 'https://dev.to/michaelgee/build-side-projects-you-ll-actually-be-passionate-about-164b'
   },
   {
     title: 'Prevent Your Codebase From Becoming A Spaghetti Factory',
