@@ -1,7 +1,6 @@
 # michaelgee.com
 Michael Gee's personal portfolio & blogging website.
 
-
 ## Introduction
 Built with Next.js & React with a heavy emphasis on UI and responsive design.
 
@@ -13,4 +12,3 @@ Feedback is always welcome in any form whether it is positive or negative. Pleas
 ## Social
 Always looking to connect with software (currently web) developers so follow my socials if interested!<br/>
 [DEV](https://dev.to/michaelgee22) • [Twitter](https://twitter.com/michaelgee7) • [LinkedIn](https://www.linkedin.com/in/michael-gee)
-

@@ -1,7 +1,0 @@
-.projectsContainer {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 0 15px;
-  font-size: 1.8em;
-}
