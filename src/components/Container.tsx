@@ -1,19 +1,11 @@
-import { Flex, useColorMode, FlexProps } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
-export const Container = (props: FlexProps) => {
-	const { colorMode } = useColorMode()
-
-	const bgColor = { light: 'gray.50', dark: 'gray.900' }
-	const color = { light: 'black', dark: 'white' }
-
-	return (
-		<Flex
-			direction="column"
-			alignItems="center"
-			justifyContent="flex-start"
-			bg={bgColor[colorMode]}
-			color={color[colorMode]}
-			{...props}
-		/>
-	)
+interface Props {
+	children: React.ReactNode
 }
+
+export const Container = (props: Props) => (
+	<Box w="704px" maxW="100%" p="0 32px" m="0 auto">
+		{props.children}
+	</Box>
+)

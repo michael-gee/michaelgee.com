@@ -1,14 +1,10 @@
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
+import { Box } from '@chakra-ui/react'
+import { Header } from '@/components/Header'
 
 const Index = () => (
-	<Container height="100vh">
-		<Hero />
-		<DarkModeSwitch />
-		<CTA />
-	</Container>
+	<Box as="main" minH="100vh">
+		<Header />
+	</Box>
 )
 
 export default Index
