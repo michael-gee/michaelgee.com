@@ -1,4 +1,4 @@
-import { Flex, Icon, IconButton, Link } from '@chakra-ui/react'
+import { Box, Flex, Icon, IconButton, Link } from '@chakra-ui/react'
 import { Container } from './Container'
 import { FaCanadianMapleLeaf, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
@@ -9,7 +9,16 @@ export const Footer = () => {
 				<Flex justify="space-between" align="center">
 					<Flex align="center">
 						<Icon as={FaCanadianMapleLeaf} mr="8px" color="red.500" />
-						Michael Gee
+						<Box as="span" fontSize="sm">
+							Coded by
+							<Link href="" isExternal pl="4px">
+								Michael Gee
+							</Link>{' '}
+							| Inspired by
+							<Link href="" isExternal pl="4px">
+								Daniel Wirtz
+							</Link>
+						</Box>
 					</Flex>
 
 					<Flex>
