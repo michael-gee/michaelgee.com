@@ -1,21 +1,24 @@
-import { Box, Flex, Link, IconButton } from '@chakra-ui/react'
+import { Flex, Icon, IconButton, Link } from '@chakra-ui/react'
 import { Container } from './Container'
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaCanadianMapleLeaf, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export const Footer = () => {
 	return (
-		<Flex as="footer" m="16px 0" display={['none', 'flex', 'flex', 'flex']}>
+		<Flex as="footer" my="16px" display={['none', 'flex']}>
 			<Container>
 				<Flex justify="space-between" align="center">
-					<Box>&#169; 2021 Michael Gee</Box>
+					<Flex align="center">
+						<Icon as={FaCanadianMapleLeaf} mr="8px" color="red.500" />
+						Michael Gee
+					</Flex>
 
 					<Flex>
 						<Link href="https://twitter.com/michaelgee7" isExternal>
 							<IconButton
 								icon={<FaTwitter />}
-								backgroundColor="transparent"
+								variant="ghost"
 								isRound
-								m="0 4px"
+								mx="4px"
 								aria-label="Twitter Profile Link Button"
 							/>
 						</Link>
@@ -23,9 +26,9 @@ export const Footer = () => {
 						<Link href="https://github.com/michaelgee22" isExternal>
 							<IconButton
 								icon={<FaGithub />}
-								backgroundColor="transparent"
+								variant="ghost"
 								isRound
-								m="0 4px"
+								mx="4px"
 								aria-label="Github Profile Link Button"
 							/>
 						</Link>
@@ -33,9 +36,9 @@ export const Footer = () => {
 						<Link href="https://www.linkedin.com/in/michael-gee/" isExternal>
 							<IconButton
 								icon={<FaLinkedin />}
-								backgroundColor="transparent"
+								variant="ghost"
 								isRound
-								m="0 4px"
+								mx="4px"
 								aria-label="LinkedIn Profile Link Button"
 							/>
 						</Link>

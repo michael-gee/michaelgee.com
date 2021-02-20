@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
@@ -10,7 +10,9 @@ const App = ({ Component, pageProps }: AppProps) => {
 	return (
 		<ChakraProvider resetCSS theme={theme}>
 			<Header />
-			<Component {...pageProps} />
+			<Box as="main" pt={['0', '72px']}>
+				<Component {...pageProps} />
+			</Box>
 			<Footer />
 		</ChakraProvider>
 	)
