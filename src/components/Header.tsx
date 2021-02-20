@@ -21,8 +21,8 @@ export const Header = () => {
 				<Flex justify="space-between" alignItems="center">
 					<Image src="/images/michael.jpg" width="32px" height="32px" className="round-img" />
 
-					<Flex ml="16px">
-						<Button minW="92px" m="0 8px" backgroundColor="transparent">
+					<Flex as="nav" ml="16px">
+						<Button minW="80px" m="0 4px" backgroundColor="transparent">
 							Blog
 						</Button>
 
@@ -30,7 +30,7 @@ export const Header = () => {
 							<MenuButton
 								as={Button}
 								rightIcon={<FiChevronDown />}
-								m="0 8px"
+								m="0 4px"
 								backgroundColor="transparent"
 							>
 								Works
@@ -41,7 +41,7 @@ export const Header = () => {
 							</MenuList>
 						</Menu>
 
-						<Button m="0 8px" backgroundColor="transparent">
+						<Button m="0 4px" backgroundColor="transparent">
 							Contact
 						</Button>
 					</Flex>

@@ -1,10 +1,9 @@
 import { Box } from '@chakra-ui/react'
-import { Header } from '@/components/Header'
 
-const Index = () => (
-	<Box as="main" minH="100vh">
-		<Header />
+const AboutPage = () => (
+	<Box as="main">
+		<h1>About Page</h1>
 	</Box>
 )
 
-export default Index
+export default AboutPage
