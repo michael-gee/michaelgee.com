@@ -5,7 +5,7 @@ interface Props {
 }
 
 export const Container = (props: Props) => (
-	<Box w="768px" maxW="100%" px="32px" mx="auto">
+	<Box w="768px" maxW="100%" px={['16px', '32px']} mx="auto">
 		{props.children}
 	</Box>
 )

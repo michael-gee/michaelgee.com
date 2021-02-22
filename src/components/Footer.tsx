@@ -11,11 +11,11 @@ export const Footer = () => {
 						<Icon as={FaCanadianMapleLeaf} mr="8px" color="red.500" />
 						<Box as="span" fontSize="sm">
 							Coded by
-							<Link href="" isExternal pl="4px">
+							<Link href="https://github.com/michaelgee22/michaelgee.com" isExternal pl="4px">
 								Michael Gee
 							</Link>{' '}
 							| Inspired by
-							<Link href="" isExternal pl="4px">
+							<Link href="https://github.com/wirtzdan/website" isExternal pl="4px">
 								Daniel Wirtz
 							</Link>
 						</Box>
