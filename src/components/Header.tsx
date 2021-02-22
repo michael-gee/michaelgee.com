@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import {
 	Button,
 	Flex,
@@ -10,8 +11,8 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import { Container } from './Container'
-import { FaBriefcase, FaCode, FaMoon } from 'react-icons/fa'
-import { FiSun, FiChevronDown } from 'react-icons/fi'
+import { FaCode, FaMoon } from 'react-icons/fa'
+import { FiBriefcase, FiSun, FiChevronDown } from 'react-icons/fi'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -32,26 +33,39 @@ export const Header = () => {
 		>
 			<Container>
 				<Flex justify="space-between" alignItems="center">
-					<Image src="/images/michael.jpg" width="32px" height="32px" className="round-img" />
+					<Link href="/">
+						<Flex as="a" align="center" cursor="pointer">
+							<Image src="/images/michael.jpg" width="32px" height="32px" className="round-img" />
+						</Flex>
+					</Link>
 
 					<Flex as="nav" ml="16px">
-						<Button minW="80px" mx="4px" variant="ghost">
-							Blog
-						</Button>
+						<Link href="/blog">
+							<Button minW="80px" mx="4px" variant="ghost">
+								Blog
+							</Button>
+						</Link>
 
-						<Menu>
+						<Menu isLazy={true}>
 							<MenuButton as={Button} rightIcon={<FiChevronDown />} mx="4px" variant="ghost">
 								Works
 							</MenuButton>
 							<MenuList>
-								<MenuItem icon={<FaCode />}>Projects</MenuItem>
-								<MenuItem icon={<FaBriefcase />}>Experience</MenuItem>
+								<Link href="/projects">
+									<MenuItem icon={<FaCode />}>Projects</MenuItem>
+								</Link>
+
+								<Link href="experience">
+									<MenuItem icon={<FiBriefcase />}>Experience</MenuItem>
+								</Link>
 							</MenuList>
 						</Menu>
 
-						<Button mx="4px" variant="ghost">
-							Contact
-						</Button>
+						<Link href="/contact">
+							<Button mx="4px" variant="ghost">
+								Contact
+							</Button>
+						</Link>
 					</Flex>
 
 					<Button onClick={toggleColorMode} variant="ghost">

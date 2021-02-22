@@ -1,6 +1,6 @@
 import { Box, Flex, Icon, IconButton, Link } from '@chakra-ui/react'
 import { Container } from './Container'
-import { FaCanadianMapleLeaf, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaCanadianMapleLeaf, FaDev, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export const Footer = () => {
 	return (
@@ -29,6 +29,16 @@ export const Footer = () => {
 								isRound
 								mx="4px"
 								aria-label="Twitter Profile Link Button"
+							/>
+						</Link>
+
+						<Link href="https://dev.to/michaelgee" isExternal>
+							<IconButton
+								icon={<FaDev />}
+								variant="ghost"
+								isRound
+								mx="4px"
+								aria-label="Dev.to Profile Link Button"
 							/>
 						</Link>
 
