@@ -1,11 +1,11 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Fade } from '@chakra-ui/react'
 
 interface Props {
 	children: React.ReactNode
 }
 
 export const Container = (props: Props) => (
-	<Box w="768px" maxW="100%" px={['16px', '32px']} mx="auto">
-		{props.children}
+	<Box w="768px" maxW="100%" px={['16px', '32px']} mx="auto" transition=".5s">
+		<Fade in>{props.children}</Fade>
 	</Box>
 )

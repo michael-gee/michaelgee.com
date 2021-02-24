@@ -1,23 +1,38 @@
 import { AppProps } from 'next/app'
 import { Box, ChakraProvider } from '@chakra-ui/react'
+import { PageContent } from '@/components/PageContent'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { MobileNav } from '@/components/MobileNav'
+
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 import theme from '../theme'
 import '../index.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
+	const [isLoading, setIsLoading] = useState(false)
+	const router = useRouter()
+
+	useEffect(() => {
+		router.events.on('routeChangeStart', () => setIsLoading(true))
+		router.events.on('routeChangeComplete', () => setIsLoading(false))
+		router.events.on('routeChangeError', () => setIsLoading(false))
+	}, [])
+
 	return (
 		<ChakraProvider resetCSS theme={theme}>
 			<Header />
 
 			<Box as="main" pt={['16px', '72px']} pb={['80px', '0']}>
-				<Component {...pageProps} />
+				<PageContent isLoading={isLoading}>
+					<Component {...pageProps} />
+					<Footer />
+				</PageContent>
 			</Box>
 
 			<MobileNav />
-			<Footer />
 		</ChakraProvider>
 	)
 }
