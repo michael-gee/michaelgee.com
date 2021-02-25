@@ -1,9 +1,14 @@
-import { Container } from '@/components/Container'
+import { Contact } from '@/containers/Contact'
+import { PageTitle } from '@/components/PageTitle'
 
 const ContactPage = () => (
-	<Container>
-		<h1>Contact Page</h1>
-	</Container>
+	<>
+		<Contact>
+			<PageTitle title="Contact Me" />
+			<Contact.Form />
+			<Contact.Other />
+		</Contact>
+	</>
 )
 
 export default ContactPage

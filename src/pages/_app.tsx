@@ -1,5 +1,7 @@
 import { AppProps } from 'next/app'
+
 import { Box, ChakraProvider } from '@chakra-ui/react'
+import { PageHead } from '@/components/PageHead'
 import { PageContent } from '@/components/PageContent'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -22,18 +24,26 @@ const App = ({ Component, pageProps }: AppProps) => {
 	}, [])
 
 	return (
-		<ChakraProvider resetCSS theme={theme}>
-			<Header />
+		<>
+			<PageHead
+				title="Michael Gee"
+				description="Michael Gee is a full-stack software developer eager to learn, share, and teach web development along with turning ideas into applications."
+				url="https://michaelgee.com"
+			/>
 
-			<Box as="main" pt={['16px', '72px']} pb={['80px', '0']}>
-				<PageContent isLoading={isLoading}>
-					<Component {...pageProps} />
-					<Footer />
-				</PageContent>
-			</Box>
+			<ChakraProvider resetCSS theme={theme}>
+				<Header />
 
-			<MobileNav />
-		</ChakraProvider>
+				<Box as="main" pt={['0', '72px']} pb={['80px', '0']}>
+					<PageContent isLoading={isLoading}>
+						<Component {...pageProps} />
+						<Footer />
+					</PageContent>
+				</Box>
+
+				<MobileNav />
+			</ChakraProvider>
+		</>
 	)
 }
 
