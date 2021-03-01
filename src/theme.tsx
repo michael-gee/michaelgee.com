@@ -18,7 +18,13 @@ const theme = extendTheme({
 		})
 	},
 	// components: {},
-	breakpoints
+	breakpoints,
+	colors: {
+		primary: {
+			light: '#3182ce',
+			dark: '#90cdf4'
+		}
+	}
 })
 
 export default theme

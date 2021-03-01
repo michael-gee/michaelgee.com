@@ -20,13 +20,16 @@ export const Form = () => {
 				<InputGroup mr={['0', '8px']} mb={['16px', '0']}>
 					<InputLeftElement
 						children={<FaUserAlt />}
-						color={useColorModeValue('#3182ce', '#90cdf4')}
+						color={useColorModeValue('primary.light', 'primary.dark')}
 					/>
 					<Input name="name" onChange={onInputChange} isRequired placeholder="Name" />
 				</InputGroup>
 
 				<InputGroup ml={['0', '8px']}>
-					<InputLeftElement children={<FaAt />} color={useColorModeValue('#3182ce', '#90cdf4')} />
+					<InputLeftElement
+						children={<FaAt />}
+						color={useColorModeValue('primary.light', 'primary.dark')}
+					/>
 					<Input name="email" onChange={onInputChange} isRequired placeholder="Email" />
 				</InputGroup>
 			</Flex>

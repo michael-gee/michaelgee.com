@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const PageTitle = (props: Props) => (
-	<Flex justify="space-between" pb="4px" borderBottomWidth="2px">
+	<Flex justify="space-between" py="8px" borderBottomWidth="2px">
 		<Heading size="lg" fontWeight="normal">
 			{props.title}
 		</Heading>

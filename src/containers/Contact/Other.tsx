@@ -10,7 +10,7 @@ export const OtherContactMethods = () => {
 			<Flex justify="center" align="center" my="16px">
 				<Icon
 					as={SiProtonmail}
-					color={useColorModeValue('#3182ce', '#90cdf4')}
+					color={useColorModeValue('primary.light', 'primary.dark')}
 					boxSize={5}
 					mr="8px"
 				/>
@@ -20,7 +20,7 @@ export const OtherContactMethods = () => {
 			<Flex justify="center" align="center" my="16px">
 				<Icon
 					as={SiDiscord}
-					color={useColorModeValue('#3182ce', '#90cdf4')}
+					color={useColorModeValue('primary.light', 'primary.dark')}
 					boxSize={5}
 					mr="10px"
 				/>
