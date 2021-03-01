@@ -43,6 +43,7 @@ export const MobileNav = () => {
 			bg={useColorModeValue('white', 'gray.800')}
 			borderTopWidth="2px"
 			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
+			zIndex="overlay"
 			data-id="mobile-nav"
 		>
 			<Flex align="center" justify="center" w="33%" h="100%">

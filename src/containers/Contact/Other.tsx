@@ -7,7 +7,7 @@ export const OtherContactMethods = () => {
 				other ways to contact...
 			</Box>
 
-			<Flex justify="center" align="center" my="24px">
+			<Flex justify="center" align="center" my="16px">
 				<Icon
 					as={SiProtonmail}
 					color={useColorModeValue('#3182ce', '#90cdf4')}
@@ -17,7 +17,7 @@ export const OtherContactMethods = () => {
 				michaelgee.dev@protonmail.com
 			</Flex>
 
-			<Flex justify="center" align="center" my="24px">
+			<Flex justify="center" align="center" my="16px">
 				<Icon
 					as={SiDiscord}
 					color={useColorModeValue('#3182ce', '#90cdf4')}

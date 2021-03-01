@@ -1,9 +1,10 @@
-import { Container } from '@/components/Container'
+import { Experience } from '@/containers/Experience'
+import { PageTitle } from '@/components/PageTitle'
 
 const ExperiencePage = () => (
-	<Container>
-		<h1>Experience Page</h1>
-	</Container>
+	<Experience>
+		<PageTitle title="Work Experience" />
+	</Experience>
 )
 
 export default ExperiencePage

@@ -30,6 +30,7 @@ export const Header = () => {
 			borderBottomWidth="2px"
 			borderBottomColor={useColorModeValue('gray.100', 'gray.700')}
 			shadow="0 0 10px 0 rgba(0,0,0, 0.035);"
+			zIndex="overlay"
 		>
 			<Container>
 				<Flex justify="space-between" alignItems="center">

@@ -1,4 +1,13 @@
-import { Box, Button, Flex, Input, InputGroup, InputLeftElement, Textarea } from '@chakra-ui/react'
+import {
+	Box,
+	Button,
+	Flex,
+	Input,
+	InputGroup,
+	InputLeftElement,
+	Textarea,
+	useColorModeValue
+} from '@chakra-ui/react'
 import { FaUserAlt, FaAt } from 'react-icons/fa'
 import { useContactForm } from './useContactForm'
 
@@ -7,14 +16,17 @@ export const Form = () => {
 
 	return (
 		<Box as="form" onSubmit={onSubmit}>
-			<Flex my="16px">
-				<InputGroup mr="8px">
-					<InputLeftElement children={<FaUserAlt />} />
+			<Flex flexDir={['column', 'row']} my="16px">
+				<InputGroup mr={['0', '8px']} mb={['16px', '0']}>
+					<InputLeftElement
+						children={<FaUserAlt />}
+						color={useColorModeValue('#3182ce', '#90cdf4')}
+					/>
 					<Input name="name" onChange={onInputChange} isRequired placeholder="Name" />
 				</InputGroup>
 
-				<InputGroup ml="8px">
-					<InputLeftElement children={<FaAt />} />
+				<InputGroup ml={['0', '8px']}>
+					<InputLeftElement children={<FaAt />} color={useColorModeValue('#3182ce', '#90cdf4')} />
 					<Input name="email" onChange={onInputChange} isRequired placeholder="Email" />
 				</InputGroup>
 			</Flex>
