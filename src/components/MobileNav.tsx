@@ -68,7 +68,7 @@ export const MobileNav = () => {
 			</Flex>
 
 			<Flex as="nav" align="center" justify="center" w="33%" h="100%">
-				<Menu placement="top" isLazy={true}>
+				<Menu placement="auto" isLazy={true}>
 					<MenuButton
 						as={IconButton}
 						icon={<FiMenu />}

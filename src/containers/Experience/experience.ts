@@ -12,12 +12,12 @@ export const experience: ExperienceItem[] = [
 		title: 'Software Developer',
 		dates: '03/2021 - Present',
 		description: [
-			"Recently started my next exciting opportunity with Inxception. The description of my roles & responsibilities will be added over time after I've had more time with the company."
+			"Recently started my next exciting opportunity with Inxeption. The description of my roles & responsibilities will be added over time after I've had more time with the company."
 		],
 		id: 'inxeption'
 	},
 	{
-		company: 'CoreView Inc.',
+		company: 'CoreView',
 		title: 'Software Development Engineer',
 		dates: '07/2018 - 03/2021',
 		description: [
@@ -31,7 +31,7 @@ export const experience: ExperienceItem[] = [
 		id: 'coreview'
 	},
 	{
-		company: 'CEGMAG Solutions Inc.',
+		company: 'CEGMAG Solutions',
 		title: 'Software Developer',
 		dates: '02/2017 - 07/2018',
 		description: [
