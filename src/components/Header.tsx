@@ -56,7 +56,7 @@ export const Header = () => {
 									<MenuItem icon={<FaCode />}>Projects</MenuItem>
 								</Link>
 
-								<Link href="experience">
+								<Link href="/experience">
 									<MenuItem icon={<FiBriefcase />}>Experience</MenuItem>
 								</Link>
 							</MenuList>

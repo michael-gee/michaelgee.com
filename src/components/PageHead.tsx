@@ -9,7 +9,7 @@ interface Props {
 	children?: React.ReactNode
 }
 
-enum PageTypes {
+export enum PageTypes {
 	website = 'website',
 	article = 'article'
 }

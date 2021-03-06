@@ -13,23 +13,18 @@ import { useContactForm } from './useContactForm'
 
 export const Form = () => {
 	const { onSubmit, onInputChange, isSubmitting, errorMessage } = useContactForm()
+	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
 		<Box as="form" onSubmit={onSubmit}>
 			<Flex flexDir={['column', 'row']} my="16px">
 				<InputGroup mr={['0', '8px']} mb={['16px', '0']}>
-					<InputLeftElement
-						children={<FaUserAlt />}
-						color={useColorModeValue('primary.light', 'primary.dark')}
-					/>
+					<InputLeftElement children={<FaUserAlt />} color={color} />
 					<Input name="name" onChange={onInputChange} isRequired placeholder="Name" />
 				</InputGroup>
 
 				<InputGroup ml={['0', '8px']}>
-					<InputLeftElement
-						children={<FaAt />}
-						color={useColorModeValue('primary.light', 'primary.dark')}
-					/>
+					<InputLeftElement children={<FaAt />} color={color} />
 					<Input name="email" onChange={onInputChange} isRequired placeholder="Email" />
 				</InputGroup>
 			</Flex>
