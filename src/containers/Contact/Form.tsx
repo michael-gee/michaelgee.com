@@ -29,11 +29,11 @@ export const Form = () => {
 				</InputGroup>
 			</Flex>
 
-			<Textarea name="message" onChange={onInputChange} isRequired placeholder="Message" />
+			<Textarea name="message" onChange={onInputChange} isRequired rows={6} placeholder="Message" />
 
 			<Input name="_gotcha" display="none" />
 
-			<Flex justify="space-between" align="center" mt="16px">
+			<Flex flexDir={['column', 'column', 'row']} justify="space-between" align="center" mt="16px">
 				<Button
 					type="submit"
 					isLoading={isSubmitting}
@@ -45,7 +45,7 @@ export const Form = () => {
 				</Button>
 
 				{!isSubmitting && errorMessage && (
-					<Box as="span" color="red.500">
+					<Box as="span" color="red.500" mt={['16px', '16px', '0']}>
 						* {errorMessage}
 					</Box>
 				)}

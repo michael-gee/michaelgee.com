@@ -15,7 +15,7 @@ export const OtherContactMethods = () => {
 				michaelgee.dev@protonmail.com
 			</Flex>
 
-			<Flex justify="center" align="center" my="16px">
+			<Flex justify="center" align="center" mt="16px">
 				<Icon as={SiDiscord} color={color} boxSize={5} mr="10px" />
 				michaelg33#9503
 			</Flex>

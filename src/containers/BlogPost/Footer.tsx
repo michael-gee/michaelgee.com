@@ -11,7 +11,19 @@ export const Footer = (props: Props) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
-		<Box as="footer" my="24px" textAlign="center">
+		<Box as="footer" my="16px" textAlign="center">
+			<Flex align="center" justify="flex-end" mb="16px">
+				<Flex as="span" align="center" mr="8px">
+					<Icon as={FaHeart} color={color} mx="8px" />
+					{props.reactionsCount}
+				</Flex>
+
+				<Flex as="span" align="center">
+					<Icon as={FaComment} color={color} mx="8px" />
+					{props.commentsCount}
+				</Flex>
+			</Flex>
+
 			<Box>
 				<Icon as={FaInfoCircle} color={color} mr="8px" mb="4px" />
 				This article was originally published on{' '}
@@ -24,18 +36,6 @@ export const Footer = (props: Props) => {
 				</Link>{' '}
 				to provide some much appreciated feedback!
 			</Box>
-
-			<Flex align="center" justify="flex-end" mt="8px">
-				<Flex as="span" align="center" mr="8px">
-					<Icon as={FaHeart} color={color} mx="8px" />
-					{props.reactionsCount}
-				</Flex>
-
-				<Flex as="span" align="center">
-					<Icon as={FaComment} color={color} mx="8px" />
-					{props.commentsCount}
-				</Flex>
-			</Flex>
 		</Box>
 	)
 }

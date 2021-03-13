@@ -3,7 +3,7 @@ import { PageTitle } from '@/components/PageTitle'
 
 const ContactPage = () => (
 	<Contact>
-		<PageTitle title="Contact Me" />
+		<PageTitle title="Get In Touch" />
 		<Contact.Form />
 		<Contact.Other />
 	</Contact>

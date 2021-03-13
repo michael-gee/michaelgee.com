@@ -9,7 +9,7 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
 	{
 		company: 'Inxeption',
-		title: 'Software Developer',
+		title: 'Software Engineer',
 		dates: '03/2021 - Present',
 		description: [
 			"Recently started my next exciting opportunity with Inxeption. The description of my roles & responsibilities will be added over time after I've had more time with the company."

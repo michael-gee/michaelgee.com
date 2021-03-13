@@ -18,18 +18,20 @@ export const Position = (props: Props) => {
 			>
 				<Box>
 					<Heading as="h3" fontSize="xl" color={color}>
-						{props.company}
+						{props.title}
 					</Heading>
-					<Box fontSize="lg">{props.title}</Box>
+					<Box fontSize="lg" fontStyle="italic">
+						{props.company}
+					</Box>
 				</Box>
 
-				<Flex align="center" fontSize="sm">
+				<Flex align="center" fontSize="sm" pt={['2px', '0']}>
 					<Icon as={FaRegCalendarAlt} color={color} mr="8px" />
 					{props.dates}
 				</Flex>
 			</Flex>
 
-			<Box as="ul" listStyleType="none">
+			<Box as="ul" listStyleType="none" py={['0', '8px']} px={['8px', '0']}>
 				{props.description.map((item: string, index: number) => {
 					return (
 						<Box
