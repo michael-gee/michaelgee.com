@@ -2,8 +2,6 @@ import { Box, Flex, Icon, useColorModeValue } from '@chakra-ui/react'
 import { FaCode, FaPencilAlt, FaUniversity } from 'react-icons/fa'
 import { IconType } from 'react-icons/lib'
 
-// interface Props {}
-
 export const Intro = () => {
 	const tileColor = useColorModeValue('primary.light', 'primary.dark')
 	const tileBgColor = useColorModeValue('#FFFFFF', '#2E3648')
@@ -46,6 +44,7 @@ export const Intro = () => {
 	)
 }
 
+// ***** IntroTile Child component *****
 interface IntroTileProps {
 	title: string
 	icon: IconType
@@ -56,7 +55,14 @@ interface IntroTileProps {
 
 const IntroTile = (props: IntroTileProps) => {
 	return (
-		<Box w="32%" p="3% 2.5%" bgColor={props.bgColor} borderRadius="12px" textAlign="center">
+		<Box
+			w="32%"
+			p="3% 2.5%"
+			bgColor={props.bgColor}
+			borderRadius="12px"
+			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);"
+			textAlign="center"
+		>
 			<Icon as={props.icon} color={props.color} fontSize="4xl" />
 			<Box as="h3" fontWeight="bold" fontStyle="italic" py="8px">
 				{props.title}

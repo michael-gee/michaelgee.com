@@ -8,7 +8,7 @@ const AboutPage = () => (
 		<PageTitle title="Hello World 🌎" />
 		<About.Intro />
 
-		<PageTitle title="Tech Stack" />
+		<PageTitle title="Tech Stack 🚀" />
 		<About.TechStack />
 	</About>
 )
