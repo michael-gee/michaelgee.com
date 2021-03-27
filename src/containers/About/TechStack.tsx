@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Tooltip } from '@chakra-ui/react'
+import { Box, Flex, Heading, Icon, Tooltip, useColorModeValue } from '@chakra-ui/react'
 import { IconType } from 'react-icons/lib'
 import {
 	SiAmazonaws,
@@ -21,71 +21,63 @@ import {
 export const TechStack = () => {
 	return (
 		<Box py={['8px', '16px']}>
-			<Flex as="section" flexDir={['column', 'row']} py={['8px', '24px']}>
-				<Heading
-					as="h3"
-					size="lg"
-					minW="142px"
-					fontWeight="normal"
-					textAlign={['center', 'center', 'start']}
-				>
-					Front-End
-				</Heading>
+			<TechStackSection title="Front-End">
+				<TechStackIcon icon={SiReact} iconName="React" />
+				<TechStackIcon icon={SiNextDotJs} iconName="Next.js" />
+				<TechStackIcon icon={SiTypescript} iconName="TypeScript" />
+				<TechStackIcon icon={SiJavascript} iconName="JavaScript" />
+				<TechStackIcon icon={SiCss3} iconName="CSS 3" />
+				<TechStackIcon icon={SiTailwindcss} iconName="Tailwind CSS" />
+				<TechStackIcon icon={SiHtml5} iconName="HTML 5" />
+			</TechStackSection>
 
-				<Flex w="100%" wrap="wrap" align="center" justify="space-evenly">
-					<TechStackIcon icon={SiReact} iconName="React" />
-					<TechStackIcon icon={SiNextDotJs} iconName="Next.js" />
-					<TechStackIcon icon={SiTypescript} iconName="TypeScript" />
-					<TechStackIcon icon={SiJavascript} iconName="JavaScript" />
-					<TechStackIcon icon={SiCss3} iconName="CSS 3" />
-					<TechStackIcon icon={SiTailwindcss} iconName="Tailwind CSS" />
-					<TechStackIcon icon={SiHtml5} iconName="HTML 5" />
-				</Flex>
-			</Flex>
+			<TechStackSection title="Back-End">
+				<TechStackIcon icon={SiNodeDotJs} iconName="Node.js" />
+				<TechStackIcon icon={SiTypescript} iconName="TypeScript" />
+				<TechStackIcon icon={SiGraphql} iconName="Graph QL" />
+				<TechStackIcon icon={SiCsharp} iconName="C#" />
+				<TechStackIcon icon={SiDotNet} iconName=".NET (Core)" />
+			</TechStackSection>
 
-			<Flex as="section" flexDir={['column', 'column', 'row']} py="24px">
-				<Heading
-					as="h3"
-					size="lg"
-					minW="142px"
-					fontWeight="normal"
-					textAlign={['center', 'center', 'start']}
-				>
-					Back-End
-				</Heading>
-
-				<Flex w="100%" align="center" justify="space-evenly">
-					<TechStackIcon icon={SiNodeDotJs} iconName="Node.js" />
-					<TechStackIcon icon={SiTypescript} iconName="TypeScript" />
-					<TechStackIcon icon={SiMongodb} iconName="MongoDB" />
-					<TechStackIcon icon={SiGraphql} iconName="Graph QL" />
-					<TechStackIcon icon={SiCsharp} iconName="C#" />
-					<TechStackIcon icon={SiDotNet} iconName=".NET (Core)" />
-				</Flex>
-			</Flex>
-
-			<Flex as="section" flexDir={['column', 'column', 'row']} py="24px">
-				<Heading
-					as="h3"
-					size="lg"
-					minW="142px"
-					fontWeight="normal"
-					textAlign={['center', 'center', 'start']}
-				>
-					Cloud
-				</Heading>
-
-				<Flex w="100%" align="center" justify="space-evenly">
-					<TechStackIcon icon={SiAmazonaws} iconName="Amazon Web Services" />
-					<TechStackIcon icon={SiMicrosoftazure} iconName="Microsoft Azure" />
-					<TechStackIcon icon={SiServerless} iconName="Serverless Framework" size="1.6em" />
-				</Flex>
-			</Flex>
+			<TechStackSection title="Cloud">
+				<TechStackIcon icon={SiAmazonaws} iconName="Amazon Web Services" />
+				<TechStackIcon icon={SiMicrosoftazure} iconName="Microsoft Azure" />
+				<TechStackIcon icon={SiMongodb} iconName="MongoDB Atlas" />
+				<TechStackIcon icon={SiServerless} iconName="Serverless Framework" size="1.6em" />
+			</TechStackSection>
 		</Box>
 	)
 }
 
-// ***** TechStackIcon child component *****
+// ***** TechStackSection *****
+interface TechStackSectionProps {
+	title: string
+	children?: React.ReactNode
+}
+
+const TechStackSection = (props: TechStackSectionProps) => {
+	return (
+		<Flex as="section" flexDir={['column', 'row']} py={['8px', '24px']}>
+			<Heading
+				as="h3"
+				size="lg"
+				minW="164px"
+				fontWeight="normal"
+				pb={['16px', '16px', '0']}
+				textAlign={['center', 'center', 'start']}
+				fontStyle="italic"
+			>
+				{props.title}
+			</Heading>
+
+			<Flex w="100%" wrap="wrap" align="center" justify="space-evenly">
+				{props.children}
+			</Flex>
+		</Flex>
+	)
+}
+
+// ***** TechStackIcon *****
 interface TechStackIconProps {
 	icon: IconType
 	iconName: string
@@ -93,12 +85,13 @@ interface TechStackIconProps {
 }
 
 const TechStackIcon = (props: TechStackIconProps) => {
+	const color = useColorModeValue('primary.light', 'primary.dark')
 	const iconSize = props.size ? props.size : '2em'
 
 	return (
 		<Tooltip label={props.iconName} placement="bottom" aria-label={props.iconName}>
 			<Box as="span">
-				<Icon as={props.icon} fontSize={iconSize} />
+				<Icon as={props.icon} color={color} fontSize={iconSize} />
 			</Box>
 		</Tooltip>
 	)

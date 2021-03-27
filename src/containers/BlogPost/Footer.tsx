@@ -11,7 +11,7 @@ export const Footer = (props: Props) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
-		<Box as="footer" my="16px" textAlign="center">
+		<Box as="footer" mt="16px" mb="24px" textAlign="center">
 			<Flex align="center" justify="flex-end" mb="16px">
 				<Flex as="span" align="center" mr="8px">
 					<Icon as={FaHeart} color={color} mx="8px" />
