@@ -1,3 +1,8 @@
+.markdownContainer {
+  max-width: 584px;
+  margin: 0 auto;
+}
+
 .markdownContainer h1 {
   font-size: 2.2em;
 }
@@ -15,8 +20,9 @@
   margin: 16px 0;
 }
 
-.markdownContainer > ol, .markdownContainer > ul, .markdownContainer > pre  {
-  line-height: 1.4;
+.markdownContainer ul, .markdownContainer ol {
+  padding-left: 24px;
+  margin-bottom: 8px;
 }
 
 .markdownContainer > blockquote {
@@ -39,4 +45,12 @@
   color: #99DCFD;
   padding: 4px;
   border-radius: 4px;
+}
+
+.markdownContainer a {
+  color: #3182CE;
+}
+
+.markdownContainer img {
+  margin: 0 auto;
 }
