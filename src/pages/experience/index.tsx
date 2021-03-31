@@ -1,6 +1,5 @@
 import { Experience } from '@/containers/Experience'
 import { PageTitle } from '@/components/PageTitle'
-
 import { experience, ExperienceItem } from '@/containers/Experience/experience'
 
 const ExperiencePage = () => (

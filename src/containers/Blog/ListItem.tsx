@@ -1,8 +1,7 @@
+import { BlogListItem } from './'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react'
-
-import { BlogListItem } from './'
 
 interface Props extends BlogListItem {}
 

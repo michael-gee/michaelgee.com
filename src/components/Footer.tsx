@@ -1,5 +1,5 @@
-import { Box, Flex, Icon, IconButton, Link } from '@chakra-ui/react'
 import { Container } from './Container'
+import { Box, Flex, Icon, IconButton, Link } from '@chakra-ui/react'
 import { FaCanadianMapleLeaf, FaDev, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export const Footer = () => (

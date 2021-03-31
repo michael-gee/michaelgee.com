@@ -1,6 +1,6 @@
-import { GetServerSideProps } from 'next'
 import { PageHead, PageTypes } from '@/components/PageHead'
 import { BlogPost, BlogPostItem } from '@/containers/BlogPost'
+import { GetServerSideProps } from 'next'
 
 interface Props {
 	post: BlogPostItem | null

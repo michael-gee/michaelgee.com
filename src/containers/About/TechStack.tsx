@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Icon, Tooltip, useColorModeValue } from '@chakra-ui/react'
-import { IconType } from 'react-icons/lib'
 import {
 	SiAmazonaws,
 	SiCsharp,
@@ -13,10 +12,13 @@ import {
 	SiNextDotJs,
 	SiNodeDotJs,
 	SiReact,
+	SiSass,
 	SiServerless,
 	SiTailwindcss,
-	SiTypescript
+	SiTypescript,
+	SiWordpress
 } from 'react-icons/si'
+import { IconType } from 'react-icons/lib'
 
 export const TechStack = () => {
 	return (
@@ -26,15 +28,17 @@ export const TechStack = () => {
 				<TechStackIcon icon={SiNextDotJs} iconName="Next.js" />
 				<TechStackIcon icon={SiTypescript} iconName="TypeScript" />
 				<TechStackIcon icon={SiJavascript} iconName="JavaScript" />
+				<TechStackIcon icon={SiHtml5} iconName="HTML 5" />
 				<TechStackIcon icon={SiCss3} iconName="CSS 3" />
 				<TechStackIcon icon={SiTailwindcss} iconName="Tailwind CSS" />
-				<TechStackIcon icon={SiHtml5} iconName="HTML 5" />
+				<TechStackIcon icon={SiSass} iconName="SASS (CSS)" />
 			</TechStackSection>
 
 			<TechStackSection title="Back-End">
 				<TechStackIcon icon={SiNodeDotJs} iconName="Node.js" />
 				<TechStackIcon icon={SiTypescript} iconName="TypeScript" />
 				<TechStackIcon icon={SiGraphql} iconName="Graph QL" />
+				<TechStackIcon icon={SiWordpress} iconName="WordPress" />
 				<TechStackIcon icon={SiCsharp} iconName="C#" />
 				<TechStackIcon icon={SiDotNet} iconName=".NET (Core)" />
 			</TechStackSection>

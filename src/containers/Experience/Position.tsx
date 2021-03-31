@@ -1,6 +1,6 @@
+import { ExperienceItem } from './experience'
 import { Box, Flex, Heading, Icon, useColorModeValue } from '@chakra-ui/react'
 import { FaRegCalendarAlt } from 'react-icons/fa'
-import { ExperienceItem } from './experience'
 
 interface Props extends ExperienceItem {}
 

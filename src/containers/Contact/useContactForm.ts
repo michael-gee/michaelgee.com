@@ -36,7 +36,7 @@ export function useContactForm() {
 			xhr.onreadystatechange = () => {
 				if (xhr.readyState !== XMLHttpRequest.DONE) return
 				if (xhr.status === 200) {
-					router.push('/success')
+					router.push('/contact/success')
 				} else {
 					setErrorMessage('Form was unsuccessfully submitted. Please try again later.')
 					setIsSubmitting(false)

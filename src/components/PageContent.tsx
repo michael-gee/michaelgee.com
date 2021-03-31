@@ -1,5 +1,5 @@
-import { Flex, Spinner } from '@chakra-ui/react'
 import { Container } from './Container'
+import { Flex, Spinner } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 
 interface Props {

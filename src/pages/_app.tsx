@@ -1,14 +1,13 @@
-import { AppProps } from 'next/app'
-
-import { Box, ChakraProvider } from '@chakra-ui/react'
 import { PageHead } from '@/components/PageHead'
 import { PageContent } from '@/components/PageContent'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { MobileNav } from '@/components/MobileNav'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { AppProps } from 'next/app'
 
 import theme from '../theme'
 import '../index.css'

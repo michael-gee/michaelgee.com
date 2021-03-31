@@ -1,3 +1,4 @@
+import { Container } from './Container'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
 	useColorMode,
 	useColorModeValue
 } from '@chakra-ui/react'
-import { Container } from './Container'
 import { FaCode, FaMoon } from 'react-icons/fa'
 import { FiBriefcase, FiSun, FiChevronDown } from 'react-icons/fi'
 
