@@ -15,6 +15,7 @@ const ProjectsPage = () => {
 				display="flex"
 				alignItems="center"
 				justifyContent="center"
+				fontSize="x-large"
 				mt="16px"
 				mb="24px"
 			>

@@ -17,7 +17,7 @@ export const Header = (props: Props) => {
 			</Heading>
 
 			<Box display="flex" justifyContent="center">
-				<Image src={props.coverImageSrc} width={584} height={245} />
+				<Image src={props.coverImageSrc} width={700} height={300} />
 			</Box>
 
 			<Box color={color} textAlign="center" fontStyle="italic" my="8px">
