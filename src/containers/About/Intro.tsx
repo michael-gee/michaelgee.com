@@ -17,7 +17,7 @@ export const Intro = () => {
 				rapidly continue improving as a developer.
 			</Box>
 
-			<Flex justify="space-between" mb="16px">
+			<Flex flexDir={['column', 'row']} justify="space-between" mb="16px">
 				<IntroTile
 					title="Coding"
 					icon={FaCode}
@@ -58,8 +58,9 @@ const IntroTile = (props: IntroTileProps) => {
 
 	return (
 		<Box
-			w="32%"
+			w={['100%', '32%']}
 			p="3% 2.5%"
+			my={['8px', '0']}
 			bgColor={props.bgColor}
 			borderRadius="12px"
 			borderWidth="2px"

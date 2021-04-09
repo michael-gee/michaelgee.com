@@ -39,7 +39,7 @@ export const MobileNav = () => {
 			bottom={0}
 			right={0}
 			left={0}
-			pb="8px"
+			pb="10px"
 			bg={useColorModeValue('white', 'gray.800')}
 			borderTopWidth="2px"
 			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
@@ -68,7 +68,7 @@ export const MobileNav = () => {
 			</Flex>
 
 			<Flex as="nav" align="center" justify="center" w="33%" h="100%">
-				<Menu placement="auto" isLazy={true}>
+				<Menu placement="auto">
 					<MenuButton
 						as={IconButton}
 						icon={<FiMenu />}
