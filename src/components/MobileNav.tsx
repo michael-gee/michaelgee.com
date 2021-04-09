@@ -52,17 +52,23 @@ export const MobileNav = () => {
 					onClick={toggleColorMode}
 					variant="ghost"
 					size="lg"
+					aria-label="Toggle Light/Dark Theme"
 					_hover={{}}
 					_active={{}}
 					_focus={{}}
-					aria-label={isDark ? '' : ''}
 				/>
 			</Flex>
 
 			<Flex align="center" justify="center" w="33%" h="100%">
 				<Link href="/">
 					<Flex as="a" align="center" cursor="pointer">
-						<Image src="/images/michael.jpg" width="32px" height="32px" className="round-img" />
+						<Image
+							src="/images/michael.jpg"
+							width={32}
+							height={32}
+							alt="Michael Gee"
+							className="round-img"
+						/>
 					</Flex>
 				</Link>
 			</Flex>
@@ -74,6 +80,7 @@ export const MobileNav = () => {
 						icon={<FiMenu />}
 						variant="ghost"
 						size="lg"
+						aria-label="Mobile Navigation Menu"
 						_hover={{}}
 						_active={{}}
 						_focus={{}}
