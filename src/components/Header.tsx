@@ -36,7 +36,13 @@ export const Header = () => {
 				<Flex justify="space-between" alignItems="center">
 					<Link href="/">
 						<Flex as="a" align="center" cursor="pointer">
-							<Image src="/images/michael.jpg" width="32px" height="32px" className="round-img" />
+							<Image
+								src="/images/michael.jpg"
+								width={32}
+								height={32}
+								alt="Michael Gee"
+								className="round-img"
+							/>
 						</Flex>
 					</Link>
 
