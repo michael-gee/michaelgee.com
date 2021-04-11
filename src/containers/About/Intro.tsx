@@ -54,8 +54,6 @@ interface IntroTileProps {
 }
 
 const IntroTile = (props: IntroTileProps) => {
-	const tileBorderColor = useColorModeValue('gray.100', 'gray.700')
-
 	return (
 		<Box
 			w={['100%', '32%']}
@@ -63,8 +61,6 @@ const IntroTile = (props: IntroTileProps) => {
 			my={['8px', '0']}
 			bgColor={props.bgColor}
 			borderRadius="12px"
-			borderWidth="2px"
-			borderColor={tileBorderColor}
 			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);"
 			textAlign="center"
 		>

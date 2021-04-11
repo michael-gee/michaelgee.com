@@ -2,6 +2,7 @@ import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
 import { Intro } from './Intro'
 import { TechStack } from './TechStack'
+import { CurrentInterests } from './CurrentInterests'
 
 interface Props {
 	children?: React.ReactNode
@@ -21,3 +22,4 @@ export const About = (props: Props) => (
 
 About.Intro = Intro
 About.TechStack = TechStack
+About.CurrentInterests = CurrentInterests

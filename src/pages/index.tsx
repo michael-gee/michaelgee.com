@@ -10,17 +10,9 @@ const AboutPage = () => (
 
 		<PageTitle title="Tech Stack" />
 		<About.TechStack />
-		{/* 
-		<PageTitle title="What I'm Doing" />
-		<h2>(Briefcase icon) Inxeption</h2>
-		<h2>
-			(Discord icon) Actively Involved in the React Podcast, Devs Helping Devs, & other discord
-			communities
-		</h2>
-		<h2>
-			(GitPullRequest icon) Open Source contributions to the lunch.dev calendar & building out side
-			projects like michaelgee.dev
-		</h2> */}
+
+		<PageTitle title="Current Interests" />
+		<About.CurrentInterests />
 	</About>
 )
 
