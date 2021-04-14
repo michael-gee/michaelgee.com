@@ -72,6 +72,7 @@ export const CurrentInterestItem = (props: CurrentInterestItemProps) => {
 			transition=".3s"
 			cursor="pointer"
 			p="16px"
+			pr="0"
 			m="16px 4px"
 			_hover={{ transform: 'translateY(-4px)', textDecoration: 'none' }}
 		>
