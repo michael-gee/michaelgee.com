@@ -40,7 +40,7 @@ export const MobileNav = () => {
 			right={0}
 			left={0}
 			pt="24px"
-			pb="40px"
+			pb="32px"
 			bg={useColorModeValue('white', 'gray.800')}
 			borderTopWidth="2px"
 			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
