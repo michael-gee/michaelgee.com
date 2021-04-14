@@ -22,7 +22,10 @@ import {
 	FaLinkedin,
 	FaTwitter
 } from 'react-icons/fa'
-import { FiBriefcase, FiMail, FiMenu, FiSun } from 'react-icons/fi'
+import { BsFillBriefcaseFill } from 'react-icons/bs'
+import { FiMenu, FiSun } from 'react-icons/fi'
+import { FaRocket } from 'react-icons/fa'
+import { IoMdMail } from 'react-icons/io'
 
 export const MobileNav = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -39,6 +42,8 @@ export const MobileNav = () => {
 			bottom={0}
 			right={0}
 			left={0}
+			pt="48px"
+			pb="64px"
 			bg={useColorModeValue('white', 'gray.800')}
 			borderTopWidth="2px"
 			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
@@ -51,8 +56,6 @@ export const MobileNav = () => {
 					onClick={toggleColorMode}
 					variant="ghost"
 					size="lg"
-					pt="24px"
-					pb="40px"
 					aria-label="Toggle Light/Dark Theme"
 					_hover={{}}
 					_active={{}}
@@ -62,7 +65,7 @@ export const MobileNav = () => {
 
 			<Flex align="center" justify="center" w="33%" h="100%">
 				<Link href="/">
-					<Flex as="a" align="center" cursor="pointer" pt="24px" pb="40px">
+					<Flex as="a" align="center" cursor="pointer">
 						<Image
 							src="/images/michael.jpg"
 							width={32}
@@ -81,8 +84,6 @@ export const MobileNav = () => {
 						icon={<FiMenu />}
 						variant="ghost"
 						size="lg"
-						pt="24px"
-						pb="40px"
 						aria-label="Mobile Navigation Menu"
 						_hover={{}}
 						_active={{}}
@@ -139,10 +140,13 @@ export const MobileNav = () => {
 							<MenuItem icon={<FaCode />}>Projects</MenuItem>
 						</Link>
 						<Link href="/experience">
-							<MenuItem icon={<FiBriefcase />}>Experience</MenuItem>
+							<MenuItem icon={<BsFillBriefcaseFill />}>Experience</MenuItem>
+						</Link>
+						<Link href="/memes">
+							<MenuItem icon={<FaRocket />}>Memes</MenuItem>
 						</Link>
 						<Link href="/contact">
-							<MenuItem icon={<FiMail />}>Contact</MenuItem>
+							<MenuItem icon={<IoMdMail />}>Contact</MenuItem>
 						</Link>
 					</MenuList>
 				</Menu>
