@@ -42,8 +42,8 @@ export const MobileNav = () => {
 			bottom={0}
 			right={0}
 			left={0}
-			pt="48px"
-			pb="64px"
+			pt="24px"
+			pb="48px"
 			bg={useColorModeValue('white', 'gray.800')}
 			borderTopWidth="2px"
 			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
