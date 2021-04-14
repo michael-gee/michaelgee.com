@@ -11,8 +11,9 @@ import {
 	useColorMode,
 	useColorModeValue
 } from '@chakra-ui/react'
-import { FaCode, FaMoon } from 'react-icons/fa'
-import { FiBriefcase, FiSun, FiChevronDown } from 'react-icons/fi'
+import { BsFillBriefcaseFill } from 'react-icons/bs'
+import { FaCode, FaMoon, FaRocket } from 'react-icons/fa'
+import { FiSun, FiChevronDown } from 'react-icons/fi'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -63,7 +64,11 @@ export const Header = () => {
 								</Link>
 
 								<Link href="/experience">
-									<MenuItem icon={<FiBriefcase />}>Experience</MenuItem>
+									<MenuItem icon={<BsFillBriefcaseFill />}>Experience</MenuItem>
+								</Link>
+
+								<Link href="/memes">
+									<MenuItem icon={<FaRocket />}>Memes</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>
