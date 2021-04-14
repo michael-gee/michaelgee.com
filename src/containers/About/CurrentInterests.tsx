@@ -26,8 +26,8 @@ export const CurrentInterests = () => {
 			/>
 
 			<CurrentInterestItem
-				title="Side Project(s) (coming soon...)"
-				description="Building out new exciting projects that I'm passionate about"
+				title="Side Project(s)"
+				description="Building new exciting projects that I'm passionate about (coming soon...)"
 				href="https://michaelgee.dev/"
 				icon={IoConstruct}
 				iconColor={useColorModeValue('#365071', '#7CAFD1')}
