@@ -3,12 +3,12 @@ import { PageTitle } from '@/components/PageTitle'
 import { Heading, Icon, useColorModeValue } from '@chakra-ui/react'
 import { IoConstruct } from 'react-icons/io5'
 
-const ProjectsPage = () => {
+const MemesPage = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
 		<Container>
-			<PageTitle title="Projects" />
+			<PageTitle title="Memes" />
 
 			<Heading
 				as="h3"
@@ -27,4 +27,4 @@ const ProjectsPage = () => {
 	)
 }
 
-export default ProjectsPage
+export default MemesPage
