@@ -1,8 +1,7 @@
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { Intro } from './Intro'
 import { TechStack } from './TechStack'
-import { CurrentInterests } from './CurrentInterests'
+// import { CurrentInterests } from './CurrentInterests'
 
 interface Props {
 	children?: React.ReactNode
@@ -11,15 +10,14 @@ interface Props {
 export const About = (props: Props) => (
 	<>
 		<PageHead
-			title="Michael Gee"
-			description="Michael Gee is a full-stack software developer eager to learn & share web development along with turning ideas into applications."
-			url="https://michaelgee.com"
+			title="Michael Gee | About Me"
+			description="Michael Gee is a full-stack software developer eager to build, learn, and share web development things along with turning ideas into applications."
+			url="https://michaelgee.com/about"
 		/>
 
 		<Container>{props.children}</Container>
 	</>
 )
 
-About.Intro = Intro
 About.TechStack = TechStack
-About.CurrentInterests = CurrentInterests
+// About.CurrentInterests = CurrentInterests

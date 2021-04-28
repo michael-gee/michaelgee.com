@@ -12,7 +12,7 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import { BsFillBriefcaseFill } from 'react-icons/bs'
-import { FaCode, FaMoon, FaRocket } from 'react-icons/fa'
+import { FaBlog, FaCode, FaMoon, FaRocket } from 'react-icons/fa'
 import { FiSun, FiChevronDown } from 'react-icons/fi'
 
 export const Header = () => {
@@ -48,9 +48,9 @@ export const Header = () => {
 					</Link>
 
 					<Flex as="nav" ml="16px">
-						<Link href="/blog">
+						<Link href="/about">
 							<Button minW="80px" mx="4px" variant="ghost">
-								Blog
+								About
 							</Button>
 						</Link>
 
@@ -59,6 +59,10 @@ export const Header = () => {
 								Works
 							</MenuButton>
 							<MenuList>
+								<Link href="/blog">
+									<MenuItem icon={<FaBlog />}>Blog</MenuItem>
+								</Link>
+
 								<Link href="/projects">
 									<MenuItem icon={<FaCode />}>Projects</MenuItem>
 								</Link>
