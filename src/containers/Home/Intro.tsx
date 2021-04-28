@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Box, Flex, Heading, Icon, useColorModeValue } from '@chakra-ui/react'
-import { FaCode, FaDiscord, FaGolfBall, FaPencilAlt, FaReact, FaUniversity } from 'react-icons/fa'
+import { FaCode, FaDiscord, FaGolfBall, FaPencilAlt, FaUniversity } from 'react-icons/fa'
 import { MdImportantDevices } from 'react-icons/md'
 import { IconType } from 'react-icons/lib'
 
