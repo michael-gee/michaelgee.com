@@ -10,7 +10,7 @@ export const HomeIntro = () => {
 	const tileBgColor = useColorModeValue('white', 'gray.800')
 
 	return (
-		<Box>
+		<>
 			<Flex align="center" justify="space-around" my="24px">
 				<Flex h="240px" flexDir="column" justify="center">
 					<Heading as="h1" fontSize="5xl">
@@ -18,7 +18,7 @@ export const HomeIntro = () => {
 					</Heading>
 					<Heading as="h2" fontSize="2xl" color={color}>
 						Software Developer
-						{/* Blogger, Freelancer, Enthusiast */}
+						{/* Enthusiast, Blogger, Freelancer, Memer */}
 					</Heading>
 				</Flex>
 
@@ -77,7 +77,7 @@ export const HomeIntro = () => {
 					bgColor={tileBgColor}
 				/>
 			</Flex>
-		</Box>
+		</>
 	)
 }
 
