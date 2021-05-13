@@ -20,7 +20,8 @@ import {
 	FaMoon,
 	FaGithub,
 	FaLinkedin,
-	FaTwitter
+	FaTwitter,
+	FaUser
 } from 'react-icons/fa'
 import { BsFillBriefcaseFill } from 'react-icons/bs'
 import { FiMenu, FiSun } from 'react-icons/fi'
@@ -132,6 +133,9 @@ export const MobileNav = () => {
 
 						<Link href="/">
 							<MenuItem icon={<FaHome />}>Home</MenuItem>
+						</Link>
+						<Link href="/about">
+							<MenuItem icon={<FaUser />}>About</MenuItem>
 						</Link>
 						<Link href="/blog">
 							<MenuItem icon={<FaBlog />}>Blog</MenuItem>

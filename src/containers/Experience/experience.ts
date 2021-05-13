@@ -10,7 +10,7 @@ export const experience: ExperienceItem[] = [
 	{
 		company: 'Inxeption',
 		title: 'Software Engineer',
-		dates: '03/2021 - Present',
+		dates: '02/2021 - Present',
 		description: [
 			"Recently started my next exciting opportunity with Inxeption. The description of my roles & responsibilities will be added over time after I've had more time with the company."
 		],
@@ -19,7 +19,7 @@ export const experience: ExperienceItem[] = [
 	{
 		company: 'CoreView',
 		title: 'Software Development Engineer',
-		dates: '07/2018 - 03/2021',
+		dates: '07/2018 - 02/2021',
 		description: [
 			'Core contributor to the development of CoreFlow, the workflow automation engine for CoreView',
 			'Lead front-end developer responsible for organizing and maintaining micro front-ends built with React',
