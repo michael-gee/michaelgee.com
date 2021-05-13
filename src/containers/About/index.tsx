@@ -1,7 +1,5 @@
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { TechStack } from './TechStack'
-// import { CurrentInterests } from './CurrentInterests'
 
 interface Props {
 	children?: React.ReactNode
@@ -18,6 +16,3 @@ export const About = (props: Props) => (
 		<Container>{props.children}</Container>
 	</>
 )
-
-About.TechStack = TechStack
-// About.CurrentInterests = CurrentInterests

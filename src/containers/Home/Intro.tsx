@@ -1,24 +1,31 @@
 import Image from 'next/image'
 import { Box, Flex, Heading, Icon, useColorModeValue } from '@chakra-ui/react'
-import { FaCode, FaDiscord, FaGolfBall, FaPencilAlt, FaUniversity } from 'react-icons/fa'
-import { MdImportantDevices } from 'react-icons/md'
+import { BoxProps } from '@chakra-ui/react'
 import { IconType } from 'react-icons/lib'
 
-export const HomeIntro = () => {
+// ********** Intro Container **********
+interface IntroProps {
+	children?: React.ReactNode
+}
+
+const Intro = (props: IntroProps) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
-	const tileColor = useColorModeValue('primary.light', 'primary.dark')
-	const tileBgColor = useColorModeValue('white', 'gray.800')
 
 	return (
 		<>
-			<Flex align="center" justify="space-around" my="24px">
-				<Flex h="240px" flexDir="column" justify="center">
+			<Flex
+				flexDir={['column', 'row']}
+				align="center"
+				justify="space-around"
+				mt={['0', '24px']}
+				mb="24px"
+			>
+				<Flex height={['auto', '240px']} my={['32px', '0']} flexDir="column" justify="center">
 					<Heading as="h1" fontSize="5xl">
 						Michael Gee
 					</Heading>
-					<Heading as="h2" fontSize="2xl" color={color}>
+					<Heading as="h2" fontSize="2xl" color={color} textAlign={['center', 'left']}>
 						Software Developer
-						{/* Enthusiast, Blogger, Freelancer, Memer */}
 					</Heading>
 				</Flex>
 
@@ -30,78 +37,49 @@ export const HomeIntro = () => {
 				/>
 			</Flex>
 
-			<Flex flexDir={['column', 'row']} justify="space-between" mt="32px">
-				<IntroTile
-					title="Coding"
-					icon={FaCode}
-					desc="I consider myself lucky that I get to wake up and do what I love every day. I see code as a form of art where you can start with a blank canvas and create anything that comes to mind."
-					color={tileColor}
-					bgColor={tileBgColor}
-				/>
-				<IntroTile
-					title="Learning"
-					icon={FaUniversity}
-					desc="I have a strong passion for continuous learning and collaborating with others to rapidly expand upon my developer journey while staying open-minded to new tech and ideas."
-					color={tileColor}
-					bgColor={tileBgColor}
-				/>
-				<IntroTile
-					title="Blogging"
-					icon={FaPencilAlt}
-					desc="I am in no way a writer but I like to share my past experiences and cool things I have learned. I hope that some people can benefit from them and even provide valuable feedback."
-					color={tileColor}
-					bgColor={tileBgColor}
-				/>
-			</Flex>
-
-			<Flex flexDir={['column', 'row']} justify="space-between" my={['0', '16px']}>
-				<IntroTile
-					title="Freelancing"
-					icon={MdImportantDevices}
-					desc=""
-					color={tileColor}
-					bgColor={tileBgColor}
-				/>
-				<IntroTile
-					title="Moderating"
-					icon={FaDiscord}
-					desc=""
-					color={tileColor}
-					bgColor={tileBgColor}
-				/>
-				<IntroTile
-					title="Golfing"
-					icon={FaGolfBall}
-					desc=""
-					color={tileColor}
-					bgColor={tileBgColor}
-				/>
-			</Flex>
+			{props.children}
 		</>
 	)
 }
 
-// ***** IntroTile Child component *****
+// ********** Intro Tile Section **********
+interface IntroTileSectionProps extends BoxProps {
+	children: React.ReactNode
+}
+
+const IntroTileSection = (props: IntroTileSectionProps) => {
+	const styleProps = { ...props }
+	delete styleProps.children
+
+	return (
+		<Flex flexDir={['column', 'row']} justify="space-between" {...styleProps}>
+			{props.children}
+		</Flex>
+	)
+}
+
+// ********** Intro Tile **********
 interface IntroTileProps {
 	title: string
 	icon: IconType
 	desc: string
-	color: string
-	bgColor: string
 }
 
 const IntroTile = (props: IntroTileProps) => {
+	const tileColor = useColorModeValue('primary.light', 'primary.dark')
+	const tileBgColor = useColorModeValue('white', 'gray.800')
+
 	return (
 		<Box
 			w={['100%', '32%']}
 			p="3% 2.5%"
 			my={['8px', '0']}
-			bgColor={props.bgColor}
+			bgColor={tileBgColor}
 			borderRadius="12px"
 			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);"
 			textAlign="center"
 		>
-			<Icon as={props.icon} color={props.color} fontSize="4xl" />
+			<Icon as={props.icon} color={tileColor} fontSize="4xl" />
 			<Box as="h3" fontWeight="bold" fontStyle="italic" py="8px">
 				{props.title}
 			</Box>
@@ -109,3 +87,5 @@ const IntroTile = (props: IntroTileProps) => {
 		</Box>
 	)
 }
+
+export { Intro, IntroTileSection, IntroTile }
