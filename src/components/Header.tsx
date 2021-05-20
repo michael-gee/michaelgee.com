@@ -1,6 +1,7 @@
 import { Container } from './Container'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {
 	Button,
 	Flex,
@@ -17,6 +18,8 @@ import { FiSun, FiChevronDown } from 'react-icons/fi'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
+	const primaryColor = useColorModeValue('primary.light', 'primary.dark')
+	const router = useRouter()
 	const isDark = colorMode === 'dark'
 
 	return (
@@ -49,36 +52,75 @@ export const Header = () => {
 
 					<Flex as="nav" ml="16px">
 						<Link href="/about">
-							<Button minW="80px" mx="4px" variant="ghost">
+							<Button
+								minW="80px"
+								mx="4px"
+								variant="ghost"
+								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
+							>
 								About
 							</Button>
 						</Link>
 
 						<Menu isLazy={true}>
-							<MenuButton as={Button} rightIcon={<FiChevronDown />} mx="4px" variant="ghost">
+							<MenuButton
+								as={Button}
+								rightIcon={<FiChevronDown />}
+								mx="4px"
+								variant="ghost"
+								color={
+									_isCurrentRoute(['/blog', '/blog/[slug]', '/projects', '/experience', '/memes'])
+										? primaryColor
+										: 'default'
+								}
+							>
 								Works
 							</MenuButton>
 							<MenuList>
 								<Link href="/blog">
-									<MenuItem icon={<FaBlog />}>Blog</MenuItem>
+									<MenuItem
+										icon={<FaBlog />}
+										color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
+									>
+										Blog
+									</MenuItem>
 								</Link>
 
 								<Link href="/projects">
-									<MenuItem icon={<FaCode />}>Projects</MenuItem>
+									<MenuItem
+										icon={<FaCode />}
+										color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
+									>
+										Projects
+									</MenuItem>
 								</Link>
 
 								<Link href="/experience">
-									<MenuItem icon={<BsFillBriefcaseFill />}>Experience</MenuItem>
+									<MenuItem
+										icon={<BsFillBriefcaseFill />}
+										color={_isCurrentRoute(['/experience']) ? primaryColor : 'default'}
+									>
+										Experience
+									</MenuItem>
 								</Link>
 
 								<Link href="/memes">
-									<MenuItem icon={<FaRocket />}>Memes</MenuItem>
+									<MenuItem
+										icon={<FaRocket />}
+										color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
+									>
+										Memes
+									</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>
 
 						<Link href="/contact">
-							<Button mx="4px" variant="ghost">
+							<Button
+								mx="4px"
+								variant="ghost"
+								color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
+							>
 								Contact
 							</Button>
 						</Link>
@@ -91,4 +133,8 @@ export const Header = () => {
 			</Container>
 		</Flex>
 	)
+
+	function _isCurrentRoute(routes: string[]) {
+		return routes.includes(router.pathname)
+	}
 }

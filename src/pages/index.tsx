@@ -17,7 +17,7 @@ const Homepage = () => {
 						<IntroTile
 							title="Coding"
 							icon={icons.code}
-							desc="I consider myself lucky that I get to wake up and do what I love every day. Code is a tool to solve challenging problems while bringing interesting ideas to life."
+							desc="I consider myself lucky that I get to wake up and do what I love every day. Code is just the tool to solve challenging problems while bringing interesting ideas to life."
 						/>
 						<IntroTile
 							title="Learning"
@@ -32,9 +32,21 @@ const Homepage = () => {
 					</IntroTileSection>
 
 					<IntroTileSection my={['0', '16px']}>
-						<IntroTile title="Collaborating" icon={icons.discord} desc="" />
-						<IntroTile title="Consulting" icon={icons.devices} desc="" />
-						<IntroTile title="Golfing" icon={icons.golf} desc="" />
+						<IntroTile
+							title="Collaborating"
+							icon={icons.discord}
+							desc="Participating in communities like the React Podcast Discord and others is extremely important to me and has led me to meeting great like-minded friends."
+						/>
+						<IntroTile
+							title="Consulting"
+							icon={icons.devices}
+							desc="It is important now more than ever to provide ideal user experiences online. I create, mentor, and contribute heavily to professional grade apps and code repositories."
+						/>
+						<IntroTile
+							title="Golfing"
+							icon={icons.golf}
+							desc="When I'm not coding you can often find me enjoying my favorite pastime. I love the mental challenge and enjoying some relaxation time outside with friends."
+						/>
 					</IntroTileSection>
 				</Intro>
 
@@ -47,7 +59,6 @@ const Homepage = () => {
 						<TechStackIcon icon={icons.javascript} iconName="JavaScript" />
 						<TechStackIcon icon={icons.html} iconName="HTML 5" />
 						<TechStackIcon icon={icons.css} iconName="CSS 3" />
-						<TechStackIcon icon={icons.tailwind} iconName="Tailwind CSS" />
 						<TechStackIcon icon={icons.sass} iconName="SASS (CSS)" />
 					</TechStackSection>
 

@@ -3,7 +3,7 @@ import { PageTitle } from '@/components/PageTitle'
 import { Box } from '@chakra-ui/react'
 
 const AboutPage = () => (
-	<Box py="24px">
+	<Box py="16px">
 		<About>
 			<PageTitle title="Hello, I'm Michael Gee 👋" />
 			<Box as="p" pt="8px" pb="16px">

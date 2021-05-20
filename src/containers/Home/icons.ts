@@ -24,7 +24,6 @@ import {
 	SiReact as react,
 	SiSass as sass,
 	SiServerless as serverless,
-	SiTailwindcss as tailwind,
 	SiTypescript as typescript,
 	SiWordpress as wordpress
 } from 'react-icons/si'
@@ -52,7 +51,6 @@ export {
 	react,
 	sass,
 	serverless,
-	tailwind,
 	typescript,
 	wordpress
 }

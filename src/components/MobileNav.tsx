@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {
 	Flex,
 	IconButton,
@@ -30,6 +31,8 @@ import { IoMdMail } from 'react-icons/io'
 
 export const MobileNav = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
+	const primaryColor = useColorModeValue('primary.light', 'primary.dark')
+	const router = useRouter()
 	const isDark = colorMode === 'dark'
 
 	return (
@@ -44,7 +47,7 @@ export const MobileNav = () => {
 			right={0}
 			left={0}
 			pt="24px"
-			pb="40px"
+			pb="32px"
 			bg={useColorModeValue('white', 'gray.800')}
 			borderTopWidth="2px"
 			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
@@ -132,29 +135,65 @@ export const MobileNav = () => {
 						<MenuDivider />
 
 						<Link href="/">
-							<MenuItem icon={<FaHome />}>Home</MenuItem>
+							<MenuItem icon={<FaHome />} color={_isCurrentRoute(['/']) ? primaryColor : 'default'}>
+								Home
+							</MenuItem>
 						</Link>
 						<Link href="/about">
-							<MenuItem icon={<FaUser />}>About</MenuItem>
+							<MenuItem
+								icon={<FaUser />}
+								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
+							>
+								About
+							</MenuItem>
 						</Link>
 						<Link href="/blog">
-							<MenuItem icon={<FaBlog />}>Blog</MenuItem>
+							<MenuItem
+								icon={<FaBlog />}
+								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
+							>
+								Blog
+							</MenuItem>
 						</Link>
 						<Link href="/projects">
-							<MenuItem icon={<FaCode />}>Projects</MenuItem>
+							<MenuItem
+								icon={<FaCode />}
+								color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
+							>
+								Projects
+							</MenuItem>
 						</Link>
 						<Link href="/experience">
-							<MenuItem icon={<BsFillBriefcaseFill />}>Experience</MenuItem>
+							<MenuItem
+								icon={<BsFillBriefcaseFill />}
+								color={_isCurrentRoute(['/experience']) ? primaryColor : 'default'}
+							>
+								Experience
+							</MenuItem>
 						</Link>
 						<Link href="/memes">
-							<MenuItem icon={<FaRocket />}>Memes</MenuItem>
+							<MenuItem
+								icon={<FaRocket />}
+								color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
+							>
+								Memes
+							</MenuItem>
 						</Link>
 						<Link href="/contact">
-							<MenuItem icon={<IoMdMail />}>Contact</MenuItem>
+							<MenuItem
+								icon={<IoMdMail />}
+								color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
+							>
+								Contact
+							</MenuItem>
 						</Link>
 					</MenuList>
 				</Menu>
 			</Flex>
 		</Flex>
 	)
+
+	function _isCurrentRoute(routes: string[]) {
+		return routes.includes(router.pathname)
+	}
 }
