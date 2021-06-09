@@ -1,7 +1,6 @@
-import { Intro, IntroTileSection, IntroTile } from '@/containers/Home/Intro'
-import { TechStack, TechStackSection, TechStackIcon } from '@/containers/Home/TechStack'
-import * as icons from '@/containers/Home/icons'
-
+import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
+import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
+import * as icons from '@/components/home/icons'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
 import { PageTitle } from '@/components/PageTitle'

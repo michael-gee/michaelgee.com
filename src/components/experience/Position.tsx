@@ -1,10 +1,17 @@
-import { ExperienceItem } from './experience'
 import { Box, Flex, Heading, Icon, useColorModeValue } from '@chakra-ui/react'
 import { FaRegCalendarAlt } from 'react-icons/fa'
 
-interface Props extends ExperienceItem {}
+interface PositionProps {
+	company: string
+	title: string
+	dates: string
+	description: string[]
+	id: string
+}
 
-export const Position = (props: Props) => {
+interface Props extends PositionProps {}
+
+const Position = (props: Props) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
@@ -51,3 +58,6 @@ export const Position = (props: Props) => {
 		</Box>
 	)
 }
+
+export { Position }
+export type { PositionProps }

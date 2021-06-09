@@ -1,5 +1,5 @@
 import { PageHead, PageTypes } from '@/components/PageHead'
-import { BlogPost, BlogPostItem } from '@/containers/BlogPost'
+import { BlogPost, BlogPostItem } from '@/components/blog/BlogPost'
 import { GetServerSideProps } from 'next'
 
 interface Props {

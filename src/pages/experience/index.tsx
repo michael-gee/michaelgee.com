@@ -1,15 +1,23 @@
-import { Experience } from '@/containers/Experience'
-import { PageTitle } from '@/components/PageTitle'
-import { experience, ExperienceItem } from '@/containers/Experience/experience'
+import { Position, PositionProps } from '@/components/experience/Position'
+import { PageHead } from '@/components/PageHead'
+import { Container } from '@/components/Container'
+
+import { experience } from '@/constants/experience'
 
 const ExperiencePage = () => (
-	<Experience>
-		<PageTitle title="Work Experience" />
+	<>
+		<PageHead
+			title="Michael Gee | Experience"
+			description=""
+			url="https://michaelgee.com/experience"
+		/>
 
-		{experience.map((item: ExperienceItem) => {
-			return <Experience.Position {...item} key={item.id} />
-		})}
-	</Experience>
+		<Container>
+			{experience.map((item: PositionProps) => {
+				return <Position {...item} key={item.id} />
+			})}
+		</Container>
+	</>
 )
 
 export default ExperiencePage

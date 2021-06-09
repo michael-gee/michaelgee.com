@@ -9,9 +9,9 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import { FaUserAlt, FaAt } from 'react-icons/fa'
-import { useContactForm } from './useContactForm'
+import { useContactForm } from '@/hooks/useContactForm'
 
-export const Form = () => {
+const Form = () => {
 	const { onSubmit, onInputChange, isSubmitting, errorMessage } = useContactForm()
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
@@ -53,3 +53,5 @@ export const Form = () => {
 		</Box>
 	)
 }
+
+export { Form }

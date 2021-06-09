@@ -1,31 +1,33 @@
-import { Blog, BlogListItem } from '@/containers/Blog'
-import { PageTitle } from '@/components/PageTitle'
-import { Box, Icon, Link } from '@chakra-ui/react'
-import { FaDev } from 'react-icons/fa'
+import { ListItem, ListItemProps } from '@/components/blog/ListItem'
+import { PageHead } from '@/components/PageHead'
+import { Container } from '@/components/Container'
+import { Box } from '@chakra-ui/react'
 
 interface Props {
-	posts: BlogListItem[] | null
+	posts: ListItemProps[] | null
 }
 
 const BlogPage = (props: Props) => {
 	const { posts } = props
 
 	return (
-		<Blog>
-			<PageTitle title="Blog">
-				<Link href="https://dev.to/michaelgee" isExternal mr="6px" _focus={{}}>
-					<Icon as={FaDev} fontSize="2em" />
-				</Link>
-			</PageTitle>
+		<>
+			<PageHead
+				title="Michael Gee | Blog"
+				description="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+				url="https://michaelgee.com/blog"
+			/>
 
-			{posts && posts.length > 0 ? (
-				posts.map((item: BlogListItem) => <Blog.ListItem {...item} key={item.id} />)
-			) : (
-				<Box py="24px" textAlign="center">
-					No blog post items were found. Please refresh the page or try again later.
-				</Box>
-			)}
-		</Blog>
+			<Container>
+				{posts && posts.length > 0 ? (
+					posts.map((item: ListItemProps) => <ListItem {...item} key={item.id} />)
+				) : (
+					<Box py="24px" textAlign="center">
+						No blog post items were found. Please refresh the page or try again later.
+					</Box>
+				)}
+			</Container>
+		</>
 	)
 }
 

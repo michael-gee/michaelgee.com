@@ -30,7 +30,6 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/constants/*": ["src/constants/*"],
-      "@/containers/*": ["src/containers/*"],
       "@/hooks/*": ["src/hooks/*"],
       "@/interfaces/*": ["src/interfaces/*"],
       "@/pages/*": ["src/pages/*"],

@@ -1,11 +1,17 @@
-import { BlogListItem } from './'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react'
 
-interface Props extends BlogListItem {}
+interface ListItemProps {
+	title: string
+	description: string
+	date: string
+	image: string
+	href: string
+	id: string
+}
 
-export const ListItem = (props: Props) => {
+const ListItem = (props: ListItemProps) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
@@ -45,3 +51,6 @@ export const ListItem = (props: Props) => {
 		</Link>
 	)
 }
+
+export { ListItem }
+export type { ListItemProps }

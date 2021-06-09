@@ -1,7 +1,7 @@
 import { Box, Flex, Icon, useColorModeValue } from '@chakra-ui/react'
 import { SiDiscord, SiProtonmail } from 'react-icons/si'
 
-export const OtherContactMethods = () => {
+const Methods = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
@@ -22,3 +22,5 @@ export const OtherContactMethods = () => {
 		</Box>
 	)
 }
+
+export { Methods }

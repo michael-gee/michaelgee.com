@@ -1,12 +1,6 @@
-export interface ExperienceItem {
-	company: string
-	title: string
-	dates: string
-	description: string[]
-	id: string
-}
+import { PositionProps } from '@/components/experience/Position'
 
-export const experience: ExperienceItem[] = [
+const experience: PositionProps[] = [
 	{
 		company: 'Inxeption',
 		title: 'Software Engineer',
@@ -43,3 +37,5 @@ export const experience: ExperienceItem[] = [
 		id: 'cegmag'
 	}
 ]
+
+export { experience }
