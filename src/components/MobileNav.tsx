@@ -26,7 +26,7 @@ import {
 } from 'react-icons/fa'
 import { BsFillBriefcaseFill } from 'react-icons/bs'
 import { FiMenu, FiSun } from 'react-icons/fi'
-import { FaRocket } from 'react-icons/fa'
+// import { FaRocket } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 
 export const MobileNav = () => {
@@ -171,14 +171,14 @@ export const MobileNav = () => {
 								Experience
 							</MenuItem>
 						</Link>
-						<Link href="/memes">
+						{/* <Link href="/memes">
 							<MenuItem
 								icon={<FaRocket />}
 								color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
 							>
 								Memes
 							</MenuItem>
-						</Link>
+						</Link> */}
 						<Link href="/contact">
 							<MenuItem
 								icon={<IoMdMail />}

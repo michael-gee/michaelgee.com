@@ -16,6 +16,7 @@ export enum PageTypes {
 
 export const PageHead = (props: Props) => {
 	const pageType = props.type ? props.type : PageTypes.website
+	const pageImage = props.image ? props.image : '/images/michaelgee-banner.jpg'
 
 	return (
 		<Head>
@@ -28,16 +29,14 @@ export const PageHead = (props: Props) => {
 			<meta property="og:title" content={props.title} key="og:title" />
 			<meta property="og:description" content={props.description} key="og:description" />
 			<meta property="og:type" content={pageType} key="og:type" />
+			<meta property="og:image" content={pageImage} key="og:image" />
 			<meta property="og:url" content={props.url} key="og:url" />
-			{props.image ? <meta property="og:image" content={props.image} key="og:image" /> : undefined}
 
 			<meta property="twitter:title" content={props.title} key="twitter:title" />
 			<meta property="twitter:description" content={props.description} key="twitter:description" />
 			<meta name="twitter:creator" content="Michael Gee" />
 			<meta property="twitter:url" content={props.url} key="twitter:url" />
-			{props.image ? (
-				<meta property="twitter:image" content={props.image} key="twitter:image" />
-			) : undefined}
+			<meta property="twitter:image" content={pageImage} key="twitter:image" />
 
 			{props.children}
 		</Head>
