@@ -13,7 +13,7 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import { BsFillBriefcaseFill } from 'react-icons/bs'
-import { FaBlog, FaCode, FaMoon, FaRocket } from 'react-icons/fa'
+import { FaBlog, FaCode, FaMoon } from 'react-icons/fa' // FaRocket
 import { FiSun, FiChevronDown } from 'react-icons/fi'
 
 export const Header = () => {
@@ -104,14 +104,14 @@ export const Header = () => {
 									</MenuItem>
 								</Link>
 
-								<Link href="/memes">
+								{/* <Link href="/memes">
 									<MenuItem
 										icon={<FaRocket />}
 										color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
 									>
 										Memes
 									</MenuItem>
-								</Link>
+								</Link> */}
 							</MenuList>
 						</Menu>
 
