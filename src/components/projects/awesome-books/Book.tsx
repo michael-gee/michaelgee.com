@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import { Box, Flex, Heading, Link } from '@chakra-ui/react'
-// import { ExpandableDescription } from './ExpandableDescription'
-import { AwesomeBookProps } from '@/constants/awesome-books'
+import { ExpandableDescription } from './ExpandableDescription'
+import { BookProps } from '@/constants/awesome-books'
 
-interface Props extends AwesomeBookProps {
+interface Props extends BookProps {
 	isFeatured: boolean
 }
 
-const AwesomeBook = (props: Props) => {
+const Book = (props: Props) => {
 	const displayConfig = _returnDisplayConfig(props.isFeatured)
 
 	return (
@@ -16,7 +16,7 @@ const AwesomeBook = (props: Props) => {
 			flexDir={['column', 'column', 'row', 'row']}
 			maxW="1000px"
 			m={['16px 0', '16px 0', displayConfig.margin, displayConfig.margin]}
-			p="0 16px"
+			p={['0 8px', '0']}
 		>
 			<Flex
 				pos="relative"
@@ -49,7 +49,7 @@ const AwesomeBook = (props: Props) => {
 
 			<Flex
 				direction="column"
-				pl={['0', '0', props.isFeatured ? '56px' : '48px', props.isFeatured ? '56px' : '48px']}
+				pl={['0', '0', props.isFeatured ? '64px' : '50px', props.isFeatured ? '64px' : '50px']}
 			>
 				<Link href={props.bookUrl} isExternal _hover={{ opacity: 0.8 }}>
 					<Heading
@@ -60,6 +60,7 @@ const AwesomeBook = (props: Props) => {
 						bgGradient="linear-gradient(to bottom right, #e94057, #f27121)"
 						bgClip="text"
 						fill="transparent"
+						pt={['16px', '0']}
 					>
 						<Box as="span">{props.title}</Box>{' '}
 						<Box as="span" fontSize=".6em" fontStyle="italic">
@@ -69,7 +70,7 @@ const AwesomeBook = (props: Props) => {
 				</Link>
 
 				<Flex
-					justify={['center', 'center', 'flex-start', 'flex-start']}
+					justify={['center', 'center', 'space-between', 'space-between']}
 					flexDirection={['column', 'column', 'row', 'row']}
 					mb={['8px', '8px', '0', '0']}
 					align="center"
@@ -113,11 +114,11 @@ const AwesomeBook = (props: Props) => {
 					mb="8px"
 				/>
 
-				{/* <ExpandableDescription
+				<ExpandableDescription
 					descPreview={props.descPreview}
 					description={props.description}
 					fontSize={displayConfig.descFontSize}
-				/> */}
+				/>
 			</Flex>
 		</Flex>
 	)
@@ -128,8 +129,8 @@ function _returnDisplayConfig(isFeatured: boolean) {
 		return {
 			margin: '48px auto 80px auto',
 
-			bookImgWidth: '224px',
-			bookImgHeight: '335px',
+			bookImgWidth: '180px',
+			bookImgHeight: '291px',
 			bookBorderSize: '6px',
 
 			avatarWidth: '100px',
@@ -163,4 +164,4 @@ function _returnDisplayConfig(isFeatured: boolean) {
 	}
 }
 
-export { AwesomeBook }
+export { Book }

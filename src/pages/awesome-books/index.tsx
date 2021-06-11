@@ -1,5 +1,5 @@
 import { SubscriptionForm } from '@/components/projects/awesome-books/SubscriptionForm'
-import { AwesomeBook } from '@/components/projects/awesome-books/AwesomeBook'
+import { Book } from '@/components/projects/awesome-books/Book'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
 import { Box, Heading } from '@chakra-ui/react'
@@ -17,7 +17,7 @@ const AwesomeBooksPage = () => {
 			/>
 
 			<Container>
-				<Box as="header" p="0 16px" pt="16px">
+				<Box as="header">
 					<Heading
 						bgGradient="linear-gradient(to bottom right, #e94057, #f27121)"
 						bgClip="text"
@@ -26,6 +26,7 @@ const AwesomeBooksPage = () => {
 					>
 						awesome-books
 					</Heading>
+
 					<Box as="p" maxWidth="800px" m="0 auto" fontSize="1.2em" textAlign="center">
 						All-time favorite book recommendations from awesome software developers. Join the
 						newsletter! Stay up to date for when new book recommendations are published!
@@ -35,7 +36,7 @@ const AwesomeBooksPage = () => {
 				<SubscriptionForm />
 
 				{awesomeBooks.map((item, index) => {
-					return <AwesomeBook isFeatured={index === 0 ? true : false} {...item} key={index} />
+					return <Book isFeatured={index === 0 ? true : false} {...item} key={index} />
 				})}
 			</Container>
 		</>

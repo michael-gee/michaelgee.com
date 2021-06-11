@@ -2,7 +2,7 @@ import { IconType } from 'react-icons/lib'
 import { FaTwitter, FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
 
-interface AwesomeBookProps {
+interface BookProps {
 	title: string
 	author: string
 	bookImg: string
@@ -15,7 +15,7 @@ interface AwesomeBookProps {
 	guestLinks: { id: string; icon: IconType; href: string }[]
 }
 
-const awesomeBooks: AwesomeBookProps[] = [
+const awesomeBooks: BookProps[] = [
 	{
 		title: 'Shoe Dog: A Memoir by the Creator of NIKE',
 		author: 'Phil Knight',
@@ -43,8 +43,7 @@ const awesomeBooks: AwesomeBookProps[] = [
 		avatar: '/images/awesome-books/michaelchan/avatar.jpg',
 		descPreview: [
 			"This book is the only reason that I've produced anything.",
-			'It\'s like a shot of adrenaline to the heart for anyone who believes they are smart, creative, and have good things to offer but "just haven\'t had a shot".',
-			'This book is about shutting up, doing the work, and personifying the dark force of Resistance that presses back against your creative work.'
+			'It\'s like a shot of adrenaline to the heart for anyone who believes they are smart, creative, and have good things to offer but "just haven\'t had a shot".'
 		],
 		description: [
 			"This book is the only reason that I've produced anything.",
@@ -68,4 +67,4 @@ const awesomeBooks: AwesomeBookProps[] = [
 ]
 
 export { awesomeBooks }
-export type { AwesomeBookProps }
+export type { BookProps }
