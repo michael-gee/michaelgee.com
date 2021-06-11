@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, Icon, Link as ChakraLink, useColorModeValue } from '@chakra-ui/react'
 import { BsBriefcaseFill } from 'react-icons/bs'
 import { FaDiscord, FaGolfBall } from 'react-icons/fa'
 import { IoConstruct } from 'react-icons/io5'
@@ -61,7 +61,7 @@ export const CurrentInterestItem = (props: CurrentInterestItemProps) => {
 
 	return (
 		<Flex
-			as={Link}
+			as={ChakraLink}
 			href={props.href}
 			isExternal
 			align="center"

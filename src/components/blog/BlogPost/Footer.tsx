@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Icon, Link as ChakraLink, useColorModeValue } from '@chakra-ui/react'
 import { FaComment, FaDev, FaInfoCircle, FaHeart } from 'react-icons/fa'
 
 interface Props {
@@ -27,13 +27,13 @@ export const Footer = (props: Props) => {
 			<Box>
 				<Icon as={FaInfoCircle} color={color} mr="8px" mb="4px" />
 				This article was originally published on{' '}
-				<Link href="https://dev.to/michaelgee" isExternal>
+				<ChakraLink href="https://dev.to/michaelgee" isExternal>
 					<Icon as={FaDev} fontSize="1.2em" />
-				</Link>
+				</ChakraLink>
 				. To leave a like or participate in the comments, please visit the{' '}
-				<Link href={props.url} isExternal>
+				<ChakraLink href={props.url} isExternal>
 					original post
-				</Link>{' '}
+				</ChakraLink>{' '}
 				to provide some much appreciated feedback!
 			</Box>
 		</Box>

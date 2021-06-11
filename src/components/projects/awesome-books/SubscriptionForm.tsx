@@ -57,7 +57,6 @@ const SubscriptionForm = () => {
 						m="0 auto"
 						bgGradient="linear-gradient(to bottom right, #e94057, #f27121)"
 						color="white"
-						_active={{}}
 						_hover={{ opacity: 0.8 }}
 						data-element="submit"
 					>

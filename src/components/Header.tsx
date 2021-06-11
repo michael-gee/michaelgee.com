@@ -39,7 +39,13 @@ export const Header = () => {
 			<Container>
 				<Flex justify="space-between" alignItems="center">
 					<Link href="/">
-						<Flex as="a" align="center" cursor="pointer">
+						<Flex
+							as={Button}
+							align="center"
+							cursor="pointer"
+							variant="ghost"
+							_hover={{ backgroundColor: 'transparent' }}
+						>
 							<Image
 								src="/images/michael.jpg"
 								width={32}
@@ -76,6 +82,7 @@ export const Header = () => {
 							>
 								Works
 							</MenuButton>
+
 							<MenuList>
 								<Link href="/blog">
 									<MenuItem

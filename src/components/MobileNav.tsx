@@ -66,7 +66,13 @@ export const MobileNav = () => {
 
 			<Flex align="center" justify="center" w="33%" h="100%">
 				<Link href="/">
-					<Flex as="a" align="center" cursor="pointer">
+					<Flex
+						as={IconButton}
+						align="center"
+						variant="ghost"
+						_hover={{ backgroundColor: 'transparent' }}
+						cursor="pointer"
+					>
 						<Image
 							src="/images/michael.jpg"
 							width={32}
@@ -87,43 +93,48 @@ export const MobileNav = () => {
 						size="lg"
 						aria-label="Mobile Navigation Menu"
 					/>
+
 					<MenuList>
 						<Flex justify="space-evenly">
-							<ChakraLink href="https://twitter.com/michaelgee7" isExternal>
-								<IconButton
-									icon={<FaTwitter />}
-									variant="ghost"
-									isRound
-									aria-label="Twitter Profile Link Button"
-								/>
-							</ChakraLink>
+							<IconButton
+								as={ChakraLink}
+								href="https://twitter.com/michaelgee7"
+								isExternal
+								icon={<FaTwitter />}
+								variant="ghost"
+								isRound
+								aria-label="Twitter Profile Link Button"
+							/>
 
-							<ChakraLink href="https://dev.to/michaelgee" isExternal>
-								<IconButton
-									icon={<FaDev />}
-									variant="ghost"
-									isRound
-									aria-label="Dev.to Profile Link Button"
-								/>
-							</ChakraLink>
+							<IconButton
+								as={ChakraLink}
+								href="https://dev.to/michaelgee"
+								isExternal
+								icon={<FaDev />}
+								variant="ghost"
+								isRound
+								aria-label="Dev.to Profile Link Button"
+							/>
 
-							<ChakraLink href="https://github.com/michaelgee22" isExternal>
-								<IconButton
-									icon={<FaGithub />}
-									variant="ghost"
-									isRound
-									aria-label="Github Profile Link Button"
-								/>
-							</ChakraLink>
+							<IconButton
+								as={ChakraLink}
+								href="https://github.com/michaelgee22"
+								isExternal
+								icon={<FaGithub />}
+								variant="ghost"
+								isRound
+								aria-label="Github Profile Link Button"
+							/>
 
-							<ChakraLink href="https://www.linkedin.com/in/michael-gee/" isExternal>
-								<IconButton
-									icon={<FaLinkedin />}
-									variant="ghost"
-									isRound
-									aria-label="LinkedIn Profile Link Button"
-								/>
-							</ChakraLink>
+							<IconButton
+								as={ChakraLink}
+								href="https://www.linkedin.com/in/michael-gee/"
+								isExternal
+								icon={<FaLinkedin />}
+								variant="ghost"
+								isRound
+								aria-label="LinkedIn Profile Link Button"
+							/>
 						</Flex>
 
 						<MenuDivider />
@@ -133,6 +144,7 @@ export const MobileNav = () => {
 								Home
 							</MenuItem>
 						</Link>
+
 						<Link href="/about">
 							<MenuItem
 								icon={<FaUser />}
@@ -141,6 +153,7 @@ export const MobileNav = () => {
 								About
 							</MenuItem>
 						</Link>
+
 						<Link href="/blog">
 							<MenuItem
 								icon={<FaBlog />}
@@ -149,6 +162,7 @@ export const MobileNav = () => {
 								Blog
 							</MenuItem>
 						</Link>
+
 						<Link href="/projects">
 							<MenuItem
 								icon={<FaCode />}
@@ -157,6 +171,7 @@ export const MobileNav = () => {
 								Projects
 							</MenuItem>
 						</Link>
+
 						<Link href="/experience">
 							<MenuItem
 								icon={<BsFillBriefcaseFill />}
@@ -165,6 +180,7 @@ export const MobileNav = () => {
 								Experience
 							</MenuItem>
 						</Link>
+
 						{/* <Link href="/memes">
 							<MenuItem
 								icon={<FaRocket />}
@@ -173,6 +189,7 @@ export const MobileNav = () => {
 								Memes
 							</MenuItem>
 						</Link> */}
+
 						<Link href="/contact">
 							<MenuItem
 								icon={<IoMdMail />}

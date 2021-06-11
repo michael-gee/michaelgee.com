@@ -8,7 +8,11 @@ import { PageTitle } from '@/components/PageTitle'
 const Homepage = () => {
 	return (
 		<>
-			<PageHead title="Michael Gee" description="" url="https://michaelgee.com" />
+			<PageHead
+				title="Michael Gee"
+				description="Michael Gee is a full-stack software developer eager to build, learn, and share web development projects along with turning ideas into applications."
+				url="https://michaelgee.com"
+			/>
 
 			<Container>
 				<Intro>

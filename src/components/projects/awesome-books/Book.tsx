@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Box, Flex, Heading, Link } from '@chakra-ui/react'
+import { Box, Flex, Heading, Link as ChakraLink } from '@chakra-ui/react'
 import { ExpandableDescription } from './ExpandableDescription'
 import { BookProps } from '@/constants/awesome-books'
 
@@ -51,7 +51,7 @@ const Book = (props: Props) => {
 				direction="column"
 				pl={['0', '0', props.isFeatured ? '64px' : '50px', props.isFeatured ? '64px' : '50px']}
 			>
-				<Link href={props.bookUrl} isExternal _hover={{ opacity: 0.8 }}>
+				<ChakraLink href={props.bookUrl} isExternal _hover={{ opacity: 0.8 }}>
 					<Heading
 						as="h3"
 						fontWeight="normal"
@@ -67,7 +67,7 @@ const Book = (props: Props) => {
 							by {props.author}
 						</Box>
 					</Heading>
-				</Link>
+				</ChakraLink>
 
 				<Flex
 					justify={['center', 'center', 'space-between', 'space-between']}
@@ -90,7 +90,7 @@ const Book = (props: Props) => {
 					<Flex ml={['0', '0', '4px', '4px']}>
 						{props.guestLinks.map((item) => {
 							return (
-								<Link
+								<ChakraLink
 									href={item.href}
 									isExternal
 									color="#78757f"
@@ -98,7 +98,7 @@ const Book = (props: Props) => {
 									key={item.id}
 								>
 									{item.icon({})}
-								</Link>
+								</ChakraLink>
 							)
 						})}
 					</Flex>
