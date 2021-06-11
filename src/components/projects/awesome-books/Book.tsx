@@ -90,17 +90,15 @@ const Book = (props: Props) => {
 					<Flex ml={['0', '0', '4px', '4px']}>
 						{props.guestLinks.map((item) => {
 							return (
-								<Box
-									as="a"
+								<Link
 									href={item.href}
-									target="_blank"
-									rel="noopener noreferrer"
+									isExternal
 									color="#78757f"
 									m={['0 16px', '0 16px', '0 8px', '0 8px']}
 									key={item.id}
 								>
 									{item.icon({})}
-								</Box>
+								</Link>
 							)
 						})}
 					</Flex>
