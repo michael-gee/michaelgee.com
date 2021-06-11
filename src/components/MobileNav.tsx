@@ -61,9 +61,6 @@ export const MobileNav = () => {
 					variant="ghost"
 					size="lg"
 					aria-label="Toggle Light/Dark Theme"
-					_hover={{}}
-					_active={{}}
-					_focus={{}}
 				/>
 			</Flex>
 
@@ -89,9 +86,6 @@ export const MobileNav = () => {
 						variant="ghost"
 						size="lg"
 						aria-label="Mobile Navigation Menu"
-						_hover={{}}
-						_active={{}}
-						_focus={{}}
 					/>
 					<MenuList>
 						<Flex justify="space-evenly">
