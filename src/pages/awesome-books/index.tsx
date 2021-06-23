@@ -1,12 +1,14 @@
 import { SubscriptionForm } from '@/components/projects/awesome-books/SubscriptionForm'
-import { Book } from '@/components/projects/awesome-books/Book'
+import { Book, BookProps } from '@/components/projects/awesome-books/Book'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
 import { Box, Heading } from '@chakra-ui/react'
 
-import { awesomeBooks } from '@/constants/awesome-books'
+import data from '@/db/awesome-books.json'
 
 const AwesomeBooksPage = () => {
+	const { books } = data
+
 	return (
 		<>
 			<PageHead
@@ -35,7 +37,7 @@ const AwesomeBooksPage = () => {
 
 				<SubscriptionForm />
 
-				{awesomeBooks.map((item, index) => {
+				{books.map((item: BookProps, index: number) => {
 					return <Book isFeatured={index === 0 ? true : false} {...item} key={index} />
 				})}
 			</Container>

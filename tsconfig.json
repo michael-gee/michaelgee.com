@@ -30,8 +30,8 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/constants/*": ["src/constants/*"],
+      "@/db/*": ["src/db/*"],
       "@/hooks/*": ["src/hooks/*"],
-      "@/interfaces/*": ["src/interfaces/*"],
       "@/pages/*": ["src/pages/*"],
       "@/services/*": ["src/services/*"],
       "@/utils/*": ["src/utils/*"],
@@ -43,6 +43,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.json",
   ],
 }

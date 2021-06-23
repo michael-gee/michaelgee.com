@@ -28,7 +28,7 @@ export const Header = () => {
 			alignItems="center"
 			w="100%"
 			h="64px"
-			bg={useColorModeValue('white', 'gray.800')}
+			bgColor={useColorModeValue('white', 'gray.800')}
 			display={['none', 'flex']}
 			pos="fixed"
 			borderBottomWidth="2px"

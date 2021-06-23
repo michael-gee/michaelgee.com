@@ -1,7 +1,21 @@
+import { ExpandableDescription } from './ExpandableDescription'
 import Image from 'next/image'
 import { Box, Flex, Heading, Link as ChakraLink } from '@chakra-ui/react'
-import { ExpandableDescription } from './ExpandableDescription'
-import { BookProps } from '@/constants/awesome-books'
+import { FaTwitter, FaGithub } from 'react-icons/fa'
+import { FiExternalLink } from 'react-icons/fi'
+
+interface BookProps {
+	title: string
+	author: string
+	bookImg: string
+	bookUrl: string
+	avatar: string
+	descPreview: string[] | null
+	description: string[]
+	guest: string
+	guestBio: string
+	guestLinks: { id: string; href: string }[]
+}
 
 interface Props extends BookProps {
 	isFeatured: boolean
@@ -97,7 +111,7 @@ const Book = (props: Props) => {
 									m={['0 16px', '0 16px', '0 8px', '0 8px']}
 									key={item.id}
 								>
-									{item.icon({})}
+									{_renderSocialIcon(item.id)}
 								</ChakraLink>
 							)
 						})}
@@ -120,6 +134,20 @@ const Book = (props: Props) => {
 			</Flex>
 		</Flex>
 	)
+}
+
+function _renderSocialIcon(type: string) {
+	switch (type) {
+		case 'website':
+			return <FiExternalLink />
+		case 'twitter':
+			return <FaTwitter />
+		case 'github':
+			return <FaGithub />
+
+		default:
+			return
+	}
 }
 
 function _returnDisplayConfig(isFeatured: boolean) {
@@ -163,3 +191,4 @@ function _returnDisplayConfig(isFeatured: boolean) {
 }
 
 export { Book }
+export type { BookProps }

@@ -7,7 +7,7 @@ const AboutPage = () => (
 	<>
 		<PageHead
 			title="Michael Gee | About Me"
-			description="Michael Gee is a full-stack software developer eager to build, learn, and share web development things along with turning ideas into applications."
+			description="Michael Gee is a passionate software developer eager to build, learn, and share web development things along with turning ideas into applications."
 			url="https://michaelgee.com/about"
 		/>
 

@@ -10,7 +10,7 @@ const Homepage = () => {
 		<>
 			<PageHead
 				title="Michael Gee"
-				description="Michael Gee is a full-stack software developer eager to build, learn, and share web development projects along with turning ideas into applications."
+				description="Michael Gee's personal website that consists of his professional & personal interests, projects, and findings primarily focused on software development."
 				url="https://michaelgee.com"
 			/>
 

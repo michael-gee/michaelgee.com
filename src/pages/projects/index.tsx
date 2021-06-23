@@ -1,15 +1,12 @@
+// import { ListItem } from '@/components/projects/ListItem'
 import { Container } from '@/components/Container'
-import { PageTitle } from '@/components/PageTitle'
 import { Heading, Icon, useColorModeValue } from '@chakra-ui/react'
 import { IoConstruct } from 'react-icons/io5'
-
 const ProjectsPage = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
 		<Container>
-			<PageTitle title="Projects" />
-
 			<Heading
 				as="h3"
 				display="flex"
@@ -23,6 +20,9 @@ const ProjectsPage = () => {
 				Under Construction
 				<Icon as={IoConstruct} color={color} ml="12px" />
 			</Heading>
+			{/* 
+			<ListItem />
+			<ListItem /> */}
 		</Container>
 	)
 }
