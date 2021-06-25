@@ -1,9 +1,10 @@
 import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
-import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
-import * as icons from '@/components/home/icons'
+import { TechStack, TechStackSection } from '@/components/home/TechStack'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
 import { PageTitle } from '@/components/PageTitle'
+import { HoverIcon } from '@/components/HoverIcon'
+import * as icons from '@/components/home/icons'
 
 const Homepage = () => {
 	return (
@@ -56,29 +57,27 @@ const Homepage = () => {
 				<PageTitle title="Tech Stack" />
 				<TechStack>
 					<TechStackSection title="Front-End">
-						<TechStackIcon icon={icons.react} iconName="React" />
-						<TechStackIcon icon={icons.nextjs} iconName="Next.js" />
-						<TechStackIcon icon={icons.typescript} iconName="TypeScript" />
-						<TechStackIcon icon={icons.javascript} iconName="JavaScript" />
-						<TechStackIcon icon={icons.html} iconName="HTML 5" />
-						<TechStackIcon icon={icons.css} iconName="CSS 3" />
-						<TechStackIcon icon={icons.sass} iconName="SASS (CSS)" />
+						<HoverIcon icon={icons.react} name="React" size="2em" />
+						<HoverIcon icon={icons.nextjs} name="Next.js" size="2em" />
+						<HoverIcon icon={icons.typescript} name="TypeScript" size="2em" />
+						<HoverIcon icon={icons.javascript} name="JavaScript" size="2em" />
+						<HoverIcon icon={icons.html} name="HTML 5" size="2em" />
+						<HoverIcon icon={icons.css} name="CSS 3" size="2em" />
+						<HoverIcon icon={icons.sass} name="SASS (CSS)" size="2em" />
 					</TechStackSection>
-
 					<TechStackSection title="Back-End">
-						<TechStackIcon icon={icons.nodejs} iconName="Node.js" />
-						<TechStackIcon icon={icons.typescript} iconName="TypeScript" />
-						<TechStackIcon icon={icons.graphQL} iconName="Graph QL" />
-						<TechStackIcon icon={icons.wordpress} iconName="WordPress" />
-						<TechStackIcon icon={icons.cSharp} iconName="C#" />
-						<TechStackIcon icon={icons.dotNet} iconName=".NET (Core)" />
+						<HoverIcon icon={icons.nodejs} name="Node.js" size="2em" />
+						<HoverIcon icon={icons.typescript} name="TypeScript" size="2em" />
+						<HoverIcon icon={icons.graphQL} name="Graph QL" size="2em" />
+						<HoverIcon icon={icons.wordpress} name="WordPress" size="2em" />
+						<HoverIcon icon={icons.cSharp} name="C#" size="2em" />
+						<HoverIcon icon={icons.dotNet} name=".NET (Core)" size="2em" />
 					</TechStackSection>
-
 					<TechStackSection title="Cloud">
-						<TechStackIcon icon={icons.aws} iconName="Amazon Web Services" />
-						<TechStackIcon icon={icons.azure} iconName="Microsoft Azure" />
-						<TechStackIcon icon={icons.mongodb} iconName="MongoDB Atlas" />
-						<TechStackIcon icon={icons.serverless} iconName="Serverless Framework" size="1.6em" />
+						<HoverIcon icon={icons.aws} name="Amazon Web Services" size="2em" />
+						<HoverIcon icon={icons.azure} name="Microsoft Azure" size="2em" />
+						<HoverIcon icon={icons.mongodb} name="MongoDB Atlas" size="2em" />
+						<HoverIcon icon={icons.serverless} name="Serverless Framework" />
 					</TechStackSection>
 				</TechStack>
 			</Container>

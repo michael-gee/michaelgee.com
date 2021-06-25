@@ -51,7 +51,7 @@ export const Header = () => {
 								width={32}
 								height={32}
 								alt="Michael Gee"
-								className="round-img"
+								className="is-round"
 							/>
 						</Flex>
 					</Link>

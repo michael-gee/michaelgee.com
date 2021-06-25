@@ -57,7 +57,7 @@ const Book = (props: Props) => {
 					h={displayConfig.avatarHeight}
 					mb={displayConfig.avatarBottom}
 				>
-					<Image src={props.avatar} width="100px" height="100px" className="round-img" />
+					<Image src={props.avatar} width="100px" height="100px" className="is-round" />
 				</Box>
 			</Flex>
 

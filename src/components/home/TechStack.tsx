@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Icon, Tooltip, useColorModeValue } from '@chakra-ui/react'
-import { IconType } from 'react-icons/lib'
+import { Box, Flex, Heading } from '@chakra-ui/react'
 
 // ********** Tech Stack Container **********
 interface TechStackProps {
@@ -38,24 +37,4 @@ const TechStackSection = (props: TechStackSectionProps) => {
 	)
 }
 
-// ********** Tech Stack Icon **********
-interface TechStackIconProps {
-	icon: IconType
-	iconName: string
-	size?: string
-}
-
-const TechStackIcon = (props: TechStackIconProps) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
-	const iconSize = props.size ? props.size : '2em'
-
-	return (
-		<Tooltip label={props.iconName} placement="bottom" aria-label={props.iconName}>
-			<Box as="span">
-				<Icon as={props.icon} color={color} fontSize={iconSize} />
-			</Box>
-		</Tooltip>
-	)
-}
-
-export { TechStack, TechStackSection, TechStackIcon }
+export { TechStack, TechStackSection }
