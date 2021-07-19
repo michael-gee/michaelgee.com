@@ -5,7 +5,7 @@ const Methods = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
-		<Box as="section" py="16px" textAlign="center">
+		<Box as="section" py="24px" textAlign="center">
 			<Box as="h2" fontSize="1.4em">
 				other ways to contact...
 			</Box>

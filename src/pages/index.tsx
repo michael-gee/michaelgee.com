@@ -49,7 +49,7 @@ const Homepage = () => {
 						<IntroTile
 							title="Golfing"
 							icon={icons.golf}
-							desc="When I'm not coding you can often find me enjoying my favorite pastime. I love the mental challenge and enjoying some relaxation time outside with friends."
+							desc="When I'm not coding you can often find me enjoying my favorite pastime playing golf. I love the mental challenge and enjoying some relaxation time outside with friends."
 						/>
 					</IntroTileSection>
 				</Intro>
