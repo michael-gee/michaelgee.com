@@ -10,7 +10,7 @@ const ProjectsPage = () => {
 	return (
 		<Container>
 			{projects.map((project: ProjectProps) => (
-				<ListItem {...project} />
+				<ListItem {...project} key={project.title} />
 			))}
 
 			<Box as="p" fontSize="1.1em" textAlign="center" mb="32px">

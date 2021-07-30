@@ -35,14 +35,14 @@ const ExpandableDescription = (props: Props) => {
 				)
 			})}
 
-			{props.descPreview && (
+			{props.descPreview ? (
 				<IconButton
 					icon={expanded ? <FiChevronsUp /> : <FiChevronsDown />}
 					onClick={_toggleDescriptionExpand}
 					backgroundColor="transparent"
 					aria-label="Expandable Description Toggle Button"
 				/>
-			)}
+			) : null}
 		</>
 	)
 

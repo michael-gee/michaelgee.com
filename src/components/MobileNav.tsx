@@ -98,7 +98,7 @@ export const MobileNav = () => {
 						<Flex justify="space-evenly">
 							<IconButton
 								as={ChakraLink}
-								href="https://twitter.com/michaelgee7"
+								href="https://twitter.com/michaelgee_"
 								isExternal
 								icon={<FaTwitter />}
 								variant="ghost"
@@ -118,7 +118,7 @@ export const MobileNav = () => {
 
 							<IconButton
 								as={ChakraLink}
-								href="https://github.com/michaelgee22"
+								href="https://github.com/michael-gee"
 								isExternal
 								icon={<FaGithub />}
 								variant="ghost"

@@ -12,7 +12,7 @@
         { "id": "css", "name": "CSS" }
       ],
       "projectLink": "https://michaelgee.com/awesome-books",
-      "sourceCode": "https://github.com/michaelgee22/michaelgee.com/blob/main/src/pages/awesome-books/index.tsx"
+      "sourceCode": "https://github.com/michael-gee/michaelgee.com/blob/main/src/pages/awesome-books/index.tsx"
     },
     {
       "title": "lunch.dev Community Calendar",

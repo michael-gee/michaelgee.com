@@ -8,4 +8,4 @@ Feedback is always welcome in any form whether it is positive or negative. Pleas
 
 ## Social
 Always looking to connect with new like-minded friends so here is where to find me!<br/>
-[DEV](https://dev.to/michaelgee22) • [Twitter](https://twitter.com/michaelgee7) • [LinkedIn](https://www.linkedin.com/in/michael-gee)
+[DEV](https://dev.to/michaelgee22) • [Twitter](https://twitter.com/michaelgee_) • [LinkedIn](https://www.linkedin.com/in/michael-gee)

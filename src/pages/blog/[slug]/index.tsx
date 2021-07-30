@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const data = await res.json()
 	let post = null
 
-	if (data && !data.error)
+	if (data && !data.error) {
 		post = {
 			title: data.title,
 			description: data.description,
@@ -71,6 +71,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 			commentsCount: data['comments_count'],
 			reactionsCount: data['public_reactions_count']
 		}
+	}
 
 	return {
 		props: { post }

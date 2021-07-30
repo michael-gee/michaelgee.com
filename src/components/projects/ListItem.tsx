@@ -56,16 +56,16 @@ const ProjectsListItem = (props: Props) => {
 						const { id, name } = icon
 
 						return (
-							<Box mr="16px">
+							<Box mr="16px" key={icon.id}>
 								<HoverIcon icon={techIcons[id]} name={name} gutter={12} size="1.4em" />
 							</Box>
 						)
 					})}
 				</Flex>
 
-				{hasLink && (
+				{hasLink ? (
 					<Flex align="center" mt="16px">
-						{props.projectLink && (
+						{props.projectLink ? (
 							<Button
 								as={ChakraLink}
 								href={props.projectLink}
@@ -77,8 +77,8 @@ const ProjectsListItem = (props: Props) => {
 							>
 								View Project
 							</Button>
-						)}
-						{props.sourceCode && (
+						) : null}
+						{props.sourceCode ? (
 							<Button
 								as={ChakraLink}
 								href={props.sourceCode}
@@ -89,9 +89,9 @@ const ProjectsListItem = (props: Props) => {
 							>
 								Source Code
 							</Button>
-						)}
+						) : null}
 					</Flex>
-				)}
+				) : null}
 			</Box>
 		</Box>
 	)

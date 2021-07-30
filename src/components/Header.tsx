@@ -44,6 +44,7 @@ export const Header = () => {
 							align="center"
 							cursor="pointer"
 							variant="ghost"
+							aria-label="Homepage navigation button"
 							_hover={{ backgroundColor: 'transparent' }}
 						>
 							<Image

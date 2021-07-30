@@ -27,11 +27,11 @@ export const PageContent = (props: Props) => {
 				props.children
 			) : (
 				<Container>
-					{renderAfterDelay && (
+					{renderAfterDelay ? (
 						<Flex justify="center" my="40px">
 							<Spinner size="lg" label="Loading Spinner" speed="0.65s" />
 						</Flex>
-					)}
+					) : null}
 				</Container>
 			)}
 		</>

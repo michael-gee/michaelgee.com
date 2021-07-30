@@ -29,7 +29,14 @@ const Form = () => {
 				</InputGroup>
 			</Flex>
 
-			<Textarea name="message" onChange={onInputChange} isRequired rows={6} placeholder="Message" mt={['16px', '0']} />
+			<Textarea
+				name="message"
+				onChange={onInputChange}
+				isRequired
+				rows={6}
+				placeholder="Message"
+				mt={['16px', '0']}
+			/>
 
 			<Input name="_gotcha" display="none" />
 
@@ -44,11 +51,11 @@ const Form = () => {
 					Send Message
 				</Button>
 
-				{!isSubmitting && errorMessage && (
+				{!isSubmitting && errorMessage ? (
 					<Box as="span" color="red.500" mt={['16px', '16px', '0']}>
 						* {errorMessage}
 					</Box>
-				)}
+				) : null}
 			</Flex>
 		</Box>
 	)

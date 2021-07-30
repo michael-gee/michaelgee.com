@@ -9,7 +9,7 @@ export const CurrentInterests = () => {
 		<>
 			<CurrentInterestItem
 				title="Inxeption"
-				description="Developing amazing new B2B ecommerce features & interfaces"
+				description="Developing amazing new ecommerce features & interfaces"
 				href="https://www.inxeption.com/"
 				icon={BsBriefcaseFill}
 				iconColor={useColorModeValue('#86432D', '#D6B47C')}
@@ -28,7 +28,7 @@ export const CurrentInterests = () => {
 			<CurrentInterestItem
 				title="Side Project(s)"
 				description="Building new exciting projects that I'm passionate about (coming soon...)"
-				href="https://michaelgee.dev/"
+				href="https://michaelgee.com/projects"
 				icon={IoConstruct}
 				iconColor={useColorModeValue('#365071', '#7CAFD1')}
 				iconBgColor={useColorModeValue('#BEE3F8', '#2A3644')}
