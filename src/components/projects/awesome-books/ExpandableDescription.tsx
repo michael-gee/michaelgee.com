@@ -1,5 +1,6 @@
 import { Box, Collapse, IconButton, useDisclosure } from '@chakra-ui/react'
 import { FiChevronsUp, FiChevronsDown } from 'react-icons/fi'
+import { v4 } from 'uuid'
 
 interface Props {
 	fontSize: string
@@ -19,14 +20,14 @@ const ExpandableDescription = (props: Props) => {
 	return (
 		<>
 			{preview
-				? preview.map((paragraph: string, index: number) => {
+				? preview.map((paragraph: string) => {
 						return (
 							<Box
 								as="p"
 								p="4px 0"
 								fontSize={props.fontSize}
 								textAlign={['center', 'center', 'start']}
-								key={index}
+								key={v4()}
 							>
 								{paragraph}
 							</Box>
@@ -34,28 +35,32 @@ const ExpandableDescription = (props: Props) => {
 				  })
 				: null}
 
-			{desc.map((paragraph: string, index: number) => {
-				let className = ''
-				if (paragraph.startsWith('<quote>')) {
-					paragraph = paragraph.split('<quote>')[1]
-					className = 'books-quote'
-				}
+			<Collapse
+				in={isOpen}
+				animateOpacity
+				transition={{ enter: { duration: 0.5 }, exit: { duration: 0.5 } }}
+			>
+				{desc.map((paragraph: string) => {
+					let className = ''
+					if (paragraph.startsWith('<quote>')) {
+						paragraph = paragraph.split('<quote>')[1]
+						className = 'books-quote'
+					}
 
-				return (
-					<Collapse in={isOpen} animateOpacity>
+					return (
 						<Box
 							as="p"
 							p="4px 0"
 							fontSize={props.fontSize}
 							textAlign={['center', 'center', 'start']}
 							className={className}
-							key={index}
+							key={v4()}
 						>
 							{paragraph}
 						</Box>
-					</Collapse>
-				)
-			})}
+					)
+				})}
+			</Collapse>
 
 			{props.previewIndex ? (
 				<IconButton

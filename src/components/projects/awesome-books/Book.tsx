@@ -72,7 +72,7 @@ const Book = (props: Props) => {
 						fill="transparent"
 						pt={['16px', '0']}
 					>
-						<Box as="span">{props.title}</Box>
+						<Box as="span">{props.title}</Box>{' '}
 						<Box as="span" fontSize=".6em" fontStyle="italic">
 							by {props.author}
 						</Box>
@@ -182,7 +182,7 @@ function _returnDisplayConfig(isFeatured: boolean) {
 		bookTitleFontSize: '1.2em',
 		recommendedByFontSize: 'xs',
 		titleBorderHeight: '2px',
-		descFontSize: '.8em'
+		descFontSize: '.9em'
 	}
 }
 

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, useColorModeValue } from '@chakra-ui/react'
+import { Box, Fade, Flex, Heading, Icon, SlideFade, useColorModeValue } from '@chakra-ui/react'
 import { FaRegCalendarAlt } from 'react-icons/fa'
 
 interface PositionProps {
@@ -23,14 +23,14 @@ const Position = (props: Props) => {
 				textAlign={['center', 'initial']}
 				pb={['16px', '0']}
 			>
-				<Box>
+				<Fade in transition={{ enter: { duration: 1 } }}>
 					<Heading as="h3" fontSize="xl" color={color}>
 						{props.title}
 					</Heading>
 					<Box fontSize="lg" fontStyle="italic">
 						{props.company}
 					</Box>
-				</Box>
+				</Fade>
 
 				<Flex align="center" fontSize="sm" pt={['2px', '0']}>
 					<Icon as={FaRegCalendarAlt} color={color} mr="8px" />
@@ -39,21 +39,23 @@ const Position = (props: Props) => {
 			</Flex>
 
 			<Box as="ul" listStyleType="none" py={['0', '8px']} px={['8px', '0']}>
-				{props.description.map((item: string, index: number) => {
-					return (
-						<Box
-							as="li"
-							_before={{
-								content: '"• "',
-								color,
-								fontSize: 'xl'
-							}}
-							key={`${props.id}-${index}`}
-						>
-							{item}
-						</Box>
-					)
-				})}
+				<SlideFade in offsetY="20px" transition={{ enter: { duration: 1 } }}>
+					{props.description.map((item: string, index: number) => {
+						return (
+							<Box
+								as="li"
+								_before={{
+									content: '"• "',
+									color,
+									fontSize: 'xl'
+								}}
+								key={`${props.id}-${index}`}
+							>
+								{item}
+							</Box>
+						)
+					})}
+				</SlideFade>
 			</Box>
 		</Box>
 	)
