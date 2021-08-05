@@ -1,19 +1,39 @@
-import { Box, IconButton } from '@chakra-ui/react'
-import { useState } from 'react'
+import { Box, Collapse, IconButton, useDisclosure } from '@chakra-ui/react'
 import { FiChevronsUp, FiChevronsDown } from 'react-icons/fi'
 
 interface Props {
 	fontSize: string
-	descPreview: string[] | null
+	previewIndex: number | null
 	description: string[]
 }
 
 const ExpandableDescription = (props: Props) => {
-	const [expanded, setExpanded] = useState<boolean>(false)
-	const desc = !expanded && props.descPreview ? props.descPreview : props.description
+	const { isOpen, onToggle } = useDisclosure()
+	const preview = props.previewIndex
+		? props.description.slice(0, props.previewIndex + 1)
+		: props.description
+	const desc = props.previewIndex
+		? props.description.slice(props.previewIndex + 1, props.description.length)
+		: props.description
 
 	return (
 		<>
+			{preview
+				? preview.map((paragraph: string, index: number) => {
+						return (
+							<Box
+								as="p"
+								p="4px 0"
+								fontSize={props.fontSize}
+								textAlign={['center', 'center', 'start']}
+								key={index}
+							>
+								{paragraph}
+							</Box>
+						)
+				  })
+				: null}
+
 			{desc.map((paragraph: string, index: number) => {
 				let className = ''
 				if (paragraph.startsWith('<quote>')) {
@@ -22,33 +42,32 @@ const ExpandableDescription = (props: Props) => {
 				}
 
 				return (
-					<Box
-						as="p"
-						p="4px 0"
-						fontSize={props.fontSize}
-						textAlign={['center', 'center', 'start', 'start']}
-						className={className}
-						key={index}
-					>
-						{paragraph}
-					</Box>
+					<Collapse in={isOpen} animateOpacity>
+						<Box
+							as="p"
+							p="4px 0"
+							fontSize={props.fontSize}
+							textAlign={['center', 'center', 'start']}
+							className={className}
+							key={index}
+						>
+							{paragraph}
+						</Box>
+					</Collapse>
 				)
 			})}
 
-			{props.descPreview ? (
+			{props.previewIndex ? (
 				<IconButton
-					icon={expanded ? <FiChevronsUp /> : <FiChevronsDown />}
-					onClick={_toggleDescriptionExpand}
+					icon={isOpen ? <FiChevronsUp /> : <FiChevronsDown />}
+					onClick={onToggle}
 					backgroundColor="transparent"
+					my="4px"
 					aria-label="Expandable Description Toggle Button"
 				/>
 			) : null}
 		</>
 	)
-
-	function _toggleDescriptionExpand() {
-		setExpanded((prevState) => !prevState)
-	}
 }
 
 export { ExpandableDescription }

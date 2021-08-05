@@ -10,7 +10,7 @@ interface BookProps {
 	bookImg: string
 	bookUrl: string
 	avatar: string
-	descPreview: string[] | null
+	previewIndex: number | null
 	description: string[]
 	guest: string
 	guestBio: string
@@ -27,9 +27,8 @@ const Book = (props: Props) => {
 	return (
 		<Flex
 			as="article"
-			flexDir={['column', 'column', 'row', 'row']}
-			maxW="1000px"
-			m={['16px 0', '16px 0', displayConfig.margin, displayConfig.margin]}
+			flexDir={['column', 'column', 'row']}
+			m={['16px 0', '16px 0', displayConfig.margin]}
 			p={['0 8px', '0']}
 		>
 			<Flex
@@ -41,7 +40,7 @@ const Book = (props: Props) => {
 				minW={displayConfig.bookImgWidth}
 				minH={displayConfig.bookImgHeight}
 				p={displayConfig.bookBorderSize}
-				m={['0 auto 16px auto', '0 auto 32px auto', '0', '0']}
+				m={['0 auto 16px auto', '0 auto 32px auto', '0']}
 			>
 				<Image
 					src={props.bookImg}
@@ -61,22 +60,19 @@ const Book = (props: Props) => {
 				</Box>
 			</Flex>
 
-			<Flex
-				direction="column"
-				pl={['0', '0', props.isFeatured ? '64px' : '50px', props.isFeatured ? '64px' : '50px']}
-			>
+			<Flex direction="column" pl={['0', '0', props.isFeatured ? '64px' : '50px']}>
 				<ChakraLink href={props.bookUrl} isExternal _hover={{ opacity: 0.8 }}>
 					<Heading
 						as="h3"
 						fontWeight="normal"
 						fontSize={displayConfig.bookTitleFontSize}
-						textAlign={['center', 'center', 'start', 'start']}
+						textAlign={['center', 'center', 'start']}
 						bgGradient="linear-gradient(to bottom right, #e94057, #f27121)"
 						bgClip="text"
 						fill="transparent"
 						pt={['16px', '0']}
 					>
-						<Box as="span">{props.title}</Box>{' '}
+						<Box as="span">{props.title}</Box>
 						<Box as="span" fontSize=".6em" fontStyle="italic">
 							by {props.author}
 						</Box>
@@ -84,9 +80,9 @@ const Book = (props: Props) => {
 				</ChakraLink>
 
 				<Flex
-					justify={['center', 'center', 'space-between', 'space-between']}
-					flexDirection={['column', 'column', 'row', 'row']}
-					mb={['8px', '8px', '0', '0']}
+					justify={['center', 'center', 'space-between']}
+					flexDirection={['column', 'column', 'row']}
+					mb={['8px', '8px', '0']}
 					align="center"
 				>
 					<Heading
@@ -95,20 +91,20 @@ const Book = (props: Props) => {
 						color="#78757f"
 						fontWeight="normal"
 						fontStyle="italic"
-						textAlign={['center', 'center', 'start', 'start']}
+						textAlign={['center', 'center', 'start']}
 						p="6px 0"
 					>
 						{props.guest} • {props.guestBio}
 					</Heading>
 
-					<Flex ml={['0', '0', '4px', '4px']}>
+					<Flex ml={['0', '0', '4px']}>
 						{props.guestLinks.map((item) => {
 							return (
 								<ChakraLink
 									href={item.href}
 									isExternal
 									color="#78757f"
-									m={['0 16px', '0 16px', '0 8px', '0 8px']}
+									m={['0 16px', '0 16px', '0 8px']}
 									key={item.id}
 								>
 									{_renderSocialIcon(item.id)}
@@ -127,7 +123,7 @@ const Book = (props: Props) => {
 				/>
 
 				<ExpandableDescription
-					descPreview={props.descPreview}
+					previewIndex={props.previewIndex}
 					description={props.description}
 					fontSize={displayConfig.descFontSize}
 				/>

@@ -29,9 +29,9 @@ const AwesomeBooksPage = () => {
 						awesome-books
 					</Heading>
 
-					<Box as="p" maxWidth="800px" m="0 auto" fontSize="1.2em" textAlign="center">
+					<Box as="p" lineHeight="1.2" fontSize="1.2em" textAlign="center">
 						All-time favorite book recommendations from awesome software developers. Join the
-						newsletter! Stay up to date for when new book recommendations are published!
+						newsletter & stay up to date for when new recommendations are announced!
 					</Box>
 				</Box>
 

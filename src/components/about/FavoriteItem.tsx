@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
 
 interface Props {
 	label: string
@@ -6,21 +6,24 @@ interface Props {
 }
 
 const FavoriteItem = (props: Props) => {
+	const borderColor = useColorModeValue('primary.light', 'primary.dark')
+
 	return (
 		<Flex
 			justify="space-between"
 			flexWrap="wrap"
-			borderBottom="1px dashed #a5a9a1"
+			borderBottomColor={borderColor}
+			borderBottomWidth="1px"
+			borderBottomStyle="dashed"
 			lineHeight="2"
 			fontSize="xl"
-			px="8px"
+			px="4px"
 		>
-			<Box as="span" fontWeight="600">
+			<Box as="span" fontWeight="600" fontStyle="italic">
 				{props.label}
 			</Box>
-			<Box as="span" fontWeight="lighter">
-				{props.value}
-			</Box>
+
+			<Box as="span">{props.value}</Box>
 		</Flex>
 	)
 }
