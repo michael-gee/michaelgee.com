@@ -13,8 +13,7 @@ body {
 }
 
 .project-image-container img {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-radius: 13px;
 }
 
 @media screen and (max-width: 650px)  {

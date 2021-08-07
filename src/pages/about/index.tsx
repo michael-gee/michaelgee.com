@@ -20,7 +20,7 @@ const AboutPage = () => {
 			<Container>
 				<Box py="16px">
 					<PageTitle title="Hello, I'm Michael Gee 👋" />
-					<Box as="p" py="8px" fontWeight="700">
+					<Box as="p" py="8px">
 						I'm a passionate software developer eager to turn ideas into applications specializing
 						in creating elegant user interfaces & experiences.
 					</Box>
@@ -72,7 +72,7 @@ const AboutPage = () => {
 				<Box as="h3" fontSize="3xl" fontStyle="italic" py="24px">
 					I Also Enjoy...
 				</Box>
-				<Flex flexWrap="wrap" justify={['center', 'center', 'space-evenly']}>
+				<Flex flexWrap="wrap" justify="center">
 					{otherLikes.map((item: string) => {
 						return (
 							<Badge

@@ -9,11 +9,12 @@ const ProjectsPage = () => {
 
 	return (
 		<Container>
-			{projects.map((project: ProjectProps) => (
-				<ListItem {...project} key={project.title} />
-			))}
+			{projects.map((project: ProjectProps, index: number) => {
+				const imagePosition = index % 2 === 0 ? 'right' : 'left'
+				return <ListItem {...project} imagePosition={imagePosition} key={project.title} />
+			})}
 
-			<Box as="p" fontSize="1.1em" textAlign="center" mb="32px">
+			<Box as="p" fontSize="1.2em" textAlign="center" pt={['0', '0', '32px']} pb="32px">
 				<Box as="span" pr="8px">
 					more projects coming soon...
 				</Box>

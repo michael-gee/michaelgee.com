@@ -17,7 +17,7 @@ const FavoriteItem = (props: Props) => {
 			borderBottomStyle="dashed"
 			lineHeight="2"
 			fontSize="xl"
-			px="4px"
+			px="8px"
 		>
 			<Box as="span" fontWeight="600" fontStyle="italic">
 				{props.label}

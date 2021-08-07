@@ -21,7 +21,7 @@ const Homepage = () => {
 						<IntroTile
 							title="Coding"
 							icon={icons.code}
-							desc="I consider myself lucky that I get to wake up and do what I love every day. Code is just the tool to solve challenging problems while bringing interesting ideas to life."
+							desc="I consider myself lucky that I get to wake up and do what I love every day. Code is just the tool to solve challenging problems while bringing interesting application ideas to life."
 						/>
 						<IntroTile
 							title="Learning"
@@ -39,7 +39,7 @@ const Homepage = () => {
 						<IntroTile
 							title="Collaborating"
 							icon={icons.discord}
-							desc="Participating in communities like the React Podcast Discord and others is extremely important to me and has led me to meeting great like-minded friends."
+							desc="Participating in communities like the React Podcast Discord and others continues to be extremely important to me and has led me to meeting great like-minded friends."
 						/>
 						<IntroTile
 							title="Consulting"

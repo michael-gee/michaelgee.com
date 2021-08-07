@@ -1,6 +1,7 @@
 import { Form } from '@/components/contact/Form'
 import { Methods } from '@/components/contact/Methods'
 import { PageHead } from '@/components/PageHead'
+import { PageTitle } from '@/components/PageTitle'
 import { Container } from '@/components/Container'
 
 const ContactPage = () => (
@@ -12,6 +13,7 @@ const ContactPage = () => (
 		/>
 
 		<Container>
+			<PageTitle title="Get In Touch!" borderless />
 			<Form />
 			<Methods />
 		</Container>
