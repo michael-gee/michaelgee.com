@@ -6,10 +6,11 @@
       "dates": "02/2021 - Present",
       "description": [
         "Building reusable components & layout templates used throughout various eCommerce storefronts",
-        "Introducing and developing customization options added on top of generically built features",
+        "Developing and maintaining a v2 greenfield development project which provides a much-improved user & developer experience (primarily using React, JavaScript, SASS (CSS), GraphQL, and more)",
+        "Introducing customization options added on top of generically built features",
+        "Implementing best practice design principles like component composition & React hooks",
         "Establishing mobile-first development strategies with an emphasis on design, performance, and reusability",
-        "Assessing eCommerce UX/UI industry standards to implement great online shopping & checkout experiences",
-        "Writing documentation (both internal & external) to provide guides and best practices for using or contributing to the component library"
+        "Assessing UI & UX designs to provide great online shopping & checkout experiences"
       ],
       "id": "inxeption"
     },
@@ -20,8 +21,10 @@
       "description": [
         "Core contributor to the development of CoreFlow, the workflow automation engine for CoreView",
         "Lead front-end developer responsible for organizing and maintaining micro front-ends built with React",
+        "Migrated large portions of component libraries and application features from JavaScript to TypeScript",
+        "Unit, Integration and End-To-End tested application features and components with Jest & Cypress",
         "Built the design system of UI components to be reused across all front-end applications",
-        "Paired with teammates, provided code reviews, and implemented best practice code with a primary focus around maintainability & prioritizing UX/DX",
+        "Paired with teammates, provided code reviews, and implemented best practice code with a primary focus of prioritizing both User & Developer experience equally",
         "Worked closely with product management and quality assurance team members to achieve well organized and time-intensive agile sprints",
         "Contributed to the back-end infrastructure and APIs built with C#, .NET Core, and AWS"
       ],
@@ -32,10 +35,10 @@
       "title": "Software Developer",
       "dates": "02/2017 - 07/2018",
       "description": [
-        "Developed various web applications using full-stack JavaScript and/or WordPress",
-        "Brainstormed & created custom UI layout themes and reusable application features",
-        "Researched and provided proof of concept demos using various JavaScript tools, frameworks, and libraries to determine the best project solutions",
-        "Collaborated directly with customers to provide UI/UX recommendations and deliver on exact feature requests"
+        "Developed custom Gutenberg blocks (reusable React components) to use within WordPress sites",
+        "Designed and built custom UI landing pages, layouts, and functionality to bring business owner’s ideas to life",
+        "Provided proof of concept demos using various JavaScript libraries to determine the best project solutions",
+        "Worked as a consultant teaching site admins how to overwrite WordPress content & theme styles with CSS"
       ],
       "id": "cegmag"
     }

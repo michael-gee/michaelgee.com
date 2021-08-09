@@ -20,7 +20,10 @@ const BlogPage = (props: Props) => {
 
 			<Container>
 				{posts && posts.length > 0 ? (
-					posts.map((item: ListItemProps) => <ListItem {...item} key={item.id} />)
+					posts.map((item: ListItemProps, index: number) => {
+						const animationDelay = index > 0 ? 0.3 * index : 0
+						return <ListItem {...item} animationDelay={animationDelay} key={item.id} />
+					})
 				) : (
 					<Box py="24px" textAlign="center">
 						No blog post items were found. Please refresh the page or try again later.

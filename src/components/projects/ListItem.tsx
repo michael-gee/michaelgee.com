@@ -39,7 +39,7 @@ const ProjectsListItem = (props: Props) => {
 		<Flex pos="relative" flexDir={['column', 'column', flexDir]} justify="space-around" py="16px">
 			<SlideFade
 				in
-				offsetX={props.imagePosition === 'right' ? '-64px' : '64px'}
+				offsetX={props.imagePosition === 'right' ? '-16px' : '16px'}
 				offsetY="0"
 				transition={{ enter: { duration: 1, delay: 0.3 } }}
 			>
@@ -59,7 +59,7 @@ const ProjectsListItem = (props: Props) => {
 
 			<SlideFade
 				in
-				offsetX={props.imagePosition === 'right' ? '64px' : '-64px'}
+				offsetX={props.imagePosition === 'right' ? '16px' : '-16px'}
 				offsetY="0"
 				transition={{ enter: { duration: 1, delay: 0.3 } }}
 			>

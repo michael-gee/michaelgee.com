@@ -3,6 +3,7 @@ import { Methods } from '@/components/contact/Methods'
 import { PageHead } from '@/components/PageHead'
 import { PageTitle } from '@/components/PageTitle'
 import { Container } from '@/components/Container'
+import { Fade } from '@chakra-ui/react'
 
 const ContactPage = () => (
 	<>
@@ -13,9 +14,11 @@ const ContactPage = () => (
 		/>
 
 		<Container>
-			<PageTitle title="Get In Touch!" borderless />
-			<Form />
-			<Methods />
+			<Fade in transition={{ enter: { duration: 1.2 } }}>
+				<PageTitle title="Get In Touch!" borderless />
+				<Form />
+				<Methods />
+			</Fade>
 		</Container>
 	</>
 )
