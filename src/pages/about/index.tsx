@@ -22,8 +22,8 @@ const AboutPage = () => {
 					<Box py="16px">
 						<PageTitle title="Hello, I'm Michael Gee 👋" />
 						<Box as="p" py="8px">
-							I'm a passionate software developer eager to turn ideas into applications specializing
-							in creating elegant user interfaces & experiences.
+							I&apos;m a passionate software developer eager to turn ideas into applications
+							specializing in creating elegant user interfaces & experiences.
 						</Box>
 					</Box>
 					<Flex flexDir={['column', 'row']} className="about-image-container">
