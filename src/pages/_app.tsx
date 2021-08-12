@@ -20,7 +20,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 		router.events.on('routeChangeStart', () => setIsLoading(true))
 		router.events.on('routeChangeComplete', () => setIsLoading(false))
 		router.events.on('routeChangeError', () => setIsLoading(false))
-	}, [])
+	}, [router.events])
 
 	return (
 		<>

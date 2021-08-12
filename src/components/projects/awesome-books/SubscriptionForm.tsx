@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import { Button, Flex, Icon, InputGroup, Input, InputLeftElement } from '@chakra-ui/react'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { FiAtSign } from 'react-icons/fi'
@@ -25,7 +26,9 @@ const SubscriptionForm = () => {
 						data-stacked="false"
 					>
 						<InputGroup m={['8px 4px', '8px 4px', '0 4px', '0 4px']}>
-							<InputLeftElement children={<Icon as={FaRegUserCircle} />} />
+							<InputLeftElement>
+								<Icon as={FaRegUserCircle} />
+							</InputLeftElement>
 
 							<Input
 								type="text"
@@ -38,7 +41,9 @@ const SubscriptionForm = () => {
 						</InputGroup>
 
 						<InputGroup m="0 4px">
-							<InputLeftElement children={<Icon as={FiAtSign} />} />
+							<InputLeftElement>
+								<Icon as={FiAtSign} />
+							</InputLeftElement>
 
 							<Input
 								type="email"
@@ -65,7 +70,7 @@ const SubscriptionForm = () => {
 				</Flex>
 			</form>
 
-			<script src="https://f.convertkit.com/ckjs/ck.5.js" />
+			<Script src="https://f.convertkit.com/ckjs/ck.5.js" />
 		</>
 	)
 }

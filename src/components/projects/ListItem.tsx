@@ -53,7 +53,13 @@ const ProjectsListItem = (props: Props) => {
 					boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
 					className="project-image-container"
 				>
-					<Image src={props.image} width="400px" height="400px" layout="responsive" />
+					<Image
+						src={props.image}
+						width="400px"
+						height="400px"
+						alt={props.title}
+						layout="responsive"
+					/>
 				</Box>
 			</SlideFade>
 
@@ -102,7 +108,7 @@ const ProjectsListItem = (props: Props) => {
 										colorScheme="blue"
 										mr="16px"
 										size="sm"
-										className="no-text-decoration"
+										textDecoration="none !important"
 									>
 										View Project
 									</Button>
@@ -114,7 +120,7 @@ const ProjectsListItem = (props: Props) => {
 										isExternal
 										colorScheme="blue"
 										size="sm"
-										className="no-text-decoration"
+										textDecoration="none !important"
 									>
 										Source Code
 									</Button>

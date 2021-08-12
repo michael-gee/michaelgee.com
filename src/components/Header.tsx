@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {
+	chakra,
 	Button,
 	Flex,
 	Menu,
@@ -38,9 +39,10 @@ export const Header = () => {
 		>
 			<Container>
 				<Flex justify="space-between" alignItems="center">
-					<Link href="/">
-						<Flex
-							as={Button}
+					<Link href="/" passHref>
+						<Button
+							as={chakra.a}
+							display="flex"
 							align="center"
 							cursor="pointer"
 							variant="ghost"
@@ -54,12 +56,13 @@ export const Header = () => {
 								alt="Michael Gee"
 								className="is-round"
 							/>
-						</Flex>
+						</Button>
 					</Link>
 
 					<Flex as="nav" ml="16px">
-						<Link href="/about">
+						<Link href="/about" passHref>
 							<Button
+								as={chakra.a}
 								minW="80px"
 								mx="4px"
 								variant="ghost"
@@ -85,8 +88,9 @@ export const Header = () => {
 							</MenuButton>
 
 							<MenuList>
-								<Link href="/blog">
+								<Link href="/blog" passHref>
 									<MenuItem
+										as={chakra.a}
 										icon={<FaBlog />}
 										color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
 									>
@@ -94,8 +98,9 @@ export const Header = () => {
 									</MenuItem>
 								</Link>
 
-								<Link href="/projects">
+								<Link href="/projects" passHref>
 									<MenuItem
+										as={chakra.a}
 										icon={<FaCode />}
 										color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
 									>
@@ -103,8 +108,9 @@ export const Header = () => {
 									</MenuItem>
 								</Link>
 
-								<Link href="/experience">
+								<Link href="/experience" passHref>
 									<MenuItem
+										as={chakra.a}
 										icon={<BsFillBriefcaseFill />}
 										color={_isCurrentRoute(['/experience']) ? primaryColor : 'default'}
 									>
@@ -112,22 +118,24 @@ export const Header = () => {
 									</MenuItem>
 								</Link>
 
-								{/* <Link href="/memes">
+								{/* <Link href="/memes" passHref>
 									<MenuItem
+										as={chakra.a}
 										icon={<FaRocket />}
 										color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
 									>
 										Memes
-									</MenuItem>
+									</MenuItem>	
 								</Link> */}
 							</MenuList>
 						</Menu>
 
-						<Link href="/contact">
+						<Link href="/contact" passHref>
 							<Button
-								mx="4px"
+								as={chakra.a}
 								variant="ghost"
 								color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
+								mx="4px"
 							>
 								Contact
 							</Button>

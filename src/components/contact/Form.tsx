@@ -18,17 +18,23 @@ const Form = () => {
 	return (
 		<Box as="form" onSubmit={onSubmit}>
 			<InputGroup my="16px">
-				<InputLeftElement children={<FaUserAlt />} color={color} />
+				<InputLeftElement color={color}>
+					<FaUserAlt />
+				</InputLeftElement>
 				<Input name="name" onChange={onInputChange} isRequired placeholder="Name" />
 			</InputGroup>
 
 			<InputGroup my="16px">
-				<InputLeftElement children={<FaAt />} color={color} />
+				<InputLeftElement color={color}>
+					<FaAt />
+				</InputLeftElement>
 				<Input name="email" onChange={onInputChange} isRequired placeholder="Email" />
 			</InputGroup>
 
 			<InputGroup my="16px">
-				<InputLeftElement children={<FaEnvelope />} color={color} />
+				<InputLeftElement color={color}>
+					<FaEnvelope />
+				</InputLeftElement>
 				<Textarea
 					name="message"
 					onChange={onInputChange}

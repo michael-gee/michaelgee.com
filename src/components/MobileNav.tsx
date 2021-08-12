@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {
+	chakra,
 	Flex,
 	IconButton,
 	Link as ChakraLink,
@@ -54,24 +55,23 @@ export const MobileNav = () => {
 			zIndex="overlay"
 			data-id="mobile-nav"
 		>
-			<Flex align="center" justify="center" w="33%" h="100%">
+			<Flex align="center" justify="center" w="33%">
 				<IconButton
 					icon={isDark ? <FiSun /> : <FaMoon />}
 					onClick={toggleColorMode}
 					variant="ghost"
 					size="lg"
-					aria-label="Toggle Light/Dark Theme"
+					aria-label="Toggle Light or Dark Theme"
 				/>
 			</Flex>
 
-			<Flex align="center" justify="center" w="33%" h="100%">
-				<Link href="/">
-					<Flex
-						as={IconButton}
-						align="center"
+			<Flex align="center" justify="center" w="33%">
+				<Link href="/" passHref>
+					<IconButton
+						as={chakra.a}
 						variant="ghost"
 						_hover={{ backgroundColor: 'transparent' }}
-						cursor="pointer"
+						aria-label=""
 					>
 						<Image
 							src="/images/michael.jpg"
@@ -80,11 +80,11 @@ export const MobileNav = () => {
 							alt="Michael Gee"
 							className="is-round"
 						/>
-					</Flex>
+					</IconButton>
 				</Link>
 			</Flex>
 
-			<Flex as="nav" align="center" justify="center" w="33%" h="100%">
+			<Flex as="nav" align="center" justify="center" w="33%">
 				<Menu placement="auto">
 					<MenuButton
 						as={IconButton}
@@ -139,14 +139,19 @@ export const MobileNav = () => {
 
 						<MenuDivider />
 
-						<Link href="/">
-							<MenuItem icon={<FaHome />} color={_isCurrentRoute(['/']) ? primaryColor : 'default'}>
+						<Link href="/" passHref>
+							<MenuItem
+								as={chakra.a}
+								icon={<FaHome />}
+								color={_isCurrentRoute(['/']) ? primaryColor : 'default'}
+							>
 								Home
 							</MenuItem>
 						</Link>
 
-						<Link href="/about">
+						<Link href="/about" passHref>
 							<MenuItem
+								as={chakra.a}
 								icon={<FaUser />}
 								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
 							>
@@ -154,8 +159,9 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link>
 
-						<Link href="/blog">
+						<Link href="/blog" passHref>
 							<MenuItem
+								as={chakra.a}
 								icon={<FaBlog />}
 								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
 							>
@@ -163,8 +169,9 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link>
 
-						<Link href="/projects">
+						<Link href="/projects" passHref>
 							<MenuItem
+								as={chakra.a}
 								icon={<FaCode />}
 								color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
 							>
@@ -172,8 +179,9 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link>
 
-						<Link href="/experience">
+						<Link href="/experience" passHref>
 							<MenuItem
+								as={chakra.a}
 								icon={<BsFillBriefcaseFill />}
 								color={_isCurrentRoute(['/experience']) ? primaryColor : 'default'}
 							>
@@ -181,8 +189,9 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link>
 
-						{/* <Link href="/memes">
+						{/* <Link href="/memes" passHref>
 							<MenuItem
+								as={chakra.a}
 								icon={<FaRocket />}
 								color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
 							>
@@ -190,8 +199,9 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link> */}
 
-						<Link href="/contact">
+						<Link href="/contact" passHref>
 							<MenuItem
+								as={chakra.a}
 								icon={<IoMdMail />}
 								color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
 							>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Box, Button, Heading } from '@chakra-ui/react'
+import { Box, Button, Heading, Link as ChakraLink } from '@chakra-ui/react'
 import { IoMdArrowBack } from 'react-icons/io'
 
 const AwesomeBooksSuccessPage = () => {
@@ -24,8 +24,9 @@ const AwesomeBooksSuccessPage = () => {
 				<Box as="p">Please check your email inbox for a subsciption confirmation.</Box>
 			</Box>
 
-			<Link href="/awesome-books">
+			<Link href="/awesome-books" passHref>
 				<Button
+					as={ChakraLink}
 					display="flex"
 					m="24px auto"
 					bgGradient="linear-gradient(to bottom right, #e94057, #f27121)"

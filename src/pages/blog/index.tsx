@@ -1,7 +1,7 @@
 import { ListItem, ListItemProps } from '@/components/blog/ListItem'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { Box } from '@chakra-ui/react'
+import { Box, List, ListItem as CharkaListItem } from '@chakra-ui/react'
 
 interface Props {
 	posts: ListItemProps[] | null
@@ -20,10 +20,16 @@ const BlogPage = (props: Props) => {
 
 			<Container>
 				{posts && posts.length > 0 ? (
-					posts.map((item: ListItemProps, index: number) => {
-						const animationDelay = index > 0 ? 0.3 * index : 0
-						return <ListItem {...item} animationDelay={animationDelay} key={item.id} />
-					})
+					<List>
+						{posts.map((item: ListItemProps, index: number) => {
+							const animationDelay = index > 0 ? 0.3 * index : 0
+							return (
+								<CharkaListItem key={item.id}>
+									<ListItem {...item} animationDelay={animationDelay} />
+								</CharkaListItem>
+							)
+						})}
+					</List>
 				) : (
 					<Box py="24px" textAlign="center">
 						No blog post items were found. Please refresh the page or try again later.

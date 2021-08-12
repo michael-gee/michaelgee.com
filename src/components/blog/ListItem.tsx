@@ -1,6 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Box, Flex, Heading, SlideFade, useColorModeValue } from '@chakra-ui/react'
+import {
+	Box,
+	Flex,
+	Heading,
+	Link as ChakraLink,
+	SlideFade,
+	useColorModeValue
+} from '@chakra-ui/react'
 
 interface ListItemProps {
 	title: string
@@ -16,27 +23,30 @@ const ListItem = (props: ListItemProps) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
-		<Link href={props.href}>
-			<SlideFade
-				in
-				offsetY="40px"
-				transition={{ enter: { duration: 1.2, delay: props.animationDelay || 0 } }}
-			>
+		<SlideFade
+			in
+			offsetY="40px"
+			transition={{ enter: { duration: 1.2, delay: props.animationDelay || 0 } }}
+		>
+			<Link href={props.href} passHref>
 				<Flex
-					as="a"
+					as={ChakraLink}
+					flexDir={['column', 'column', 'row']}
+					align={['center', 'center', 'flex-start']}
 					py="8px"
 					m="16px 24px"
 					transition=".3s"
-					cursor="pointer"
-					flexDir={['column', 'column', 'row']}
-					align={['center', 'center', 'flex-start']}
+					textDecoration="none !important"
+					_focus={{
+						boxShadow: '0 0 0 3px rgba(66, 153, 225, 0.6)'
+					}}
 					_hover={{
 						transform: 'translateY(-4px)',
 						color
 					}}
 				>
 					<Box maxW="400px" maxH="100%" mb={['8px', '8px', '0']}>
-						<Image src={props.image} width={400} height={168} />
+						<Image src={props.image} width={400} height={168} alt={props.title} />
 					</Box>
 
 					<Box
@@ -54,8 +64,8 @@ const ListItem = (props: ListItemProps) => {
 						<Box fontStyle="italic">{props.date}</Box>
 					</Box>
 				</Flex>
-			</SlideFade>
-		</Link>
+			</Link>
+		</SlideFade>
 	)
 }
 

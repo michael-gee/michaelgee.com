@@ -1,6 +1,7 @@
 import { PageHead, PageTypes } from '@/components/PageHead'
 import { BlogPost, BlogPostItem } from '@/components/blog/BlogPost'
 import { GetServerSideProps } from 'next'
+import { Fade } from '@chakra-ui/react'
 
 interface Props {
 	post: BlogPostItem | null
@@ -22,15 +23,17 @@ const BlogPostPage = (props: Props) => {
 			</PageHead>
 
 			<BlogPost>
-				<BlogPost.Header title={post.title} coverImageSrc={post.coverImageSrc} date={post.date} />
+				<Fade in transition={{ enter: { duration: 1.2 } }}>
+					<BlogPost.Header title={post.title} coverImageSrc={post.coverImageSrc} date={post.date} />
 
-				<BlogPost.Body markdown={post.body} />
+					<BlogPost.Body markdown={post.body} />
 
-				<BlogPost.Footer
-					url={post.url}
-					reactionsCount={post.reactionsCount}
-					commentsCount={post.commentsCount}
-				/>
+					<BlogPost.Footer
+						url={post.url}
+						reactionsCount={post.reactionsCount}
+						commentsCount={post.commentsCount}
+					/>
+				</Fade>
 			</BlogPost>
 		</>
 	) : (

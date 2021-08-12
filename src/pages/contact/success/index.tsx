@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
 import Link from 'next/link'
-import { Box, Button, Heading } from '@chakra-ui/react'
+import { Box, Button, Heading, Link as ChakraLink } from '@chakra-ui/react'
 import { FaHome } from 'react-icons/fa'
 
 const ContactSucessPage = () => (
@@ -15,8 +15,8 @@ const ContactSucessPage = () => (
 			</Box>
 		</Box>
 
-		<Link href="/">
-			<Button display="flex" colorScheme="blue" mt="24px" mb="32px" mx="auto">
+		<Link href="/" passHref>
+			<Button as={ChakraLink} display="flex" colorScheme="blue" mt="24px" mb="32px" mx="auto">
 				<FaHome />
 				<Box as="span" pl="6px">
 					Navigate To Homepage
