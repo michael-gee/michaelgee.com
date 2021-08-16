@@ -8,6 +8,12 @@ body {
   border-radius: 50%;
 }
 
+.vertical-text-scroll {
+  animation: verticalScroll 12s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+}
+
 .project-image-container img {
   border-radius: 13px;
 }
@@ -24,4 +30,12 @@ body {
   color: #7d8a97;
   font-style: italic;
   margin: 8px 0;
+}
+
+@keyframes verticalScroll {
+  0%  { top: 2px; }
+  20% { top: -40px; }
+  40% { top: -80px; }
+  60% { top: -120px; }
+  80% { top: -160px; }
 }

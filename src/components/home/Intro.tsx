@@ -24,8 +24,28 @@ const Intro = (props: IntroProps) => {
 					<Heading as="h1" fontSize="5xl">
 						Michael Gee
 					</Heading>
+
 					<Heading as="h2" fontSize="2xl" color={color} textAlign={['center', 'left']}>
-						Software Developer
+						<Box as="span" float="left" h="40px" mr="6px">
+							Software
+						</Box>
+						<Box as="span" float="left" overflow="hidden" pos="relative" h="40px">
+							<Box
+								as="span"
+								display="inline-block"
+								pos="relative"
+								whiteSpace="nowrap"
+								top={0}
+								left={0}
+								className="vertical-text-scroll"
+							>
+								<Box h="40px">Developer</Box>
+								<Box h="40px">Enthusiast</Box>
+								<Box h="40px">Blogger</Box>
+								<Box h="40px">Consultant</Box>
+								<Box h="40px">Memer</Box>
+							</Box>
+						</Box>
 					</Heading>
 				</Flex>
 
