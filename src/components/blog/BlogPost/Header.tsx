@@ -12,7 +12,7 @@ export const Header = (props: Props) => {
 
 	return (
 		<Box as="header">
-			<Heading as="h2" fontSize="3xl" textAlign="center" mt="8px" mb="16px" color={color}>
+			<Heading as="h1" fontSize="3xl" textAlign="center" mt="8px" mb="16px" color={color}>
 				{props.title}
 			</Heading>
 

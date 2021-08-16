@@ -19,13 +19,14 @@ const AboutPage = () => {
 
 			<Container>
 				<Fade in transition={{ enter: { duration: 1.5 } }}>
-					<Box py="16px">
-						<PageTitle title="Hello, I'm Michael Gee 👋" />
+					<Box as="section" py="16px">
+						<PageTitle text="Hello, I'm Michael Gee 👋" />
 						<Box as="p" py="8px">
 							I&apos;m a passionate software developer eager to turn ideas into applications
 							specializing in creating elegant user interfaces & experiences.
 						</Box>
 					</Box>
+
 					<Flex flexDir={['column', 'row']} className="about-image-container">
 						<Image
 							src="/images/about/fam1.jpg"
@@ -46,7 +47,7 @@ const AboutPage = () => {
 							alt="Another family photo"
 						/>
 					</Flex>
-					<Flex flexDir={['column', 'row']} className="about-image-container">
+					<Flex flexDir={['column', 'row']} className="about-image-container" mb="16px">
 						<Image
 							src="/images/about/golf1.jpg"
 							width="540px"
@@ -60,35 +61,40 @@ const AboutPage = () => {
 							alt="Golf photo: swinging while watching the ball fly into the lake"
 						/>
 					</Flex>
-					<Box as="h3" fontSize="3xl" fontStyle="italic" py="16px">
-						My Favorite...
+
+					<Box as="section">
+						<PageTitle text="My Favorite..." fontStyle="italic" borderless />
+						<Flex as="dl" pb="16px" flexWrap="wrap" fontStyle="">
+							{favorites.map((fav: FavoriteItemProps) => {
+								return <FavoriteItem label={fav.label} value={fav.value} key={fav.label} />
+							})}
+						</Flex>
 					</Box>
-					{favorites.map((fav: FavoriteItemProps) => {
-						return <FavoriteItem label={fav.label} value={fav.value} key={fav.label} />
-					})}
-					<Box as="h3" fontSize="3xl" fontStyle="italic" py="24px">
-						I Also Enjoy...
+
+					<Box as="section">
+						<PageTitle text="I Also Enjoy..." fontStyle="italic" borderless />
+						<Flex flexWrap="wrap" pt="16px">
+							{otherLikes.map((item: string) => {
+								return (
+									<Badge
+										colorScheme="blue"
+										size="2xl"
+										py="4px"
+										px="16px"
+										mr="4px"
+										mb="10px"
+										fontSize="md"
+										fontWeight="500"
+										borderRadius="16px"
+										textTransform="capitalize"
+										key={item}
+									>
+										{item}
+									</Badge>
+								)
+							})}
+						</Flex>
 					</Box>
-					<Flex flexWrap="wrap" justify="center">
-						{otherLikes.map((item: string) => {
-							return (
-								<Badge
-									colorScheme="blue"
-									size="2xl"
-									py="4px"
-									px="16px"
-									mr="4px"
-									mb="10px"
-									fontSize="md"
-									fontWeight="500"
-									borderRadius="16px"
-									key={item}
-								>
-									{item}
-								</Badge>
-							)
-						})}
-					</Flex>
 				</Fade>
 			</Container>
 		</>

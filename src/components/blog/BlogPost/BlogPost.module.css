@@ -27,7 +27,8 @@
 }
 
 .markdownContainer > pre {
-  max-width: 584px;
+  max-width: 700px;
+  margin: 0 auto;
   overflow-x: auto;
   overflow-y: hidden;
   background-color: #2C2D31;
@@ -47,5 +48,6 @@
 }
 
 .markdownContainer img {
+  max-width: 100%;
   margin: 0 auto;
 }

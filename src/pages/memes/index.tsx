@@ -8,7 +8,7 @@ const MemesPage = () => {
 
 	return (
 		<Container>
-			<PageTitle title="Memes" />
+			<PageTitle text="Memes" />
 
 			<Heading
 				as="h3"

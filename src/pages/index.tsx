@@ -56,7 +56,7 @@ const Homepage = () => {
 						</IntroTileSection>
 					</Intro>
 
-					<PageTitle title="Tech Stack" />
+					<PageTitle text="Tech Stack" />
 					<TechStack>
 						<TechStackSection title="Front-End">
 							<HoverIcon icon={icons.react} name="React" size="2em" />

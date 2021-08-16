@@ -1,16 +1,22 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Heading, HeadingProps } from '@chakra-ui/react'
 
-interface Props {
-	title: string
+interface Props extends HeadingProps {
+	text: string
 	borderless?: boolean
-	children?: React.ReactNode
 }
 
-export const PageTitle = (props: Props) => (
-	<Flex justify="space-between" py="8px" borderBottomWidth={props.borderless ? '0' : '2px'}>
-		<Heading size="lg" fontWeight="normal">
-			{props.title}
+export const PageTitle = (props: Props) => {
+	const { text, borderless, ...styleProps } = props
+
+	return (
+		<Heading
+			size="lg"
+			py="8px"
+			fontWeight="normal"
+			borderBottomWidth={borderless ? '0' : '2px'}
+			{...styleProps}
+		>
+			{text}
 		</Heading>
-		{props.children}
-	</Flex>
-)
+	)
+}

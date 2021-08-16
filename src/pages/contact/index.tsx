@@ -15,7 +15,7 @@ const ContactPage = () => (
 
 		<Container>
 			<Fade in transition={{ enter: { duration: 1.2 } }}>
-				<PageTitle title="Get In Touch!" borderless />
+				<PageTitle text="Get In Touch!" borderless />
 				<Form />
 				<Methods />
 			</Fade>
