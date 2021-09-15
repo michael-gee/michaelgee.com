@@ -1,9 +1,16 @@
 {
   "experiences": [
     {
+      "company": "GoFan",
+      "title": "Senior Frontend Software Engineer",
+      "dates": "09/2021 - Present",
+      "description": [],
+      "id": "gofan"
+    },
+    {
       "company": "Inxeption",
-      "title": "(Front-End) Software Engineer",
-      "dates": "02/2021 - Present",
+      "title": "Frontend Software Engineer",
+      "dates": "02/2021 - 09/2021",
       "description": [
         "Building reusable components & layout templates used throughout various eCommerce storefronts",
         "Developing and maintaining a v2 greenfield development project which provides a much-improved user & developer experience (primarily using React, JavaScript, SASS (CSS), GraphQL, and more)",
