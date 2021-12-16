@@ -3,7 +3,7 @@ import {
 	SiEleventy as eleventy,
 	SiHtml5 as html,
 	SiJavascript as javascript,
-	SiNextDotJs as nextjs,
+	SiNextdotjs as nextjs,
 	SiReact as react,
 	SiSass as sass,
 	SiTypescript as typescript
