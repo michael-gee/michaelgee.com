@@ -25,7 +25,7 @@ const Intro = (props: IntroProps) => {
 						Michael Gee
 					</Heading>
 
-					<Heading as="h2" fontSize="2xl" color={color} mx="auto">
+					<Heading as="h2" fontSize="2xl" color={color}>
 						<Box as="span" float="left" h="40px" mr="6px">
 							Software
 						</Box>
