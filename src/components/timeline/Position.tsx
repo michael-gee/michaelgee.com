@@ -15,7 +15,7 @@ const Position = (props: Props) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
-		<Box as="section" py="16px" data-id="experience-item">
+		<Box as="section" py="16px" data-id="timeline-item">
 			<Flex
 				flexDir={['column', 'row']}
 				justify={['center', 'space-between']}

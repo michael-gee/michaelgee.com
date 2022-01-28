@@ -1,5 +1,4 @@
 import { Form } from '@/components/contact/Form'
-import { Methods } from '@/components/contact/Methods'
 import { PageHead } from '@/components/PageHead'
 import { PageTitle } from '@/components/PageTitle'
 import { Container } from '@/components/Container'
@@ -17,7 +16,6 @@ const ContactPage = () => (
 			<Fade in transition={{ enter: { duration: 1.2 } }}>
 				<PageTitle text="Get In Touch!" borderless />
 				<Form />
-				<Methods />
 			</Fade>
 		</Container>
 	</>

@@ -13,9 +13,10 @@ import {
 	useColorMode,
 	useColorModeValue
 } from '@chakra-ui/react'
-import { BsFillBriefcaseFill } from 'react-icons/bs'
-import { FaBlog, FaCode, FaMoon } from 'react-icons/fa' // FaRocket
+import { MdTimeline } from 'react-icons/md'
+import { FaCode, FaMoon } from 'react-icons/fa' // FaRocket
 import { FiSun, FiChevronDown } from 'react-icons/fi'
+import { ImQuill } from 'react-icons/im'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -79,19 +80,19 @@ export const Header = () => {
 								mx="4px"
 								variant="ghost"
 								color={
-									_isCurrentRoute(['/blog', '/blog/[slug]', '/projects', '/experience', '/memes'])
+									_isCurrentRoute(['/blog', '/blog/[slug]', '/projects', '/timeline', '/memes'])
 										? primaryColor
 										: 'default'
 								}
 							>
-								Works
+								Menu
 							</MenuButton>
 
 							<MenuList>
 								<Link href="/blog" passHref>
 									<MenuItem
 										as={chakra.a}
-										icon={<FaBlog />}
+										icon={<ImQuill />}
 										color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
 									>
 										Blog
@@ -108,13 +109,13 @@ export const Header = () => {
 									</MenuItem>
 								</Link>
 
-								<Link href="/experience" passHref>
+								<Link href="/timeline" passHref>
 									<MenuItem
 										as={chakra.a}
-										icon={<BsFillBriefcaseFill />}
-										color={_isCurrentRoute(['/experience']) ? primaryColor : 'default'}
+										icon={<MdTimeline />}
+										color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
 									>
-										Experience
+										Timeline
 									</MenuItem>
 								</Link>
 

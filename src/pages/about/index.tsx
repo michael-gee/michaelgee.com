@@ -47,20 +47,6 @@ const AboutPage = () => {
 							alt="Another family photo"
 						/>
 					</Flex>
-					<Flex flexDir={['column', 'row']} className="about-image-container" mb="16px">
-						<Image
-							src="/images/about/golf1.jpg"
-							width="540px"
-							height="360px"
-							alt="Golf photo: setting up to hit the ball"
-						/>
-						<Image
-							src="/images/about/golf2.jpg"
-							width="540px"
-							height="360px"
-							alt="Golf photo: swinging while watching the ball fly into the lake"
-						/>
-					</Flex>
 
 					<Box as="section">
 						<PageTitle text="My Favorite..." fontStyle="italic" borderless />

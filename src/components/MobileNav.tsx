@@ -15,7 +15,6 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import {
-	FaBlog,
 	FaCode,
 	FaDev,
 	FaHome,
@@ -25,10 +24,10 @@ import {
 	FaTwitter,
 	FaUser
 } from 'react-icons/fa'
-import { BsFillBriefcaseFill } from 'react-icons/bs'
 import { FiMenu, FiSun } from 'react-icons/fi'
-// import { FaRocket } from 'react-icons/fa'
+import { ImQuill } from 'react-icons/im'
 import { IoMdMail } from 'react-icons/io'
+import { MdTimeline } from 'react-icons/md'
 
 export const MobileNav = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -162,7 +161,7 @@ export const MobileNav = () => {
 						<Link href="/blog" passHref>
 							<MenuItem
 								as={chakra.a}
-								icon={<FaBlog />}
+								icon={<ImQuill />}
 								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
 							>
 								Blog
@@ -179,13 +178,13 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link>
 
-						<Link href="/experience" passHref>
+						<Link href="/timeline" passHref>
 							<MenuItem
 								as={chakra.a}
-								icon={<BsFillBriefcaseFill />}
-								color={_isCurrentRoute(['/experience']) ? primaryColor : 'default'}
+								icon={<MdTimeline />}
+								color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
 							>
-								Experience
+								Timeline
 							</MenuItem>
 						</Link>
 

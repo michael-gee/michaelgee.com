@@ -34,3 +34,6 @@ tsconfig.tsbuildinfo
 # vercel
 .vercel
 
+#env variables
+.env
+

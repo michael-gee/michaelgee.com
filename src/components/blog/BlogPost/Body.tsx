@@ -11,7 +11,7 @@ interface Props {
 export const Body = (props: Props) => {
 	return (
 		<article className={styles.markdownContainer}>
-			<ReactMarkdown plugins={[[emoji, { emoticon: true }]]}>{props.markdown}</ReactMarkdown>
+			<ReactMarkdown remarkPlugins={[[emoji, { emoticon: true }]]}>{props.markdown}</ReactMarkdown>
 		</article>
 	)
 }

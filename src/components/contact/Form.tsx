@@ -16,7 +16,7 @@ const Form = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (
-		<Box as="form" onSubmit={onSubmit}>
+		<Box as="form" onSubmit={onSubmit} pb="8px">
 			<InputGroup my="16px">
 				<InputLeftElement color={color}>
 					<FaUserAlt />

@@ -14,16 +14,6 @@ body {
   animation-delay: 3s;
 }
 
-.project-image-container img {
-  border-radius: 13px;
-}
-
-@media screen and (max-width: 650px)  {
-  .about-image-container img {
-    margin-bottom: 16px !important;
-  } 
-}
-
 .books-quote {
   border-left: 2px solid #ed5544;
   padding-left: 24px !important;
