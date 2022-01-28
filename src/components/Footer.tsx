@@ -30,9 +30,8 @@ export const Footer = () => {
 							isExternal
 							icon={<FaTwitter />}
 							color={color}
-							variant="ghost"
 							isRound
-							mx="4px"
+							mx="6px"
 							aria-label="Twitter Profile Link"
 						/>
 
@@ -42,9 +41,8 @@ export const Footer = () => {
 							isExternal
 							icon={<FaDev />}
 							color={color}
-							variant="ghost"
 							isRound
-							mx="4px"
+							mx="6px"
 							aria-label="Dev.to Profile Link"
 						/>
 
@@ -54,9 +52,8 @@ export const Footer = () => {
 							isExternal
 							icon={<FaGithub />}
 							color={color}
-							variant="ghost"
 							isRound
-							mx="4px"
+							mx="6px"
 							aria-label="Github Profile Link"
 						/>
 
@@ -66,9 +63,9 @@ export const Footer = () => {
 							isExternal
 							icon={<FaLinkedin />}
 							color={color}
-							variant="ghost"
 							isRound
-							mx="4px"
+							mx="6px"
+							mr="0"
 							aria-label="LinkedIn Profile Link"
 						/>
 					</Flex>

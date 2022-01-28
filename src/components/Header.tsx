@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import {
 	chakra,
 	Button,
+	Icon,
+	IconButton,
 	Flex,
 	Menu,
 	MenuButton,
@@ -13,10 +15,9 @@ import {
 	useColorMode,
 	useColorModeValue
 } from '@chakra-ui/react'
-import { MdTimeline } from 'react-icons/md'
-import { FaCode, FaMoon } from 'react-icons/fa' // FaRocket
-import { FiSun, FiChevronDown } from 'react-icons/fi'
-import { ImQuill } from 'react-icons/im'
+import { FaRegUser, FaMoon } from 'react-icons/fa' // FaRocket
+import { FiSun, FiMoreHorizontal } from 'react-icons/fi'
+import { BsChatDots } from 'react-icons/bs'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -54,68 +55,77 @@ export const Header = () => {
 								src="/images/michael.jpg"
 								width={32}
 								height={32}
-								alt="Michael Gee"
+								alt="Michael Gee profile image"
 								className="is-round"
 							/>
 						</Button>
 					</Link>
 
 					<Flex as="nav" ml="16px">
-						<Link href="/about" passHref>
+						<Link href="/blog" passHref>
+							<Button
+								as={chakra.a}
+								variant="ghost"
+								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
+								mx="4px"
+							>
+								Blog
+							</Button>
+						</Link>
+
+						<Link href="/projects" passHref>
 							<Button
 								as={chakra.a}
 								minW="80px"
 								mx="4px"
 								variant="ghost"
-								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
 							>
-								About
+								Projects
+							</Button>
+						</Link>
+
+						<Link href="/timeline" passHref>
+							<Button
+								as={chakra.a}
+								variant="ghost"
+								color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
+								mx="4px"
+							>
+								Timeline
 							</Button>
 						</Link>
 
 						<Menu isLazy={true}>
 							<MenuButton
-								as={Button}
-								rightIcon={<FiChevronDown />}
 								mx="4px"
-								variant="ghost"
-								color={
-									_isCurrentRoute(['/blog', '/blog/[slug]', '/projects', '/timeline', '/memes'])
-										? primaryColor
-										: 'default'
-								}
+								borderRadius="8px"
+								_hover={{ backgroundColor: 'rgba(255, 255, 255, 0.08);' }}
 							>
-								Menu
+								<IconButton
+									icon={<Icon as={FiMoreHorizontal} />}
+									aria-label="Additional options menu"
+								/>
 							</MenuButton>
 
 							<MenuList>
-								<Link href="/blog" passHref>
+								<Link href="/about" passHref>
 									<MenuItem
 										as={chakra.a}
-										icon={<ImQuill />}
-										color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
+										icon={<FaRegUser />}
+										color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
 									>
-										Blog
+										About
 									</MenuItem>
 								</Link>
 
-								<Link href="/projects" passHref>
+								<Link href="/contact" passHref>
 									<MenuItem
 										as={chakra.a}
-										icon={<FaCode />}
-										color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
+										icon={<BsChatDots />}
+										color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
 									>
-										Projects
-									</MenuItem>
-								</Link>
-
-								<Link href="/timeline" passHref>
-									<MenuItem
-										as={chakra.a}
-										icon={<MdTimeline />}
-										color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
-									>
-										Timeline
+										Contact
 									</MenuItem>
 								</Link>
 
@@ -130,22 +140,9 @@ export const Header = () => {
 								</Link> */}
 							</MenuList>
 						</Menu>
-
-						<Link href="/contact" passHref>
-							<Button
-								as={chakra.a}
-								variant="ghost"
-								color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
-								mx="4px"
-							>
-								Contact
-							</Button>
-						</Link>
 					</Flex>
 
-					<Button onClick={toggleColorMode} variant="ghost">
-						{isDark ? <FiSun /> : <FaMoon />}
-					</Button>
+					<Button onClick={toggleColorMode}>{isDark ? <FiSun /> : <FaMoon />}</Button>
 				</Flex>
 			</Container>
 		</Flex>
