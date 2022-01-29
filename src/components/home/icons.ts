@@ -11,21 +11,18 @@ import { MdImportantDevices as devices } from 'react-icons/md'
 // Tech Stack Icons
 import {
 	SiAmazonaws as aws,
-	SiCsharp as cSharp,
 	SiCss3 as css,
-	SiDotnet as dotNet,
-	SiGraphql as graphQL,
 	SiHtml5 as html,
+	SiGit as git,
 	SiJavascript as javascript,
-	SiMicrosoftazure as azure,
-	SiMongodb as mongodb,
 	SiNextdotjs as nextjs,
 	SiNodedotjs as nodejs,
+	SiPostgresql as postgreSQL,
+	SiPrisma as prisma,
 	SiReact as react,
 	SiSass as sass,
-	SiServerless as serverless,
-	SiTypescript as typescript,
-	SiWordpress as wordpress
+	SiSupabase as supabase,
+	SiTypescript as typescript
 } from 'react-icons/si'
 
 export {
@@ -38,19 +35,16 @@ export {
 	university,
 	// Tech Stack Icons
 	aws,
-	cSharp,
 	css,
-	dotNet,
-	graphQL,
 	html,
+	git,
 	javascript,
-	azure,
-	mongodb,
 	nextjs,
 	nodejs,
+	postgreSQL,
+	prisma,
 	react,
 	sass,
-	serverless,
-	typescript,
-	wordpress
+	supabase,
+	typescript
 }

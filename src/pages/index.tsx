@@ -1,9 +1,7 @@
 import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
-import { TechStack, TechStackSection } from '@/components/home/TechStack'
+import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { PageTitle } from '@/components/PageTitle'
-import { HoverIcon } from '@/components/HoverIcon'
 import * as icons from '@/components/home/icons'
 import { Fade } from '@chakra-ui/react'
 
@@ -56,30 +54,21 @@ const Homepage = () => {
 						</IntroTileSection>
 					</Intro>
 
-					<PageTitle text="Tech Stack" />
 					<TechStack>
-						<TechStackSection title="Front-End">
-							<HoverIcon icon={icons.react} name="React" size="2em" />
-							<HoverIcon icon={icons.nextjs} name="Next.js" size="2em" />
-							<HoverIcon icon={icons.typescript} name="TypeScript" size="2em" />
-							<HoverIcon icon={icons.javascript} name="JavaScript" size="2em" />
-							<HoverIcon icon={icons.html} name="HTML 5" size="2em" />
-							<HoverIcon icon={icons.css} name="CSS 3" size="2em" />
-							<HoverIcon icon={icons.sass} name="SASS (CSS)" size="2em" />
+						<TechStackSection title="Proficiency" pos="left">
+							<TechStackIcon name="React" icon={icons.react} />
+							<TechStackIcon name="Next.js" icon={icons.nextjs} />
+							<TechStackIcon name="TypeScript" icon={icons.typescript} />
+							<TechStackIcon name="SCSS" icon={icons.sass} />
+							<TechStackIcon name="Node.js" icon={icons.nodejs} />
+							<TechStackIcon name="Git" icon={icons.git} />
 						</TechStackSection>
-						<TechStackSection title="Back-End">
-							<HoverIcon icon={icons.nodejs} name="Node.js" size="2em" />
-							<HoverIcon icon={icons.typescript} name="TypeScript" size="2em" />
-							<HoverIcon icon={icons.graphQL} name="Graph QL" size="2em" />
-							<HoverIcon icon={icons.wordpress} name="WordPress" size="2em" />
-							<HoverIcon icon={icons.cSharp} name="C#" size="2em" />
-							<HoverIcon icon={icons.dotNet} name=".NET (Core)" size="2em" />
-						</TechStackSection>
-						<TechStackSection title="Cloud">
-							<HoverIcon icon={icons.aws} name="Amazon Web Services" size="2em" />
-							<HoverIcon icon={icons.azure} name="Microsoft Azure" size="2em" />
-							<HoverIcon icon={icons.mongodb} name="MongoDB Atlas" size="2em" />
-							<HoverIcon icon={icons.serverless} name="Serverless Framework" />
+						<TechStackSection title="Discovery" pos="right">
+							<TechStackIcon name="React Native" icon={icons.react} />
+							<TechStackIcon name="AWS" icon={icons.aws} />
+							<TechStackIcon name="Supabase" icon={icons.supabase} />
+							<TechStackIcon name="Prisma" icon={icons.prisma} />
+							<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
 						</TechStackSection>
 					</TechStack>
 				</Fade>
