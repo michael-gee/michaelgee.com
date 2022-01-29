@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 import { FaRegUser, FaMoon } from 'react-icons/fa' // FaRocket
 import { FiSun, FiMoreHorizontal } from 'react-icons/fi'
-import { BsChatDots } from 'react-icons/bs'
+import { BsChatDots, BsBook } from 'react-icons/bs'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -116,6 +116,16 @@ export const Header = () => {
 										color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
 									>
 										About
+									</MenuItem>
+								</Link>
+
+								<Link href="/books" passHref>
+									<MenuItem
+										as={chakra.a}
+										icon={<BsBook />}
+										color={_isCurrentRoute(['/books']) ? primaryColor : 'default'}
+									>
+										Books
 									</MenuItem>
 								</Link>
 

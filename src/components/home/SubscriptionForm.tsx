@@ -13,7 +13,7 @@ const SubscriptionForm = () => {
 				data-uid="f4adac1697"
 				data-format="inline"
 				data-version="5"
-				data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":${process.env.AWESOME_BOOKS_REDIRECT_URL}},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"}`}
+				data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":${process.env.SUBSCRIPTION_REDIRECT_URL}},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"}`}
 			>
 				<Flex direction="column" justify="center" data-style="clean">
 					<ul data-element="errors" data-group="alert" />
@@ -33,10 +33,10 @@ const SubscriptionForm = () => {
 							<Input
 								type="text"
 								name="fields[first_name]"
-								placeholder="First Name"
-								aria-label="First Name"
+								placeholder="Name"
+								colorScheme="blue"
+								aria-label="Name"
 								isRequired={true}
-								_focus={{ border: '1px solid #e94057' }}
 							/>
 						</InputGroup>
 
@@ -48,10 +48,10 @@ const SubscriptionForm = () => {
 							<Input
 								type="email"
 								name="email_address"
-								placeholder="Email Address"
-								aria-label="Email Address"
+								placeholder="Email"
+								colorScheme="blue"
+								aria-label="Email"
 								isRequired={true}
-								_focus={{ border: '1px solid #e94057' }}
 							/>
 						</InputGroup>
 					</Flex>
@@ -60,8 +60,7 @@ const SubscriptionForm = () => {
 						type="submit"
 						w="124px"
 						m="0 auto"
-						bgGradient="linear-gradient(to bottom right, #e94057, #f27121)"
-						color="white"
+						colorScheme="blue"
 						_hover={{ opacity: 0.8 }}
 						data-element="submit"
 					>

@@ -10,9 +10,7 @@ module.exports = (phase) => {
 
 	return {
 		env: {
-			AWESOME_BOOKS_REDIRECT_URL: isDev
-				? 'localhost:3000/awesome-books/success'
-				: 'https://michaelgee.com/books/success'
+			SUBSCRIPTION_REDIRECT_URL: isDev ? 'localhost:3000/success' : 'https://michaelgee.com/success'
 		},
 		images: {
 			domains: ['res.cloudinary.com']

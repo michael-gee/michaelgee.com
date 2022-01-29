@@ -1,20 +1,6 @@
 {
   "projects": [
     {
-      "title": "awesome-books",
-      "description": "A list of all-time favorite book recommendations from awesome software developers aiming to collect a great reading list for myself and others while creating my first email newsletter.",
-      "image": "/images/projects/awesome-books.png",
-      "techIcons": [
-        { "id": "nextjs", "name": "Next.js" },
-        { "id": "react", "name": "React" },
-        { "id": "typescript", "name": "TypeScript" },
-        { "id": "html", "name": "HTML" },
-        { "id": "css", "name": "CSS" }
-      ],
-      "projectLink": "https://michaelgee.com/awesome-books",
-      "sourceCode": "https://github.com/michael-gee/michaelgee.com/blob/main/src/pages/awesome-books/index.tsx"
-    },
-    {
       "title": "lunch.dev Community Calendar",
       "description": "An event calendar for the React Podcast (lunch.dev) community centered around creating and organizing fun group learning and discussions at lunch time.",
       "image": "/images/projects/lunch-dev-calendar.png",
