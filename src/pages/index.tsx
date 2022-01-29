@@ -1,9 +1,10 @@
-import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
-import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import * as icons from '@/components/home/icons'
 import { Fade } from '@chakra-ui/react'
+import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
+import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
+import { CurrentInterests } from '@/components/home/CurrentInterests'
+import * as icons from '@/components/home/icons'
 
 const Homepage = () => {
 	return (
@@ -53,25 +54,27 @@ const Homepage = () => {
 							/>
 						</IntroTileSection>
 					</Intro>
-
-					<TechStack>
-						<TechStackSection title="Proficiency" pos="left">
-							<TechStackIcon name="React" icon={icons.react} />
-							<TechStackIcon name="Next.js" icon={icons.nextjs} />
-							<TechStackIcon name="TypeScript" icon={icons.typescript} />
-							<TechStackIcon name="SCSS" icon={icons.sass} />
-							<TechStackIcon name="Node.js" icon={icons.nodejs} />
-							<TechStackIcon name="Git" icon={icons.git} />
-						</TechStackSection>
-						<TechStackSection title="Discovery" pos="right">
-							<TechStackIcon name="React Native" icon={icons.react} />
-							<TechStackIcon name="AWS" icon={icons.aws} />
-							<TechStackIcon name="Supabase" icon={icons.supabase} />
-							<TechStackIcon name="Prisma" icon={icons.prisma} />
-							<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
-						</TechStackSection>
-					</TechStack>
 				</Fade>
+
+				<TechStack>
+					<TechStackSection title="Proficiency" pos="left">
+						<TechStackIcon name="React" icon={icons.react} />
+						<TechStackIcon name="Next.js" icon={icons.nextjs} />
+						<TechStackIcon name="TypeScript" icon={icons.typescript} />
+						<TechStackIcon name="SCSS" icon={icons.sass} />
+						<TechStackIcon name="Node.js" icon={icons.nodejs} />
+						<TechStackIcon name="Git" icon={icons.git} />
+					</TechStackSection>
+					<TechStackSection title="Discovery" pos="right">
+						<TechStackIcon name="React Native" icon={icons.react} />
+						<TechStackIcon name="AWS" icon={icons.aws} />
+						<TechStackIcon name="Supabase" icon={icons.supabase} />
+						<TechStackIcon name="Prisma" icon={icons.prisma} />
+						<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
+					</TechStackSection>
+				</TechStack>
+
+				<CurrentInterests />
 			</Container>
 		</>
 	)
