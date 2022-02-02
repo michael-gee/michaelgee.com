@@ -1,10 +1,14 @@
+import { Container } from '@/components/Container'
 import Link from 'next/link'
-import { Box, Button, Link as ChakraLink, Text } from '@chakra-ui/react'
+import { Box, Button, Link as ChakraLink, Heading, Text } from '@chakra-ui/react'
 import { IoMdArrowBack } from 'react-icons/io'
 
 const SubscriptionSuccessPage = () => {
 	return (
-		<>
+		<Container>
+			<Heading as="h2" textAlign="center" pt="8px">
+				Success!
+			</Heading>
 			<Box fontSize="1.2em" textAlign="center">
 				<Text as="p" mt="16px">
 					Thank you for subscribing and joining me on my journey 🎉
@@ -14,14 +18,14 @@ const SubscriptionSuccessPage = () => {
 			</Box>
 
 			<Link href="/" passHref>
-				<Button as={ChakraLink} display="flex" m="24px auto" colorScheme="blue">
+				<Button as={ChakraLink} display="flex" maxW="200px" m="24px auto" colorScheme="blue">
 					<IoMdArrowBack />{' '}
 					<Text as="span" pl="8px">
-						Back to Homepage
+						Return to Site
 					</Text>
 				</Button>
 			</Link>
-		</>
+		</Container>
 	)
 }
 

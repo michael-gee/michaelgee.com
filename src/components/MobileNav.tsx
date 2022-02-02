@@ -48,8 +48,9 @@ export const MobileNav = () => {
 			left={0}
 			m="16px"
 			bg={useColorModeValue('white', 'gray.800')}
-			borderRadius="8px"
-			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+			borderWidth="2px"
+			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
+			borderRadius="16px"
 			zIndex="overlay"
 			data-id="mobile-nav"
 		>
