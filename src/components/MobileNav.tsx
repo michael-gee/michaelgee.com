@@ -39,18 +39,17 @@ export const MobileNav = () => {
 		<Flex
 			as="footer"
 			display={['flex', 'none']}
-			w="100%"
+			w="calc(100% - 32px)"
 			h="64px"
 			basis="auto"
 			pos="fixed"
 			bottom={0}
 			right={0}
 			left={0}
-			pt="24px"
-			pb="40px"
+			m="16px"
 			bg={useColorModeValue('white', 'gray.800')}
-			borderTopWidth="2px"
-			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
+			borderRadius="8px"
+			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06)"
 			zIndex="overlay"
 			data-id="mobile-nav"
 		>
@@ -167,6 +166,16 @@ export const MobileNav = () => {
 								Blog
 							</MenuItem>
 						</Link>
+
+						{/* <Link href="/books" passHref>
+							<MenuItem
+								as={chakra.a}
+								icon={}
+								color={_isCurrentRoute(['/books']) ? primaryColor : 'default'}
+							>
+								Books
+							</MenuItem>
+						</Link> */}
 
 						<Link href="/projects" passHref>
 							<MenuItem

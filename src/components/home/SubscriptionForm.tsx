@@ -13,7 +13,7 @@ const SubscriptionForm = () => {
 				data-uid="f4adac1697"
 				data-format="inline"
 				data-version="5"
-				data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":${process.env.SUBSCRIPTION_REDIRECT_URL}},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"}`}
+				data-options={`{"settings":{"after_subscribe":{"action":"redirect","redirect_url":${process.env.SUBSCRIPTION_REDIRECT_URL}},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"}`}
 			>
 				<Flex direction="column" justify="center" data-style="clean">
 					<ul data-element="errors" data-group="alert" />

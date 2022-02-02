@@ -26,7 +26,7 @@ const CurrentInterests = () => {
 
 			<CurrentInterestItem
 				title="Side Project(s)"
-				description="Bringing ideas to life by building exciting solutions that I'm passionate about (coming soon...)"
+				description="Bringing ideas to life by building exciting solutions that I'm passionate about"
 				icon={IoConstruct}
 				iconColor={useColorModeValue('#365071', '#7CAFD1')}
 				iconBgColor={useColorModeValue('#BEE3F8', '#2A3644')}
@@ -81,10 +81,10 @@ const CurrentInterestItem = (props: CurrentInterestItemProps) => {
 			</Flex>
 
 			<Flex flexDir="column" justify="center" w="calc(100% - 104px)">
-				<Heading as="h3" fontSize="lg" pb="4px">
+				<Heading as="h3" fontSize={['md', 'lg']} pb="4px">
 					{props.title}
 				</Heading>
-				<Text as="p" lineHeight="1.1">
+				<Text as="p" lineHeight="1.1" fontSize={['sm', 'md']}>
 					{props.description}
 				</Text>
 			</Flex>
