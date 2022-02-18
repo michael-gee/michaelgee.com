@@ -55,38 +55,39 @@ const Homepage = () => {
 							/>
 						</IntroTileSection>
 					</Intro>
+
+					<TechStack>
+						<TechStackSection title="Proficiency" pos="left">
+							<TechStackIcon name="React" icon={icons.react} />
+							<TechStackIcon name="Next.js" icon={icons.nextjs} />
+							<TechStackIcon name="TypeScript" icon={icons.typescript} />
+							<TechStackIcon name="SCSS" icon={icons.sass} />
+							<TechStackIcon name="Node.js" icon={icons.nodejs} />
+							<TechStackIcon name="Git" icon={icons.git} />
+						</TechStackSection>
+						<TechStackSection title="Discovery" pos="right">
+							<TechStackIcon name="React Native" icon={icons.react} />
+							<TechStackIcon name="AWS" icon={icons.aws} />
+							<TechStackIcon name="Supabase" icon={icons.supabase} />
+							<TechStackIcon name="Prisma" icon={icons.prisma} />
+							<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
+						</TechStackSection>
+					</TechStack>
+
+					<CurrentInterests />
+
+					<Box pt="8px" pb="16px" fontSize="1.2em" textAlign="center">
+						<Text as="p" fontWeight="bold">
+							Subscribe to my newsletter!
+						</Text>
+						<Text as="p" fontSize=".8em" maxW="600px" mx="auto">
+							Get notified when I announce major updates about all content including blog posts,
+							memes, projects, and hopefully video content (coming soon)
+						</Text>
+
+						<SubscriptionForm />
+					</Box>
 				</Fade>
-				<TechStack>
-					<TechStackSection title="Proficiency" pos="left">
-						<TechStackIcon name="React" icon={icons.react} />
-						<TechStackIcon name="Next.js" icon={icons.nextjs} />
-						<TechStackIcon name="TypeScript" icon={icons.typescript} />
-						<TechStackIcon name="SCSS" icon={icons.sass} />
-						<TechStackIcon name="Node.js" icon={icons.nodejs} />
-						<TechStackIcon name="Git" icon={icons.git} />
-					</TechStackSection>
-					<TechStackSection title="Discovery" pos="right">
-						<TechStackIcon name="React Native" icon={icons.react} />
-						<TechStackIcon name="AWS" icon={icons.aws} />
-						<TechStackIcon name="Supabase" icon={icons.supabase} />
-						<TechStackIcon name="Prisma" icon={icons.prisma} />
-						<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
-					</TechStackSection>
-				</TechStack>
-
-				<CurrentInterests />
-
-				<Box pt="8px" pb="16px" fontSize="1.2em" textAlign="center">
-					<Text as="p" fontWeight="bold">
-						Subscribe to my newsletter!
-					</Text>
-					<Text as="p" fontSize=".8em" maxW="600px" mx="auto">
-						Get notified when I announce major updates about all content including blog posts,
-						memes, projects, and hopefully video content (coming soon)
-					</Text>
-
-					<SubscriptionForm />
-				</Box>
 			</Container>
 		</>
 	)

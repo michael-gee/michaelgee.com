@@ -1,10 +1,10 @@
 import { Flex, Heading, Icon, Text, useColorModeValue } from '@chakra-ui/react'
 import Image from 'next/image'
 
-import { FaDiscord } from 'react-icons/fa'
-import { IoConstruct } from 'react-icons/io5'
-import { IconType } from 'react-icons/lib'
+import { HiLightBulb } from 'react-icons/hi'
 import { ImQuill } from 'react-icons/im'
+
+import type { IconType } from 'react-icons/lib'
 
 const CurrentInterests = () => {
 	return (
@@ -12,32 +12,22 @@ const CurrentInterests = () => {
 			<CurrentInterestItem
 				title="GoFan"
 				description="(Primary Focus) Leading UI/UX/DX initiatives for both admin and customer facing apps"
-				iconColor={useColorModeValue('gray.700', 'gray.700')}
-				iconBgColor={useColorModeValue('gray.400', 'gray.400')}
-			/>
-
-			<CurrentInterestItem
-				title="Community"
-				description="Engaging & moderating my all-time favorite software development communities"
-				icon={FaDiscord}
-				iconColor={useColorModeValue('#645494', '#D6BCFA')}
-				iconBgColor={useColorModeValue('#E9D8FD', '#353245')}
 			/>
 
 			<CurrentInterestItem
 				title="Side Project(s)"
-				description="Bringing ideas to life by building exciting solutions that I'm passionate about"
-				icon={IoConstruct}
-				iconColor={useColorModeValue('#365071', '#7CAFD1')}
-				iconBgColor={useColorModeValue('#BEE3F8', '#2A3644')}
+				description="Brainstorming innovative ideas for continuous learning and striving to provide value (coming soon)"
+				icon={HiLightBulb}
+				iconColor={useColorModeValue('#FFD804', 'yellow.200')}
+				iconBgColor={useColorModeValue('blue.200', 'blue.800')}
 			/>
 
 			<CurrentInterestItem
 				title="Content Creation"
 				description="Sharing past experiences and opinionated views through blogging, memeing, and more"
 				icon={ImQuill}
-				iconColor={useColorModeValue('#30614A', '#9AE6B4')}
-				iconBgColor={useColorModeValue('#C6F7D5', '#2B3A3A')}
+				iconColor={useColorModeValue('green.800', 'green.200')}
+				iconBgColor={useColorModeValue('green.100', 'teal.900')}
 			/>
 		</>
 	)
@@ -47,8 +37,8 @@ interface CurrentInterestItemProps {
 	title: string
 	description: string
 	icon?: IconType
-	iconColor: string
-	iconBgColor: string
+	iconColor?: string
+	iconBgColor?: string
 }
 
 const CurrentInterestItem = (props: CurrentInterestItemProps) => {
