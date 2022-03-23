@@ -1,10 +1,9 @@
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { Fade, Box, Text } from '@chakra-ui/react'
+import { Fade } from '@chakra-ui/react'
 import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
 import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
 import { CurrentInterests } from '@/components/home/CurrentInterests'
-import { SubscriptionForm } from '@/components/home/SubscriptionForm'
 import * as icons from '@/components/home/icons'
 
 const Homepage = () => {
@@ -75,18 +74,6 @@ const Homepage = () => {
 					</TechStack>
 
 					<CurrentInterests />
-
-					<Box pt="8px" pb="16px" fontSize="1.2em" textAlign="center">
-						<Text as="p" fontWeight="bold">
-							Subscribe to my newsletter!
-						</Text>
-						<Text as="p" fontSize=".8em" maxW="600px" mx="auto">
-							Get notified when I announce major updates about all content including blog posts,
-							memes, projects, and hopefully video content (coming soon)
-						</Text>
-
-						<SubscriptionForm />
-					</Box>
 				</Fade>
 			</Container>
 		</>

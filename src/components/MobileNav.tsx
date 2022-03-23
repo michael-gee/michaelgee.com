@@ -60,6 +60,7 @@ export const MobileNav = () => {
 					onClick={toggleColorMode}
 					variant="ghost"
 					size="lg"
+					isRound
 					aria-label="Toggle Light or Dark Theme"
 				/>
 			</Flex>
@@ -69,6 +70,7 @@ export const MobileNav = () => {
 					<IconButton
 						as={chakra.a}
 						variant="ghost"
+						isRound
 						_hover={{ backgroundColor: 'transparent' }}
 						aria-label=""
 					>
@@ -90,6 +92,7 @@ export const MobileNav = () => {
 						icon={<FiMenu />}
 						variant="ghost"
 						size="lg"
+						isRound
 						aria-label="Mobile Navigation Menu"
 					/>
 

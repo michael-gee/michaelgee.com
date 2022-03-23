@@ -42,12 +42,10 @@ export const Header = () => {
 			<Container>
 				<Flex justify="space-between" alignItems="center">
 					<Link href="/" passHref>
-						<Button
+						<IconButton
 							as={chakra.a}
-							display="flex"
-							align="center"
-							cursor="pointer"
-							variant="ghost"
+							isRound
+							bgColor="transparent"
 							aria-label="Homepage navigation button"
 							_hover={{ backgroundColor: 'transparent' }}
 						>
@@ -58,7 +56,7 @@ export const Header = () => {
 								alt="Michael Gee profile image"
 								className="is-round"
 							/>
-						</Button>
+						</IconButton>
 					</Link>
 
 					<Flex as="nav" ml="16px">
@@ -98,16 +96,12 @@ export const Header = () => {
 
 						<Menu isLazy={true}>
 							<MenuButton
+								as={IconButton}
+								icon={<Icon as={FiMoreHorizontal} />}
 								mx="4px"
-								borderRadius="8px"
-								_hover={{ backgroundColor: 'rgba(255, 255, 255, 0.08);' }}
-							>
-								<IconButton
-									as="span"
-									icon={<Icon as={FiMoreHorizontal} />}
-									aria-label="Additional options menu"
-								/>
-							</MenuButton>
+								isRound
+								aria-label="Additional options menu"
+							/>
 
 							<MenuList>
 								<Link href="/about" passHref>
@@ -154,7 +148,12 @@ export const Header = () => {
 						</Menu>
 					</Flex>
 
-					<Button onClick={toggleColorMode}>{isDark ? <FiSun /> : <FaMoon />}</Button>
+					<IconButton
+						icon={<Icon as={isDark ? FiSun : FaMoon} />}
+						onClick={toggleColorMode}
+						isRound
+						aria-label="Dark & light mode toggle button"
+					/>
 				</Flex>
 			</Container>
 		</Flex>
