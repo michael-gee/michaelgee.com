@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 import { PageTitle } from '@/components/PageTitle'
 import Image from 'next/image'
 import { Badge, Box, Fade, Flex } from '@chakra-ui/react'
+
 import data from '@/db/about.json'
 
 const AboutPage = () => {

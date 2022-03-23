@@ -13,11 +13,11 @@ export const Footer = () => {
 						<Icon as={FaCanadianMapleLeaf} mr="8px" color="red.500" />
 						<Box as="span" fontSize="sm">
 							Coded by
-							<ChakraLink href="https://github.com/michaelgee22/michaelgee.com" isExternal pl="4px">
+							<ChakraLink href="https://github.com/michael-gee/michaelgee.com" isExternal ml="4px">
 								Michael Gee
 							</ChakraLink>{' '}
 							| Inspired by
-							<ChakraLink href="https://github.com/wirtzdan/website" isExternal pl="4px">
+							<ChakraLink href="https://github.com/wirtzdan/website" isExternal ml="4px">
 								Daniel Wirtz
 							</ChakraLink>
 						</Box>

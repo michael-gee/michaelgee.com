@@ -7,10 +7,11 @@ import { Box, ChakraProvider } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { AppProps } from 'next/app'
 
 import theme from '../theme'
 import '../index.css'
+
+import type { AppProps } from 'next/app'
 
 const App = ({ Component, pageProps }: AppProps) => {
 	const [isLoading, setIsLoading] = useState(false)

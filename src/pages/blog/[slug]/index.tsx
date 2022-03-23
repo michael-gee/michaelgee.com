@@ -1,7 +1,8 @@
 import { PageHead, PageTypes } from '@/components/PageHead'
 import { BlogPost, BlogPostItem } from '@/components/blog/BlogPost'
-import { GetServerSideProps } from 'next'
 import { Fade } from '@chakra-ui/react'
+
+import type { GetServerSideProps } from 'next'
 
 interface Props {
 	post: BlogPostItem | null

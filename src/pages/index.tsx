@@ -1,10 +1,10 @@
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { Fade } from '@chakra-ui/react'
 import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
 import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
 import { CurrentInterests } from '@/components/home/CurrentInterests'
 import * as icons from '@/components/home/icons'
+import { Fade } from '@chakra-ui/react'
 
 const Homepage = () => {
 	return (
@@ -60,16 +60,16 @@ const Homepage = () => {
 							<TechStackIcon name="React" icon={icons.react} />
 							<TechStackIcon name="Next.js" icon={icons.nextjs} />
 							<TechStackIcon name="TypeScript" icon={icons.typescript} />
-							<TechStackIcon name="SCSS" icon={icons.sass} />
+							<TechStackIcon name="CSS" icon={icons.css} />
 							<TechStackIcon name="Node.js" icon={icons.nodejs} />
 							<TechStackIcon name="Git" icon={icons.git} />
 						</TechStackSection>
 						<TechStackSection title="Discovery" pos="right">
 							<TechStackIcon name="React Native" icon={icons.react} />
 							<TechStackIcon name="AWS" icon={icons.aws} />
-							<TechStackIcon name="Supabase" icon={icons.supabase} />
-							<TechStackIcon name="Prisma" icon={icons.prisma} />
 							<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
+							<TechStackIcon name="Prisma" icon={icons.prisma} />
+							<TechStackIcon name="Supabase" icon={icons.supabase} />
 						</TechStackSection>
 					</TechStack>
 
