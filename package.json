@@ -1,11 +1,11 @@
 {
   "name": "michaelgee.com",
-  "version": "2022.03.22",
+  "version": "2022.05.07",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint & tsc",
+    "lint": "tsc & next lint",
     "reinstall": "rm -rf node_modules && npm install"
   },
   "dependencies": {
