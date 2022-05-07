@@ -8,16 +8,11 @@ import {
 	Icon,
 	IconButton,
 	Flex,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
 	useColorMode,
 	useColorModeValue
 } from '@chakra-ui/react'
-import { FaRegUser, FaMoon } from 'react-icons/fa' // FaRocket
-import { FiSun, FiMoreHorizontal } from 'react-icons/fi'
-import { BsChatDots } from 'react-icons/bs' //BsBook
+import { FaMoon } from 'react-icons/fa'
+import { FiSun } from 'react-icons/fi'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -60,6 +55,18 @@ export const Header = () => {
 					</Link>
 
 					<Flex as="nav" ml="16px">
+						<Link href="/about" passHref>
+							<Button
+								as={chakra.a}
+								minW="80px"
+								mx="4px"
+								variant="ghost"
+								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
+							>
+								About
+							</Button>
+						</Link>
+
 						<Link href="/blog" passHref>
 							<Button
 								as={chakra.a}
@@ -93,59 +100,6 @@ export const Header = () => {
 								Timeline
 							</Button>
 						</Link>
-
-						<Menu isLazy={true}>
-							<MenuButton
-								as={IconButton}
-								icon={<Icon as={FiMoreHorizontal} />}
-								mx="4px"
-								isRound
-								aria-label="Additional options menu"
-							/>
-
-							<MenuList>
-								<Link href="/about" passHref>
-									<MenuItem
-										as={chakra.a}
-										icon={<FaRegUser />}
-										color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
-									>
-										About
-									</MenuItem>
-								</Link>
-
-								{/* 
-								<Link href="/books" passHref>
-									<MenuItem
-										as={chakra.a}
-										icon={<BsBook />}
-										color={_isCurrentRoute(['/books']) ? primaryColor : 'default'}
-									>
-										Books
-									</MenuItem>
-								</Link> */}
-
-								<Link href="/contact" passHref>
-									<MenuItem
-										as={chakra.a}
-										icon={<BsChatDots />}
-										color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
-									>
-										Contact
-									</MenuItem>
-								</Link>
-
-								{/* <Link href="/memes" passHref>
-									<MenuItem
-										as={chakra.a}
-										icon={<FaRocket />}
-										color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
-									>
-										Memes
-									</MenuItem>	
-								</Link> */}
-							</MenuList>
-						</Menu>
 					</Flex>
 
 					<IconButton

@@ -26,7 +26,6 @@ import {
 } from 'react-icons/fa'
 import { FiMenu, FiSun } from 'react-icons/fi'
 import { ImQuill } from 'react-icons/im'
-import { IoMdMail } from 'react-icons/io'
 import { MdTimeline } from 'react-icons/md'
 
 export const MobileNav = () => {
@@ -171,16 +170,6 @@ export const MobileNav = () => {
 							</MenuItem>
 						</Link>
 
-						{/* <Link href="/books" passHref>
-							<MenuItem
-								as={chakra.a}
-								icon={}
-								color={_isCurrentRoute(['/books']) ? primaryColor : 'default'}
-							>
-								Books
-							</MenuItem>
-						</Link> */}
-
 						<Link href="/projects" passHref>
 							<MenuItem
 								as={chakra.a}
@@ -198,26 +187,6 @@ export const MobileNav = () => {
 								color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
 							>
 								Timeline
-							</MenuItem>
-						</Link>
-
-						{/* <Link href="/memes" passHref>
-							<MenuItem
-								as={chakra.a}
-								icon={<FaRocket />}
-								color={_isCurrentRoute(['/memes']) ? primaryColor : 'default'}
-							>
-								Memes
-							</MenuItem>
-						</Link> */}
-
-						<Link href="/contact" passHref>
-							<MenuItem
-								as={chakra.a}
-								icon={<IoMdMail />}
-								color={_isCurrentRoute(['/contact']) ? primaryColor : 'default'}
-							>
-								Contact
 							</MenuItem>
 						</Link>
 					</MenuList>

@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Heading, Link } from '@chakra-ui/react'
 
 export const ErrorPage = () => {
 	return (
@@ -12,8 +11,8 @@ export const ErrorPage = () => {
 
 			<Box as="p" my="16px">
 				Please try again later or{' '}
-				<Link href="/contact">
-					<a>Contact Me Here</a>
+				<Link href="https://twitter.com/michaelgee_" isExternal color="blue.500">
+					contact me
 				</Link>{' '}
 				to let me know there is an issue and I will fix it as soon as possible.
 			</Box>

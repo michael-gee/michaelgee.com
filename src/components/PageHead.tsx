@@ -37,7 +37,7 @@ export const PageHead = (props: Props) => {
 
 			<meta property="twitter:title" content={props.title} key="twitter:title" />
 			<meta property="twitter:description" content={props.description} key="twitter:description" />
-			<meta name="twitter:creator" content="@michaelgee7" />
+			<meta name="twitter:creator" content="@michaelgee_" />
 			<meta property="twitter:url" content={props.url} key="twitter:url" />
 			<meta property="twitter:image" content={pageImage} key="twitter:image" />
 			<meta property="twitter:card" content="summary_large_image" />
