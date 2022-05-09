@@ -6,7 +6,7 @@ export const Footer = () => {
 	const color = '#718096'
 
 	return (
-		<Flex as="footer" my="16px" color={color} display={['none', 'flex']}>
+		<Flex as="footer" my="24px" color={color} display={['none', 'flex']}>
 			<Container>
 				<Flex justify="space-between" align="center">
 					<Flex align="center">

@@ -13,17 +13,41 @@ const theme = extendTheme({
 		global: (props) => ({
 			body: {
 				color: mode('gray.700', 'whiteAlpha.900')(props),
-				bg: mode('gray.50', 'gray.900')(props)
+				bg: mode('gray.50', '#1C2128')(props)
 			}
 		})
 	},
 	// components: {},
 	breakpoints,
 	colors: {
-		primary: {
-			light: '#3182ce',
-			dark: '#90cdf4'
+		dark: {
+			background: '#22272D',
+			text: 'whiteAlpha.800',
+			container: '#22272e',
+			border: '#444c56',
+			link: '#90cdf4',
+
+			primary: '',
+			secondary: '',
+			tertiary: '#FFD70F'
+		},
+
+		light: {
+			background: '#F5F8FA',
+			text: 'gray.700',
+			container: '#FFFFFF',
+			border: '#d0d7de',
+			link: '#3182ce',
+
+			primary: '',
+			secondary: '',
+			tertiary: '#E60067'
 		}
+
+		// primary: {
+		// 	light: '#3182ce',
+		// 	dark: '#90cdf4'
+		// }
 	}
 })
 

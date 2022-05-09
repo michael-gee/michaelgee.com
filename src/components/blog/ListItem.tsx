@@ -20,7 +20,7 @@ interface ListItemProps {
 }
 
 const ListItem = (props: ListItemProps) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const titleColor = useColorModeValue('light.link', 'dark.link')
 
 	return (
 		<SlideFade
@@ -42,7 +42,7 @@ const ListItem = (props: ListItemProps) => {
 					}}
 					_hover={{
 						transform: 'translateY(-4px)',
-						color
+						color: titleColor
 					}}
 				>
 					<Box maxW="400px" maxH="100%" mb={['8px', '8px', '0']}>
@@ -55,7 +55,7 @@ const ListItem = (props: ListItemProps) => {
 						pl={['0', '0', '24px']}
 						textAlign={['center', 'center', 'start']}
 					>
-						<Heading as="h3" fontSize="sm" color={color}>
+						<Heading as="h3" fontSize="sm" color={titleColor}>
 							{props.title}
 						</Heading>
 						<Box as="p" py="4px">

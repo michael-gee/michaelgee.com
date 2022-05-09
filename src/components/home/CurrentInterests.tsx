@@ -42,13 +42,16 @@ interface CurrentInterestItemProps {
 }
 
 const CurrentInterestItem = (props: CurrentInterestItemProps) => {
-	const backgroundColor = useColorModeValue('white', 'gray.800')
+	const backgroundColor = useColorModeValue('light.container', 'dark.container')
+	const borderColor = useColorModeValue('light.border', 'dark.border')
 
 	return (
 		<Flex
 			align="center"
-			borderRadius="8px"
 			bgColor={backgroundColor}
+			borderWidth="1px"
+			borderColor={borderColor}
+			borderRadius="12px"
 			p="16px"
 			pr="0"
 			m="16px 4px"
