@@ -31,6 +31,8 @@ import { MdTimeline } from 'react-icons/md'
 export const MobileNav = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
 	const textColor = useColorModeValue('light.link', 'dark.link')
+	const backgroundColor = useColorModeValue('light.container', 'dark.container')
+	const borderColor = useColorModeValue('light.border', 'dark.border')
 	const router = useRouter()
 	const isDark = colorMode === 'dark'
 
@@ -46,10 +48,10 @@ export const MobileNav = () => {
 			right={0}
 			left={0}
 			m="16px"
-			bg={useColorModeValue('white', 'gray.800')}
+			backgroundColor={backgroundColor}
 			borderWidth="2px"
-			borderTopColor={useColorModeValue('gray.100', 'gray.700')}
-			borderRadius="16px"
+			borderColor={borderColor}
+			borderRadius="12px"
 			zIndex="overlay"
 			data-id="mobile-nav"
 		>
@@ -95,7 +97,7 @@ export const MobileNav = () => {
 						aria-label="Mobile Navigation Menu"
 					/>
 
-					<MenuList>
+					<MenuList backgroundColor={backgroundColor}>
 						<Flex justify="space-evenly">
 							<IconButton
 								as={ChakraLink}

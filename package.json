@@ -1,6 +1,6 @@
 {
   "name": "michaelgee.com",
-  "version": "2022.05.07",
+  "version": "2022.06.12",
   "scripts": {
     "dev": "next",
     "build": "next build",

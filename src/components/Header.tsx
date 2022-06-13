@@ -29,8 +29,8 @@ export const Header = () => {
 			bgColor={useColorModeValue('white', '#2D333B')}
 			display={['none', 'flex']}
 			pos="fixed"
-			borderBottomWidth="2px"
-			borderBottomColor={useColorModeValue('gray.100', 'gray.700')}
+			borderBottomWidth="1px"
+			borderBottomColor={useColorModeValue('light.border', 'dark.border')}
 			shadow="0 0 10px 0 rgba(0,0,0, 0.035);"
 			zIndex="overlay"
 		>
