@@ -21,8 +21,8 @@ import {
 	FaMoon,
 	FaGithub,
 	FaLinkedin,
-	FaTwitter,
-	FaUser
+	FaTwitter
+	// FaUser
 } from 'react-icons/fa'
 import { FiMenu, FiSun } from 'react-icons/fi'
 import { ImQuill } from 'react-icons/im'
