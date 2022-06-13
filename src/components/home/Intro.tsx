@@ -9,7 +9,7 @@ interface IntroProps {
 }
 
 const Intro = (props: IntroProps) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const color = useColorModeValue('light.tertiary', 'dark.tertiary')
 
 	return (
 		<>
@@ -86,21 +86,24 @@ interface IntroTileProps {
 }
 
 const IntroTile = (props: IntroTileProps) => {
-	const tileColor = useColorModeValue('primary.light', 'primary.dark')
-	const tileBgColor = useColorModeValue('white', 'gray.800')
+	const color = useColorModeValue('light.text', 'dark.text')
+	const backgroundColor = useColorModeValue('light.container', 'dark.container')
+	const borderColor = useColorModeValue('light.border', 'dark.border')
+	const tertiary = useColorModeValue('light.tertiary', 'dark.tertiary')
 
 	return (
 		<Box
 			w={['100%', '32%']}
 			p="3% 2.5%"
 			my={['8px', '0']}
-			bgColor={tileBgColor}
+			bgColor={backgroundColor}
+			borderWidth="1px"
+			borderColor={borderColor}
 			borderRadius="12px"
-			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06)"
 			textAlign="center"
 		>
-			<Icon as={props.icon} color={tileColor} fontSize="4xl" />
-			<Box as="h3" fontWeight="bold" fontStyle="italic" py="8px">
+			<Icon as={props.icon} color={color} fontSize="4xl" />
+			<Box as="h3" color={tertiary} fontWeight="bold" fontStyle="italic" py="8px">
 				{props.title}
 			</Box>
 			<Box as="p">{props.desc}</Box>

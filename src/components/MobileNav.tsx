@@ -21,8 +21,8 @@ import {
 	FaMoon,
 	FaGithub,
 	FaLinkedin,
-	FaTwitter,
-	FaUser
+	FaTwitter
+	// FaUser
 } from 'react-icons/fa'
 import { FiMenu, FiSun } from 'react-icons/fi'
 import { ImQuill } from 'react-icons/im'
@@ -30,7 +30,7 @@ import { MdTimeline } from 'react-icons/md'
 
 export const MobileNav = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
-	const primaryColor = useColorModeValue('primary.light', 'primary.dark')
+	const textColor = useColorModeValue('light.link', 'dark.link')
 	const router = useRouter()
 	const isDark = colorMode === 'dark'
 
@@ -144,27 +144,27 @@ export const MobileNav = () => {
 							<MenuItem
 								as={chakra.a}
 								icon={<FaHome />}
-								color={_isCurrentRoute(['/']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/']) ? textColor : 'default'}
 							>
 								Home
 							</MenuItem>
 						</Link>
 
-						<Link href="/about" passHref>
+						{/* <Link href="/about" passHref>
 							<MenuItem
 								as={chakra.a}
 								icon={<FaUser />}
-								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/about']) ? textColor : 'default'}
 							>
 								About
 							</MenuItem>
-						</Link>
+						</Link> */}
 
 						<Link href="/blog" passHref>
 							<MenuItem
 								as={chakra.a}
 								icon={<ImQuill />}
-								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? textColor : 'default'}
 							>
 								Blog
 							</MenuItem>
@@ -174,7 +174,7 @@ export const MobileNav = () => {
 							<MenuItem
 								as={chakra.a}
 								icon={<FaCode />}
-								color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/projects']) ? textColor : 'default'}
 							>
 								Projects
 							</MenuItem>
@@ -184,7 +184,7 @@ export const MobileNav = () => {
 							<MenuItem
 								as={chakra.a}
 								icon={<MdTimeline />}
-								color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/timeline']) ? textColor : 'default'}
 							>
 								Timeline
 							</MenuItem>

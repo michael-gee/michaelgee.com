@@ -20,7 +20,9 @@ interface ListItemProps {
 }
 
 const ListItem = (props: ListItemProps) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const titleColor = useColorModeValue('light.link', 'dark.link')
+	const backgroundColor = useColorModeValue('light.container', 'dark.container')
+	const borderColor = useColorModeValue('light.border', 'dark.border')
 
 	return (
 		<SlideFade
@@ -31,10 +33,14 @@ const ListItem = (props: ListItemProps) => {
 			<Link href={props.href} passHref>
 				<Flex
 					as={ChakraLink}
+					backgroundColor={backgroundColor}
+					borderColor={borderColor}
+					borderWidth="1px"
+					borderRadius="12px"
 					flexDir={['column', 'column', 'row']}
 					align={['center', 'center', 'flex-start']}
-					py="8px"
-					m="16px 24px"
+					p="16px"
+					my="16px"
 					transition=".3s"
 					textDecoration="none !important"
 					_focus={{
@@ -42,7 +48,7 @@ const ListItem = (props: ListItemProps) => {
 					}}
 					_hover={{
 						transform: 'translateY(-4px)',
-						color
+						color: titleColor
 					}}
 				>
 					<Box maxW="400px" maxH="100%" mb={['8px', '8px', '0']}>
@@ -55,7 +61,7 @@ const ListItem = (props: ListItemProps) => {
 						pl={['0', '0', '24px']}
 						textAlign={['center', 'center', 'start']}
 					>
-						<Heading as="h3" fontSize="sm" color={color}>
+						<Heading as="h3" fontSize="sm" color={titleColor}>
 							{props.title}
 						</Heading>
 						<Box as="p" py="4px">

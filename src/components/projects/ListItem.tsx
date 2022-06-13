@@ -31,7 +31,7 @@ interface Props extends ProjectProps {
 
 const ProjectsListItem = (props: Props) => {
 	const techIcons: any = icons
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const titleColor = useColorModeValue('light.tertiary', 'dark.tertiary')
 	const hasLink = props.projectLink || props.sourceCode
 	const flexDir = props.imagePosition === 'right' ? 'row' : 'row-reverse'
 
@@ -78,7 +78,7 @@ const ProjectsListItem = (props: Props) => {
 					align="center"
 				>
 					<Box w="100%">
-						<Heading fontSize="1.4em" color={color}>
+						<Heading fontSize="1.4em" color={titleColor}>
 							{props.title}
 						</Heading>
 

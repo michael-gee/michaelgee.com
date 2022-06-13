@@ -22,15 +22,17 @@ interface TechStackSectionProps {
 }
 
 const TechStackSection = (props: TechStackSectionProps) => {
-	const tileBgColor = useColorModeValue('white', 'gray.800')
+	const backgroundColor = useColorModeValue('light.container', 'dark.container')
+	const borderColor = useColorModeValue('light.border', 'dark.border')
 
 	return (
 		<Box
 			as={chakra.section}
 			w={['100%', '50%']}
-			bgColor={tileBgColor}
+			bgColor={backgroundColor}
+			borderWidth="1px"
+			borderColor={borderColor}
 			borderRadius="12px"
-			boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06)"
 			mr={['0', props.pos === 'left' ? '8px' : '0']}
 			ml={['0', props.pos === 'right' ? '8px' : '0']}
 			my={['8px', '0']}
@@ -49,14 +51,13 @@ const TechStackSection = (props: TechStackSectionProps) => {
 interface TechStackIconProps {
 	icon: IconType
 	name: string
+	color?: string
 }
 
 const TechStackIcon = (props: TechStackIconProps) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
-
 	return (
 		<Box w="33%" my="16px">
-			<Icon as={props.icon} fontSize="2em" color={color} aria-label={props.name} />
+			<Icon as={props.icon} fontSize="2em" color={props.color} aria-label={props.name} />
 			<Text>{props.name}</Text>
 		</Box>
 	)

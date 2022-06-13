@@ -16,7 +16,7 @@ import { FiSun } from 'react-icons/fi'
 
 export const Header = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
-	const primaryColor = useColorModeValue('primary.light', 'primary.dark')
+	const textColor = useColorModeValue('light.link', 'dark.link')
 	const router = useRouter()
 	const isDark = colorMode === 'dark'
 
@@ -26,7 +26,7 @@ export const Header = () => {
 			alignItems="center"
 			w="100%"
 			h="64px"
-			bgColor={useColorModeValue('white', 'gray.800')}
+			bgColor={useColorModeValue('white', '#2D333B')}
 			display={['none', 'flex']}
 			pos="fixed"
 			borderBottomWidth="2px"
@@ -55,23 +55,23 @@ export const Header = () => {
 					</Link>
 
 					<Flex as="nav" ml="16px">
-						<Link href="/about" passHref>
+						{/* <Link href="/about" passHref>
 							<Button
 								as={chakra.a}
 								minW="80px"
 								mx="4px"
 								variant="ghost"
-								color={_isCurrentRoute(['/about']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/about']) ? textColor : 'default'}
 							>
 								About
 							</Button>
-						</Link>
+						</Link> */}
 
 						<Link href="/blog" passHref>
 							<Button
 								as={chakra.a}
 								variant="ghost"
-								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/blog', '/blog/[slug]']) ? textColor : 'default'}
 								mx="4px"
 							>
 								Blog
@@ -84,7 +84,7 @@ export const Header = () => {
 								minW="80px"
 								mx="4px"
 								variant="ghost"
-								color={_isCurrentRoute(['/projects']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/projects']) ? textColor : 'default'}
 							>
 								Projects
 							</Button>
@@ -94,7 +94,7 @@ export const Header = () => {
 							<Button
 								as={chakra.a}
 								variant="ghost"
-								color={_isCurrentRoute(['/timeline']) ? primaryColor : 'default'}
+								color={_isCurrentRoute(['/timeline']) ? textColor : 'default'}
 								mx="4px"
 							>
 								Timeline

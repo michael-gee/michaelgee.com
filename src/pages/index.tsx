@@ -4,7 +4,7 @@ import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
 import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
 import { CurrentInterests } from '@/components/home/CurrentInterests'
 import * as icons from '@/components/home/icons'
-import { Fade } from '@chakra-ui/react'
+import { Fade, useColorModeValue } from '@chakra-ui/react'
 
 const Homepage = () => {
 	return (
@@ -57,19 +57,27 @@ const Homepage = () => {
 
 					<TechStack>
 						<TechStackSection title="Proficiency" pos="left">
-							<TechStackIcon name="React" icon={icons.react} />
+							<TechStackIcon
+								name="React"
+								icon={icons.react}
+								color={useColorModeValue('#0C7EA3', '#129ECA')}
+							/>
 							<TechStackIcon name="Next.js" icon={icons.nextjs} />
-							<TechStackIcon name="TypeScript" icon={icons.typescript} />
-							<TechStackIcon name="CSS" icon={icons.css} />
-							<TechStackIcon name="Node.js" icon={icons.nodejs} />
-							<TechStackIcon name="Git" icon={icons.git} />
+							<TechStackIcon name="TypeScript" icon={icons.typescript} color="#3078C6" />
+							<TechStackIcon name="CSS" icon={icons.css} color="#264DE4" />
+							<TechStackIcon name="Node.js" icon={icons.nodejs} color="#67A063" />
+							<TechStackIcon name="Git" icon={icons.git} color="#F64D27" />
 						</TechStackSection>
 						<TechStackSection title="Discovery" pos="right">
-							<TechStackIcon name="React Native" icon={icons.react} />
-							<TechStackIcon name="AWS" icon={icons.aws} />
-							<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} />
+							<TechStackIcon
+								name="React Native"
+								icon={icons.react}
+								color={useColorModeValue('#0C7EA3', '#129ECA')}
+							/>
+							<TechStackIcon name="AWS" icon={icons.aws} color="#EC902E" />
+							<TechStackIcon name="PostgreSQL" icon={icons.postgreSQL} color="#326790" />
 							<TechStackIcon name="Prisma" icon={icons.prisma} />
-							<TechStackIcon name="Supabase" icon={icons.supabase} />
+							<TechStackIcon name="Supabase" icon={icons.supabase} color="#36BE80" />
 						</TechStackSection>
 					</TechStack>
 

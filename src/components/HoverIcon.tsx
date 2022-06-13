@@ -1,4 +1,4 @@
-import { Box, Icon, Tooltip, useColorModeValue } from '@chakra-ui/react'
+import { Box, Icon, Tooltip } from '@chakra-ui/react'
 import { IconType } from 'react-icons/lib'
 
 interface Props {
@@ -11,8 +11,6 @@ interface Props {
 }
 
 const HoverIcon = (props: Props) => {
-	const themeColor = useColorModeValue('primary.light', 'primary.dark')
-	const color = props.color ? props.color : themeColor
 	const size = props.size ? props.size : '1.6em'
 	const gutter = props.gutter ? props.gutter : 8
 
@@ -26,7 +24,7 @@ const HoverIcon = (props: Props) => {
 			aria-label={props.name}
 		>
 			<Box as="span">
-				<Icon as={props.icon} color={color} fontSize={size} />
+				<Icon as={props.icon} color={props.color} fontSize={size} />
 			</Box>
 		</Tooltip>
 	)
