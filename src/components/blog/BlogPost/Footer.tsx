@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const Footer = (props: Props) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const color = useColorModeValue('light.tertiary', 'dark.tertiary')
 
 	return (
 		<Box as="footer" mt="16px" mb="24px" textAlign="center">
@@ -25,7 +25,7 @@ export const Footer = (props: Props) => {
 			</Flex>
 
 			<Box>
-				<Icon as={FaInfoCircle} color={color} mr="8px" mb="4px" />
+				<Icon as={FaInfoCircle} color={color} mr="8px" mt="4px" />
 				This article was originally published on{' '}
 				<ChakraLink href="https://dev.to/michaelgee" isExternal>
 					<Icon as={FaDev} fontSize="1.2em" />

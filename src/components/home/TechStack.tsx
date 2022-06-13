@@ -51,14 +51,13 @@ const TechStackSection = (props: TechStackSectionProps) => {
 interface TechStackIconProps {
 	icon: IconType
 	name: string
+	color?: string
 }
 
 const TechStackIcon = (props: TechStackIconProps) => {
-	const color = useColorModeValue('light.text', 'dark.text')
-
 	return (
 		<Box w="33%" my="16px">
-			<Icon as={props.icon} fontSize="2em" color={color} aria-label={props.name} />
+			<Icon as={props.icon} fontSize="2em" color={props.color} aria-label={props.name} />
 			<Text>{props.name}</Text>
 		</Box>
 	)

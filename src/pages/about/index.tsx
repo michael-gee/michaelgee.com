@@ -1,14 +1,14 @@
-import { FavoriteItem, FavoriteItemProps } from '@/components/about/FavoriteItem'
+// import { FavoriteItem, FavoriteItemProps } from '@/components/about/FavoriteItem'
 import { PageHead } from '@/components/PageHead'
 import { Container } from '@/components/Container'
-import { PageTitle } from '@/components/PageTitle'
-import Image from 'next/image'
-import { Badge, Box, Fade, Flex } from '@chakra-ui/react'
+// import { PageTitle } from '@/components/PageTitle'
+// import Image from 'next/image'
+import { Fade, Flex, Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
 
-import data from '@/db/about.json'
+// import data from '@/db/about.json'
 
 const AboutPage = () => {
-	const { favorites, otherLikes } = data
+	// const { favorites, otherLikes } = data
 
 	return (
 		<>
@@ -20,7 +20,19 @@ const AboutPage = () => {
 
 			<Container>
 				<Fade in transition={{ enter: { duration: 1.5 } }}>
-					<Box as="section" py="16px">
+					<Tabs variant="soft-rounded" colorScheme="blue">
+						<TabList as={Flex} justifyContent="center" my="24px">
+							<Tab>Bio</Tab>
+							<Tab>Gallery</Tab>
+						</TabList>
+
+						<TabPanels>
+							<TabPanel>Under Construction</TabPanel>
+							<TabPanel>Under Construction</TabPanel>
+						</TabPanels>
+					</Tabs>
+
+					{/* <Box as="section" py="16px">
 						<PageTitle text="Hello, I'm Michael Gee 👋" />
 						<Box as="p" py="8px">
 							I&apos;m a passionate software developer eager to turn ideas into applications
@@ -81,7 +93,7 @@ const AboutPage = () => {
 								)
 							})}
 						</Flex>
-					</Box>
+					</Box> */}
 				</Fade>
 			</Container>
 		</>

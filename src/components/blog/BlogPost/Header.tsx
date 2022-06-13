@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const Header = (props: Props) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const color = useColorModeValue('light.tertiary', 'dark.tertiary')
 
 	return (
 		<Box as="header">

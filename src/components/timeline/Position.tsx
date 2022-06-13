@@ -12,7 +12,7 @@ interface PositionProps {
 interface Props extends PositionProps {}
 
 const Position = (props: Props) => {
-	const color = useColorModeValue('primary.light', 'primary.dark')
+	const color = useColorModeValue('light.tertiary', 'dark.tertiary')
 
 	return (
 		<Box as="section" py="16px" data-id="timeline-item">

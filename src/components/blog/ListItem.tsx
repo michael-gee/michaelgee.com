@@ -21,6 +21,8 @@ interface ListItemProps {
 
 const ListItem = (props: ListItemProps) => {
 	const titleColor = useColorModeValue('light.link', 'dark.link')
+	const backgroundColor = useColorModeValue('light.container', 'dark.container')
+	const borderColor = useColorModeValue('light.border', 'dark.border')
 
 	return (
 		<SlideFade
@@ -31,10 +33,14 @@ const ListItem = (props: ListItemProps) => {
 			<Link href={props.href} passHref>
 				<Flex
 					as={ChakraLink}
+					backgroundColor={backgroundColor}
+					borderColor={borderColor}
+					borderWidth="1px"
+					borderRadius="12px"
 					flexDir={['column', 'column', 'row']}
 					align={['center', 'center', 'flex-start']}
-					py="8px"
-					m="16px 24px"
+					p="16px"
+					my="16px"
 					transition=".3s"
 					textDecoration="none !important"
 					_focus={{
