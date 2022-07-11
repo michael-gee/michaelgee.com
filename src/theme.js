@@ -41,7 +41,7 @@ const theme = extendTheme({
 
 			primary: '',
 			secondary: '',
-			tertiary: '#E60067'
+			tertiary: '#E53E3E'
 		}
 
 		// primary: {
