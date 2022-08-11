@@ -13,7 +13,7 @@ export const Footer = () => {
 						<Icon as={FaCanadianMapleLeaf} mr="8px" color="red.500" />
 						<Box as="span" fontSize="sm">
 							Coded by
-							<ChakraLink href="https://github.com/michael-gee/michaelgee.com" isExternal ml="4px">
+							<ChakraLink href="https://staging.hq.gofan.co/" isExternal ml="4px">
 								Michael Gee
 							</ChakraLink>{' '}
 							| Inspired by
