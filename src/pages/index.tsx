@@ -4,7 +4,7 @@ import { Intro, IntroTileSection, IntroTile } from '@/components/home/Intro'
 import { TechStack, TechStackSection, TechStackIcon } from '@/components/home/TechStack'
 import { CurrentInterests } from '@/components/home/CurrentInterests'
 import * as icons from '@/components/home/icons'
-import { Fade, useColorModeValue } from '@chakra-ui/react'
+import { Fade, Link as ChakraLink, useColorModeValue } from '@chakra-ui/react'
 
 const Homepage = () => {
 	return (
@@ -18,6 +18,9 @@ const Homepage = () => {
 			<Container>
 				<Fade in transition={{ enter: { duration: 1.2 } }}>
 					<Intro>
+						<ChakraLink href="https://staging.hq.gofan.co/" isExternal ml="4px">
+							Michael Gee
+						</ChakraLink>{' '}
 						<IntroTileSection mt="32px">
 							<IntroTile
 								title="Coding"
@@ -35,7 +38,6 @@ const Homepage = () => {
 								desc="I am in no way a writer but I love to share my past experiences and things I have learned. I hope that some people can benefit from them and provide valuable feedback."
 							/>
 						</IntroTileSection>
-
 						<IntroTileSection my={['0', '16px']}>
 							<IntroTile
 								title="Collaborating"
