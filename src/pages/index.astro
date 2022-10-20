@@ -2,17 +2,19 @@
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-
-import './index.css';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head><BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /></head>
+	<head>
+		<BaseHead
+			title="Michael Gee"
+			description="Michael Gee's personal website that consists of his professional & personal interests, projects, and findings primarily focused on software development."
+		/>
+	</head>
 
 	<body>
-		<Header title={SITE_TITLE} />
+		<Header />
 
 		<main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>

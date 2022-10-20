@@ -7,5 +7,5 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://michaelgee.com',
-	integrations: [image(), mdx(), sitemap()]
+	integrations: [image({ serviceEntryPoint: '@astrojs/image/sharp' }), mdx(), sitemap()]
 });

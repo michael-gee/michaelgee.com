@@ -1,0 +1,28 @@
+---
+export interface Props {
+	href: string;
+	title: string;
+	date: string;
+	description: string;
+}
+
+const { href, title, date, description } = Astro.props;
+---
+
+<a href={href}>
+	<article class="blog-post-card">
+		<h3>{title}</h3>
+		<h5>{date}</h5>
+		<p>{description}</p>
+	</article>
+</a>
+
+<style>
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.blog-post-card {
+	}
+</style>
