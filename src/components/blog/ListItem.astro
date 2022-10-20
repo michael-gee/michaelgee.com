@@ -10,10 +10,11 @@ const { href, title, date, description } = Astro.props;
 ---
 
 <a href={href}>
-	<article class="blog-post-card">
-		<h3>{title}</h3>
+	<article class="blog-list-item">
 		<h5>{date}</h5>
+		<h3>{title}</h3>
 		<p>{description}</p>
+		<span class="text-sky-500 font-semibold dark:text-sky-400">Read Article &#8608;</span>
 	</article>
 </a>
 
@@ -23,6 +24,18 @@ const { href, title, date, description } = Astro.props;
 		text-decoration: none;
 	}
 
-	.blog-post-card {
+	.blog-list-item {
+	}
+
+	.blog-list-item h5 {
+		color: #a2a2a9;
+	}
+	.blog-list-item h5::before {
+		padding-right: 4px;
+		border-left: 2px solid #a2a2a9;
+	}
+
+	.blog-list-item p {
+		color: #a1a1aa;
 	}
 </style>
