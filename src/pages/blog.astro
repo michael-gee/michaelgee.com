@@ -2,78 +2,45 @@
 import BaseHead from '@components/BaseHead.astro';
 import ListItem from '@components/blog/ListItem.astro';
 import Header from '@components/Header.astro';
+import Container from '@components/PageContainer.astro';
 import Footer from '@components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 );
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li time {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
+		<BaseHead
+			title="Michael Gee's Blog"
+			description="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+		/>
 	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ListItem
-					href="/blog/first-post"
-					title="Placeholder Hero Post"
-					date={new Date().toLocaleString()}
-					description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-				/>
-				<ListItem
-					href="/blog/second-post"
-					title="Placeholder Second Post"
-					date={new Date().toLocaleString()}
-					description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-				/>
-				<ListItem
-					href="/blog/third-post"
-					title="Placeholder Third Post"
-					date={new Date().toLocaleString()}
-					description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-				/>
 
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
-										year: 'numeric',
-										month: 'long',
-										day: 'numeric'
-									})}
-								</time>
-								<a href={post.url}>{post.frontmatter.title}</a>
-							</li>
-						))
-					}
-				</ul>
+	<body class="w-full bg-black text-white">
+		<Header />
+
+		<Container>
+			<section class="flex flex-wrap justify-between py-4">
+				{
+					posts.map((post) => (
+						<ListItem
+							href={post.frontmatter.href}
+							title={post.frontmatter.title}
+							date={new Date(post.frontmatter.date).toLocaleDateString('en-us', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric'
+							})}
+							description={post.frontmatter.description}
+						/>
+					))
+				}
 			</section>
-		</main>
+		</Container>
+
 		<Footer />
 	</body>
 </html>

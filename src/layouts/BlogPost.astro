@@ -1,6 +1,7 @@
 ---
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
+import Container from '@components/PageContainer.astro';
 import Footer from '@components/Footer.astro';
 
 export interface Props {
@@ -18,24 +19,15 @@ const {
 } = Astro.props;
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-		</style>
 	</head>
 
-	<body>
+	<body class="w-full bg-black text-white">
 		<Header />
-		<main>
+
+		<Container>
 			<article>
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="title">{title}</h1>
@@ -50,7 +42,8 @@ const {
 				<hr />
 				<slot />
 			</article>
-		</main>
+		</Container>
+
 		<Footer />
 	</body>
 </html>

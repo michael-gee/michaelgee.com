@@ -1,6 +1,7 @@
 ---
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
+import Container from '@components/PageContainer.astro';
 import Footer from '@components/Footer.astro';
 ---
 
@@ -13,10 +14,10 @@ import Footer from '@components/Footer.astro';
 		/>
 	</head>
 
-	<body>
+	<body class="w-full bg-black text-white">
 		<Header />
 
-		<main>
+		<Container>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
 				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
@@ -93,7 +94,7 @@ import Footer from '@components/Footer.astro';
 					>astro-blog-template
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 			</p>
-		</main>
+		</Container>
 
 		<Footer />
 	</body>

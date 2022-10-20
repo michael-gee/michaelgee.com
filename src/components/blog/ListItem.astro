@@ -9,33 +9,23 @@ export interface Props {
 const { href, title, date, description } = Astro.props;
 ---
 
-<a href={href}>
-	<article class="blog-list-item">
-		<h5>{date}</h5>
-		<h3>{title}</h3>
-		<p>{description}</p>
-		<span class="text-sky-500 font-semibold dark:text-sky-400">Read Article &#8608;</span>
+<a
+	href={href}
+	class="w-[512px] my-4 mx-2 p-6 rounded-2xl border border-zinc-700 cursor-pointer hover:bg-zinc-800"
+>
+	<article class="flex flex-col items-start">
+		<time
+			class="relative z-10 order-first mb-3 pl-3.5 flex items-center text-sm font-medium text-zinc-400 dark:text-zinc-500"
+		>
+			<span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+				<span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+			</span>
+			{date}
+		</time>
+		<h3 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">{title}</h3>
+		<p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
+		<span class="mt-4 flex items-center text-sm font-medium text-sky-500 dark:text-sky-400"
+			>Read Article &#8608;</span
+		>
 	</article>
 </a>
-
-<style>
-	a {
-		color: white;
-		text-decoration: none;
-	}
-
-	.blog-list-item {
-	}
-
-	.blog-list-item h5 {
-		color: #a2a2a9;
-	}
-	.blog-list-item h5::before {
-		padding-right: 4px;
-		border-left: 2px solid #a2a2a9;
-	}
-
-	.blog-list-item p {
-		color: #a1a1aa;
-	}
-</style>

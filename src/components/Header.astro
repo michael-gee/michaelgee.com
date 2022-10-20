@@ -2,51 +2,19 @@
 import { Icon } from 'astro-icon';
 ---
 
-<header class="fixed w-full z-50">
-	<div class="flex items-center justify-between max-w-6xl mx-auto py-3 px-8 border-y-2">
-		<a href="/" class="flex items-center">
-			<Icon pack="mdi" name="leaf-maple" class="maple-leaf" />
+<header class="fixed w-full z-50 font-semibold">
+	<div
+		class="max-w-6xl flex items-center justify-between mx-auto py-1 px-8 border-x-2 dark:bg-zinc-900 dark:border-zinc-700/40"
+	>
+		<a href="/" class="flex items-center hover:text-red-600">
+			<Icon pack="mdi" name="leaf-maple" class="w-8 h-8 mr-3 text-red-600" />
 			<h2 class="text-2xl">Michael Gee</h2>
 		</a>
 
-		<nav>
-			<a href="/about">About</a>
-			<a href="/blog">Blog</a>
-			<a href="/portfolio">Portfolio</a>
+		<nav class="p-3 rounded-full">
+			<a href="/about" class="mx-2 hover:dark:text-sky-400">About</a>
+			<a href="/blog" class="mx-2 hover:dark:text-sky-400">Blog</a>
+			<a href="/portfolio" class="mx-2 hover:dark:text-sky-400">Portfolio</a>
 		</nav>
 	</div>
 </header>
-
-<style>
-	.header-content {
-		background-color: hsl(240, 6%, 10%);
-		border-left: 2px solid #2a2a2b;
-		border-right: 2px solid #2a2a2b;
-	}
-	.title:hover {
-		color: hsl(0, 76%, 57%);
-	}
-
-	.maple-leaf {
-		width: 32px;
-		height: 32px;
-		margin-right: 12px;
-		color: hsl(0, 76%, 57%);
-	}
-
-	nav {
-		background-color: hsla(240, 4%, 16%, 0.9);
-		padding: 12px;
-		border-radius: 9999px;
-		border: 2px solid #2a2a2b;
-	}
-
-	nav a {
-		margin: 0 8px;
-		padding: 8px;
-		border-radius: 8px;
-	}
-	nav a:hover {
-		color: #2cd4be;
-	}
-</style>
