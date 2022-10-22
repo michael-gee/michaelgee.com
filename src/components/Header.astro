@@ -4,17 +4,46 @@ import { Icon } from 'astro-icon';
 
 <header class="fixed w-full z-50 font-semibold">
 	<div
-		class="max-w-6xl flex items-center justify-between mx-auto py-1 px-8 border-x-2 dark:bg-zinc-900 dark:border-zinc-700/40"
+		class="max-w-6xl flex items-center justify-between mx-auto py-2 px-7 border-x-2 bg-zinc-900 border-zinc-700/40"
 	>
 		<a href="/" class="flex items-center hover:text-red-600">
 			<Icon pack="mdi" name="leaf-maple" class="w-8 h-8 mr-3 text-red-600" />
 			<h2 class="text-2xl">Michael Gee</h2>
 		</a>
 
-		<nav class="p-3 rounded-full">
-			<a href="/about" class="mx-2 hover:dark:text-sky-400">About</a>
-			<a href="/blog" class="mx-2 hover:dark:text-sky-400">Blog</a>
-			<a href="/portfolio" class="mx-2 hover:dark:text-sky-400">Portfolio</a>
+		<nav class="flex items-center p-3">
+			<a href="/about" class="text-zinc-300 mx-2 hover:text-sky-400">About</a>
+			<a href="/blog" class="text-zinc-300 mx-2 hover:text-sky-400">Blog</a>
+			<a href="/portfolio" class="text-zinc-300 mx-2 hover:text-sky-400">Portfolio</a>
+
+			<div class="flex items-center ml-2 pl-2 border-l-2 border-zinc-700">
+				<a
+					href="https://github.com/michael-gee"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+				>
+					<Icon pack="mdi" name="github" class="w-6 h-6 mx-3" />
+				</a>
+
+				<a
+					href="https://twitter.com/michaelgee_"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+				>
+					<Icon pack="mdi" name="twitter" class="w-6 h-6 mx-3" />
+				</a>
+
+				<a
+					href="https://www.linkedin.com/in/michael-gee/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+				>
+					<Icon pack="mdi" name="linkedin" class="w-6 h-6 mx-3" />
+				</a>
+			</div>
 		</nav>
 	</div>
 </header>

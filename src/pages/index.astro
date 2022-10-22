@@ -3,6 +3,7 @@ import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 import Footer from '@components/Footer.astro';
+import { Image } from '@astrojs/image/components';
 ---
 
 <!DOCTYPE html>
@@ -17,85 +18,73 @@ import Footer from '@components/Footer.astro';
 	<body class="w-full bg-black text-white">
 		<Header />
 
-		<Container>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/">read the docs</a
-				> or
-				<a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<Container customStyles="flex align-center justify-evenly">
+			<section class="max-w-2xl">
+				<h1 class="text-4xl font-bold text-zinc-100">
+					<span class="h-10 mr-1 float-left">I'm a software</span>
+					<span class="relative h-10 float-left overflow-hidden">
+						<span
+							class="relative top-0 left-0 inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500 whitespace-nowrap vertical-text-scroll"
+						>
+							<div class="h-10">engineer</div>
+							<div class="h-10">enthusiast</div>
+							<div class="h-10">blogger</div>
+							<div class="h-10">consultant</div>
+							<div class="h-10">memer</div>
+						</span>
+					</span>
+				</h1>
+
+				<p class="py-4 text-base clear-both text-zinc-600 dark:text-zinc-400">
+					...passionate about turning ideas into applications. I'm currently working as a senior
+					frontend software engineer at <a
+						href="https://get.gofan.co/"
+						target="_blank"
+						rel="noopenner noreferrer"
+						class="text-sky-400 font-semibold">GoFan</a
+					> leading UI/UX/DX initiatives for both administrative and customer facing applications. In
+					my spare time I enjoy spending time with my family, playing or watching sports, (sometimes)
+					playing video games, and working on side projects.
+				</p>
+
+				<a href="/about" class="text-sky-400 font-semibold">Read more &#8608;</a>
+			</section>
+
+			<Image
+				src="mgee.jpg"
+				width="200px"
+				height="200px"
+				alt="Profile image of Michael Gee"
+				class="rounded-full"
+			/>
 		</Container>
 
 		<Footer />
+
+		<style>
+			.vertical-text-scroll {
+				animation: verticalScroll 16s;
+				animation-iteration-count: infinite;
+				animation-delay: 3s;
+			}
+
+			@keyframes verticalScroll {
+				0% {
+					top: 2px;
+				}
+				20% {
+					top: -40px;
+				}
+				40% {
+					top: -80px;
+				}
+				60% {
+					top: -120px;
+				}
+				80% {
+					top: -160px;
+				}
+			}
+		</style>
 	</body>
 </html>
