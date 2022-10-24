@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogPost.astro'
 title: 'Second post'
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing.'
-date: 'Jul 22 2022'
+date: 'July 22, 2022'
 href: '/blog/second-post'
 heroImage: '/placeholder-hero.jpg'
 ---

@@ -1,9 +1,17 @@
 ---
+import { Image } from '@astrojs/image/components';
+
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
+import BlogCard from '@components/blog/Card.astro';
+import SubscriptionForm from '@components/SubscriptionForm.astro';
+import WorkExperience from '@components/WorkExperience.astro';
 import Footer from '@components/Footer.astro';
-import { Image } from '@astrojs/image/components';
+
+const posts = (await Astro.glob('./blog/*.{md,mdx}'))
+	.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+	.splice(0, 3);
 ---
 
 <!DOCTYPE html>
@@ -18,45 +26,67 @@ import { Image } from '@astrojs/image/components';
 	<body class="w-full bg-black text-white">
 		<Header />
 
-		<Container customStyles="flex align-center justify-evenly">
-			<section class="max-w-2xl">
-				<h1 class="text-4xl font-bold text-zinc-100">
-					<span class="h-10 mr-1 float-left">I'm a software</span>
-					<span class="relative h-10 float-left overflow-hidden">
-						<span
-							class="relative top-0 left-0 inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500 whitespace-nowrap vertical-text-scroll"
-						>
-							<div class="h-10">engineer</div>
-							<div class="h-10">enthusiast</div>
-							<div class="h-10">blogger</div>
-							<div class="h-10">consultant</div>
-							<div class="h-10">memer</div>
+		<Container>
+			<section class="flex align-center max-full p-4">
+				<div>
+					<h1 class="text-4xl font-bold text-zinc-100">
+						<span class="h-10 mr-1 float-left">I'm a software</span>
+						<span class="relative h-10 float-left overflow-hidden">
+							<span
+								class="relative top-0 left-0 inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500 whitespace-nowrap vertical-text-scroll"
+							>
+								<div class="h-10">engineer</div>
+								<div class="h-10">enthusiast</div>
+								<div class="h-10">blogger</div>
+								<div class="h-10">consultant</div>
+								<div class="h-10">memer</div>
+							</span>
 						</span>
-					</span>
-				</h1>
+					</h1>
 
-				<p class="py-4 text-base clear-both text-zinc-600 dark:text-zinc-400">
-					...passionate about turning ideas into applications. I'm currently working as a senior
-					frontend software engineer at <a
-						href="https://get.gofan.co/"
-						target="_blank"
-						rel="noopenner noreferrer"
-						class="text-sky-400 font-semibold">GoFan</a
-					> leading UI/UX/DX initiatives for both administrative and customer facing applications. In
-					my spare time I enjoy spending time with my family, playing or watching sports, (sometimes)
-					playing video games, and working on side projects.
-				</p>
+					<p class="max-w-2xl py-4 text-base clear-both text-zinc-600 dark:text-zinc-400">
+						...passionate about turning ideas into applications. I'm currently working as a senior
+						frontend software engineer at <a
+							href="https://get.gofan.co/"
+							target="_blank"
+							rel="noopenner noreferrer"
+							class="text-sky-400 font-semibold">GoFan</a
+						> leading UI/UX/DX initiatives for both administrative and customer facing applications.
+						In my spare time I enjoy spending time with my family, playing or watching sports, (sometimes)
+						playing video games, and working on side projects.
+					</p>
 
-				<a href="/about" class="text-sky-400 font-semibold">Read more &#8608;</a>
+					<a href="/about" class="text-sky-400 font-semibold">Read more &#8608;</a>
+				</div>
+
+				<Image
+					src="mgee.jpg"
+					width="200px"
+					height="200px"
+					alt="Profile image of Michael Gee"
+					class="mx-auto rounded-full"
+				/>
 			</section>
 
-			<Image
-				src="mgee.jpg"
-				width="200px"
-				height="200px"
-				alt="Profile image of Michael Gee"
-				class="rounded-full"
-			/>
+			<div class="flex py-4">
+				<section class="flex flex-col max-w-lg">
+					{
+						posts.map((post) => (
+							<BlogCard
+								href={post.frontmatter.href}
+								title={post.frontmatter.title}
+								date={post.frontmatter.date}
+								description={post.frontmatter.description}
+							/>
+						))
+					}
+				</section>
+
+				<div class="max-w-md mx-auto py-4">
+					<SubscriptionForm />
+					<WorkExperience />
+				</div>
+			</div>
 		</Container>
 
 		<Footer />

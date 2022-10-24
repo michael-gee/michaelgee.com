@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogPost.astro'
 title: 'Third post'
 description: 'Lorem ipsum dolor sit amet'
-date: 'Jul 15 2022'
+date: 'July 15, 2022'
 href: '/blog/third-post'
 heroImage: '/placeholder-hero.jpg'
 ---

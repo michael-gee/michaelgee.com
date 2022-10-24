@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogPost.astro'
 title: 'Markdown Style Guide'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-date: 'Jul 01 2022'
+date: 'July 01, 2022'
 href: '/blog/markdown-style-guide'
 heroImage: '/placeholder-hero.jpg'
 ---

@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<form action="/thank-you" class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+	<h2 class="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+		<Icon pack="mdi" name="mail-outline" class="w-6 h-6 text-zinc-500" />
+		<span class="ml-3">Stay up to date</span>
+	</h2>
+
+	<p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+		Get notified when I publish something new, and unsubscribe at any time.
+	</p>
+
+	<div class="mt-6 flex">
+		<input
+			type="email"
+			placeholder="Email address"
+			aria-label="Email address"
+			required=""
+			class="min-w-0 flex-auto appearance-none rounded-md border border-zinc-700 bg-zinc-700/[0.15] text-zinc-200 px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-500 focus:border-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-400/10 sm:text-sm"
+		/>
+
+		<button
+			class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-700 font-semibold text-zinc-100 hover:bg-zinc-600 active:bg-zinc-700 active:text-zinc-100/70 ml-4 flex-none"
+			type="submit">Subscribe</button
+		>
+	</div>
+</form>
