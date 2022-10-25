@@ -2,20 +2,19 @@
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
+import SubscriptionForm from '@components/SubscriptionForm.astro';
 import Footer from '@components/Footer.astro';
 
 export interface Props {
 	content: {
 		title: string;
 		description: string;
-		pubDate?: string;
-		updatedDate?: string;
-		heroImage?: string;
+		date: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage }
+	content: { title, description, date }
 } = Astro.props;
 ---
 
@@ -28,20 +27,21 @@ const {
 		<Header />
 
 		<Container>
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{
-					updatedDate && (
-						<div>
-							Last updated on <time>{updatedDate}</time>
-						</div>
-					)
-				}
-				<hr />
+			<article class="leading-relaxed tracking-wide px-14">
+				<time datetime={date} class="block text-center text-zinc-400 text-sm mb-3">{date}</time>
+
+				<h1
+					class="flex w-full max-w-fit mx-auto text-2xl sm:text-4xl sm:leading-tight mb-6 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500 whitespace-nowrap"
+				>
+					{title}
+				</h1>
+
 				<slot />
 			</article>
+
+			<div class="max-w-lg mx-auto my-6">
+				<SubscriptionForm />
+			</div>
 		</Container>
 
 		<Footer />

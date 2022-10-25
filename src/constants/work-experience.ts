@@ -36,7 +36,7 @@ export const workExperience: WorkExperience[] = [
 		company: 'Cegmag Solutions',
 		position: 'Software Developer',
 		startDateYear: 'Feb 2017',
-		endDateYear: 'Jul 2028',
+		endDateYear: 'Jul 2018',
 		image: 'work/cegmag.jpg',
 		imageAlt: 'Cegmag Solutions company logo'
 	}

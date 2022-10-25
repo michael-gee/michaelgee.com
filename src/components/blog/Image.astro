@@ -1,0 +1,14 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+	src: string;
+	width: string;
+	height: string;
+	alt: string;
+}
+
+const { src, width, height, alt } = Astro.props;
+---
+
+<Image src={src} width={width} height={height} alt={alt} class="flex max-w-2xl mx-auto py-4" />
