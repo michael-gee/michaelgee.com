@@ -7,7 +7,6 @@ import Container from '@components/PageContainer.astro';
 import BlogCard from '@components/blog/Card.astro';
 import SubscriptionForm from '@components/SubscriptionForm.astro';
 import WorkExperience from '@components/WorkExperience.astro';
-import Footer from '@components/Footer.astro';
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 	.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
@@ -88,8 +87,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 				</div>
 			</div>
 		</Container>
-
-		<Footer />
 
 		<style>
 			.vertical-text-scroll {
