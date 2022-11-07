@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon';
+
+import { tech } from '@constants/tech';
+import type { Tech } from '@constants/tech';
+---
+
+<section class="rounded-2xl border border-zinc-700/40 p-6 mt-4">
+	<h2 class="flex items-center text-sm font-semibold text-zinc-100">
+		<Icon pack="mdi" name="code" class="w-6 h-6 text-zinc-500" />
+		<span class="ml-3">Tech</span>
+	</h2>
+
+	<ol class="flex flex-wrap justify-center mt-4">
+		{
+			tech.map((t: Tech) => {
+				return (
+					<li class="w-10 flex flex-col justify-start items-center mx-6 my-2 text-center">
+						<Icon
+							pack={t.iconPack}
+							name={t.iconName}
+							class="w-8 h-8"
+							style={{ color: t.iconColor }}
+						/>
+						<span class="mt-1 text-xs">{t.name}</span>
+					</li>
+				);
+			})
+		}
+	</ol>
+</section>

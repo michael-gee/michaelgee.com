@@ -6,6 +6,7 @@ import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 import BlogCard from '@components/blog/Card.astro';
 import SubscriptionForm from '@components/SubscriptionForm.astro';
+import Tech from '@components/Tech.astro';
 import WorkExperience from '@components/WorkExperience.astro';
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}'))
@@ -79,10 +80,12 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 							/>
 						))
 					}
+
+					<SubscriptionForm />
 				</section>
 
-				<div class="max-w-md mx-auto py-4">
-					<SubscriptionForm />
+				<div class="max-w-md mx-auto">
+					<Tech />
 					<WorkExperience />
 				</div>
 			</div>
