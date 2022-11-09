@@ -22,7 +22,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<Header />
 
 		<Container>
-			<section class="flex flex-wrap justify-between py-4">
+			<section class="flex flex-wrap justify-between">
 				{
 					posts.map((post) => (
 						<BlogCard
@@ -30,6 +30,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 							title={post.frontmatter.title}
 							date={post.frontmatter.date}
 							description={post.frontmatter.description}
+							styles="md:w-[calc(50%-32px)] mx-4"
 						/>
 					))
 				}

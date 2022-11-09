@@ -11,4 +11,10 @@ export interface Props {
 const { src, width, height, alt } = Astro.props;
 ---
 
-<Image src={src} width={width} height={height} alt={alt} class="flex max-w-2xl mx-auto py-6" />
+<Image
+	src={src}
+	width={width}
+	height={height}
+	alt={alt}
+	class="flex w-2xl max-w-full mx-auto py-6"
+/>

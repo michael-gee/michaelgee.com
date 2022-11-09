@@ -2,6 +2,7 @@
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
+import { Icon } from 'astro-icon';
 ---
 
 <!DOCTYPE html>
@@ -14,7 +15,10 @@ import Container from '@components/PageContainer.astro';
 		<Header />
 
 		<Container>
-			<h2>Portfolio</h2>
+			<h2 class="flex items-center justify-center py-8">
+				<Icon pack="ic" name="round-construction" class="w-8 h-8 mr-2" />
+				<span class="text-xl">Under Construction</span>
+			</h2>
 		</Container>
 	</body>
 </html>
