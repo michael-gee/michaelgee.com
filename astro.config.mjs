@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
+import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
@@ -14,6 +15,7 @@ export default defineConfig({
 			serviceEntryPoint: '@astrojs/image/sharp'
 		}),
 		mdx(),
+		partytown(),
 		sitemap(),
 		tailwind()
 	]
