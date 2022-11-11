@@ -1,5 +1,5 @@
 ---
-import MenuButton from './MenuButton.astro';
+import MenuButton from './MenuButton.tsx';
 import { Icon } from 'astro-icon';
 ---
 
@@ -38,7 +38,9 @@ import { Icon } from 'astro-icon';
 					<Icon pack="mdi" name="twitter" class="w-6 h-6 mx-2" />
 				</a>
 
-				<MenuButton client:visible />
+				<MenuButton url={Astro.url} client:visible>
+					<Icon pack="mdi" name="menu" class="w-7 h-7 mx-2 mt-2" />
+				</MenuButton>
 			</div>
 		</nav>
 	</div>
