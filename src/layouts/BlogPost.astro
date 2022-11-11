@@ -8,12 +8,12 @@ export interface Props {
 	content: {
 		title: string;
 		description: string;
-		date: string;
+		pubDate: string;
 	};
 }
 
 const {
-	content: { title, description, date }
+	content: { title, description, pubDate }
 } = Astro.props;
 ---
 
@@ -27,7 +27,9 @@ const {
 
 		<Container>
 			<article class="leading-relaxed tracking-wide px-4 pt-6">
-				<time datetime={date} class="block text-center text-zinc-400 text-sm mb-3">{date}</time>
+				<time datetime={pubDate} class="block text-center text-zinc-400 text-sm mb-3"
+					>{pubDate}
+				</time>
 
 				<h1
 					class="flex w-full max-w-fit mx-auto text-2xl text-center sm:text-4xl sm:leading-tight mb-6 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500"
