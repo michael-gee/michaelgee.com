@@ -1,10 +1,10 @@
 import rss from '@astrojs/rss';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 export const get = () =>
 	rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
+		title: "Michael Gee's Blog",
+		description:
+			"Michael Gee's personal blog sharing technical expertise and cool things he has learned along the way.",
 		site: import.meta.env.SITE,
-		items: import.meta.glob('./blog/**/*.md')
+		items: import.meta.glob('./blog/**/*.mdx')
 	});

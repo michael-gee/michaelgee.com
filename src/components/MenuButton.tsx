@@ -5,9 +5,9 @@ export default function MenuButton({ url, children }) {
 	const { pathname } = url;
 
 	return (
-		<Menu as="div" className="relative inline-block text-left">
+		<Menu as="div" className="relative md:hidden">
 			<div>
-				<Menu.Button className="text-zinc-300 rounded-full cursor-pointer hover:text-white md:hidden">
+				<Menu.Button className="text-zinc-300 rounded-full cursor-pointer hover:text-white">
 					{children}
 				</Menu.Button>
 			</div>

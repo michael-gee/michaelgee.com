@@ -6,6 +6,7 @@ import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 import BlogCard from '@components/blog/Card.astro';
 import SubscriptionForm from '@components/SubscriptionForm.astro';
+// import Featured from '@components/Featured.astro';
 import Tech from '@components/Tech.astro';
 import WorkExperience from '@components/WorkExperience.astro';
 
@@ -82,16 +83,16 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 							/>
 						))
 					}
+
+					<SubscriptionForm />
 				</section>
 
 				<div class="w-full md:max-w-md">
+					<!-- @@@ Re-enable this component after 3rd blog post is written and published! -->
+					<!-- <Featured /> -->
 					<Tech />
 					<WorkExperience />
 				</div>
-			</div>
-
-			<div class="mx-0 md:mx-16">
-				<SubscriptionForm />
 			</div>
 		</Container>
 
