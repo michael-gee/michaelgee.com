@@ -12,9 +12,9 @@ const { href, title, date, description, styles } = Astro.props;
 
 <a
 	href={href}
-	class={`w-full my-4 p-6 rounded-2xl border border-zinc-700/40 cursor-pointer hover:bg-zinc-800 ${styles}`}
+	class={`w-full bg-zinc-800/50 my-4 p-6 rounded-2xl border border-zinc-700/40 cursor-pointer hover:bg-zinc-800 ${styles}`}
 >
-	<article class="flex flex-col items-start">
+	<article class="h-full flex flex-col items-start">
 		<time
 			class="relative z-10 order-first mb-3 pl-3.5 flex items-center text-sm font-medium text-zinc-500"
 		>
@@ -25,7 +25,8 @@ const { href, title, date, description, styles } = Astro.props;
 		</time>
 		<h3 class="text-base font-semibold tracking-tight text-zinc-100">{title}</h3>
 		<p class="mt-2 text-sm text-zinc-400">{description}</p>
-		<span class="mt-4 flex items-center text-sm font-medium text-sky-400">Read article &#8608;</span
+		<span class="mt-auto pt-4 flex items-center text-sm font-medium text-sky-400"
+			>Read article &#8608;</span
 		>
 	</article>
 </a>
