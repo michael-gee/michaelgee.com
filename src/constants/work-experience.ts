@@ -1,9 +1,14 @@
+import goFanLogo from '@assets/work/gofan.png';
+import inxLogo from '@assets/work/inx.jpg';
+import coreviewLogo from '@assets/work/coreview.jpg';
+import cegmagLogo from '@assets/work/cegmag.jpg';
+
 export type WorkExperience = {
 	company: string;
 	position: string;
 	startDateYear: string;
 	endDateYear: string;
-	image: string;
+	image: ImageMetadata;
 	imageAlt: string;
 };
 
@@ -13,7 +18,7 @@ export const workExperience: WorkExperience[] = [
 		position: 'Senior Frontend Software Engineer',
 		startDateYear: 'Sep 2021',
 		endDateYear: 'Present',
-		image: 'work/gofan.png',
+		image: goFanLogo,
 		imageAlt: 'GoFan company logo'
 	},
 	{
@@ -21,7 +26,7 @@ export const workExperience: WorkExperience[] = [
 		position: 'Frontend Software Engineer',
 		startDateYear: 'Feb 2021',
 		endDateYear: 'Sep 2021',
-		image: 'work/inx.jpg',
+		image: inxLogo,
 		imageAlt: 'Inxeption company logo'
 	},
 	{
@@ -29,7 +34,7 @@ export const workExperience: WorkExperience[] = [
 		position: 'Software Development Engineer',
 		startDateYear: 'Jul 2018',
 		endDateYear: 'Feb 2021',
-		image: 'work/coreview.jpg',
+		image: coreviewLogo,
 		imageAlt: 'CoreView company logo'
 	},
 	{
@@ -37,7 +42,7 @@ export const workExperience: WorkExperience[] = [
 		position: 'Software Developer',
 		startDateYear: 'Feb 2017',
 		endDateYear: 'Jul 2018',
-		image: 'work/cegmag.jpg',
+		image: cegmagLogo,
 		imageAlt: 'Cegmag Solutions company logo'
 	}
 ];
