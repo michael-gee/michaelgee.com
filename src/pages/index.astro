@@ -1,0 +1,125 @@
+---
+import { Image } from '@astrojs/image/components';
+
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Container from '@components/PageContainer.astro';
+import BlogCard from '@components/blog/Card.astro';
+import SubscriptionForm from '@components/SubscriptionForm.astro';
+// import Featured from '@components/Featured.astro';
+import Tech from '@components/Tech.astro';
+import WorkExperience from '@components/WorkExperience.astro';
+
+const posts = (await Astro.glob('./blog/*.{md,mdx}'))
+	.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+	.splice(0, 3);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Michael Gee"
+			description="Michael Gee's personal website that consists of his professional & personal interests, projects, and findings primarily focused on software development."
+		/>
+	</head>
+
+	<body class="w-full bg-black text-white">
+		<Header />
+
+		<Container>
+			<section
+				class="flex flex-col justify-center align-center max-full pt-5 px-4 md:flex-row md:pt-8 md:pb-4"
+			>
+				<div class="mr-0 md:mr-8">
+					<h1 class="text-2xl font-bold text-zinc-100 md:text-4xl">
+						<span class="h-10 mr-1 float-left">I'm a software</span>
+						<span class="relative h-10 float-left overflow-hidden">
+							<span
+								class="relative top-0 left-0 inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500 whitespace-nowrap vertical-text-scroll"
+							>
+								<div class="h-10">engineer</div>
+								<div class="h-10">enthusiast</div>
+								<div class="h-10">blogger</div>
+								<div class="h-10">consultant</div>
+								<div class="h-10">memer</div>
+							</span>
+						</span>
+					</h1>
+
+					<p class="max-w-2xl py-2 text-base clear-both text-zinc-600 dark:text-zinc-400">
+						...passionate about turning ideas into applications. I'm currently working as a senior
+						frontend software engineer at <a
+							href="https://get.gofan.co/"
+							target="_blank"
+							rel="noopenner noreferrer"
+							class="text-sky-400 font-semibold">GoFan</a
+						> leading UI/UX/DX initiatives for both administrative and customer facing applications.
+						In my spare time I enjoy spending time with my family, playing or watching sports, (sometimes)
+						playing video games, and working on side projects.
+					</p>
+
+					<a href="/about" class="text-sky-400 font-semibold">Read more &#8608;</a>
+				</div>
+
+				<Image
+					src="mgee.jpg"
+					width="200px"
+					height="200px"
+					alt="Profile image of Michael Gee"
+					class="hidden rounded-full md:block"
+				/>
+			</section>
+
+			<div class="w-full flex flex-col justify-center py-4 md:flex-row">
+				<section class="w-full flex flex-col items-center md:max-w-md md:mr-10">
+					{
+						posts.map((post) => (
+							<BlogCard
+								href={post.frontmatter.href}
+								title={post.frontmatter.title}
+								date={post.frontmatter.date}
+								description={post.frontmatter.description}
+							/>
+						))
+					}
+
+					<SubscriptionForm />
+				</section>
+
+				<div class="w-full md:max-w-md">
+					<!-- @@@ Re-enable this component after 3rd blog post is written and published! -->
+					<!-- <Featured /> -->
+					<Tech />
+					<WorkExperience />
+				</div>
+			</div>
+		</Container>
+
+		<style>
+			.vertical-text-scroll {
+				animation: verticalScroll 16s;
+				animation-iteration-count: infinite;
+				animation-delay: 3s;
+			}
+
+			@keyframes verticalScroll {
+				0% {
+					top: 2px;
+				}
+				20% {
+					top: -40px;
+				}
+				40% {
+					top: -80px;
+				}
+				60% {
+					top: -120px;
+				}
+				80% {
+					top: -160px;
+				}
+			}
+		</style>
+	</body>
+</html>

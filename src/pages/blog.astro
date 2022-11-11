@@ -1,0 +1,40 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import BlogCard from '@components/blog/Card.astro';
+import Header from '@components/Header.astro';
+import Container from '@components/PageContainer.astro';
+
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Michael Gee's Blog"
+			description="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+		/>
+	</head>
+
+	<body class="w-full bg-black text-white">
+		<Header />
+
+		<Container>
+			<section class="flex flex-wrap justify-between">
+				{
+					posts.map((post) => (
+						<BlogCard
+							href={post.frontmatter.href}
+							title={post.frontmatter.title}
+							date={post.frontmatter.date}
+							description={post.frontmatter.description}
+							styles="md:w-[calc(50%-32px)] mx-4"
+						/>
+					))
+				}
+			</section>
+		</Container>
+	</body>
+</html>

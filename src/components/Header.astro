@@ -1,0 +1,47 @@
+---
+import MenuButton from './MenuButton.tsx';
+import { Icon } from 'astro-icon';
+---
+
+<header class="fixed w-full z-50 font-semibold">
+	<div
+		class="max-w-6xl flex items-center justify-between mx-auto py-2 px-4 border-x-2 bg-zinc-900 border-zinc-700/40 md:px-7"
+	>
+		<a href="/" class="flex items-center hover:text-red-600">
+			<Icon pack="mdi" name="leaf-maple" class="w-8 h-8 mr-3 text-red-600" />
+			<h2 class="text-2xl">Michael Gee</h2>
+		</a>
+
+		<nav class="flex items-center py-3">
+			<div class="hidden pr-2 border-r-2 border-zinc-700 md:block">
+				<a href="/about" class="text-zinc-300 mx-2 hover:text-sky-400">About</a>
+				<a href="/blog" class="text-zinc-300 mx-2 hover:text-sky-400">Blog</a>
+				<a href="/portfolio" class="text-zinc-300 mx-2 hover:text-sky-400">Portfolio</a>
+			</div>
+
+			<div class="flex items-center ml-2">
+				<a
+					href="https://github.com/michael-gee"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+				>
+					<Icon pack="mdi" name="github" class="w-6 h-6 mx-2" />
+				</a>
+
+				<a
+					href="https://twitter.com/michaelgee_"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+				>
+					<Icon pack="mdi" name="twitter" class="w-6 h-6 mx-2" />
+				</a>
+
+				<MenuButton url={Astro.url} client:visible>
+					<Icon pack="mdi" name="menu" class="w-7 h-7 mx-2 mt-2" />
+				</MenuButton>
+			</div>
+		</nav>
+	</div>
+</header>

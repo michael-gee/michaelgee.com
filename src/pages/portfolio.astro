@@ -1,0 +1,24 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Container from '@components/PageContainer.astro';
+import { Icon } from 'astro-icon';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title="Michael Gee's Portfolio" description="" />
+	</head>
+
+	<body class="w-full bg-black text-white">
+		<Header />
+
+		<Container>
+			<h2 class="flex items-center justify-center py-8">
+				<Icon pack="ic" name="round-construction" class="w-8 h-8 mr-2" />
+				<span class="text-xl">Under Construction</span>
+			</h2>
+		</Container>
+	</body>
+</html>

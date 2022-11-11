@@ -1,0 +1,95 @@
+---
+layout: '../../layouts/BlogPost.astro'
+title: 'Quick Tips & Resources To Improve Your Github Profile'
+description: 'After Github introduced user profile customization, it was fun and interesting to dive right in and find cool new ways of showcasing personal & code related information through markdown.'
+date: 'August 26, 2020'
+href: '/blog/quick-tips-and-resources-to-improve-your-github-profile'
+---
+
+import { Code } from 'astro/components';
+import Heading from '@components/blog/Heading.astro';
+import Image from '@components/blog/Image.astro';
+import Paragraph from '@components/blog/Paragraph.astro';
+import Link from '@components/blog/Link.astro';
+
+export const components = { h2: Heading, p: Paragraph, a: Link };
+
+Unless you have been living under a rock for the past few months, you are probably aware that Github has a cool new feature where you can create a custom markdown README intro for your Github profile page.
+
+I finally got around to creating my initial implementation and wanted to share some quick tips and resources I came across while doing it.
+
+## Getting Started?
+
+For getting started or finding new ideas and inspiration, you can't go wrong with an awesome-\* repository!
+
+Repository: <Link href="https://github.com/abhisheknaiidu/awesome-github-profile-readme" isExternal><span>awesome-github-profile-readme</span></Link>
+
+I highly recommend going through various examples and gathering inspiration from multiple sources.
+
+To see the markdown implementation of a profile click into the README.md file and click the "Raw" version shown in the image below:
+
+<Image
+	src="https://dev-to-uploads.s3.amazonaws.com/i/5ll4avqzhkfj4ipxtrdz.png"
+	width="750px"
+	height="296px"
+	alt="Github raw text editing example"
+/>
+
+Once you have an idea of the direction you want to go you can get started!
+
+## Emojis
+
+You will quickly notice that emojis are all over the place in almost all the examples you will find.
+
+Most emojis are supported in markdown and you can find a full reference list:
+
+<Link href="https://github.com/ikatyang/emoji-cheat-sheet" isExternal>
+	<span>Markdown Emojies Cheat Sheet</span>
+</Link>
+
+## Displaying Your Dev.to Blog Posts
+
+Luckily there is already a great blog post that goes over this:
+
+<Link
+	href="https://dev.to/gautamkrishnar/show-your-latest-dev-to-posts-automatically-in-your-github-profile-readme-3nk8"
+	isExternal
+>
+	<span>Show your latest dev.to posts automatically on your GitHub profile readme</span>
+</Link>
+
+## Video Resources
+
+<Link href="https://www.youtube.com/watch?v=ECuqb5Tv9qI" isExternal>
+	<span>Next Level GitHub Profile README</span>
+</Link>
+
+<br />
+<br />
+
+<Link href="https://www.youtube.com/watch?v=n6d4KHSKqGk" isExternal>
+	<span>UPDATE: Next Level GitHub Profile README</span>
+</Link>
+
+These videos go over various features that can be added to your README including displaying blog posts, YouTube videos, Github stats, icons, badges, currently playing Spotify songs, and more!
+
+## Bonus
+
+You might notice that a lot of examples will have no space in between the emoji and the text:
+
+<Image
+	src="https://dev-to-uploads.s3.amazonaws.com/i/msze24ujavr75opxnqnt.png"
+	width="470px"
+	height="150px"
+	alt="Github profile using emojis example"
+/>
+
+To manually inject spaces in between the two you can add `&nbsp;` spaces:
+
+<Code
+	lang="ts"
+	code={`
+	- :computer: &nbsp;&nbsp; I'm a full-stack software developer.
+	- :briefcase: &nbsp;&nbsp; Currently working on...
+	`}
+/>

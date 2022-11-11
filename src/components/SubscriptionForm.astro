@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<form
+	action="https://app.convertkit.com/forms/1902888/subscriptions"
+	method="post"
+	data-sv-form="1902888"
+	data-uid="f4adac1697"
+	data-format="inline"
+	data-version="5"
+	data-options={`{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"${
+		import.meta.env.SUBSCRIPTION_REDIRECT_URL
+	}"},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"}}}`}
+	class="w-full rounded-2xl my-5 border border-zinc-100 p-6 dark:border-zinc-700/40"
+>
+	<h2 class="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+		<Icon pack="mdi" name="mail-outline" class="w-6 h-6 text-zinc-500" />
+		<span class="ml-3">Stay up to date</span>
+	</h2>
+
+	<p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+		Get notified when I publish something new, and unsubscribe at any time.
+	</p>
+
+	<div class="mt-6 flex">
+		<input
+			type="email"
+			name="email_address"
+			placeholder="Email address"
+			aria-label="Email address"
+			required
+			class="min-w-0 flex-auto appearance-none rounded-md border border-zinc-700 bg-zinc-700/[0.15] text-zinc-200 px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-500 focus:border-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-400/10 sm:text-sm"
+		/>
+
+		<button
+			class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-700/70 font-semibold text-zinc-100 hover:bg-zinc-600 active:bg-zinc-700 active:text-zinc-100/70 ml-4 flex-none"
+			type="submit"
+		>
+			Subscribe
+		</button>
+	</div>
+</form>
+
+<script type="text/partytown" src="https://f.convertkit.com/ckjs/ck.5.js"></script>

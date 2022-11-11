@@ -1,0 +1,68 @@
+---
+import { Image } from '@astrojs/image/components';
+import { Icon } from 'astro-icon';
+
+import { workExperience } from '@constants/work-experience';
+import type { WorkExperience } from '@constants/work-experience';
+
+const currentYear = `${new Date().getFullYear()}`;
+---
+
+<section class="w-full rounded-2xl border border-zinc-700/40 p-6 mt-8">
+	<h2 class="flex items-center text-sm font-semibold text-zinc-100">
+		<Icon pack="mdi" name="briefcase-variant-outline" class="w-6 h-6 text-zinc-500" />
+		<span class="ml-3">Work</span>
+	</h2>
+
+	<ol class="mt-6 space-y-4">
+		{
+			workExperience.map((item: WorkExperience) => {
+				return (
+					<li class="flex gap-4">
+						<Image
+							src={item.image}
+							width="40px"
+							height="40px"
+							alt={item.imageAlt}
+							class="w-10 h-10 rounded-full"
+						/>
+
+						<dl class="flex flex-auto flex-wrap gap-x-2">
+							<dt class="sr-only">Company</dt>
+							<dd class="w-full flex-none text-sm font-medium text-zinc-100">{item.company}</dd>
+
+							<dt class="sr-only">Role</dt>
+							<dd class="text-xs text-zinc-400">{item.position}</dd>
+
+							<dt class="sr-only">Date</dt>
+							<dd
+								class="ml-auto text-xs text-zinc-500"
+								aria-label={`${item.startDateYear} until ${item.endDateYear}`}
+							>
+								<time datetime={item.startDateYear}>{item.startDateYear}</time>
+								<span aria-hidden="true">—</span>
+								<time
+									datetime={
+										item.endDateYear.toLowerCase() === 'present' ? currentYear : item.endDateYear
+									}
+								>
+									{item.endDateYear}
+								</time>
+							</dd>
+						</dl>
+					</li>
+				);
+			})
+		}
+	</ol>
+
+	<a
+		class="w-full group inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 mt-6 text-sm outline-offset-2 transition active:transition-none font-medium bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-50 active:bg-zinc-800/50 active:text-zinc-50/70"
+		href="https://www.linkedin.com/in/michael-gee/"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<Icon pack="mdi" name="linkedin" class="w-5 h-5" />
+		<span>LinkedIn</span>
+	</a>
+</section>

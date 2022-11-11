@@ -1,64 +1,10 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2017"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/constants/*": [
-        "src/constants/*"
-      ],
-      "@/db/*": [
-        "src/db/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/services/*": [
-        "src/services/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ]
-    },
-    "incremental": true
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.json"
-  ]
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"paths": {
+			"@components/*": ["./components/*"],
+			"@constants/*": ["./constants/*"]
+		}
+	}
 }
