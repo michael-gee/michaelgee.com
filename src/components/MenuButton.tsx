@@ -6,11 +6,9 @@ export default function MenuButton({ url, children }) {
 
 	return (
 		<Menu as="div" className="relative md:hidden">
-			<div>
-				<Menu.Button className="text-zinc-300 rounded-full cursor-pointer hover:text-white">
-					{children}
-				</Menu.Button>
-			</div>
+			<Menu.Button className="flex items-center h-6 ml-6 text-zinc-300 rounded-full cursor-pointer hover:text-white">
+				{children}
+			</Menu.Button>
 
 			<Transition
 				as={Fragment}

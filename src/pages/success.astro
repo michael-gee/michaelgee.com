@@ -7,16 +7,23 @@ import Container from '@components/PageContainer.astro';
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title="Michael Gee's Portfolio" description="" />
+		<BaseHead title="Michael Gee" description="" />
 	</head>
 
 	<body class="w-full bg-black text-white">
 		<Header />
 
 		<Container>
-			<h2 class="flex items-center justify-center py-8">
-				<span class="text-xl">Success!</span>
-			</h2>
+			<article class="flex flex-col items-center justify-center py-8">
+				<h2 class="text-xl">Success!</h2>
+
+				<p class="pt-4">Thank you for subscribing and joining me on my journey 🎉</p>
+				<p class="py-2">Please check your email inbox for a subsciption confirmation.</p>
+
+				<a href="/blog" class="pt-4 flex items-center text-md font-medium text-sky-400">
+					&#8606; Return to blog
+				</a>
+			</article>
 		</Container>
 	</body>
 </html>

@@ -37,6 +37,12 @@ export const tech: Tech[] = [
 		iconColor: '#fff'
 	},
 	{
+		name: 'Astro',
+		iconName: 'file-type-astro',
+		iconPack: 'vscode-icons',
+		iconColor: ''
+	},
+	{
 		name: 'Tailwind',
 		iconName: 'tailwind',
 		iconPack: 'mdi',
@@ -47,12 +53,6 @@ export const tech: Tech[] = [
 		iconName: 'sass',
 		iconPack: 'mdi',
 		iconColor: '#CE649A'
-	},
-	{
-		name: 'CSS',
-		iconName: 'language-css3',
-		iconPack: 'mdi',
-		iconColor: '#264DE4'
 	},
 	{
 		name: 'AWS',
