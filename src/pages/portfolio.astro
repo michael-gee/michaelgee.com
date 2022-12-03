@@ -2,7 +2,7 @@
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
-import { Icon } from 'astro-icon';
+import ProjectCard from '@components/ProjectCard.astro';
 ---
 
 <!DOCTYPE html>
@@ -15,10 +15,64 @@ import { Icon } from 'astro-icon';
 		<Header />
 
 		<Container>
-			<h2 class="flex items-center justify-center py-8">
-				<Icon pack="ic" name="round-construction" class="w-8 h-8 mr-2" />
-				<span class="text-xl">Under Construction</span>
+			<h2
+				class="flex w-full max-w-fit mx-auto text-2xl sm:text-3xl sm:leading-tight my-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500"
+			>
+				Personal
 			</h2>
+
+			<div class="flex flex-wrap justify-evenly">
+				<ProjectCard
+					title="Under Construction"
+					image="https://cdn.pixabay.com/photo/2015/09/07/08/22/under-928246_1280.jpg"
+					imageAlt="GoFan HQ Mobile Event Management and Digital Ticketing for Schools"
+				/>
+			</div>
+
+			<h2
+				class="flex w-full max-w-fit mx-auto text-2xl sm:text-3xl sm:leading-tight my-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500"
+			>
+				Production
+			</h2>
+
+			<div class="flex flex-wrap justify-evenly">
+				<ProjectCard
+					title="GoFan HQ"
+					image="https://get.gofan.co/hubfs/GoFan%20HQ_Blog%20Featured%20Image%20-%20Event%20Summary%20Report%20-%202022-01-1.jpg"
+					imageAlt="GoFan HQ Mobile Event Management and Digital Ticketing for Schools"
+					icons={[
+						{
+							href: 'https://get.gofan.co/product-blog',
+							iconPack: 'mdi',
+							iconName: 'link-variant'
+						}
+					]}
+				/>
+				<ProjectCard
+					title="GoFan Mobile HQ"
+					image="https://get.gofan.co/hubfs/2022%20-%20Blog/08_August%202022%20Blogs/Mobile%20HQ%20Newsroom.png"
+					imageAlt="GoFan HQ Mobile Event Management and Digital Ticketing for Schools"
+					icons={[
+						{
+							href: 'https://get.gofan.co/blog/mobile-event-management-platform-gofan-hq-proves-to-be-a-game-changer',
+							iconPack: 'mdi',
+							iconName: 'link-variant'
+						}
+					]}
+				/>
+				<ProjectCard
+					title="CoreView Workflow"
+					image="https://assets.website-files.com/612933c2d902f2ac80205a6f/637bc55367c4496946f29f61_Offboarding%20workflow.png"
+					imageAlt="CoreView workflow visual example"
+					icons={[
+						{
+							href: 'https://www.coreview.com/user-management',
+							iconPack: 'mdi',
+							iconName: 'link-variant'
+						}
+					]}
+				/>
+			</div>
 		</Container>
 	</body>
 </html>
