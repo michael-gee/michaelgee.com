@@ -9,6 +9,10 @@ import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'server',
+	adapter: vercel({
+		analytics: true
+	}),
 	site: 'https://michaelgee.com',
 	integrations: [
 		react(),
@@ -19,8 +23,5 @@ export default defineConfig({
 		partytown(),
 		sitemap(),
 		tailwind()
-	],
-	adapter: vercel({
-		analytics: true
-	})
+	]
 });
