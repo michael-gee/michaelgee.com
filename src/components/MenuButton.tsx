@@ -1,13 +1,15 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 
-export default function MenuButton({ url, children }) {
+export default function MenuButton({ url, children }: { url: URL; children: React.ReactNode }) {
 	const { pathname } = url;
 
 	return (
 		<Menu as="div" className="relative md:hidden">
-			<Menu.Button className="flex items-center h-6 ml-6 text-zinc-300 rounded-full cursor-pointer hover:text-white">
-				{children}
+			<Menu.Button className="flex items-center h-6 mx-2 text-zinc-300 rounded-full cursor-pointer hover:text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+					<path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+				</svg>
 			</Menu.Button>
 
 			<Transition
@@ -61,6 +63,8 @@ export default function MenuButton({ url, children }) {
 								Portfolio
 							</a>
 						</Menu.Item>
+
+						{children}
 					</div>
 				</Menu.Items>
 			</Transition>

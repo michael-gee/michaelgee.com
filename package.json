@@ -1,7 +1,7 @@
 {
 	"name": "michaelgee.com",
 	"type": "module",
-	"version": "2022.07.18",
+	"version": "2022.07.31",
 	"private": true,
 	"scripts": {
 		"astro": "astro",
@@ -14,7 +14,6 @@
 	"dependencies": {
 		"@astrojs/image": "^0.17.2",
 		"@astrojs/mdx": "^0.19.7",
-		"@astrojs/partytown": "^1.2.3",
 		"@astrojs/react": "^2.2.1",
 		"@astrojs/rss": "^2.4.3",
 		"@astrojs/sitemap": "^1.4.0",

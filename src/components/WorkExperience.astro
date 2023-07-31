@@ -18,39 +18,48 @@ const currentYear = `${new Date().getFullYear()}`;
 		{
 			workExperience.map((item: WorkExperience) => {
 				return (
-					<li class="flex gap-4">
-						<Image
-							src={item.image}
-							width={40}
-							height={40}
-							alt={item.imageAlt}
-							class="w-10 h-10 rounded-full"
-						/>
+					<>
+						<li class="flex gap-4">
+							<Image
+								src={item.image}
+								width={40}
+								height={40}
+								alt={item.imageAlt}
+								class="w-10 h-10 rounded-full"
+							/>
 
-						<dl class="flex flex-auto flex-wrap gap-x-2">
-							<dt class="sr-only">Company</dt>
-							<dd class="w-full flex-none text-sm font-medium text-zinc-100">{item.company}</dd>
+							<dl class="flex flex-auto flex-wrap gap-x-2">
+								<dt class="sr-only">Company</dt>
+								<dd class="w-full flex-none text-sm font-medium text-zinc-100">{item.company}</dd>
 
-							<dt class="sr-only">Role</dt>
-							<dd class="text-xs text-zinc-400">{item.position}</dd>
+								<dt class="sr-only">Role</dt>
+								<dd class="text-xs text-zinc-400">{item.position}</dd>
 
-							<dt class="sr-only">Date</dt>
-							<dd
-								class="ml-auto text-xs text-zinc-500"
-								aria-label={`${item.startDateYear} until ${item.endDateYear}`}
-							>
-								<time datetime={item.startDateYear}>{item.startDateYear}</time>
-								<span aria-hidden="true">—</span>
-								<time
-									datetime={
-										item.endDateYear.toLowerCase() === 'present' ? currentYear : item.endDateYear
-									}
+								<dt class="sr-only">Date</dt>
+								<dd
+									class="ml-auto text-xs text-zinc-500"
+									aria-label={`${item.startDateYear} until ${item.endDateYear}`}
 								>
-									{item.endDateYear}
-								</time>
-							</dd>
-						</dl>
-					</li>
+									<time datetime={item.startDateYear}>{item.startDateYear}</time>
+									<span aria-hidden="true">—</span>
+									<time
+										datetime={
+											item.endDateYear.toLowerCase() === 'present' ? currentYear : item.endDateYear
+										}
+									>
+										{item.endDateYear}
+									</time>
+								</dd>
+							</dl>
+						</li>
+
+						{item.company === 'GoFan' && (
+							<div class="flex items-center ml-14">
+								<Icon pack="mdi" name="trophy" class="w-5 h-5 text-[#FFD700]" />
+								<h2 class="text-sm font-medium text-zinc-100 ml-3">2021 - 2022 Engineering MVP</h2>
+							</div>
+						)}
+					</>
 				);
 			})
 		}

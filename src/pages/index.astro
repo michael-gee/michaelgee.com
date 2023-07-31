@@ -5,7 +5,7 @@ import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 import BlogCard from '@components/blog/Card.astro';
-import SubscriptionForm from '@components/SubscriptionForm.astro';
+import Engage from '@components/Engage.astro';
 // import Featured from '@components/Featured.astro';
 import Tech from '@components/Tech.astro';
 import WorkExperience from '@components/WorkExperience.astro';
@@ -49,7 +49,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 						</span>
 					</h1>
 
-					<p class="max-w-2xl py-2 text-base clear-both text-zinc-600 dark:text-zinc-400">
+					<p class="max-w-2xl py-2 text-base clear-both text-zinc-400">
 						...passionate about turning ideas into applications. I'm currently working as a senior
 						frontend software engineer at <a
 							href="https://get.gofan.co/"
@@ -57,8 +57,8 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 							rel="noopenner noreferrer"
 							class="text-sky-400 font-semibold">GoFan</a
 						> leading UI/UX/DX initiatives for both administrative and customer facing applications.
-						In my spare time I enjoy spending time with my family, playing or watching sports, (sometimes)
-						playing video games, and working on side projects.
+						In my spare time I enjoy spending time with my family, playing or watching sports,
+						(sometimes) playing video games, and working on side projects.
 					</p>
 
 					<a href="/about" class="text-sky-400 font-semibold">Read more &#8608;</a>
@@ -86,7 +86,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 						))
 					}
 
-					<SubscriptionForm />
+					<Engage />
 				</section>
 
 				<div class="w-full md:max-w-md">
