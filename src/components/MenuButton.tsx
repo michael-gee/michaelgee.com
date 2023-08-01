@@ -33,6 +33,7 @@ export default function MenuButton({ url, children }: { url: URL; children: Reac
 								Home
 							</a>
 						</Menu.Item>
+
 						<Menu.Item>
 							<a
 								href="/about"
@@ -43,6 +44,7 @@ export default function MenuButton({ url, children }: { url: URL; children: Reac
 								About
 							</a>
 						</Menu.Item>
+
 						<Menu.Item>
 							<a
 								href="/blog"
@@ -53,6 +55,7 @@ export default function MenuButton({ url, children }: { url: URL; children: Reac
 								Blog
 							</a>
 						</Menu.Item>
+
 						<Menu.Item>
 							<a
 								href="/portfolio"
