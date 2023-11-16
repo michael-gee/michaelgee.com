@@ -3,46 +3,46 @@ import MenuButton from './MenuButton.tsx';
 import { Icon } from 'astro-icon';
 ---
 
-<header class="fixed w-full z-50 font-semibold">
+<header class="fixed z-50 w-full font-semibold">
 	<div
-		class="max-w-6xl border-x-2 border-zinc-700/40 bg-zinc-900 mx-auto flex items-center justify-between py-4 px-4 md:px-12"
+		class="mx-auto flex max-w-6xl items-center justify-between border-x-2 border-zinc-700/40 bg-zinc-900 px-4 py-4 md:px-12"
 	>
 		<a href="/" class="flex items-center hover:text-red-600">
-			<Icon pack="mdi" name="leaf-maple" class="w-8 h-8 mr-3 text-red-600" />
+			<Icon pack="mdi" name="leaf-maple" class="mr-3 h-8 w-8 text-red-600" />
 			<h2 class="text-2xl">Michael Gee</h2>
 		</a>
 
 		<nav class="hidden items-center py-3 md:flex">
-			<div class="pr-2 border-r-2 border-zinc-700 px-3">
-				<a href="/about" class="text-zinc-300 mx-2 hover:text-sky-400">About</a>
-				<a href="/blog" class="text-zinc-300 mx-2 hover:text-sky-400">Blog</a>
-				<a href="/portfolio" class="text-zinc-300 mx-2 hover:text-sky-400">Portfolio</a>
+			<div class="border-r-2 border-zinc-700 px-3 pr-2">
+				<a href="/about" class="mx-2 text-zinc-300 hover:text-sky-400">About</a>
+				<a href="/blog" class="mx-2 text-zinc-300 hover:text-sky-400">Blog</a>
+				<a href="/portfolio" class="mx-2 text-zinc-300 hover:text-sky-400">Portfolio</a>
 			</div>
 
-			<div class="flex items-center ml-2">
+			<div class="ml-2 flex items-center">
 				<a
 					href="https://www.reddit.com/user/michaelg33"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-zinc-300 rounded-full cursor-pointer mr-2 ml-3 hover:text-white"
+					class="ml-3 mr-2 cursor-pointer rounded-full text-zinc-300 hover:text-white"
 				>
-					<Icon pack="dashicons" name="reddit" class="w-6 h-6" />
+					<Icon pack="dashicons" name="reddit" class="h-6 w-6" />
 				</a>
 
 				<a
 					href="https://github.com/michael-gee"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-zinc-300 rounded-full cursor-pointer mr-5 ml-3 hover:text-white"
+					class="ml-3 mr-5 cursor-pointer rounded-full text-zinc-300 hover:text-white"
 				>
-					<Icon pack="mdi" name="github" class="w-6 h-6" />
+					<Icon pack="mdi" name="github" class="h-6 w-6" />
 				</a>
 
 				<a
 					href="https://x.com/michaelgee_"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+					class="cursor-pointer rounded-full text-zinc-300 hover:text-white"
 				>
 					<svg
 						aria-label="X formerly known as Twitter"
@@ -60,30 +60,30 @@ import { Icon } from 'astro-icon';
 		</nav>
 
 		<MenuButton url={Astro.url} client:visible>
-			<div class="flex items-center justify-evenly mt-2 py-3 border-t border-zinc-700/40">
+			<div class="mt-2 flex items-center justify-evenly border-t border-zinc-700/40 py-3">
 				<a
 					href="https://www.reddit.com/user/michaelg33"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+					class="cursor-pointer rounded-full text-zinc-300 hover:text-white"
 				>
-					<Icon pack="dashicons" name="reddit" class="w-6 h-6" />
+					<Icon pack="dashicons" name="reddit" class="h-6 w-6" />
 				</a>
 
 				<a
 					href="https://github.com/michael-gee"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+					class="cursor-pointer rounded-full text-zinc-300 hover:text-white"
 				>
-					<Icon pack="mdi" name="github" class="w-6 h-6" />
+					<Icon pack="mdi" name="github" class="h-6 w-6" />
 				</a>
 
 				<a
 					href="https://x.com/michaelgee_"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-zinc-300 rounded-full cursor-pointer hover:text-white"
+					class="cursor-pointer rounded-full text-zinc-300 hover:text-white"
 				>
 					<svg
 						aria-label="X formerly known as Twitter"

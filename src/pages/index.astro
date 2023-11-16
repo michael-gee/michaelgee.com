@@ -31,14 +31,14 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 
 		<Container>
 			<section
-				class="flex flex-col justify-center align-center max-full px-4 md:flex-row md:pt-8 md:pb-4"
+				class="align-center max-full flex flex-col justify-center px-4 md:flex-row md:pb-4 md:pt-8"
 			>
 				<div class="mr-0 md:mr-8">
 					<h1 class="text-2xl font-bold text-zinc-100 md:text-4xl">
-						<span class="h-10 mr-1 float-left">I'm a software</span>
-						<span class="relative h-10 float-left overflow-hidden">
+						<span class="float-left mr-1 h-10">I'm a software</span>
+						<span class="relative float-left h-10 overflow-hidden">
 							<span
-								class="relative top-0 left-0 inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500 whitespace-nowrap vertical-text-scroll"
+								class="vertical-text-scroll relative left-0 top-0 inline-block whitespace-nowrap bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent"
 							>
 								<div class="h-10">engineer</div>
 								<div class="h-10">enthusiast</div>
@@ -49,19 +49,19 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 						</span>
 					</h1>
 
-					<p class="max-w-2xl py-2 text-base clear-both text-zinc-400">
+					<p class="clear-both max-w-2xl py-2 text-base text-zinc-400">
 						...passionate about turning ideas into applications. I'm currently working as a senior
 						frontend software engineer at <a
 							href="https://get.gofan.co/"
 							target="_blank"
 							rel="noopenner noreferrer"
-							class="text-sky-400 font-semibold">GoFan</a
+							class="font-semibold text-sky-400">GoFan</a
 						> leading UI/UX/DX initiatives for both administrative and customer facing applications.
 						In my spare time I enjoy spending time with my family, playing or watching sports,
 						(sometimes) playing video games, and working on side projects.
 					</p>
 
-					<a href="/about" class="text-sky-400 font-semibold">Read more &#8608;</a>
+					<a href="/about" class="font-semibold text-sky-400">Read more &#8608;</a>
 				</div>
 
 				<Image
@@ -73,8 +73,8 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 				/>
 			</section>
 
-			<div class="w-full flex flex-col justify-center py-4 md:flex-row">
-				<section class="w-full flex flex-col items-center md:max-w-md md:mr-10">
+			<div class="flex w-full flex-col justify-center py-4 md:flex-row">
+				<section class="flex w-full flex-col items-center md:mr-10 md:max-w-md">
 					{
 						posts.map((post) => (
 							<BlogCard
