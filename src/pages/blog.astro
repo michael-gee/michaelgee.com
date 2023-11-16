@@ -9,7 +9,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 );
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead
@@ -22,7 +22,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<Header />
 
 		<Container>
-			<section class="max-w-5xl mx-auto flex flex-wrap justify-between md:px-8">
+			<section class="max-w-6xl mx-auto flex flex-wrap justify-between md:px-8">
 				{
 					posts.map((post) => (
 						<BlogCard
