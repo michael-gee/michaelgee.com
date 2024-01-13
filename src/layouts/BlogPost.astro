@@ -26,21 +26,19 @@ const {
 		<Header />
 
 		<Container>
-			<article class="px-4 pt-6 leading-relaxed tracking-wide">
-				<time datetime={pubDate} class="mb-3 block text-center text-sm text-zinc-400"
-					>{pubDate}
-				</time>
-
-				<h1
-					class="mx-auto mb-6 flex w-full max-w-fit bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-center text-2xl font-semibold text-transparent sm:text-4xl sm:leading-tight"
-				>
+			<article class="mx-auto w-[750px] px-4 pt-6 leading-relaxed tracking-wide">
+				<h1 class="mb-2 text-center text-2xl font-semibold sm:text-4xl sm:leading-tight">
 					{title}
 				</h1>
+
+				<time datetime={pubDate} class="mb-6 block text-center text-sm text-zinc-400"
+					>{pubDate}</time
+				>
 
 				<slot />
 			</article>
 
-			<div class="mx-auto my-10 max-w-lg">
+			<div class="mx-auto my-10 max-w-[750px]">
 				<Engage />
 			</div>
 		</Container>

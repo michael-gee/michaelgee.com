@@ -4,15 +4,14 @@ export interface Props {
 	title: string;
 	date: string;
 	description: string;
-	styles?: string;
 }
 
-const { href, title, date, description, styles } = Astro.props;
+const { href, title, date, description } = Astro.props;
 ---
 
 <a
 	href={href}
-	class={`w-full bg-zinc-800/50 my-4 p-6 rounded-2xl border border-zinc-700/40 cursor-pointer hover:bg-zinc-800 ${styles}`}
+	class={`w-full bg-zinc-800/50 my-2 p-4 md:px-6 rounded-2xl border border-zinc-700/40 cursor-pointer hover:bg-zinc-800`}
 >
 	<article class="flex h-full flex-col items-start">
 		<time
