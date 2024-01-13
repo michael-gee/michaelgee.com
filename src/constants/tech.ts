@@ -1,81 +1,68 @@
 export interface Tech {
 	name: string;
 	iconName: string;
-	iconPack: string;
 	iconColor: string;
 }
 
 export const tech: Tech[] = [
 	{
 		name: 'React',
-		iconName: 'react',
-		iconPack: 'mdi',
+		iconName: 'mdi:react',
 		iconColor: '#129eca'
 	},
 	{
 		name: 'React Native',
-		iconName: 'react',
-		iconPack: 'mdi',
+		iconName: 'mdi:react',
 		iconColor: '#129eca'
 	},
 	{
 		name: 'TypeScript',
-		iconName: 'language-typescript',
-		iconPack: 'mdi',
+		iconName: 'mdi:language-typescript',
 		iconColor: '#3078C6'
 	},
 	{
 		name: 'JavaScript',
-		iconName: 'language-javascript',
-		iconPack: 'mdi',
+		iconName: 'mdi:language-javascript',
 		iconColor: '#FCDC00'
 	},
 	{
 		name: 'Next.js',
 		iconName: 'nextjs',
-		iconPack: 'file-icons',
 		iconColor: '#fff'
 	},
 	{
 		name: 'Astro',
-		iconName: 'file-type-astro',
-		iconPack: 'vscode-icons',
+		iconName: 'astro',
 		iconColor: ''
 	},
 	{
 		name: 'Tailwind',
-		iconName: 'tailwind',
-		iconPack: 'mdi',
+		iconName: 'mdi:tailwind',
 		iconColor: '#38BDF8'
 	},
 	{
 		name: 'SCSS',
-		iconName: 'sass',
-		iconPack: 'mdi',
+		iconName: 'mdi:sass',
 		iconColor: '#CE649A'
 	},
 	{
 		name: 'AWS',
-		iconName: 'aws',
-		iconPack: 'mdi',
+		iconName: 'mdi:aws',
 		iconColor: '#EC902E'
 	},
 	{
 		name: 'PostgreSQL',
 		iconName: 'postgresql',
-		iconPack: 'simple-icons',
 		iconColor: '#336791'
 	},
 	{
 		name: 'Node.js',
-		iconName: 'nodejs',
-		iconPack: 'mdi',
+		iconName: 'mdi:nodejs',
 		iconColor: '#67A063'
 	},
 	{
 		name: 'Git',
-		iconName: 'git',
-		iconPack: 'mdi',
+		iconName: 'mdi:git',
 		iconColor: '#F64D27'
 	}
 ];

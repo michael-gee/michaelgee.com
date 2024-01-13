@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 import { tech } from '@constants/tech';
 import type { Tech } from '@constants/tech';
@@ -7,7 +7,7 @@ import type { Tech } from '@constants/tech';
 
 <section class="mt-4 w-full rounded-2xl border border-zinc-700/40 p-6">
 	<h2 class="flex items-center text-sm font-semibold text-zinc-100">
-		<Icon pack="mdi" name="code" class="h-6 w-6 text-zinc-500" />
+		<Icon name="mdi:code" class="h-6 w-6 text-zinc-500" />
 		<span class="ml-3">Tech</span>
 	</h2>
 
@@ -16,12 +16,7 @@ import type { Tech } from '@constants/tech';
 			tech.map((t: Tech) => {
 				return (
 					<li class="mx-6 my-2 flex w-10 flex-col items-center justify-start text-center">
-						<Icon
-							pack={t.iconPack}
-							name={t.iconName}
-							class="h-8 w-8"
-							style={{ color: t.iconColor }}
-						/>
+						<Icon name={t.iconName} class="h-8 w-8" style={{ color: t.iconColor }} />
 						<span class="mt-1 text-xs">{t.name}</span>
 					</li>
 				);

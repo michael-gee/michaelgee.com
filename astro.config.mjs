@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import vercel from '@astrojs/vercel/static';
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +19,7 @@ export default defineConfig({
 		devImageService: 'sharp'
 	}),
 	site: 'https://michaelgee.com',
-	integrations: [react(), mdx(), sitemap(), tailwind()],
+	integrations: [react(), mdx(), sitemap(), tailwind(), icon({ sprite: true })],
 	image: {
 		remotePatterns: [{ protocol: 'https' }],
 		domains: ['get.gofan.co', 'cdn.pixabay.com', 'assets.website-files.com']

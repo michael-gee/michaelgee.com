@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 import { workExperience } from '@constants/work-experience';
 import type { WorkExperience } from '@constants/work-experience';
@@ -10,7 +10,7 @@ const currentYear = `${new Date().getFullYear()}`;
 
 <section class="mt-8 w-full rounded-2xl border border-zinc-700/40 p-6">
 	<h2 class="flex items-center text-sm font-semibold text-zinc-100">
-		<Icon pack="mdi" name="briefcase-variant-outline" class="h-6 w-6 text-zinc-500" />
+		<Icon name="mdi:briefcase-variant-outline" class="h-6 w-6 text-zinc-500" />
 		<span class="ml-3">Work</span>
 	</h2>
 
@@ -55,7 +55,7 @@ const currentYear = `${new Date().getFullYear()}`;
 
 						{item.company === 'GoFan' && (
 							<div class="ml-14 flex items-center">
-								<Icon pack="mdi" name="trophy" class="h-5 w-5 text-[#FFD700]" />
+								<Icon name="mdi:trophy" class="h-5 w-5 text-[#FFD700]" />
 								<h2 class="ml-3 text-sm font-medium text-zinc-100">2021 - 2022 Engineering MVP</h2>
 							</div>
 						)}
@@ -71,7 +71,7 @@ const currentYear = `${new Date().getFullYear()}`;
 		target="_blank"
 		rel="noopener noreferrer"
 	>
-		<Icon pack="mdi" name="linkedin" class="h-5 w-5" />
+		<Icon name="mdi:linkedin" class="h-5 w-5" />
 		<span>LinkedIn</span>
 	</a>
 </section>

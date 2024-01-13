@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 export interface Props {
 	title: string;
@@ -10,7 +10,6 @@ export interface Props {
 }
 
 type ProjectLink = {
-	iconPack: string;
 	iconName: string;
 	href: string;
 };
@@ -37,7 +36,7 @@ const { title, image, imageAlt, icons } = Astro.props;
 							index > 0 ? 'ml-4' : ''
 						}`}
 					>
-						<Icon pack={icon.iconPack} name={icon.iconName} class="h-6 w-6" />
+						<Icon name={icon.iconName} class="h-6 w-6" />
 					</a>
 				);
 			})
