@@ -34,7 +34,7 @@ export default function MenuButton({ url, children }: { url: URL; children: Reac
 							</a>
 						</Menu.Item>
 
-						<Menu.Item>
+						{/* <Menu.Item>
 							<a
 								href="/about"
 								className={`${
@@ -43,7 +43,7 @@ export default function MenuButton({ url, children }: { url: URL; children: Reac
 							>
 								About
 							</a>
-						</Menu.Item>
+						</Menu.Item> */}
 
 						<Menu.Item>
 							<a

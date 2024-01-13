@@ -1,7 +1,7 @@
 {
 	"name": "michaelgee.com",
 	"type": "module",
-	"version": "2024.01.12",
+	"version": "2024.01.13",
 	"private": true,
 	"scripts": {
 		"astro": "astro",
