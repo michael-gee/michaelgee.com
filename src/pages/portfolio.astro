@@ -3,27 +3,78 @@ import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 import ProjectCard from '@components/ProjectCard.astro';
+
+import { Icon } from 'astro-icon/components';
+import communitilsImage from '../assets/portfolio/communitils.png';
+import coreflowImage from '../assets/portfolio/coreflow.png';
+import zillaImage from '../assets/portfolio/zilla.png';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title="Michael Gee's Portfolio" description="" />
+		<BaseHead
+			title="Michael Gee's Portfolio"
+			description="List of all current and past projects worked on by Michael Gee. These project include both career and personal related projects."
+		/>
 	</head>
 
 	<body class="w-full bg-black text-white">
 		<Header />
 
 		<Container>
+			<div class="mb-2 mr-4 flex items-center justify-center md:justify-end">
+				<span class="mr-4 flex items-center">
+					<Icon name="mdi:star" class="mr-3 h-6 w-6 text-yellow-400" /> Featured
+				</span>
+				<span class="mr-4 flex items-center">
+					<Icon name="mdi:computer" class="mr-3 h-6 w-6 text-green-600" />Active
+				</span>
+				<span class="mr-4 flex items-center">
+					<Icon name="mdi:archive" class="mr-3 h-6 w-6 text-gray-500" />Archive
+				</span>
+			</div>
+
 			<div class="flex w-full flex-col items-center justify-start md:flex-row md:flex-wrap">
+				<ProjectCard
+					title="communitils"
+					image={communitilsImage}
+					imageAlt="communitils - An open-source TypeScript utility package focused on breaking into open-source technology while inviting others to do the same"
+					icons={[
+						{
+							iconName: 'mdi:star',
+							iconClass: 'text-yellow-400',
+							title: 'Featured'
+						},
+						{
+							iconName: 'mdi:computer',
+							iconClass: 'text-green-600',
+							title: 'Active'
+						},
+						{
+							href: 'https://github.com/michael-gee/communitils',
+							iconName: 'mdi:github'
+						},
+						{
+							href: 'https://communitils.com',
+							iconName: 'mdi:external-link'
+						}
+					]}
+				/>
+
 				<ProjectCard
 					title="GoFan - HQ"
 					image="https://get.gofan.co/hubfs/GoFan%20HQ_Blog%20Featured%20Image%20-%20Event%20Summary%20Report%20-%202022-01-1.jpg"
 					imageAlt="GoFan HQ - Event Administration Built for Schools"
 					icons={[
 						{
+							iconName: 'mdi:computer',
+							iconClass: 'text-green-600',
+							title: 'Active'
+						},
+						{
 							href: 'https://get.gofan.co/product-blog/gofan-hq-event-administration-built-for-schools',
-							iconName: 'mdi:link-variant'
+							iconName: 'mdi:external-link'
 						}
 					]}
 				/>
@@ -34,28 +85,49 @@ import ProjectCard from '@components/ProjectCard.astro';
 					imageAlt="GoFan HQ Mobile - Event Management and Digital Ticketing for Schools"
 					icons={[
 						{
+							iconName: 'mdi:computer',
+							iconClass: 'text-green-600',
+							title: 'Active'
+						},
+						{
 							href: 'https://get.gofan.co/blog/mobile-event-management-platform-gofan-hq-proves-to-be-a-game-changer',
-							iconName: 'mdi:link-variant'
+							iconName: 'mdi:external-link'
 						}
 					]}
 				/>
 
 				<ProjectCard
 					title="CoreView - Workflow"
-					image="https://assets.website-files.com/612933c2d902f2ac80205a6f/637bc55367c4496946f29f61_Offboarding%20workflow.png"
+					image={coreflowImage}
 					imageAlt="CoreView workflow visual example"
 					icons={[
 						{
+							iconName: 'mdi:archive',
+							iconClass: 'text-gray-500',
+							title: 'Archive'
+						},
+						{
 							href: 'https://www.coreview.com/user-management',
-							iconName: 'mdi:link-variant'
+							iconName: 'mdi:external-link'
 						}
 					]}
 				/>
 
 				<ProjectCard
-					title="More coming soon..."
-					image="https://cdn.pixabay.com/photo/2015/09/07/08/22/under-928246_1280.jpg"
-					imageAlt="GoFan HQ Mobile Event Management and Digital Ticketing for Schools"
+					title="Zilla - Marketing Site"
+					image={zillaImage}
+					imageAlt="CoreView workflow visual example"
+					icons={[
+						{
+							iconName: 'mdi:archive',
+							iconClass: 'text-gray-500',
+							title: 'Archive'
+						},
+						{
+							href: 'https://zilla-site.vercel.app/',
+							iconName: 'mdi:external-link'
+						}
+					]}
 				/>
 			</div>
 		</Container>
