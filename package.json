@@ -1,7 +1,7 @@
 {
 	"name": "michaelgee.com",
 	"type": "module",
-	"version": "2024.01.17",
+	"version": "2024.02.03",
 	"private": true,
 	"scripts": {
 		"astro": "astro",
@@ -28,11 +28,14 @@
 	},
 	"devDependencies": {
 		"@iconify-json/mdi": "^1.1.64",
-		"@iconify-json/ri": "^1.1.18",
 		"@types/react": "^18.2.47",
 		"@types/react-dom": "^18.2.18",
 		"prettier": "^3.2.1",
 		"prettier-plugin-astro": "^0.12.3",
 		"prettier-plugin-tailwindcss": "^0.5.11"
+	},
+	"volta": {
+		"node": "18.16.1",
+		"npm": "9.5.1"
 	}
 }
