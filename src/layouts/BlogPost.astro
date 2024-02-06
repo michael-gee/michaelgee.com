@@ -9,17 +9,18 @@ export interface Props {
 		title: string;
 		description: string;
 		pubDate: string;
+		image: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate }
+	content: { title, description, pubDate, image }
 } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={image} />
 	</head>
 
 	<body class="w-full bg-black text-white">
