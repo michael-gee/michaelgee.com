@@ -1,16 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
+import ProjectInfo from './ProjectInfo.tsx';
 
 export interface Props {
 	title: string;
 	image: any; // ! @@@@@ fix - string | ImageMetadata; import type { ImageMetadata } from 'astro';
 	imageAlt: string;
-	icons?: ProjectLink[];
+	icons?: Project[];
 }
 
-type ProjectLink = {
+export type Project = {
 	iconName: string;
+	description?: string;
 	href?: string;
 	iconClass?: string;
 	title?: string;
@@ -35,21 +37,32 @@ const { title, image, imageAlt, icons } = Astro.props;
 
 	<div class="mb-6 flex w-full items-center justify-evenly">
 		{
-			icons?.map((icon, index) => {
-				return icon.href ? (
-					<a
-						href={icon.href}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="cursor-pointer rounded-full text-zinc-300 hover:text-white"
-					>
-						<Icon
-							name={icon.iconName}
-							class={`h-6 w-6${icon.iconClass ? ` ${icon.iconClass}` : ''}`}
-							title={icon.title}
-						/>
-					</a>
-				) : (
+			icons?.map((icon) => {
+				if (icon.href)
+					return (
+						<a
+							href={icon.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="cursor-pointer rounded-full text-white hover:text-zinc-300"
+						>
+							<p class="hidden">Click the link to navigate to {icon.href}</p>
+							<Icon
+								name={icon.iconName}
+								class={`h-6 w-6${icon.iconClass ? ` ${icon.iconClass}` : ''}`}
+								title={icon.title}
+							/>
+						</a>
+					);
+
+				if (icon.description)
+					return (
+						<ProjectInfo description={icon.description} client:visible>
+							<Icon name={icon.iconName} class="h-6 w-6 text-white hover:text-zinc-300" />
+						</ProjectInfo>
+					);
+
+				return (
 					<Icon
 						name={icon.iconName}
 						class={`h-6 w-6${icon.iconClass ? ` ${icon.iconClass}` : ''}`}

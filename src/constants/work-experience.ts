@@ -8,7 +8,7 @@ export type WorkExperience = {
 	position: string;
 	startDateYear: string;
 	endDateYear: string;
-	image: ImageMetadata;
+	image: ImageData;
 	imageAlt: string;
 };
 
