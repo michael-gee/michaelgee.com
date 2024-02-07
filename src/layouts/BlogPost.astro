@@ -5,43 +5,43 @@ import Container from '@components/PageContainer.astro';
 import Engage from '@components/Engage.astro';
 
 export interface Props {
-	content: {
-		title: string;
-		description: string;
-		pubDate: string;
-		image: string;
-	};
+  content: {
+    title: string;
+    description: string;
+    pubDate: string;
+    image: string;
+  };
 }
 
 const {
-	content: { title, description, pubDate, image }
+  content: { title, description, pubDate, image }
 } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} image={image} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
 
-	<body class="w-full bg-black text-white">
-		<Header />
+  <body class="w-full bg-black text-white">
+    <Header />
 
-		<Container>
-			<article class="mx-auto max-w-[750px] px-4 pt-6 leading-relaxed tracking-wide">
-				<h1 class="mb-2 text-center text-2xl font-semibold sm:text-4xl sm:leading-tight">
-					{title}
-				</h1>
+    <Container>
+      <article class="mx-auto max-w-[750px] px-4 pt-6 leading-relaxed tracking-wide">
+        <h1 class="mb-2 text-center text-2xl font-semibold sm:text-4xl sm:leading-tight">
+          {title}
+        </h1>
 
-				<time datetime={pubDate} class="mb-6 block text-center text-sm text-zinc-400"
-					>{pubDate}</time
-				>
+        <time datetime={pubDate} class="mb-6 block text-center text-sm text-zinc-400"
+          >{pubDate}</time
+        >
 
-				<slot />
-			</article>
+        <slot />
+      </article>
 
-			<div class="mx-auto my-10 max-w-[750px]">
-				<Engage />
-			</div>
-		</Container>
-	</body>
+      <div class="mx-auto my-10 max-w-[750px]">
+        <Engage />
+      </div>
+    </Container>
+  </body>
 </html>

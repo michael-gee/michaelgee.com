@@ -5,35 +5,35 @@ import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 );
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead
-			title="Michael Gee's Blog"
-			description="Michael Gee's personal blog sharing past experiences and cool things he has learned."
-		/>
-	</head>
+  <head>
+    <BaseHead
+      title="Michael Gee's Blog"
+      description="Michael Gee's personal blog sharing past experiences and cool things he has learned."
+    />
+  </head>
 
-	<body class="w-full bg-black text-white">
-		<Header />
+  <body class="w-full bg-black text-white">
+    <Header />
 
-		<Container>
-			<section class="flex max-w-full flex-col">
-				{
-					posts.map((post) => (
-						<BlogCard
-							href={post.frontmatter.href}
-							title={post.frontmatter.title}
-							date={post.frontmatter.pubDate}
-							description={post.frontmatter.description}
-						/>
-					))
-				}
-			</section>
-		</Container>
-	</body>
+    <Container>
+      <section class="flex max-w-full flex-col">
+        {
+          posts.map((post) => (
+            <BlogCard
+              href={post.frontmatter.href}
+              title={post.frontmatter.title}
+              date={post.frontmatter.pubDate}
+              description={post.frontmatter.description}
+            />
+          ))
+        }
+      </section>
+    </Container>
+  </body>
 </html>

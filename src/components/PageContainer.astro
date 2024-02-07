@@ -1,15 +1,15 @@
 ---
 export interface Props {
-	customStyles?: string;
+  customStyles?: string;
 }
 
 const { customStyles } = Astro.props;
 ---
 
 <main
-	class={`max-w-5xl mx-auto px-4 pt-20 py-4 border-x-2 bg-zinc-900 border-zinc-700/40 min-h-screen md:px-10 ${
-		customStyles ? customStyles : ''
-	}`}
+  class={`max-w-5xl mx-auto px-4 pt-20 py-4 border-x-2 bg-zinc-900 border-zinc-700/40 min-h-screen md:px-10 ${
+    customStyles ? customStyles : ''
+  }`}
 >
-	<slot />
+  <slot />
 </main>

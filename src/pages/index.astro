@@ -13,111 +13,111 @@ import WorkExperience from '@components/WorkExperience.astro';
 import mgeeImage from '@assets/mgee.jpg';
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}'))
-	.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
-	.splice(0, 3);
+  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+  .splice(0, 3);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead
-			title="Michael Gee"
-			description="Michael Gee's personal website that consists of his professional & personal interests, projects, and findings primarily focused on software development."
-		/>
-	</head>
+  <head>
+    <BaseHead
+      title="Michael Gee"
+      description="Michael Gee's personal website that consists of his professional & personal interests, projects, and findings primarily focused on software development."
+    />
+  </head>
 
-	<body class="w-full bg-black text-white">
-		<Header />
+  <body class="w-full bg-black text-white">
+    <Header />
 
-		<Container>
-			<section
-				class="align-center max-full flex flex-col justify-center px-4 md:flex-row md:pb-4 md:pt-8"
-			>
-				<div class="mr-0 md:mr-8">
-					<h1 class="text-2xl font-bold text-zinc-100 md:text-4xl">
-						<span class="float-left mb-2 mr-1 h-10">I'm a software</span>
-						<span class="relative float-left h-10 overflow-hidden">
-							<span
-								class="vertical-text-scroll relative left-0 top-0 inline-block whitespace-nowrap bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent"
-							>
-								<div class="h-10">engineer</div>
-								<div class="h-10">enthusiast</div>
-								<div class="h-10">blogger</div>
-								<div class="h-10">consultant</div>
-								<div class="h-10">student</div>
-							</span>
-						</span>
-					</h1>
+    <Container>
+      <section
+        class="align-center max-full flex flex-col justify-center px-4 md:flex-row md:pb-4 md:pt-8"
+      >
+        <div class="mr-0 md:mr-8">
+          <h1 class="text-2xl font-bold text-zinc-100 md:text-4xl">
+            <span class="float-left mb-2 mr-1 h-10">I'm a software</span>
+            <span class="relative float-left h-10 overflow-hidden">
+              <span
+                class="vertical-text-scroll relative left-0 top-0 inline-block whitespace-nowrap bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent"
+              >
+                <div class="h-10">engineer</div>
+                <div class="h-10">enthusiast</div>
+                <div class="h-10">blogger</div>
+                <div class="h-10">consultant</div>
+                <div class="h-10">student</div>
+              </span>
+            </span>
+          </h1>
 
-					<p class="clear-both max-w-2xl py-2 text-base text-zinc-400">
-						...passionate about turning ideas into applications. I'm currently working as a senior
-						frontend software engineer & tech lead prioritizing UI/UX/DX (User interface/User &
-						Developer Experience) initiatives for both administrative and customer facing
-						applications. In my spare time I enjoy spending time with my family, playing or watching
-						sports, (sometimes) playing video games, and working on side projects.
-					</p>
+          <p class="clear-both max-w-2xl py-2 text-base text-zinc-400">
+            ...passionate about turning ideas into applications. I'm currently working as a senior
+            frontend software engineer & tech lead prioritizing UI/UX/DX (User interface/User &
+            Developer Experience) initiatives for both administrative and customer facing
+            applications. In my spare time I enjoy spending time with my family, playing or watching
+            sports, (sometimes) playing video games, and working on side projects.
+          </p>
 
-					<!-- <a href="/about" class="font-semibold text-sky-400">Read more &#8608;</a> -->
-				</div>
+          <!-- <a href="/about" class="font-semibold text-sky-400">Read more &#8608;</a> -->
+        </div>
 
-				<Image
-					src={mgeeImage}
-					width={200}
-					height={200}
-					alt="Michael Gee"
-					class="hidden rounded-full md:block"
-				/>
-			</section>
+        <Image
+          src={mgeeImage}
+          width={200}
+          height={200}
+          alt="Michael Gee"
+          class="hidden rounded-full md:block"
+        />
+      </section>
 
-			<div class="flex w-full flex-col justify-center py-4 md:flex-row">
-				<section class="flex w-full flex-col items-center md:mr-10 md:max-w-md">
-					{
-						posts.map((post) => (
-							<BlogCard
-								href={post.frontmatter.href}
-								title={post.frontmatter.title}
-								date={post.frontmatter.pubDate}
-								description={post.frontmatter.description}
-							/>
-						))
-					}
+      <div class="flex w-full flex-col justify-center py-4 md:flex-row">
+        <section class="flex w-full flex-col items-center md:mr-10 md:max-w-md">
+          {
+            posts.map((post) => (
+              <BlogCard
+                href={post.frontmatter.href}
+                title={post.frontmatter.title}
+                date={post.frontmatter.pubDate}
+                description={post.frontmatter.description}
+              />
+            ))
+          }
 
-					<Engage />
-				</section>
+          <Engage />
+        </section>
 
-				<div class="w-full md:max-w-md">
-					<!-- @@@ Re-enable this component after 3rd blog post is written and published! -->
-					<!-- <Featured /> -->
-					<Tech />
-					<WorkExperience />
-				</div>
-			</div>
-		</Container>
+        <div class="w-full md:max-w-md">
+          <!-- @@@ Re-enable this component after 3rd blog post is written and published! -->
+          <!-- <Featured /> -->
+          <Tech />
+          <WorkExperience />
+        </div>
+      </div>
+    </Container>
 
-		<style>
-			.vertical-text-scroll {
-				animation: verticalScroll 16s;
-				animation-iteration-count: infinite;
-				animation-delay: 3s;
-			}
+    <style>
+      .vertical-text-scroll {
+        animation: verticalScroll 16s;
+        animation-iteration-count: infinite;
+        animation-delay: 3s;
+      }
 
-			@keyframes verticalScroll {
-				0% {
-					top: 2px;
-				}
-				20% {
-					top: -40px;
-				}
-				40% {
-					top: -80px;
-				}
-				60% {
-					top: -120px;
-				}
-				80% {
-					top: -160px;
-				}
-			}
-		</style>
-	</body>
+      @keyframes verticalScroll {
+        0% {
+          top: 2px;
+        }
+        20% {
+          top: -40px;
+        }
+        40% {
+          top: -80px;
+        }
+        60% {
+          top: -120px;
+        }
+        80% {
+          top: -160px;
+        }
+      }
+    </style>
+  </body>
 </html>

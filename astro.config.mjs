@@ -8,20 +8,20 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-	adapter: vercel({
-		speedInsights: {
-			enabled: true
-		},
-		webAnalytics: {
-			enabled: true
-		},
-		imageService: true,
-		devImageService: 'sharp'
-	}),
-	site: 'https://michaelgee.com',
-	integrations: [react(), mdx(), sitemap(), tailwind(), icon({ sprite: true })],
-	image: {
-		remotePatterns: [{ protocol: 'https' }],
-		domains: ['get.gofan.co', 'cdn.pixabay.com', 'assets.website-files.com']
-	}
+  adapter: vercel({
+    speedInsights: {
+      enabled: true
+    },
+    webAnalytics: {
+      enabled: true
+    },
+    imageService: true,
+    devImageService: 'sharp'
+  }),
+  site: 'https://michaelgee.com',
+  integrations: [react(), mdx(), sitemap(), tailwind(), icon({ sprite: true })],
+  image: {
+    remotePatterns: [{ protocol: 'https' }],
+    domains: ['get.gofan.co', 'cdn.pixabay.com', 'assets.website-files.com']
+  }
 });
