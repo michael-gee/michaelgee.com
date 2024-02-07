@@ -1,4 +1,4 @@
-import goFanLogo from '@assets/work/gofan.png';
+import playOnLogo from '@assets/work/playon_sports_logo.jpeg';
 import inxLogo from '@assets/work/inx.jpg';
 import coreviewLogo from '@assets/work/coreview.jpg';
 import cegmagLogo from '@assets/work/cegmag.jpg';
@@ -14,12 +14,12 @@ export type WorkExperience = {
 
 export const workExperience: WorkExperience[] = [
 	{
-		company: 'GoFan',
+		company: 'PlayOn! Sports',
 		position: 'Senior Frontend Software Engineer',
 		startDateYear: 'Sep 2021',
 		endDateYear: 'Present',
-		image: goFanLogo,
-		imageAlt: 'GoFan company logo'
+		image: playOnLogo,
+		imageAlt: 'PlayOn! Sports company logo'
 	},
 	{
 		company: 'Inxeption',

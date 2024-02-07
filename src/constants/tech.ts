@@ -21,9 +21,9 @@ export const tech: Tech[] = [
 		iconColor: '#3078C6'
 	},
 	{
-		name: 'JavaScript',
-		iconName: 'mdi:language-javascript',
-		iconColor: '#FCDC00'
+		name: 'Node.js',
+		iconName: 'mdi:nodejs',
+		iconColor: '#67A063'
 	},
 	{
 		name: 'Next.js',
@@ -56,9 +56,9 @@ export const tech: Tech[] = [
 		iconColor: '#336791'
 	},
 	{
-		name: 'Node.js',
-		iconName: 'mdi:nodejs',
-		iconColor: '#67A063'
+		name: 'Go',
+		iconName: 'golang',
+		iconColor: ''
 	},
 	{
 		name: 'Git',
