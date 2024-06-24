@@ -4,7 +4,7 @@ export interface Tech {
   iconColor: string;
 }
 
-export const tech: Tech[] = [
+export const TECH_STACK_ICONS: Tech[] = [
   {
     name: 'React',
     iconName: 'mdi:react',

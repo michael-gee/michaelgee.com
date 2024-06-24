@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import { tech } from '@constants/tech';
+import { TECH_STACK_ICONS } from '@constants/tech';
 import type { Tech } from '@constants/tech';
 ---
 
@@ -13,7 +13,7 @@ import type { Tech } from '@constants/tech';
 
   <ol class="mt-3 flex flex-wrap justify-center">
     {
-      tech.map((t: Tech) => {
+      TECH_STACK_ICONS.map((t: Tech) => {
         return (
           <li class="mx-6 my-2 flex w-10 flex-col items-center justify-start text-center">
             <Icon name={t.iconName} class="h-8 w-8" style={{ color: t.iconColor }} />

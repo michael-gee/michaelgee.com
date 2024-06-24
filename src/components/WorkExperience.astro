@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 
-import { workExperience } from '@constants/work-experience';
+import { WORK_EXPERIENCE } from '@constants/work-experience';
 import type { WorkExperience } from '@constants/work-experience';
 
 const currentYear = `${new Date().getFullYear()}`;
@@ -16,7 +16,7 @@ const currentYear = `${new Date().getFullYear()}`;
 
   <ol class="mt-6 space-y-4">
     {
-      workExperience.map((item: WorkExperience) => {
+      WORK_EXPERIENCE.map((item: WorkExperience) => {
         return (
           <>
             <li class="flex gap-4">

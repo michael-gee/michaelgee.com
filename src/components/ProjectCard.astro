@@ -3,18 +3,20 @@ import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import ProjectInfo from './ProjectInfo.tsx';
 
+import type { ImageMetadata } from 'astro';
+
 export interface Props {
   title: string;
-  image: any; // ! @@@@@ fix - string | ImageMetadata; import type { ImageMetadata } from 'astro';
+  image: Promise<{ default: ImageMetadata }>;
   imageAlt: string;
   icons?: Project[];
 }
 
 export type Project = {
-  iconName: string;
+  name: string;
   description?: string;
   href?: string;
-  iconClass?: string;
+  className?: string;
   title?: string;
 };
 
@@ -30,7 +32,7 @@ const { title, image, imageAlt, icons } = Astro.props;
     height={200}
     alt={imageAlt}
     title={title}
-    class="mx-auto flex h-[200px] rounded-t-2xl"
+    class="mx-auto flex h-[200px] rounded-t-2xl object-contain"
   />
 
   <h3 class="my-4 text-center text-lg font-semibold tracking-tight text-zinc-100">{title}</h3>
@@ -48,8 +50,8 @@ const { title, image, imageAlt, icons } = Astro.props;
             >
               <p class="hidden">Click the link to navigate to {icon.href}</p>
               <Icon
-                name={icon.iconName}
-                class={`h-6 w-6${icon.iconClass ? ` ${icon.iconClass}` : ''}`}
+                name={icon.name}
+                class={`h-6 w-6${icon.className ? ` ${icon.className}` : ''}`}
                 title={icon.title}
               />
             </a>
@@ -58,14 +60,14 @@ const { title, image, imageAlt, icons } = Astro.props;
         if (icon.description)
           return (
             <ProjectInfo description={icon.description} client:visible>
-              <Icon name={icon.iconName} class="h-6 w-6 text-white hover:text-zinc-300" />
+              <Icon name={icon.name} class="h-6 w-6 text-white hover:text-zinc-300" />
             </ProjectInfo>
           );
 
         return (
           <Icon
-            name={icon.iconName}
-            class={`h-6 w-6${icon.iconClass ? ` ${icon.iconClass}` : ''}`}
+            name={icon.name}
+            class={`h-6 w-6${icon.className ? ` ${icon.className}` : ''}`}
             title={icon.title}
           />
         );

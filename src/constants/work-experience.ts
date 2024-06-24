@@ -1,24 +1,19 @@
-import playOnLogo from '@assets/work/playon.jpeg';
-import inxLogo from '@assets/work/inx.jpg';
-import coreviewLogo from '@assets/work/coreview.jpg';
-import cegmagLogo from '@assets/work/cegmag.jpg';
-
 export type WorkExperience = {
   company: string;
   position: string;
   startDateYear: string;
   endDateYear: string;
-  image: ImageData;
+  image: string;
   imageAlt: string;
 };
 
-export const workExperience: WorkExperience[] = [
+export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'PlayOn',
     position: 'Senior Frontend Software Engineer',
     startDateYear: 'Sep 2021',
     endDateYear: 'Present',
-    image: playOnLogo,
+    image: 'src/assets/work/playon.jpeg',
     imageAlt: 'PlayOn company logo'
   },
   {
@@ -26,7 +21,7 @@ export const workExperience: WorkExperience[] = [
     position: 'Frontend Software Engineer',
     startDateYear: 'Feb 2021',
     endDateYear: 'Sep 2021',
-    image: inxLogo,
+    image: 'src/assets/work/inx.jpg',
     imageAlt: 'Inxeption company logo'
   },
   {
@@ -34,7 +29,7 @@ export const workExperience: WorkExperience[] = [
     position: 'Software Development Engineer',
     startDateYear: 'Jul 2018',
     endDateYear: 'Feb 2021',
-    image: coreviewLogo,
+    image: 'src/assets/work/coreview.jpg',
     imageAlt: 'CoreView company logo'
   },
   {
@@ -42,7 +37,7 @@ export const workExperience: WorkExperience[] = [
     position: 'Software Developer',
     startDateYear: 'Feb 2017',
     endDateYear: 'Jul 2018',
-    image: cegmagLogo,
+    image: 'src/assets/work/cegmag.jpg',
     imageAlt: 'Cegmag Solutions company logo'
   }
 ];
