@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+  company: string;
+  position: string;
+  startDateYear: string;
+  endDateYear: string;
+  image: Promise<{ default: ImageMetadata }>;
+  imageAlt: string;
+}
+
+const { company, position, startDateYear, endDateYear, image, imageAlt } = Astro.props;
+const currentYear = `${new Date().getFullYear()}`;
+---
+
+<li class="flex gap-4">
+  <Image src={image} alt={imageAlt} width={40} height={40} class="h-10 w-10 rounded-full" />
+
+  <dl class="flex flex-auto flex-wrap gap-x-2">
+    <dt class="sr-only">Company</dt>
+    <dd class="w-full flex-none text-sm font-medium text-zinc-100">{company}</dd>
+
+    <dt class="sr-only">Role</dt>
+    <dd class="text-xs text-zinc-400">{position}</dd>
+
+    <dt class="sr-only">Date</dt>
+    <dd class="ml-auto text-xs text-zinc-500" aria-label={`${startDateYear} until ${endDateYear}`}>
+      <time datetime={startDateYear}>{startDateYear}</time>
+      <span aria-hidden="true">—</span>
+      <time datetime={endDateYear.toLowerCase() === 'present' ? currentYear : endDateYear}>
+        {endDateYear}
+      </time>
+    </dd>
+  </dl>
+</li>

@@ -3,7 +3,7 @@ export type WorkExperience = {
   position: string;
   startDateYear: string;
   endDateYear: string;
-  image: string;
+  imagePath: string;
   imageAlt: string;
 };
 
@@ -13,7 +13,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     position: 'Senior Frontend Software Engineer',
     startDateYear: 'Sep 2021',
     endDateYear: 'Present',
-    image: 'src/assets/work/playon.jpeg',
+    imagePath: '/src/assets/work/playon.jpeg',
     imageAlt: 'PlayOn company logo'
   },
   {
@@ -21,7 +21,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     position: 'Frontend Software Engineer',
     startDateYear: 'Feb 2021',
     endDateYear: 'Sep 2021',
-    image: 'src/assets/work/inx.jpg',
+    imagePath: '/src/assets/work/inx.jpg',
     imageAlt: 'Inxeption company logo'
   },
   {
@@ -29,7 +29,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     position: 'Software Development Engineer',
     startDateYear: 'Jul 2018',
     endDateYear: 'Feb 2021',
-    image: 'src/assets/work/coreview.jpg',
+    imagePath: '/src/assets/work/coreview.jpg',
     imageAlt: 'CoreView company logo'
   },
   {
@@ -37,7 +37,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     position: 'Software Developer',
     startDateYear: 'Feb 2017',
     endDateYear: 'Jul 2018',
-    image: 'src/assets/work/cegmag.jpg',
+    imagePath: '/src/assets/work/cegmag.jpg',
     imageAlt: 'Cegmag Solutions company logo'
   }
 ];

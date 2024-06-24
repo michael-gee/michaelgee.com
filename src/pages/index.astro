@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-
+import { Icon } from 'astro-icon/components';
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
@@ -9,8 +9,14 @@ import Engage from '@components/Engage.astro';
 // import Featured from '@components/Featured.astro';
 import Tech from '@components/Tech.astro';
 import WorkExperience from '@components/WorkExperience.astro';
+import WorkExperienceItem from '@components/WorkExperienceItem.astro';
 
 import mgeeImage from '@assets/mgee.jpg';
+import { WORK_EXPERIENCE } from '../constants/work-experience';
+
+const workImages = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/work/*.{jpeg,jpg,png,gif}'
+);
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}'))
   .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
@@ -88,8 +94,41 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
         <div class="w-full md:max-w-md">
           <!-- @@@ Re-enable this component after 3rd blog post is written and published! -->
           <!-- <Featured /> -->
+
           <Tech />
-          <WorkExperience />
+
+          <WorkExperience>
+            {
+              WORK_EXPERIENCE.map((item) => {
+                if (!workImages[item.imagePath])
+                  throw new Error(
+                    `"${item.imagePath}" does not exist in glob: "src/assets/work/*.{jpeg,jpg,png,gif}"`
+                  );
+
+                return (
+                  <>
+                    <WorkExperienceItem
+                      company={item.company}
+                      position={item.position}
+                      startDateYear={item.startDateYear}
+                      endDateYear={item.endDateYear}
+                      image={workImages[item.imagePath]()}
+                      imageAlt={item.imageAlt}
+                    />
+
+                    {item.company.startsWith('PlayOn') && (
+                      <div class="ml-3 flex items-center md:ml-14">
+                        <Icon name="mdi:trophy" class="h-5 w-5 text-[#FFD700]" />
+                        <h2 class="ml-3 text-sm font-medium text-zinc-100">
+                          2021 - 2022 Engineering MVP
+                        </h2>
+                      </div>
+                    )}
+                  </>
+                );
+              })
+            }
+          </WorkExperience>
         </div>
       </div>
     </Container>

@@ -1,11 +1,5 @@
 ---
-import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
-
-import { WORK_EXPERIENCE } from '@constants/work-experience';
-import type { WorkExperience } from '@constants/work-experience';
-
-const currentYear = `${new Date().getFullYear()}`;
 ---
 
 <section class="mt-8 w-full rounded-2xl border border-zinc-700/40 p-6">
@@ -15,54 +9,7 @@ const currentYear = `${new Date().getFullYear()}`;
   </h2>
 
   <ol class="mt-6 space-y-4">
-    {
-      WORK_EXPERIENCE.map((item: WorkExperience) => {
-        return (
-          <>
-            <li class="flex gap-4">
-              <Image
-                src={item.image}
-                width={40}
-                height={40}
-                alt={item.imageAlt}
-                class="h-10 w-10 rounded-full"
-              />
-
-              <dl class="flex flex-auto flex-wrap gap-x-2">
-                <dt class="sr-only">Company</dt>
-                <dd class="w-full flex-none text-sm font-medium text-zinc-100">{item.company}</dd>
-
-                <dt class="sr-only">Role</dt>
-                <dd class="text-xs text-zinc-400">{item.position}</dd>
-
-                <dt class="sr-only">Date</dt>
-                <dd
-                  class="ml-auto text-xs text-zinc-500"
-                  aria-label={`${item.startDateYear} until ${item.endDateYear}`}
-                >
-                  <time datetime={item.startDateYear}>{item.startDateYear}</time>
-                  <span aria-hidden="true">—</span>
-                  <time
-                    datetime={
-                      item.endDateYear.toLowerCase() === 'present' ? currentYear : item.endDateYear
-                    }
-                  >
-                    {item.endDateYear}
-                  </time>
-                </dd>
-              </dl>
-            </li>
-
-            {item.company.startsWith('PlayOn') && (
-              <div class="ml-3 flex items-center md:ml-14">
-                <Icon name="mdi:trophy" class="h-5 w-5 text-[#FFD700]" />
-                <h2 class="ml-3 text-sm font-medium text-zinc-100">2021 - 2022 Engineering MVP</h2>
-              </div>
-            )}
-          </>
-        );
-      })
-    }
+    <slot />
   </ol>
 
   <a
