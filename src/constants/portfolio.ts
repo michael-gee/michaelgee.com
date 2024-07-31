@@ -90,7 +90,7 @@ export const PORFOLIO_ITEMS: PortfolioItem[] = [
       },
       {
         name: 'mdi:external-link',
-        href: 'https://PlayOn.playonsports.com/overview'
+        href: 'https://playonsports.com/hq'
       }
     ]
   },

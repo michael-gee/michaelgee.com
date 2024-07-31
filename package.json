@@ -1,12 +1,14 @@
 {
   "name": "michaelgee.com",
   "type": "module",
-  "version": "2024.06.24",
+  "version": "2024.07.31",
   "private": true,
   "scripts": {
     "astro": "astro",
     "build": "astro build",
     "clean": "rm -rf .astro && rm -rf .vercel",
+    "deps:check": "npx npm-check-updates",
+    "deps:upgrade": "npx npm-check-updates -i",
     "dev": "astro dev",
     "format": "prettier --write .",
     "preview": "npm run build && astro preview",
@@ -35,7 +37,7 @@
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "volta": {
-    "node": "18.16.1",
-    "npm": "9.5.1"
+    "node": "20.16.0",
+    "npm": "10.8.1"
   }
 }
