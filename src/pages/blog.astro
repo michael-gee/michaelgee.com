@@ -4,9 +4,19 @@ import BlogCard from '@components/blog/Card.astro';
 import Header from '@components/Header.astro';
 import Container from '@components/PageContainer.astro';
 
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-);
+interface Post {
+  frontmatter: {
+    href: string;
+    title: string;
+    pubDate: string;
+    description: string;
+  };
+}
+
+const posts: Record<string, Post> = import.meta.glob('./blog/*.{md,mdx}', { eager: true });
+const sortedPosts = Object.values(posts).sort((a, b) => {
+  return new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf();
+});
 ---
 
 <!doctype html>
@@ -24,7 +34,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
     <Container>
       <section class="flex max-w-full flex-col">
         {
-          posts.map((post) => (
+          sortedPosts.map((post) => (
             <BlogCard
               href={post.frontmatter.href}
               title={post.frontmatter.title}

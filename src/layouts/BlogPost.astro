@@ -28,13 +28,13 @@ const {
 
     <Container>
       <article class="mx-auto max-w-[750px] px-4 pt-6 leading-relaxed tracking-wide">
-        <h1 class="mb-2 text-center text-2xl font-semibold sm:text-4xl sm:leading-tight">
+        <h1 class="mb-2 text-center text-2xl font-semibold italic sm:text-4xl sm:leading-tight">
           {title}
         </h1>
 
-        <time datetime={pubDate} class="mb-6 block text-center text-sm text-zinc-400"
-          >{pubDate}</time
-        >
+        <time datetime={pubDate} class="block text-center text-sm text-zinc-400">{pubDate}</time>
+
+        <hr class="my-6" />
 
         <slot />
       </article>
