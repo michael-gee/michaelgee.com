@@ -13,71 +13,15 @@ export type PortfolioItem = {
 
 export const PORFOLIO_ITEMS: PortfolioItem[] = [
   {
-    title: '@gee-ui/react',
-    imagePath: '/src/assets/portfolio/shadcn.png',
-    imageAlt: 'shadcn/ui logo',
-    icons: [
-      {
-        name: 'mdi:star',
-        className: 'text-yellow-400',
-        title: 'Featured'
-      },
-      {
-        name: 'mdi:computer',
-        className: 'text-green-600',
-        title: 'Active'
-      },
-      {
-        name: 'mdi:info',
-        description:
-          'React (TypeScript) component library which serves as a wrapper library around shadcn/ui. Unlock the same ease of use and customization for all components but with a single source of truth library.'
-      },
-      {
-        name: 'mdi:github',
-        href: 'https://github.com/michael-gee/gee-ui'
-      },
-      {
-        name: 'mdi:external-link',
-        href: 'https://www.gee-ui.com'
-      }
-    ]
-  },
-  {
-    title: 'communitils',
-    imagePath: '/src/assets/portfolio/communitils.png',
-    imageAlt:
-      'communitils - An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same',
-    icons: [
-      {
-        name: 'mdi:star',
-        className: 'text-yellow-400',
-        title: 'Featured'
-      },
-      {
-        name: 'mdi:computer',
-        className: 'text-green-600',
-        title: 'Active'
-      },
-      {
-        name: 'mdi:info',
-        description:
-          'An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same. This is my first dive into maintaining an open-source repository and I am excited to see where it goes. It is designed to be easy to use, easy to understand, easy to contribute to, and designed to be a learning tool for those who are new to open-source.'
-      },
-      {
-        name: 'mdi:github',
-        href: 'https://github.com/michael-gee/communitils'
-      },
-      {
-        name: 'mdi:external-link',
-        href: 'https://communitils.com'
-      }
-    ]
-  },
-  {
     title: 'PlayOn HQ',
     imagePath: '/src/assets/portfolio/playon-hq.png',
     imageAlt: 'PlayOn HQ - Event Administration Built for Schools',
     icons: [
+      {
+        name: 'mdi:star',
+        className: 'text-yellow-400',
+        title: 'Featured'
+      },
       {
         name: 'mdi:computer',
         className: 'text-green-600',
@@ -108,6 +52,32 @@ export const PORFOLIO_ITEMS: PortfolioItem[] = [
         name: 'mdi:info',
         description:
           'PlayOn HQ Mobile is "lite" version of PlayOn HQ, providing a similar seamless experience for event management except it is designed to be used on the go and is optimized for mobile devices. It is focused on quick actions with easy access to the most important features along with the assumption that you might not have the best internet connection. No subdomain or app download required, just visit the same URL as PlayOn HQ and it will automatically detect your device and adjust accordingly.'
+      }
+    ]
+  },
+  {
+    title: 'communitils',
+    imagePath: '/src/assets/portfolio/communitils.png',
+    imageAlt:
+      'communitils - An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same',
+    icons: [
+      {
+        name: 'mdi:computer',
+        className: 'text-green-600',
+        title: 'Active'
+      },
+      {
+        name: 'mdi:info',
+        description:
+          'An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same. This is my first dive into maintaining an open-source repository and I am excited to see where it goes. It is designed to be easy to use, easy to understand, easy to contribute to, and designed to be a learning tool for those who are new to open-source.'
+      },
+      {
+        name: 'mdi:github',
+        href: 'https://github.com/michael-gee/communitils'
+      },
+      {
+        name: 'mdi:external-link',
+        href: 'https://communitils.com'
       }
     ]
   },
@@ -171,6 +141,31 @@ export const PORFOLIO_ITEMS: PortfolioItem[] = [
       {
         name: 'mdi:external-link',
         href: 'https://d1yi08v6dkeqkz.cloudfront.net/'
+      }
+    ]
+  },
+  {
+    title: '@gee-ui/react',
+    imagePath: '/src/assets/portfolio/shadcn.png',
+    imageAlt: 'shadcn/ui logo',
+    icons: [
+      {
+        name: 'mdi:archive',
+        className: 'text-gray-500',
+        title: 'Archive'
+      },
+      {
+        name: 'mdi:info',
+        description:
+          'React (TypeScript) component library which serves as a wrapper library around shadcn/ui. Unlocked the same ease of use and customization for all components but with a single source of truth library. This was my first experience with creating a public component library exposed via NPM. A lot of what this library set out to achieve will be solved by the new component library Base UI. Instead of revinventing the wheel I plan on using that one and hopefully contributing to it.'
+      },
+      {
+        name: 'mdi:github',
+        href: 'https://github.com/michael-gee/gee-ui'
+      },
+      {
+        name: 'mdi:external-link',
+        href: 'https://www.gee-ui.com'
       }
     ]
   }
