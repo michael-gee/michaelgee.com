@@ -56,32 +56,6 @@ export const PORFOLIO_ITEMS: PortfolioItem[] = [
     ]
   },
   {
-    title: 'communitils',
-    imagePath: '/src/assets/portfolio/communitils.png',
-    imageAlt:
-      'communitils - An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same',
-    icons: [
-      {
-        name: 'mdi:computer',
-        className: 'text-green-600',
-        title: 'Active'
-      },
-      {
-        name: 'mdi:info',
-        description:
-          'An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same. This is my first dive into maintaining an open-source repository and I am excited to see where it goes. It is designed to be easy to use, easy to understand, easy to contribute to, and designed to be a learning tool for those who are new to open-source.'
-      },
-      {
-        name: 'mdi:github',
-        href: 'https://github.com/michael-gee/communitils'
-      },
-      {
-        name: 'mdi:external-link',
-        href: 'https://communitils.com'
-      }
-    ]
-  },
-  {
     title: 'CoreView Workflow',
     imagePath: '/src/assets/portfolio/coreflow.png',
     imageAlt: 'CoreView workflow visual example',
@@ -124,27 +98,6 @@ export const PORFOLIO_ITEMS: PortfolioItem[] = [
     ]
   },
   {
-    title: 'Microfrontend POC',
-    imagePath: '/src/assets/portfolio/module-federation.png',
-    imageAlt: 'Module Federation logo',
-    icons: [
-      {
-        name: 'mdi:archive',
-        className: 'text-gray-500',
-        title: 'Archive'
-      },
-      {
-        name: 'mdi:info',
-        description:
-          'Microfrontends proof of concept and real world example using Module Federation integrated with Vite React applications. It was used as a demo presentation to talk alongside explaining the different use cases and benefits of using microfrontends.'
-      },
-      {
-        name: 'mdi:external-link',
-        href: 'https://d1yi08v6dkeqkz.cloudfront.net/'
-      }
-    ]
-  },
-  {
     title: '@gee-ui/react',
     imagePath: '/src/assets/portfolio/shadcn.png',
     imageAlt: 'shadcn/ui logo',
@@ -166,6 +119,48 @@ export const PORFOLIO_ITEMS: PortfolioItem[] = [
       {
         name: 'mdi:external-link',
         href: 'https://www.gee-ui.com'
+      }
+    ]
+  },
+  {
+    title: 'communitils',
+    imagePath: '/src/assets/portfolio/communitils.png',
+    imageAlt:
+      'communitils - An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same',
+    icons: [
+      {
+        name: 'mdi:info',
+        description:
+          'An open-source TypeScript utility library focused on breaking into open-source technology while inviting others to do the same. This is my first dive into maintaining an open-source repository and I am excited to see where it goes. It is designed to be easy to use, easy to understand, easy to contribute to, and designed to be a learning tool for those who are new to open-source.'
+      },
+      {
+        name: 'mdi:github',
+        href: 'https://github.com/michael-gee/communitils'
+      },
+      {
+        name: 'mdi:external-link',
+        href: 'https://communitils.com'
+      }
+    ]
+  },
+  {
+    title: 'Microfrontend POC',
+    imagePath: '/src/assets/portfolio/module-federation.png',
+    imageAlt: 'Module Federation logo',
+    icons: [
+      {
+        name: 'mdi:archive',
+        className: 'text-gray-500',
+        title: 'Archive'
+      },
+      {
+        name: 'mdi:info',
+        description:
+          'Microfrontends proof of concept and real world example using Module Federation integrated with Vite React applications. It was used as a demo presentation to talk alongside explaining the different use cases and benefits of using microfrontends.'
+      },
+      {
+        name: 'mdi:external-link',
+        href: 'https://d1yi08v6dkeqkz.cloudfront.net/'
       }
     ]
   }

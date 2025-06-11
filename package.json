@@ -1,7 +1,7 @@
 {
   "name": "michaelgee.com",
   "type": "module",
-  "version": "2025.01.28",
+  "version": "2025.06.11",
   "private": true,
   "scripts": {
     "astro": "astro",
@@ -37,7 +37,7 @@
     "prettier-plugin-tailwindcss": "^0.6.9"
   },
   "volta": {
-    "node": "22.13.1",
+    "node": "22.16.0",
     "npm": "10.9.2"
   }
 }

@@ -26,6 +26,16 @@ export const TECH_STACK_ICONS: Tech[] = [
     iconColor: '#67A063'
   },
   {
+    name: 'AWS',
+    iconName: 'mdi:aws',
+    iconColor: '#EC902E'
+  },
+  {
+    name: 'Expo',
+    iconName: 'expo',
+    iconColor: '#fff'
+  },
+  {
     name: 'Next.js',
     iconName: 'nextjs',
     iconColor: '#fff'
@@ -39,16 +49,6 @@ export const TECH_STACK_ICONS: Tech[] = [
     name: 'Tailwind',
     iconName: 'mdi:tailwind',
     iconColor: '#38BDF8'
-  },
-  {
-    name: 'SCSS',
-    iconName: 'mdi:sass',
-    iconColor: '#CE649A'
-  },
-  {
-    name: 'AWS',
-    iconName: 'mdi:aws',
-    iconColor: '#EC902E'
   },
   {
     name: 'PostgreSQL',

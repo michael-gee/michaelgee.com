@@ -1,5 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+
+import expoImage from '@assets/tech/expo.svg';
 
 import { TECH_STACK_ICONS } from '@constants/tech';
 import type { Tech } from '@constants/tech';
@@ -16,7 +19,11 @@ import type { Tech } from '@constants/tech';
       TECH_STACK_ICONS.map((t: Tech) => {
         return (
           <li class="mx-6 my-2 flex w-10 flex-col items-center justify-start text-center">
-            <Icon name={t.iconName} class="h-8 w-8" style={{ color: t.iconColor }} />
+            {t.iconName !== 'expo' ? (
+              <Icon name={t.iconName} class="h-8 w-8" style={{ color: t.iconColor }} />
+            ) : (
+              <Image src={expoImage} alt="Expo logo" class="h-8 w-8" />
+            )}
             <span class="mt-1 text-xs">{t.name}</span>
           </li>
         );

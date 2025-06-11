@@ -10,7 +10,7 @@ export type WorkExperience = {
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'PlayOn',
-    position: 'Senior Frontend Software Engineer',
+    position: 'Senior Software Engineer',
     startDateYear: 'Sep 2021',
     endDateYear: 'Present',
     imagePath: '/src/assets/work/playon.jpeg',
@@ -18,7 +18,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Inxeption',
-    position: 'Frontend Software Engineer',
+    position: 'Software Engineer',
     startDateYear: 'Feb 2021',
     endDateYear: 'Sep 2021',
     imagePath: '/src/assets/work/inx.jpg',
